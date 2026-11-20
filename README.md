@@ -15,11 +15,11 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 
 ```bash
 npm install
-npm run dev      # fejlesztői szerver
-npm run build    # kimenet: docs/index.html
+npm run dev      # fejlesztői szerver (sablon: app.html)
+npm run build    # kimenet: index.html és docs/index.html
 ```
 
-A GitHub Pages beállítása: Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, mappa: `/docs`.
+A GitHub Pages bármelyik beállítással működik: Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, mappa: `/ (root)` vagy `/docs`. A build mindkét helyre a kész oldalt írja (`index.html` és `docs/index.html`).
 
 ## Szerkezet
 
