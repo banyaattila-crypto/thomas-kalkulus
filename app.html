@@ -4,6 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulus – látványos tananyag</title>
+    <style>
+      html, body { margin: 0; background: #0b0e24; color: #e8ecf8; font-family: system-ui, sans-serif; }
+      #boot { padding: 24px; line-height: 1.6; }
+      #boot small { color: #a3acc8; }
+      #boot pre { white-space: pre-wrap; color: #fda4af; font-size: 13px; }
+    </style>
+    <script>
+      // Hibafigyelő: ha a fő szkript elhasal, a hiba látható marad (nem néma fehér/üres lap).
+      (function () {
+        var msgs = [];
+        function show() {
+          var b = document.getElementById('boot');
+          if (!b) return; // az app már kirajzolódott, a #boot eltűnt
+          var pre = document.getElementById('boot-err');
+          if (!pre) { pre = document.createElement('pre'); pre.id = 'boot-err'; b.appendChild(pre); }
+          pre.textContent = msgs.join('\n');
+        }
+        window.addEventListener('error', function (e) {
+          msgs.push('Hiba: ' + e.message + (e.lineno ? ' (' + e.lineno + ':' + e.colno + ')' : ''));
+          show();
+        });
+        window.addEventListener('unhandledrejection', function (e) {
+          msgs.push('Hiba (ígéret): ' + (e.reason && (e.reason.message || e.reason)));
+          show();
+        });
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +39,15 @@
     />
   </head>
   <body>
-    <div id="root"></div>
+    <noscript>
+      <p style="padding:24px">Az oldal működéséhez JavaScript szükséges.</p>
+    </noscript>
+    <div id="root">
+      <div id="boot">
+        Kalkulus – betöltés…<br />
+        <small>Ha ez a felirat tartósan látszik, a szkript nem futott le (a hibaüzenet alább jelenik meg).</small>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
