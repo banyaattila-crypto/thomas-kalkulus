@@ -332,3 +332,6 @@ h1 {
 .relbuttons button.wrong { background: rgba(239,68,68,0.2); border-color: #ef4444; color: #fecaca; }
 .scatter .pl-alt { stroke-width: 2.6; }
 .widget .scatter { max-width: 560px; }
+
+.widget .mini { font-size: 0.78rem; color: var(--muted); margin-bottom: 2px; }
+.widget .legend { font-size: 0.82rem; color: var(--muted); margin: 4px 0 6px; }

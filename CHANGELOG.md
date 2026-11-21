@@ -4,6 +4,9 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.6.0] – 2026-11-21
+- Új: 1.5. Műveletek függvényekkel és függvénytranszformációk (6 oldal, 5 interaktív eszköz, 8 feladat megoldással): függvények számtana, összetett függvények, eltolás, méretezés és tükrözés, a transzformációk sorrendje, ellipszis.
+
 ## [0.5.1] – 2026-11-21
 - Javítás: a verziószám a tartalomjegyzék nézetben, keskeny képernyőn (telefon) is látszik a fejlécben.
 - Módosítás: az Előző/Következő gombok új, konzervatív acélkék 3D kivitelt kaptak vékony arany szegéllyel, lenyomódó állapottal.
