@@ -3,6 +3,7 @@ import { S1_2 } from './s1_2';
 import { S1_3 } from './s1_3';
 import { S1_4 } from './s1_4';
 import { S1_5 } from './s1_5';
+import { S1_6 } from './s1_6';
 
 /** Elkészült szakaszok: azonosító → oldalak. A többi szakasz a menüben „hamarosan” állapotú. */
 export const CONTENT: Record<string, Page[]> = {
@@ -11,4 +12,5 @@ export const CONTENT: Record<string, Page[]> = {
   '1.3': S1_3,
   '1.4': S1_4,
   '1.5': S1_5,
+  '1.6': S1_6,
 };
