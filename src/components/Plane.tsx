@@ -156,3 +156,52 @@ export function PParabola({ map, a, b, c, cls = 'pl-main' }: Base & { a: number;
   }
   return <path d={d} className={cls} />;
 }
+
+/** Valós függvény grafikonja; a nem értelmezett helyeken és a nagy ugrásoknál megszakítja a vonalat. */
+export function PFunc({
+  map,
+  fn,
+  from = -Infinity,
+  to = Infinity,
+  cls = 'pl-main',
+  n = 600,
+}: Base & { fn: (x: number) => number; from?: number; to?: number; cls?: string; n?: number }) {
+  const a = Math.max(from, map.xmin);
+  const b = Math.min(to, map.xmax);
+  const span = map.ymax - map.ymin;
+  let d = '';
+  let prev: number | null = null;
+  for (let i = 0; i <= n; i++) {
+    const x = a + ((b - a) * i) / n;
+    const y = fn(x);
+    if (!Number.isFinite(y)) {
+      prev = null;
+      continue;
+    }
+    const jump = prev !== null && Math.abs(y - prev) > span * 0.6;
+    const start = prev === null || jump;
+    d += `${start ? 'M' : 'L'}${map.X(x).toFixed(1)},${map.Y(Math.max(-1e4, Math.min(1e4, y))).toFixed(1)} `;
+    prev = y;
+  }
+  return <path d={d} className={cls} />;
+}
+
+/** Üres (nyílt végpontú) vagy teli (zárt végpontú) pont a grafikonon. */
+export function PEnd({
+  map,
+  x,
+  y,
+  closed,
+  color = '#38bdf8',
+}: Base & { x: number; y: number; closed: boolean; color?: string }) {
+  return (
+    <circle
+      cx={map.X(x)}
+      cy={map.Y(y)}
+      r={5.5}
+      fill={closed ? color : '#0b0e24'}
+      stroke={color}
+      strokeWidth={2.2}
+    />
+  );
+}
