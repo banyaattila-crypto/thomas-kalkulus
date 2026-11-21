@@ -54,7 +54,7 @@ export function SlopeWidget() {
               </>
             )}
             <PPoint map={m} x={x1} y={y1} label={`P₁${pt(x1, y1)}`} color="#38bdf8" />
-            {!same && <PPoint map={m} x={x2} y={y2} label={`P₂${pt(x2, y2)}`} color="#f472b6" />}
+            {!same && <PPoint map={m} x={x2} y={y2} label={`P₂${pt(x2, y2)}`} color="#fb923c" />}
           </>
         )}
       </Plane>

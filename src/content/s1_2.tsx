@@ -306,7 +306,7 @@ export const S1_2: Page[] = [
               <PParabola map={m} a={2} b={0} c={0} cls="pl-alt" />
               <PParabola map={m} a={0.25} b={0} c={0} cls="pl-ok" />
               <PPoint map={m} x={2.2} y={4.84} label="y = x²" dx={8} dy={-6} color="#38bdf8" />
-              <PPoint map={m} x={1.6} y={5.12} label="y = 2x²" dx={-62} dy={-6} color="#f472b6" />
+              <PPoint map={m} x={1.6} y={5.12} label="y = 2x²" dx={-62} dy={-6} color="#fb923c" />
               <PPoint map={m} x={3.6} y={3.24} label="y = x²/4" dx={-58} dy={-10} color="#34d399" />
             </>
           )}

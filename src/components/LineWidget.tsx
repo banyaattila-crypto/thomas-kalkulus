@@ -31,7 +31,7 @@ export function LineWidget() {
         {(m) => (
           <>
             <PLine map={m} k={k} b={b} />
-            <PPoint map={m} x={0} y={b} label={`y-metszet ${pt(0, b)}`} color="#f472b6" dx={10} dy={-10} />
+            <PPoint map={m} x={0} y={b} label={`y-metszet ${pt(0, b)}`} color="#fb923c" dx={10} dy={-10} />
             {xi !== null && <PPoint map={m} x={xi} y={0} label={`x-metszet ${pt(xi, 0)}`} color="#34d399" dx={10} dy={18} />}
           </>
         )}

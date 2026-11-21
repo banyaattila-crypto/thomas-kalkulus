@@ -1,18 +1,23 @@
 import { useEffect, useMemo, useState } from 'react';
 import { TOC, VOLUME_TITLES } from './data/toc';
 import { CONTENT } from './content';
+import { Cover } from './components/Cover';
+import { TocPage } from './components/TocPage';
+import { VERSION } from './version';
 
-type Route = { section: string; page: number };
+type Route = { view: 'cover' | 'toc' | 'section'; section: string; page: number };
 
 /** Hash-útvonal: #s1-1-p3  (szakasz 1.1, oldalindex 3, 0-tól). Hibás értéknél a nyitóoldalra esik vissza.
  *  Csak egyszerű #név alakú hash használható (a közzétételi keret nem enged #/útvonalat). */
 function parseHash(): Route {
-  const m = window.location.hash.match(/^#s(\d+)-(\d+)-p(\d+)$/);
-  if (!m) return { section: '1.1', page: 0 };
+  const h = window.location.hash;
+  if (h === '#toc') return { view: 'toc', section: '1.1', page: 0 };
+  const m = h.match(/^#s(\d+)-(\d+)-p(\d+)$/);
+  if (!m) return { view: 'cover', section: '1.1', page: 0 };
   const section = `${m[1]}.${m[2]}`;
   const pages = CONTENT[section];
-  if (!pages) return { section, page: 0 };
-  return { section, page: Math.min(Number(m[3]), pages.length - 1) };
+  if (!pages) return { view: 'section', section, page: 0 };
+  return { view: 'section', section, page: Math.min(Number(m[3]), pages.length - 1) };
 }
 
 export default function App() {
@@ -31,6 +36,12 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const goView = (v: 'cover' | 'toc') => {
+    window.location.hash = v === 'toc' ? '#toc' : '#cover';
+    setMenuOpen(false);
+    window.scrollTo({ top: 0 });
+  };
+
   const pages = CONTENT[route.section];
   const current = pages?.[route.page];
 
@@ -42,19 +53,38 @@ export default function App() {
     return null;
   }, [route.section]);
 
+  if (route.view === 'cover') {
+    return (
+      <div className="app">
+        <div className="bg" aria-hidden />
+        <Cover onToc={() => goView('toc')} onStart={() => go('1.1')} />
+      </div>
+    );
+  }
+
   return (
     <div className="app">
       <div className="bg" aria-hidden />
       <header className="top">
-        <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menü">
-          ☰
-        </button>
-        <div className="brand">
+        {route.view === 'section' && (
+          <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menü">
+            ☰
+          </button>
+        )}
+        <button className="brand" onClick={() => goView('cover')} title="Nyitóoldal">
           <span className="brand-title">Kalkulus</span>
           <span className="brand-sub">látványos tananyag</span>
-        </div>
+        </button>
+        <span className="top-sp" />
+        <button className={`top-link ${route.view === 'toc' ? 'on' : ''}`} onClick={() => goView('toc')}>
+          Tartalom
+        </button>
+        <span className="ver">v{VERSION}</span>
       </header>
 
+      {route.view === 'toc' ? (
+        <TocPage go={go} />
+      ) : (
       <div className="layout">
         <nav className={`side ${menuOpen ? 'open' : ''}`}>
           {[1, 2, 3].map((v) => (
@@ -138,10 +168,11 @@ export default function App() {
 
           <footer className="foot">
             A tananyag a Thomas-féle Kalkulus (Typotex, 2006) tematikáját követi. A szöveg, a példák, a feladatok és az
-            ábrák saját készítésűek; nem hivatalos kiegészítő.
+            ábrák saját készítésűek; nem hivatalos kiegészítő. Verzió: {VERSION}.
           </footer>
         </main>
       </div>
+      )}
     </div>
   );
 }

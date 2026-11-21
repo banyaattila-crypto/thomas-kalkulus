@@ -14,7 +14,7 @@ export function CircleWidget() {
   const d = Math.hypot(px - h, py - k);
   const eps = 1e-9;
   const pos = Math.abs(d - r) < eps ? 'rajta van a körvonalon' : d < r ? 'a kör belsejében van' : 'a körön kívül van';
-  const color = Math.abs(d - r) < eps ? '#34d399' : d < r ? '#38bdf8' : '#f472b6';
+  const color = Math.abs(d - r) < eps ? '#34d399' : d < r ? '#38bdf8' : '#fb923c';
   const canon = `${shiftTex(h, 'x')}^2 + ${shiftTex(k, 'y')}^2 = ${tex(r * r)}`;
   const expanded = `x^2 + y^2${sgnTerm(-2 * h, 'x')}${sgnTerm(-2 * k, 'y')}${sgnTerm(h * h + k * k - r * r)} = 0`;
 

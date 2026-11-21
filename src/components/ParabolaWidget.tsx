@@ -53,7 +53,7 @@ export function ParabolaWidget() {
             {roots.map((x0, i) => (
               <PPoint key={i} map={m} x={x0} y={0} color="#34d399" />
             ))}
-            <PPoint map={m} x={0} y={c} color="#f472b6" />
+            <PPoint map={m} x={0} y={c} color="#fb923c" />
           </>
         )}
       </Plane>

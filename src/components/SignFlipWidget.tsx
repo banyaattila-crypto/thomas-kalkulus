@@ -51,7 +51,7 @@ export function SignFlipWidget() {
           { x: hi, label: 'b', color: '#38bdf8' },
           ...(same ? [] : [
             { x: a2, label: 'c·a', color: '#f59e0b' },
-            { x: b2, label: 'c·b', color: '#f472b6' },
+            { x: b2, label: 'c·b', color: '#fb923c' },
           ]),
         ]}
       />
