@@ -170,7 +170,7 @@ h1 {
 .dot.on { background: var(--accent); }
 .pager { display: flex; justify-content: space-between; margin-top: 18px; }
 .pager button {
-  background: linear-gradient(90deg, #0ea5e9, #8b5cf6); color: #fff; border: 0; padding: 10px 20px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9); color: #04202f; font-weight: 600; border: 0; padding: 10px 20px;
   border-radius: 999px; font-size: 1rem; cursor: pointer; font-weight: 600;
 }
 .pager button:disabled { opacity: 0.3; cursor: default; }
@@ -312,3 +312,10 @@ h1 {
 .ad-cap { fill: #bae6fd; font-weight: 700; font-size: 15px; font-style: italic; }
 .ad-t { fill: #e8ecf8; font-size: 14px; }
 .ad-arrow { stroke: #38bdf8; stroke-width: 1.8; }
+
+/* ---- 1.4 ---- */
+.chips { flex-wrap: wrap; }
+.relbuttons button.right { background: rgba(52,211,153,0.25); border-color: #34d399; color: #a7f3d0; }
+.relbuttons button.wrong { background: rgba(239,68,68,0.2); border-color: #ef4444; color: #fecaca; }
+.scatter .pl-alt { stroke-width: 2.6; }
+.widget .scatter { max-width: 560px; }

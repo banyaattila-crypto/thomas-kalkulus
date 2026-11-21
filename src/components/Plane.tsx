@@ -165,7 +165,8 @@ export function PFunc({
   to = Infinity,
   cls = 'pl-main',
   n = 600,
-}: Base & { fn: (x: number) => number; from?: number; to?: number; cls?: string; n?: number }) {
+  color,
+}: Base & { fn: (x: number) => number; from?: number; to?: number; cls?: string; n?: number; color?: string }) {
   const a = Math.max(from, map.xmin);
   const b = Math.min(to, map.xmax);
   const span = map.ymax - map.ymin;
@@ -183,7 +184,7 @@ export function PFunc({
     d += `${start ? 'M' : 'L'}${map.X(x).toFixed(1)},${map.Y(Math.max(-1e4, Math.min(1e4, y))).toFixed(1)} `;
     prev = y;
   }
-  return <path d={d} className={cls} />;
+  return <path d={d} className={cls} style={color ? { stroke: color } : undefined} />;
 }
 
 /** Üres (nyílt végpontú) vagy teli (zárt végpontú) pont a grafikonon. */
