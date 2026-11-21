@@ -6,7 +6,7 @@ import { Chart, CMap } from './Widgets17';
 const sg = (n: number) => String(n).replace('.', ',').replace('-', '−');
 
 /** Folytonos görbe a Chart-ban; a nem értelmezett pontnál megszakad. */
-function curve(f: (x: number) => number, m: CMap, N = 400): string {
+export function curve(f: (x: number) => number, m: CMap, N = 400): string {
   let d = '';
   let pen = false;
   for (let i = 0; i <= N; i++) {

@@ -4,6 +4,10 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.10.0] – 2026-11-21
+### Új
+- 2.2 Határértékek kiszámítása (6 oldal, 14 feladat): határérték és alapműveletek, polinomok és racionális törtfüggvények, a nullává váló nevező kiküszöbölése (szorzattá bontás, konjugált, közös nevező), szendvicstétel, egyenlőtlenségek és a szabályok határai, módszerválasztás. Hat új interaktív ábra.
+
 ## [0.9.0] – 2026-11-21
 ### Új
 - 2.1 Változási sebesség, a határérték szemléletes fogalma (6 oldal, 11 feladat): átlagos változási sebesség és szelő, pillanatnyi sebesség és érintő, a határérték szemléletes fogalma, határérték és függvényérték, nem létező határérték, géppel való becslés csapdái. Hat új interaktív ábra.
