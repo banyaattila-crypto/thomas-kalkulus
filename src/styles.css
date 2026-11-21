@@ -493,3 +493,10 @@ h1 {
 
 .widget .mini { font-size: 0.78rem; color: var(--muted); margin-bottom: 2px; }
 .widget .legend { font-size: 0.82rem; color: var(--muted); margin: 4px 0 6px; }
+
+/* ---- 2.3: ε–δ ábrák ---- */
+.band-eps { fill: rgba(251, 146, 60, 0.18); }
+.band-delta { fill: rgba(56, 189, 248, 0.2); }
+.band-ab { fill: rgba(52, 211, 153, 0.16); }
+.verdict.ok { border-left: 4px solid var(--ok); }
+.verdict.no { border-left: 4px solid #f87171; }

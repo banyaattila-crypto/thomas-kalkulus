@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.13.0] - 2026-11-21
+
+### Hozzáadva
+- 2.3 A határérték precíz definíciója (6 oldal, 4 interaktív ábra, 15 feladat megoldással): hibahatár-játék (ε–δ), a definíció és a 0 < |x − x₀| szerepe, a δ megkeresése két lépésben, pontos és biztonságos δ nem lineáris függvényeknél, az összegszabály és az egyenlőtlenség-megőrzés bizonyítása a definícióból, összefoglalás és gyakori hibák.
+- Kötetközi számoló segédfüggvények (firstBad, maxDelta) az ε–δ ábrákhoz.
+
 ## [0.12.0] - 2026-11-21
 
 ### Módosítva
