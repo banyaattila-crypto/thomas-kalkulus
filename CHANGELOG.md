@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.11.1] - 2026-11-21
+
+### Javítva
+- A gradiens címekben (tartalomjegyzék, szakaszcímek) a betűk lelógó részei (j, gy, p) levágódtak; a sormagasság és a belső alsó térköz növelve.
+
 ## [0.11.0] - 2026-11-21
 
 ### Módosítva
