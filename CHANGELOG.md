@@ -4,6 +4,13 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.12.0] - 2026-11-21
+
+### Módosítva
+- A bal oldali tartalomjegyzék (oldalsáv) újratervezése: haladáskártya a tetején (kattintásra a teljes tartalomjegyzék), kötetfejlécek római számmal és haladásszámlálóval, fejezetek színes jelvénnyel, szakaszszámlálóval és nyíllal.
+- A szakaszlista időtengelyes: a kész szakaszok színes ponttal, az aktuális kiemelt, pulzáló ponttal; a készülők halványak.
+- A jelenlegi fejezet automatikusan nyitva, színes bal szegéllyel.
+
 ## [0.11.1] - 2026-11-21
 
 ### Javítva

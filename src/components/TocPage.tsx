@@ -4,21 +4,21 @@ import { CONTENT } from '../content';
 
 type Props = { go: (section: string, page?: number) => void };
 
-const SUB: Record<number, string> = {
+export const SUB: Record<number, string> = {
   1: 'Függvények, határérték, derivált',
   2: 'Integrálás és sorok alapjai',
   3: 'Több változó és vektoranalízis',
 };
 
 /** Kötetek színezete: [kezdő, vég]. Nincs rózsaszín és lila. */
-const VOL_COLORS: Record<number, [string, string]> = {
+export const VOL_COLORS: Record<number, [string, string]> = {
   1: ['#38bdf8', '#60a5fa'],
   2: ['#2dd4bf', '#4ade80'],
   3: ['#fbbf24', '#fb923c'],
 };
 
 /** Fejezetszínek (1–16). */
-const CH_COLORS = [
+export const CH_COLORS = [
   '#38bdf8', '#22d3ee', '#60a5fa', '#7dd3fc',
   '#2dd4bf', '#34d399', '#4ade80', '#a3e635', '#86efac',
   '#fbbf24', '#fb923c', '#f59e0b', '#fcd34d', '#fdba74', '#fde047', '#f97316',

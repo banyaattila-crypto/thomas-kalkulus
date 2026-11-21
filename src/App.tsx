@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { TOC, VOLUME_TITLES } from './data/toc';
 import { CONTENT } from './content';
 import { Cover } from './components/Cover';
-import { TocPage } from './components/TocPage';
+import { TocPage, SUB, VOL_COLORS, CH_COLORS } from './components/TocPage';
 import { VERSION } from './version';
 
 type Route = { view: 'cover' | 'toc' | 'section'; section: string; page: number };
@@ -23,6 +23,8 @@ function parseHash(): Route {
 export default function App() {
   const [route, setRoute] = useState<Route>(parseHash);
   const [menuOpen, setMenuOpen] = useState(false);
+  const allSecs = TOC.flatMap((c) => c.sections);
+  const readyAll = allSecs.filter((s) => CONTENT[s.id]).length;
 
   useEffect(() => {
     const onHash = () => setRoute(parseHash());
@@ -87,34 +89,75 @@ export default function App() {
       ) : (
       <div className="layout">
         <nav className={`side ${menuOpen ? 'open' : ''}`}>
-          {[1, 2, 3].map((v) => (
-            <div key={v} className="vol">
-              <div className="vol-title">{VOLUME_TITLES[v]}</div>
-              {TOC.filter((c) => c.volume === v).map((ch) => (
-                <details key={ch.n} open={ch.n === sectionInfo?.ch.n}>
-                  <summary>
-                    <span className="ch-n">{ch.n}.</span> {ch.title}
-                  </summary>
-                  <ul>
-                    {ch.sections.map((s) => {
-                      const ready = Boolean(CONTENT[s.id]);
-                      return (
-                        <li key={s.id}>
-                          <button
-                            className={`sec ${s.id === route.section ? 'active' : ''} ${ready ? '' : 'soon'}`}
-                            onClick={() => go(s.id)}
-                          >
-                            <span className="sec-id">{s.id}</span> {s.title}
-                            {!ready && <em> · hamarosan</em>}
-                          </button>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </details>
-              ))}
-            </div>
-          ))}
+          <button className="side-all" onClick={() => goView('toc')}>
+            <span className="side-all-t">Tartalomjegyzék</span>
+            <span className="side-all-bar">
+              <i style={{ width: `${(readyAll / allSecs.length) * 100}%` }} />
+            </span>
+            <span className="side-all-n">
+              {readyAll} / {allSecs.length} szakasz kész
+            </span>
+          </button>
+          {[1, 2, 3].map((v) => {
+            const chs = TOC.filter((c) => c.volume === v);
+            const secs = chs.flatMap((c) => c.sections);
+            const d = secs.filter((s) => CONTENT[s.id]).length;
+            const [c1, c2] = VOL_COLORS[v];
+            return (
+              <div key={v} className="vol" style={{ ['--va' as string]: c1, ['--vb' as string]: c2 }}>
+                <div className="vol-head">
+                  <span className="vol-n">{'I'.repeat(v)}</span>
+                  <span className="vol-txt">
+                    <b>{VOLUME_TITLES[v]}</b>
+                    <small>{SUB[v]}</small>
+                  </span>
+                  <span className="vol-cnt">
+                    {d}/{secs.length}
+                  </span>
+                </div>
+                {chs.map((ch) => {
+                  const done = ch.sections.filter((s) => CONTENT[s.id]).length;
+                  const cur = ch.n === sectionInfo?.ch.n;
+                  return (
+                    <details
+                      key={ch.n}
+                      open={cur}
+                      className={`chd ${cur ? 'cur' : ''} ${done ? 'started' : ''}`}
+                      style={{ ['--c' as string]: CH_COLORS[(ch.n - 1) % CH_COLORS.length] }}
+                    >
+                      <summary>
+                        <span className="ch-badge">{ch.n}</span>
+                        <span className="ch-name">{ch.title}</span>
+                        <span className="ch-cnt">
+                          {done}/{ch.sections.length}
+                        </span>
+                        <span className="ch-chev" aria-hidden />
+                      </summary>
+                      <ol className="stl">
+                        {ch.sections.map((s) => {
+                          const ready = Boolean(CONTENT[s.id]);
+                          return (
+                            <li key={s.id} className={ready ? 'ready' : 'soon'}>
+                              <button
+                                className={`sec ${s.id === route.section ? 'active' : ''}`}
+                                disabled={!ready}
+                                title={ready ? undefined : 'Hamarosan'}
+                                onClick={() => go(s.id)}
+                              >
+                                <span className="snode" />
+                                <span className="sec-id">{s.id}</span>
+                                <span className="sec-t">{s.title}</span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    </details>
+                  );
+                })}
+              </div>
+            );
+          })}
         </nav>
 
         <main className="main">
