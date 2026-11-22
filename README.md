@@ -10,8 +10,8 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 |---|---|
 | 1.1–1.7 (1. fejezet: Bevezetés) | kész |
 | 2.1–2.7 (2. fejezet: Határérték és folytonosság) | kész |
-| 3.1–3.7 (3. fejezet: Differenciálás) | kész |
-| 3.8-tól a többi szakasz | folyamatban |
+| 3.1–3.8 (3. fejezet: Differenciálás) | kész |
+| 4.1-től a többi szakasz | folyamatban |
 
 ## Fejlesztés
 

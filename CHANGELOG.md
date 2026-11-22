@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.25.0] - 2026-11-22
+
+### Hozzáadva
+- 3.8 Linearizáció és differenciálok (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): lokális linearitás és érintővonalas közelítés (interaktív nagyítóval), nevezetes lineáris és binomiális közelítések ((1+x)^k ≈ 1+kx), a dy és Δy geometriája, differenciálási szabályok differenciál-alakban, hibaterjedés / érzékenység / százalékos hiba, a 3. fejezet összefoglalása és 4 buktató.
+- A 3. fejezet (Differenciálás) ezzel teljes.
+
 ## [0.24.0] - 2026-11-22
 
 ### Hozzáadva
