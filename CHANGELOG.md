@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.28.0] - 2026-11-22
+
+### Hozzáadva
+- 4.2 A Lagrange-féle középértéktétel (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): Rolle tétele és feltételeinek ellenpéldái, gyökök számának meghatározása (Bolzano + Rolle), a Lagrange-féle középértéktétel (interaktív párhuzamos érintőkeresővel), fizikai jelentés (szekciókontroll / átlagsebesség-mérés), a 3 fő következmény (konstans függvény, +C eltolás, kezdetiérték-feladatok és egyenlőtlenségek), összefoglalás és 4 buktató.
+
 ## [0.27.0] - 2026-11-22
 
 ### Hozzáadva
