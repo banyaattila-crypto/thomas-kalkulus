@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.23.0] - 2026-11-22
+
+### Hozzáadva
+- 3.6 Implicit függvény deriváltja (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): implicit függvények és körvonal deriváltja, a 3 lépéses implicit deriválási recept, érintő és normális a Descartes-féle levélen, implicit második derivált visszahelyettesítéssel, a hatványszabály kiterjesztése racionális kitevőkre, összefoglalás és 4 buktató.
+
 ## [0.22.0] - 2026-11-22
 
 ### Hozzáadva
