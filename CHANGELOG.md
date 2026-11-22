@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.30.0] - 2026-11-22
+
+### Hozzáadva
+- 4.4 Konvexitás és a függvénygörbe felrajzolása (10 oldal, 6 magyarázó/interaktív ábra, 25 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): elmélyített elméleti feldolgozás — konvexitás/konkavitás és érintők viszonya, a 4 görbe-alapforma (f′ és f″ kombinációi), inflexiós pontok (sima, függőleges érintős és hamis x⁴ csapda), második derivált teszt és korlátai, 7 lépéses teljes függvényvizsgálat, két részletesen kidolgozott nagypélda (negyedfokú polinom + aszimptotás törtfüggvény), f–f′–f″ fordítókulcs, összefoglalás és 4 buktató.
+
 ## [0.29.0] - 2026-11-22
 
 ### Hozzáadva
