@@ -4,6 +4,16 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.20.0] - 2026-11-22
+
+### Hozzáadva
+- 3.3 A derivált mint változási sebesség (7 oldal, 6 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): geometriai változási sebesség, egyenes vonalú mozgás (helyzet, sebesség, gyorsaság, gyorsulás, lökés), szabadesés és függőleges hajítás, közgazdasági határköltség/határbevétel/marginális adó, genetikai érzékenység (Mendel-modell), összefoglalás és 4 klasszikus buktató.
+
+## [0.19.0] - 2026-11-22
+
+### Hozzáadva
+- 3.2 Deriválási szabályok (8 oldal, 6 magyarázó/interaktív ábra, 21 feladat megoldással — köztük a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): konstans-, hatvány-, konstansszoros- és összegszabály, vízszintes érintők, szorzatszabály (interaktív növekvő téglalap-bizonyítással), hányadosszabály (színkódolt vizuális sémával), negatív egész kitevők és okos szabályválasztás, másod- és magasabbrendű deriváltak, összefoglaló szabálytábla és 4 klasszikus buktató.
+
 ## [0.18.0] - 2026-11-22
 
 ### Hozzáadva
