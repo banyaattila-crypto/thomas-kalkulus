@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.32.0] - 2026-11-22
+
+### Hozzáadva
+- 4.6 Határozatlan alakok és a L’Hospital-szabály (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): lokális linearitás és nagyító-bizonyítás, Cauchy-féle középértéktétel és az erős L’Hospital-szabály (0/0 és ∞/∞, ismételt alkalmazás), a 3 legnagyobb csapda (túl-deriválás, végtelen ciklus, oszcilláló f′/g′), határozatlan szorzatok (0·∞) és különbségek (∞−∞), előretekintés a hatványalakokra (1^∞, 0^0, ∞^0) és az (1+a/x)^x → e^a szimulátor, összefoglalás és 4 buktató.
+
 ## [0.31.0] - 2026-11-22
 
 ### Hozzáadva
