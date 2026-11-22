@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.21.0] - 2026-11-22
+
+### Hozzáadva
+- 3.4 A trigonometrikus függvények deriváltja (7 oldal, 4 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a sin x és cos x deriváltjának levezetése, 4-es deriválási kör, harmonikus rezgőmozgás (rugós szimulátorral), a tg, ctg, sec és csc deriváltja, trigonometrikus egyszerűsítés, ciklikus magasabbrendű deriváltak, összefoglaló képlettár és 4 buktató.
+
 ## [0.20.0] - 2026-11-22
 
 ### Hozzáadva
