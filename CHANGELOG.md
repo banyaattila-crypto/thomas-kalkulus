@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.27.0] - 2026-11-22
+
+### Hozzáadva
+- 4.1 Függvény szélsőértékei (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): abszolút szélsőértékek és a tartomány szerepe, a Weierstrass-féle Szélsőérték-tétel és ellenpéldák, lokális szélsőértékek és Fermat tétele, kritikus pontok 4 típusa (sima csúcs, töréspont, tüske, teraszpont), a zárt intervallumos módszer 3 lépéses receptje, összefoglalás és 4 buktató.
+
 ## [0.26.0] - 2026-11-22
 
 ### Módosítva
