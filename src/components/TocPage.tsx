@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode, useEffect, useRef, useState } from 'react';
 import { TOC, VOLUME_TITLES } from '../data/toc';
-import { CONTENT } from '../content';
+import { SECTIONS } from '../content';
 
 type Props = { go: (section: string, page?: number) => void };
 
@@ -297,9 +297,9 @@ function Ring({ value, size = 120, stroke = 10 }: { value: number; size?: number
 export function TocPage({ go }: Props) {
   const [onlyReady, setOnlyReady] = useState(false);
   const all = TOC.flatMap((c) => c.sections);
-  const ready = all.filter((s) => CONTENT[s.id]);
-  const pagesTotal = ready.reduce((a, s) => a + CONTENT[s.id].length, 0);
-  const chStarted = TOC.filter((c) => c.sections.some((s) => CONTENT[s.id])).length;
+  const ready = all.filter((s) => SECTIONS[s.id]);
+  const pagesTotal = ready.reduce((a, s) => a + SECTIONS[s.id].pages, 0);
+  const chStarted = TOC.filter((c) => c.sections.some((s) => SECTIONS[s.id])).length;
   const last = ready[ready.length - 1];
   let idx = 0;
   return (
@@ -357,7 +357,7 @@ export function TocPage({ go }: Props) {
       {[1, 2, 3].map((v) => {
         const chs = TOC.filter((c) => c.volume === v);
         const secs = chs.flatMap((c) => c.sections);
-        const d = secs.filter((s) => CONTENT[s.id]).length;
+        const d = secs.filter((s) => SECTIONS[s.id]).length;
         const [c1, c2] = VOL_COLORS[v];
         const style = { '--va': c1, '--vb': c2 } as CSSProperties;
         return (
@@ -379,8 +379,8 @@ export function TocPage({ go }: Props) {
             </div>
             <div className="toc-grid">
               {chs.map((ch) => {
-                const done = ch.sections.filter((s) => CONTENT[s.id]).length;
-                const shown = onlyReady ? ch.sections.filter((s) => CONTENT[s.id]) : ch.sections;
+                const done = ch.sections.filter((s) => SECTIONS[s.id]).length;
+                const shown = onlyReady ? ch.sections.filter((s) => SECTIONS[s.id]) : ch.sections;
                 if (onlyReady && done === 0) return null;
                 const cs = { '--c': CH_COLORS[(ch.n - 1) % CH_COLORS.length], '--i': idx++ } as CSSProperties;
                 return (
@@ -394,7 +394,7 @@ export function TocPage({ go }: Props) {
                     <div className="toc-ch-t">{ch.title}</div>
                     <div className="pips" title={`${done} / ${ch.sections.length} szakasz kész`}>
                       {ch.sections.map((s) => (
-                        <i key={s.id} className={CONTENT[s.id] ? 'on' : ''} />
+                        <i key={s.id} className={SECTIONS[s.id] ? 'on' : ''} />
                       ))}
                       <span>
                         {done}/{ch.sections.length}
@@ -402,14 +402,14 @@ export function TocPage({ go }: Props) {
                     </div>
                     <ol className="tl">
                       {shown.map((s) => {
-                        const rdy = Boolean(CONTENT[s.id]);
+                        const rdy = Boolean(SECTIONS[s.id]);
                         return (
                           <li key={s.id} className={rdy ? 'ready' : 'soon'}>
                             <button disabled={!rdy} onClick={() => go(s.id)}>
                               <span className="node" />
                               <span className="id">{s.id}</span>
                               <span className="t">{s.title}</span>
-                              {rdy ? <span className="pg">{CONTENT[s.id].length} old.</span> : <span className="pg soon-t">hamarosan</span>}
+                              {rdy ? <span className="pg">{SECTIONS[s.id].pages} old.</span> : <span className="pg soon-t">hamarosan</span>}
                             </button>
                           </li>
                         );

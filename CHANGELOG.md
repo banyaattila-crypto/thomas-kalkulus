@@ -4,6 +4,13 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.26.0] - 2026-11-22
+
+### Módosítva
+- Átállás webes, szakaszonkénti code-splitting (dinamikus `import()`) architektúrára: a nyitóoldal és a tartalomjegyzék azonnal betölt, minden szakasz külön JS-chunkként csak megnyitáskor töltődik le.
+- A build kimenete a `.gitignore`-ban lévő `dist/` mappa (a duplikált `docs/index.html` és a buildelt `index.html` kikerült a Git verziókezelésből; a gyökér `index.html` a tiszta Vite sablon).
+- Automatikus GitHub Pages deploy munkafolyamat (`.github/workflows/deploy.yml`). Az opcionális egyfájlos offline export továbbra is elérhető `npm run build:single` paranccsal.
+
 ## [0.25.0] - 2026-11-22
 
 ### Hozzáadva

@@ -1,6 +1,6 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v0.25.0`  
+**Aktuális verzió:** `v0.26.0`  
 **Dátum:** 2026-11-22  
 **Összesített haladás:** **22 / 120 szakasz kész** (18,3%) — az I. kötet 1., 2. és 3. fejezete teljes.
 
@@ -25,8 +25,8 @@
 
 ## Technikai állapot
 
-- **Build:** `npm run build` (`tsc --noEmit && vite build && node scripts/finish.mjs`) hibamentes.
-- **Kimenet:** önálló `index.html` és `docs/index.html` (beágyazott KaTeX-betűkkel).
+- **Build:** `npm run build` (`tsc --noEmit && vite build`) hibamentes; szakaszonkénti code-splitting a `dist/` mappába (opcionális offline egyfájlos build: `npm run build:single`).
+- **Deploy:** automatikus GitHub Pages publikálás (`.github/workflows/deploy.yml`).
 - **Forrásmunka:** a háromkötetes *Thomas-féle Kalkulus* PDF-ek lokálisan elérhetők (`.gitignore` védi őket a commitolástól); a tananyag a könyv tematikáját követi, saját szövegekkel, ábrákkal és feladatokkal.
 
 ## Következő lépések és irányelvek

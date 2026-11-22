@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { TOC, VOLUME_TITLES } from './data/toc';
-import { CONTENT } from './content';
+import { getCachedSection, loadSection, Page, SECTIONS } from './content';
 import { Cover } from './components/Cover';
 import { TocPage, SUB, VOL_COLORS, CH_COLORS } from './components/TocPage';
 import { VERSION } from './version';
@@ -15,22 +15,56 @@ function parseHash(): Route {
   const m = h.match(/^#s(\d+)-(\d+)-p(\d+)$/);
   if (!m) return { view: 'cover', section: '1.1', page: 0 };
   const section = `${m[1]}.${m[2]}`;
-  const pages = CONTENT[section];
-  if (!pages) return { view: 'section', section, page: 0 };
-  return { view: 'section', section, page: Math.min(Number(m[3]), pages.length - 1) };
+  const entry = SECTIONS[section];
+  if (!entry) return { view: 'section', section, page: 0 };
+  return { view: 'section', section, page: Math.min(Number(m[3]), entry.pages - 1) };
 }
 
 export default function App() {
   const [route, setRoute] = useState<Route>(parseHash);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [loaded, setLoaded] = useState<{ id: string; pages: Page[] } | null>(() => {
+    const initial = parseHash();
+    const cached = initial.view === 'section' ? getCachedSection(initial.section) : undefined;
+    return cached ? { id: initial.section, pages: cached } : null;
+  });
+  const [loadError, setLoadError] = useState<string | null>(null);
+
   const allSecs = TOC.flatMap((c) => c.sections);
-  const readyAll = allSecs.filter((s) => CONTENT[s.id]).length;
+  const readyAll = allSecs.filter((s) => SECTIONS[s.id]).length;
 
   useEffect(() => {
     const onHash = () => setRoute(parseHash());
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
   }, []);
+
+  useEffect(() => {
+    if (route.view !== 'section') return;
+    if (!SECTIONS[route.section]) {
+      setLoaded(null);
+      setLoadError(null);
+      return;
+    }
+    const cached = getCachedSection(route.section);
+    if (cached) {
+      setLoaded({ id: route.section, pages: cached });
+      setLoadError(null);
+      return;
+    }
+    let cancelled = false;
+    setLoadError(null);
+    loadSection(route.section)
+      .then((pages) => {
+        if (!cancelled && pages) setLoaded({ id: route.section, pages });
+      })
+      .catch((err) => {
+        if (!cancelled) setLoadError(err instanceof Error ? err.message : 'Nem sikerült betölteni a szakaszt.');
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [route.view, route.section]);
 
   const go = (section: string, page = 0) => {
     window.location.hash = `#s${section.replace('.', '-')}-p${page}`;
@@ -44,8 +78,9 @@ export default function App() {
     window.scrollTo({ top: 0 });
   };
 
-  const pages = CONTENT[route.section];
-  const current = pages?.[route.page];
+  const hasSection = Boolean(SECTIONS[route.section]);
+  const pages = loaded?.id === route.section ? loaded.pages : undefined;
+  const current = pages?.[Math.min(route.page, (pages?.length ?? 1) - 1)];
 
   const sectionInfo = useMemo(() => {
     for (const ch of TOC) {
@@ -87,134 +122,142 @@ export default function App() {
       {route.view === 'toc' ? (
         <TocPage go={go} />
       ) : (
-      <div className="layout">
-        <nav className={`side ${menuOpen ? 'open' : ''}`}>
-          <button className="side-all" onClick={() => goView('toc')}>
-            <span className="side-all-t">Tartalomjegyzék</span>
-            <span className="side-all-bar">
-              <i style={{ width: `${(readyAll / allSecs.length) * 100}%` }} />
-            </span>
-            <span className="side-all-n">
-              {readyAll} / {allSecs.length} szakasz kész
-            </span>
-          </button>
-          {[1, 2, 3].map((v) => {
-            const chs = TOC.filter((c) => c.volume === v);
-            const secs = chs.flatMap((c) => c.sections);
-            const d = secs.filter((s) => CONTENT[s.id]).length;
-            const [c1, c2] = VOL_COLORS[v];
-            return (
-              <div key={v} className="vol" style={{ ['--va' as string]: c1, ['--vb' as string]: c2 }}>
-                <div className="vol-head">
-                  <span className="vol-n">{'I'.repeat(v)}</span>
-                  <span className="vol-txt">
-                    <b>{VOLUME_TITLES[v]}</b>
-                    <small>{SUB[v]}</small>
-                  </span>
-                  <span className="vol-cnt">
-                    {d}/{secs.length}
-                  </span>
+        <div className="layout">
+          <nav className={`side ${menuOpen ? 'open' : ''}`}>
+            <button className="side-all" onClick={() => goView('toc')}>
+              <span className="side-all-t">Tartalomjegyzék</span>
+              <span className="side-all-bar">
+                <i style={{ width: `${(readyAll / allSecs.length) * 100}%` }} />
+              </span>
+              <span className="side-all-n">
+                {readyAll} / {allSecs.length} szakasz kész
+              </span>
+            </button>
+            {[1, 2, 3].map((v) => {
+              const chs = TOC.filter((c) => c.volume === v);
+              const secs = chs.flatMap((c) => c.sections);
+              const d = secs.filter((s) => SECTIONS[s.id]).length;
+              const [c1, c2] = VOL_COLORS[v];
+              return (
+                <div key={v} className="vol" style={{ ['--va' as string]: c1, ['--vb' as string]: c2 }}>
+                  <div className="vol-head">
+                    <span className="vol-n">{'I'.repeat(v)}</span>
+                    <span className="vol-txt">
+                      <b>{VOLUME_TITLES[v]}</b>
+                      <small>{SUB[v]}</small>
+                    </span>
+                    <span className="vol-cnt">
+                      {d}/{secs.length}
+                    </span>
+                  </div>
+                  {chs.map((ch) => {
+                    const done = ch.sections.filter((s) => SECTIONS[s.id]).length;
+                    const cur = ch.n === sectionInfo?.ch.n;
+                    return (
+                      <details
+                        key={ch.n}
+                        open={cur}
+                        className={`chd ${cur ? 'cur' : ''} ${done ? 'started' : ''}`}
+                        style={{ ['--c' as string]: CH_COLORS[(ch.n - 1) % CH_COLORS.length] }}
+                      >
+                        <summary>
+                          <span className="ch-badge">{ch.n}</span>
+                          <span className="ch-name">{ch.title}</span>
+                          <span className="ch-cnt">
+                            {done}/{ch.sections.length}
+                          </span>
+                          <span className="ch-chev" aria-hidden />
+                        </summary>
+                        <ol className="stl">
+                          {ch.sections.map((s) => {
+                            const ready = Boolean(SECTIONS[s.id]);
+                            return (
+                              <li key={s.id} className={ready ? 'ready' : 'soon'}>
+                                <button
+                                  className={`sec ${s.id === route.section ? 'active' : ''}`}
+                                  disabled={!ready}
+                                  title={ready ? undefined : 'Hamarosan'}
+                                  onClick={() => go(s.id)}
+                                >
+                                  <span className="snode" />
+                                  <span className="sec-id">{s.id}</span>
+                                  <span className="sec-t">{s.title}</span>
+                                </button>
+                              </li>
+                            );
+                          })}
+                        </ol>
+                      </details>
+                    );
+                  })}
                 </div>
-                {chs.map((ch) => {
-                  const done = ch.sections.filter((s) => CONTENT[s.id]).length;
-                  const cur = ch.n === sectionInfo?.ch.n;
-                  return (
-                    <details
-                      key={ch.n}
-                      open={cur}
-                      className={`chd ${cur ? 'cur' : ''} ${done ? 'started' : ''}`}
-                      style={{ ['--c' as string]: CH_COLORS[(ch.n - 1) % CH_COLORS.length] }}
-                    >
-                      <summary>
-                        <span className="ch-badge">{ch.n}</span>
-                        <span className="ch-name">{ch.title}</span>
-                        <span className="ch-cnt">
-                          {done}/{ch.sections.length}
-                        </span>
-                        <span className="ch-chev" aria-hidden />
-                      </summary>
-                      <ol className="stl">
-                        {ch.sections.map((s) => {
-                          const ready = Boolean(CONTENT[s.id]);
-                          return (
-                            <li key={s.id} className={ready ? 'ready' : 'soon'}>
-                              <button
-                                className={`sec ${s.id === route.section ? 'active' : ''}`}
-                                disabled={!ready}
-                                title={ready ? undefined : 'Hamarosan'}
-                                onClick={() => go(s.id)}
-                              >
-                                <span className="snode" />
-                                <span className="sec-id">{s.id}</span>
-                                <span className="sec-t">{s.title}</span>
-                              </button>
-                            </li>
-                          );
-                        })}
-                      </ol>
-                    </details>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </nav>
+              );
+            })}
+          </nav>
 
-        <main className="main">
-          {sectionInfo && (
-            <div className="crumbs">
-              {VOLUME_TITLES[sectionInfo.ch.volume]} · {sectionInfo.ch.n}. fejezet: {sectionInfo.ch.title}
-            </div>
-          )}
-          {sectionInfo && (
-            <h1>
-              <span className="h1-id">{sectionInfo.sec.id}.</span> {sectionInfo.sec.title}
-            </h1>
-          )}
-
-          {current && pages ? (
-            <>
-              <div className="dots-nav">
-                {pages.map((p, i) => (
-                  <button
-                    key={p.title}
-                    className={`dot ${i === route.page ? 'on' : ''}`}
-                    onClick={() => go(route.section, i)}
-                    title={p.title}
-                    aria-label={`${i + 1}. oldal: ${p.title}`}
-                  />
-                ))}
+          <main className="main">
+            {sectionInfo && (
+              <div className="crumbs">
+                {VOLUME_TITLES[sectionInfo.ch.volume]} · {sectionInfo.ch.n}. fejezet: {sectionInfo.ch.title}
               </div>
+            )}
+            {sectionInfo && (
+              <h1>
+                <span className="h1-id">{sectionInfo.sec.id}.</span> {sectionInfo.sec.title}
+              </h1>
+            )}
+
+            {current && pages ? (
+              <>
+                <div className="dots-nav">
+                  {pages.map((p, i) => (
+                    <button
+                      key={p.title}
+                      className={`dot ${i === route.page ? 'on' : ''}`}
+                      onClick={() => go(route.section, i)}
+                      title={p.title}
+                      aria-label={`${i + 1}. oldal: ${p.title}`}
+                    />
+                  ))}
+                </div>
+                <article className="card">
+                  <h2>
+                    <span className="pg">
+                      {route.page + 1}/{pages.length}
+                    </span>{' '}
+                    {current.title}
+                  </h2>
+                  {current.body}
+                </article>
+                <div className="pager">
+                  <button disabled={route.page === 0} onClick={() => go(route.section, route.page - 1)}>
+                    ← Előző
+                  </button>
+                  <button disabled={route.page === pages.length - 1} onClick={() => go(route.section, route.page + 1)}>
+                    Következő →
+                  </button>
+                </div>
+              </>
+            ) : hasSection ? (
               <article className="card">
-                <h2>
-                  <span className="pg">
-                    {route.page + 1}/{pages.length}
-                  </span>{' '}
-                  {current.title}
-                </h2>
-                {current.body}
+                {loadError ? (
+                  <p>Hiba a szakasz betöltésekor: {loadError}</p>
+                ) : (
+                  <p>Szakasz betöltése…</p>
+                )}
               </article>
-              <div className="pager">
-                <button disabled={route.page === 0} onClick={() => go(route.section, route.page - 1)}>
-                  ← Előző
-                </button>
-                <button disabled={route.page === pages.length - 1} onClick={() => go(route.section, route.page + 1)}>
-                  Következő →
-                </button>
-              </div>
-            </>
-          ) : (
-            <article className="card">
-              <p>Ez a szakasz még készül. A menüből az elkészült szakaszokat érheted el.</p>
-            </article>
-          )}
+            ) : (
+              <article className="card">
+                <p>Ez a szakasz még készül. A menüből az elkészült szakaszokat érheted el.</p>
+              </article>
+            )}
 
-          <footer className="foot">
-            A tananyag a Thomas-féle Kalkulus (Typotex, 2006) tematikáját követi. A szöveg, a példák, a feladatok és az
-            ábrák saját készítésűek; nem hivatalos kiegészítő. Verzió: {VERSION}.
-          </footer>
-        </main>
-      </div>
+            <footer className="foot">
+              A tananyag a Thomas-féle Kalkulus (Typotex, 2006) tematikáját követi. A szöveg, a példák, a feladatok és az
+              ábrák saját készítésűek; nem hivatalos kiegészítő. Verzió: {VERSION}.
+            </footer>
+          </main>
+        </div>
       )}
     </div>
   );
