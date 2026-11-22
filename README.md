@@ -8,8 +8,10 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 
 | Szakasz | Állapot |
 |---|---|
-| 1.1. A valós számok és a valós számegyenes | kész |
-| a többi szakasz | folyamatban |
+| 1.1–1.7 (1. fejezet: Bevezetés) | kész |
+| 2.1–2.7 (2. fejezet: Határérték és folytonosság) | kész |
+| 3.1 (3. fejezet: Differenciálás) | kész |
+| 3.2-től a többi szakasz | folyamatban |
 
 ## Fejlesztés
 

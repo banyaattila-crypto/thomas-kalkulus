@@ -4,6 +4,32 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.18.0] - 2026-11-22
+
+### Hozzáadva
+- 3.1 A deriváltfüggvény (6 oldal, 4 interaktív ábra, 15 feladat megoldással): a deriváltfüggvény fogalma és két ekvivalens alakja (h → 0 és z → x), Newton- és Leibniz-jelölések, deriválás definícióból lépésről lépésre (polinom, tört, négyzetgyök), a derivált grafikonjának leolvasása (szinkronizált kettős grafikon és töröttvonal), féloldali deriváltak és a nem differenciálhatóság 4 oka, differenciálhatóság ⇒ folytonosság bizonyítással, Darboux tétele, összefoglalás és gyakori hibák.
+
+## [0.17.0] - 2026-11-22
+
+### Hozzáadva
+- 2.7 Érintő és derivált (6 oldal, 4 interaktív ábra, 15 feladat megoldással): dinamikus érintőfogalom és tévhitek cáfolata, görbe meredeksége és érintő egyenlete, differenciahányados, pillanatnyi változási sebesség és pontbeli derivált, függőleges érintők és nem létező érintők (tüske, töréspont, oszcilláció), az érem öt oldala, valamint a 2. fejezet összefoglalása.
+- A 2. fejezet (Határérték és folytonosság) ezzel teljes.
+
+## [0.16.0] - 2026-11-22
+
+### Hozzáadva
+- 2.6 Folytonosság (6 oldal, 5 interaktív ábra, 15 feladat megoldással): pontbeli folytonosság és a hármas feltétel (belső pont és végpontok), a szakadási helyek katalógusa (megszüntethető, ugrás, végtelen, oszcilláló), folytonos függvények algebrai műveletei és kompozíciója, folytonos kiterjesztés, a Bolzano-tétel és a felező zérushelykeresés, összefoglalás és gyakori hibák.
+
+## [0.15.0] - 2026-11-22
+
+### Hozzáadva
+- 2.5 Végtelen határértékek és függőleges aszimptoták (6 oldal, 5 interaktív ábra, 15 feladat megoldással): féloldali és kétoldali végtelen határértékek, racionális függvények a nevező zérushelyei közelében (lyuk vs. pólus), a végtelen határérték precíz (B–δ) definíciója, függőleges aszimptoták (racionális és trigonometrikus görbék), domináns tagok (közeli és távoli viselkedés, polinomok nagy léptékben), összefoglalás és gyakori hibák.
+
+## [0.14.0] - 2026-11-22
+
+### Hozzáadva
+- 2.4 Jobb és bal oldali határérték. Határérték a végtelenben (6 oldal, 5 interaktív ábra, 15 feladat megoldással): jobb és bal oldali határértékek és a kétoldali határértékkel való kapcsolat, féloldali ε–δ definíció, a (sin θ)/θ nevezetes határérték geometriai szendvicsbizonyítása és alkalmazásai, véges határérték a végtelenben (ε–M és ε–N definíció), racionális függvények, vízszintes és ferde aszimptoták, összefoglalás és gyakori hibák.
+
 ## [0.13.0] - 2026-11-21
 
 ### Hozzáadva
