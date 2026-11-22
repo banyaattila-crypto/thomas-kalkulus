@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.24.0] - 2026-11-22
+
+### Hozzáadva
+- 3.7 Kapcsolt deriváltak (7 oldal, 4 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): 6 lépéses megoldási stratégia, Pitagorasz-tételes modellek (csúszó létra, autós üldözés), hasonló háromszögek és kúpos tartály, szögek változási sebessége (hőlégballon/kamera), olvadó jégréteg, árnyék és koszinusztétel, összefoglalás és 4 buktató.
+
 ## [0.23.0] - 2026-11-22
 
 ### Hozzáadva

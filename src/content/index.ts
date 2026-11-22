@@ -18,6 +18,7 @@ import { S3_3 } from './s3_3';
 import { S3_4 } from './s3_4';
 import { S3_5 } from './s3_5';
 import { S3_6 } from './s3_6';
+import { S3_7 } from './s3_7';
 
 /** Elkészült szakaszok: azonosító → oldalak. A többi szakasz a menüben „hamarosan” állapotú. */
 export const CONTENT: Record<string, Page[]> = {
@@ -41,4 +42,5 @@ export const CONTENT: Record<string, Page[]> = {
   '3.4': S3_4,
   '3.5': S3_5,
   '3.6': S3_6,
+  '3.7': S3_7,
 };
