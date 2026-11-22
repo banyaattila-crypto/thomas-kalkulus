@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.29.0] - 2026-11-22
+
+### Hozzáadva
+- 4.3 Monoton függvények és az első derivált teszt (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): monotonitási kritérium a Lagrange-tételből, az első derivált teszt 4 esete (+→−, −→+, +→+, −→−), előjeltáblázat polinomokra és törtkitevőkre, szakadási helyek és aszimptoták kezelése, görbe leolvasása f′ grafikonjából, összefoglalás és 4 buktató.
+
 ## [0.28.0] - 2026-11-22
 
 ### Hozzáadva

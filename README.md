@@ -11,7 +11,7 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 1.1–1.7 (1. fejezet: Bevezetés) | kész |
 | 2.1–2.7 (2. fejezet: Határérték és folytonosság) | kész |
 | 3.1–3.8 (3. fejezet: Differenciálás) | kész |
-| 4.1–4.2 (4. fejezet: A derivált alkalmazásai) | kész (4.3-tól folyamatban) |
+| 4.1–4.3 (4. fejezet: A derivált alkalmazásai) | kész (4.4-től folyamatban) |
 
 ## Fejlesztés
 
