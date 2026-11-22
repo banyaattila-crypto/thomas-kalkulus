@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.22.0] - 2026-11-22
+
+### Hozzáadva
+- 3.5 A láncszabály. Paraméteres egyenletek (8 oldal, 5 magyarázó/interaktív ábra, 21 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a láncszabály fogaskerekes szemléltetéssel, „kívülről befelé” hagyma-modell és többszemű láncok, hatványláncszabály és radián/fok magyarázat, paraméteres görbék és paraméter-kiküszöbölés, paraméteres 1. és 2. derivált, táblázatos láncszabály, összefoglalás és 4 buktató.
+
 ## [0.21.0] - 2026-11-22
 
 ### Hozzáadva

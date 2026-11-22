@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v0.21.0`  
+**Aktuális verzió:** `v0.22.0`  
 **Dátum:** 2026-11-22  
-**Összesített haladás:** **18 / 120 szakasz kész** (15,0%) — az I. kötet 1. és 2. fejezete teljes, a 3. fejezetben `3.1`–`3.4` kész.
+**Összesített haladás:** **19 / 120 szakasz kész** (15,8%) — az I. kötet 1. és 2. fejezete teljes, a 3. fejezetben `3.1`–`3.5` kész.
 
 ## Haladás kötetenként és fejezetenként
 
@@ -10,7 +10,7 @@
 |---|---|---|---|
 | **I. kötet** | 1. Bevezetés | 7 / 7 (`1.1`–`1.7`) | **Kész** |
 | **I. kötet** | 2. Határérték és folytonosság | 7 / 7 (`2.1`–`2.7`) | **Kész** |
-| **I. kötet** | 3. Differenciálás | 4 / 8 (`3.1`–`3.4`) | Folyamatban (következő: `3.5`) |
+| **I. kötet** | 3. Differenciálás | 5 / 8 (`3.1`–`3.5`) | Folyamatban (következő: `3.6`) |
 | **I. kötet** | 4. A derivált alkalmazásai | 0 / 8 | Tervezett |
 | **II. kötet** | 5–9. fejezet | 0 / 34 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
