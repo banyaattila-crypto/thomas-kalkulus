@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.25.0] - 2026-11-23
+
+### Hozzáadva
+- 8.4 Trigonometrikus integrálok (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): sinᵐ x cosⁿ x integrálok 3 esete paritás szerint (interaktív (m, n) stratégia- és terület-szimulátorral), páros kitevők félszög-képletei és periódus-átlaguk (sin²x és sin⁴x grafikonnal), tgᵐ x secⁿ x integrálok 3 esete, a legendás ∫ sec³ x dx bumeráng-folyamatábrája, különböző frekvenciák szorzatai (szorzat → összeg képletek) és a Fourier-ortogonalitás interaktív grafikonja (∫₋π^π sin(mx)sin(nx) dx), geometriai alkalmazások (y = ln(sec x) ívhossza és forgástest térfogata), összefoglalás és 5 tipikus buktató.
+
 ## [1.24.0] - 2026-11-23
 
 ### Hozzáadva

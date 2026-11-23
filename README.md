@@ -15,7 +15,7 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 5.1–5.6 (5. fejezet: Integrálszámítás) | kész *(5. fejezet teljes!)* |
 | 6.1–6.7 (6. fejezet: A határozott integrál alkalmazásai) | kész *(6. fejezet teljes!)* |
 | 7.1–7.8 (7. fejezet: Transzcendens függvények) | kész *(7. fejezet teljes!)* |
-| 8.1–8.3 (8. fejezet: Integrálási technikák) | folyamatban (8.1–8.3 kész) |
+| 8.1–8.4 (8. fejezet: Integrálási technikák) | folyamatban (8.1–8.4 kész) |
 
 ## Fejlesztés
 
