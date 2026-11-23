@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.29.0] - 2026-11-23
+
+### Hozzáadva
+- 8.8 Improprius integrálok (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): I. típusú improprius integrálok (végtelen intervallum, Thomas 2. példa, interaktív $b\to\infty$ terület-szimulátor), a végtelenbeli $p$-skála ($\int_1^\infty x^{-p}\,dx$ konvergens $\iff p>1$, interaktív $p$-csúszkával) és Gábriel kürtje (véges térfogat, végtelen felszín), II. típusú improprius integrálok és a fordított nullabeli $p$-skála ($\int_0^1 x^{-p}\,dx$ konvergens $\iff p<1$, interaktív csúszkával), a belső aszimptota csapdája (Thomas 5. példa vs. a vak Newton–Leibniz $\int_{-1}^1 x^{-2}\,dx$ hiba), direkt összehasonlító kritérium ($e^{-x^2}$, $\sin^2 x/x^2$, $1/\sqrt{x^2-0{,}1}$ interaktív grafikonnal), hányadosteszt ($f(x)/g(x)\to L$ grafikonnal), mind a 6 improprius típus térképe + vegyes esetek és Gamma-függvény, döntési fa, összefoglalás és 5 tipikus buktató.
+- **Mérföldkő:** a **8. fejezet (Integrálási technikák, 8 / 8 szakasz)** teljes egészében elkészült! (59 / 120 szakasz, 49,2%.)
+
 ## [1.28.0] - 2026-11-23
 
 ### Hozzáadva
