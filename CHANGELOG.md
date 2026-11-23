@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.12.0] - 2026-11-23
+
+### Hozzáadva
+- 6.6 Munka (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): változó erő munkája (W = ∫ F(x) dx, interaktív erő–elmozdulás görbével), Hooke-törvény és rugók nyújtása (interaktív rugó-szimulátorral), lógó láncok és csöpögő vödör (interaktív csörlő-ábrával), folyadék kiszivattyúzása hengeres, kúpos és félgömb tartályokból (interaktív vízréteg-szimulátorral), munka–kinetikus energia tétel és gravitációs szökési munka (F = GMm/r² diagrammal), összefoglalás és 4 buktató.
+
 ## [1.11.0] - 2026-11-23
 
 ### Hozzáadva

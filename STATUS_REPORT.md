@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.11.0`  
+**Aktuális verzió:** `v1.12.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **41 / 120 szakasz kész** (34,2%) — az I. kötet (1–4. fejezet) és az 5. fejezet teljes, a 6. fejezetben `6.1`–`6.5` kész.
+**Összesített haladás:** **42 / 120 szakasz kész** (35,0%) — az I. kötet (1–4. fejezet) és az 5. fejezet teljes, a 6. fejezetben `6.1`–`6.6` kész.
 
 ## Haladás kötetenként és fejezetenként
 
@@ -13,7 +13,7 @@
 | **I. kötet** | 3. Differenciálás | 8 / 8 (`3.1`–`3.8`) | **Kész** |
 | **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
 | **II. kötet** | 5. Integrálszámítás | 6 / 6 (`5.1`–`5.6`) | **Kész** |
-| **II. kötet** | 6. A határozott integrál alkalmazásai | 5 / 7 (`6.1`–`6.5`) | Folyamatban (következő: `6.6`) |
+| **II. kötet** | 6. A határozott integrál alkalmazásai | 6 / 7 (`6.1`–`6.6`) | Folyamatban (következő: `6.7`) |
 | **II. kötet** | 7–9. fejezet | 0 / 21 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
@@ -44,6 +44,7 @@
 - **`6.3` (`v1.9.0`):** Síkgörbék hossza — 6 oldal, 5 ábra (`Widgets63.tsx`), 19 megoldott feladat.
 - **`6.4` (`v1.10.0`):** Tehetetlenségi nyomaték és tömegközéppont — 6 oldal, 5 ábra (`Widgets64.tsx`), 19 megoldott feladat. *(Elértük a teljes háromkötetes tananyag egyharmadát: 40 / 120!)*
 - **`6.5` (`v1.11.0`):** Forgásfelületek és Papposz tételei — 6 oldal, 5 ábra (`Widgets65.tsx`), 19 megoldott feladat.
+- **`6.6` (`v1.12.0`):** Munka — 6 oldal, 5 ábra (`Widgets66.tsx`), 19 megoldott feladat.
 
 ## Technikai állapot
 
@@ -56,4 +57,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **6.6 Munka**.
+4. Következő modul: **6.7 A folyadék nyomása és a folyadékra ható erők**.
