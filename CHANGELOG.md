@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.16.0] - 2026-11-23
+
+### Hozzáadva
+- 7.3 Az exponenciális függvény (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): az eˣ = ln⁻¹ x definíciója és inverz azonosságai interaktív tükör-grafikonnal, az általános aˣ = eˣ·ˡⁿ ᵃ definíció és a kitevőszabályok (3. Tétel) interaktív görbecsaláddal, az (eˣ)′ = eˣ derivált levezetése az 1. Tételből (az 1 egységű szubtangens interaktív grafikonjával), összetett exponenciális görbék elemzése (xe⁻ˣ és a Gauss-haranggörbe e⁻ˣ² interaktív érintővel), az ∫ eᵘ du = eᵘ + C integrál és kezdetiérték-problémák (interaktív terület-grafikonnal), az e szám mint határérték (4. Tétel: lim (1+x)^(1/x) és kamatos kamat konvergencia-grafikon), az általános hatványszabály tetszőleges valós kitevőre és a 3 eset (xⁿ vs. eˣ vs. xˣ) összehasonlító grafikonja + puskadiagramja, összefoglalás és 5 tipikus buktató.
+
 ## [1.15.0] - 2026-11-23
 
 ### Hozzáadva
