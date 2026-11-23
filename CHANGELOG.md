@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.24.0] - 2026-11-23
+
+### Hozzáadva
+- 8.3 Racionális törtfüggvények integrálása parciális törtekre bontással (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a parciális törtekre bontás mint a közös nevező megfordítása (interaktív résztört-összeg grafikonnal), a 4 alapeset teljes térképe, a Heaviside-féle „letakarásos” módszer interaktív letakaró szimulátorral (Thomas 6. példa), többszörös lineáris tényezők (egyszerű vs. dupla pólus grafikonja), irreducibilis másodfokú tényezők (Thomas 4. példa 4 elemi ágra bontva), többszörös másodfokú tényezők (Thomas 5. példa) és az 5 lépéses mester-algoritmus, álcázott parciális törtek (helyettesítés után) és a logisztikus növekedési S-görbe interaktív szimulátora, összefoglalás és 5 tipikus buktató.
+
 ## [1.23.0] - 2026-11-23
 
 ### Hozzáadva
