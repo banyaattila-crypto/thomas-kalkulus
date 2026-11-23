@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.27.0] - 2026-11-23
+
+### Hozzáadva
+- 8.6 Integráltáblázatok és matematikai programcsomagok (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): integráltáblázat használata és feltétel-ellenőrzés (interaktív $b>0$ logaritmikus vs. $b<0$ $\operatorname{arctg}$ ág-választó grafikonnal), alakillesztés ($u$-helyettesítés, teljes négyzet, tört szétbontása 4 lépéses diagrammal), láncolt táblázati képletek és redukciós formulák (interaktív $\int \operatorname{tg}^n x\,dx$ és $\int (\ln x)^n\,dx$ redukciós léptetővel), redukciók levezetése és az ekvivalens primitív függvények összehasonlítása (kézi vs. Maple vs. Mathematica grafikonon), nem elemi integrálok galériája ($\operatorname{erf}(x)$, Fresnel $S(x)$, $\operatorname{Si}(x)$ valós idejű numerikus területtel), CAS-parancsok összehasonlítása (Maple, Mathematica, SymPy), CAS-buktatók és a 3 aranypróba (az ugró primitív függvény csapdájával $\int_0^{2\pi} \frac{dx}{2+\cos x}$-re), a 8.1–8.7 nagy integrálási mestertérképe, összefoglalás és 5 tipikus buktató.
+
 ## [1.26.0] - 2026-11-23
 
 ### Hozzáadva
