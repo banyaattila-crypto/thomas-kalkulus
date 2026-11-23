@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.15.0] - 2026-11-23
+
+### Hozzáadva
+- 7.2 A természetes logaritmusfüggvény (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a természetes logaritmus integrálos definíciója (ln x = ∫₁ˣ 1/t dt) és az e szám interaktív előjeles terület-szimulátorral, az ln x és ln|u| deriváltja valamint az ln(ax) párhuzamos érintői (interaktív grafikonnal), a 4 logaritmusszabály (2. Tétel) analízis- és területi bizonyítása (interaktív hiperbola-skálázással), teljes függvényelemzés (konkávitás, érintők, ln x ≤ x − 1, téglalap-becslés ln 2 > ½ ⇒ lim ln x = ∞), az ∫ (1/u) du = ln|u| + C integrál és az f′/f minta kétágú grafikonnal, a tangens és kotangens integrálja (interaktív terület-grafikonnal), logaritmusos deriválás 4 lépéses élő folyamatábrával és az ln(1+x) ≈ x linearizáció grafikonja, összefoglalás és 5 tipikus buktató.
+
 ## [1.14.0] - 2026-11-23
 
 ### Hozzáadva
