@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.6.0`  
+**Aktuális verzió:** `v1.7.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **36 / 120 szakasz kész** (30,0%) — az I. kötet (1–4. fejezet) és a II. kötet 5. fejezete (Integrálszámítás) teljes!
+**Összesített haladás:** **37 / 120 szakasz kész** (30,8%) — az I. kötet (1–4. fejezet) és az 5. fejezet teljes, a 6. fejezetben `6.1` kész.
 
 ## Haladás kötetenként és fejezetenként
 
@@ -13,7 +13,8 @@
 | **I. kötet** | 3. Differenciálás | 8 / 8 (`3.1`–`3.8`) | **Kész** |
 | **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
 | **II. kötet** | 5. Integrálszámítás | 6 / 6 (`5.1`–`5.6`) | **Kész** |
-| **II. kötet** | 6–9. fejezet | 0 / 28 | Tervezett |
+| **II. kötet** | 6. A határozott integrál alkalmazásai | 1 / 7 (`6.1`) | Folyamatban (következő: `6.2`) |
+| **II. kötet** | 7–9. fejezet | 0 / 21 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
@@ -38,6 +39,7 @@
 - **`5.4` (`v1.4.0`):** Newton–Leibniz-tétel (az analízis alaptétele) — 8 oldal, 6 ábra (`Widgets54.tsx`), 23 megoldott feladat.
 - **`5.5` (`v1.5.0`):** A határozatlan integrál és a helyettesítési szabály — 7 oldal, 5 ábra (`Widgets55.tsx`), 21 megoldott feladat.
 - **`5.6` (`v1.6.0`):** Helyettesítés és görbék által közbezárt terület — 7 oldal, 5 ábra (`Widgets56.tsx`), 21 megoldott feladat. *(Az 5. fejezet ezzel teljes!)*
+- **`6.1` (`v1.7.0`):** Szeletelés és tengely körüli forgatás — 6 oldal, 5 ábra (`Widgets61.tsx`), 19 megoldott feladat. *(A 6. fejezet nyitószakasza.)*
 
 ## Technikai állapot
 
@@ -50,4 +52,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **6.1 Térfogat meghatározása szeleteléssel és a tengelyre merőleges forgástestekkel**.
+4. Következő modul: **6.2 Térfogatszámítás hengerhéj-módszerrel**.

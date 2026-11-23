@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.7.0] - 2026-11-23
+
+### Hozzáadva
+- 6.1 Szeletelés és tengely körüli forgatás (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a 6. fejezet (A határozott integrál alkalmazásai) nyitószakasza — térfogat keresztmetszeti területtel (V = ∫ A(x) dx) és a Cavalieri-elv interaktív nyírás-szimulátorral, forgástestek korong-módszerrel (x-tengely körül: paraboloid, kúp, gömb 3D koronggal), forgatás y-tengely (dy) és eltolt tengelyek (y = c) körül, gyűrű-módszer (washer method, 2D alátét-keresztmetszettel), tengelyválasztás hatása R-re és r-re (y = 0, y = −1, y = 2 összehasonlítása), henger-ék, gömbszelet és csonkakúp térfogatának levezetése, összefoglalás és 4 buktató.
+
 ## [1.6.0] - 2026-11-23
 
 ### Hozzáadva
