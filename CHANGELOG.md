@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.11.0] - 2026-11-23
+
+### Hozzáadva
+- 6.5 Forgásfelületek és Papposz tételei (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): csonkakúp-övek és a forgásfelület felszínképlete (miért kell Δs a Δx helyett!), a gömb „kenyérszeletelés-csodája” (2πRh gömböv interaktív szimulátorral) és forgatás az y-tengely körül, az univerzális S = ∫ 2πρ ds képlet 3 alakja (y=f(x), x=g(y), paraméteres), Papposz I. és II. tétele (tórusz térfogata és felszíne interaktív szimulátorral integrálás nélkül!), Papposz „visszafelé” (súlypont 1 sorban!), összefoglalás és 4 buktató.
+
 ## [1.10.0] - 2026-11-23
 
 ### Hozzáadva
