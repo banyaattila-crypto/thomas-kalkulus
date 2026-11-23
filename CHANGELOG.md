@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.30.0] - 2026-11-23
+
+### Hozzáadva
+- 9.1 Iránymező és szétválasztható változójú differenciálegyenletek (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): elsőrendű differenciálegyenletek, általános vs. partikuláris megoldás és kezdetiérték-probléma (Thomas 1–2. példa, interaktív megoldássereg-grafikonnal), interaktív iránymező-felfedező valós idejű RK4 megoldásgörbével (4 egyenlet: $y'=y-x$, $y'=-x/y$, logisztikus $y'=y(2-y)$, $y'=\cos x$), iránymező-olvasás és izoklinák, szétválasztható változójú egyenletek 4 lépéses receptje (Thomas 3–4. példa), elveszett egyensúlyi megoldások és véges idejű robbanás ($y'=y^2$ interaktív grafikonnal), implicit megoldások és ortogonális trajektóriák (sugarak $\perp$ körök, parabolák $\perp$ ellipszisek), Torricelli törvénye — tartály kiürítése (Thomas 5. példa, interaktív víztartály + $h(t)$ szimulátorral), szeparábilis-felismerő kártya, összefoglalás és 5 tipikus buktató.
+- **Mérföldkő:** elértük a teljes háromkötetes *Thomas-féle Kalkulus* tananyag **felét (60 / 120 szakasz, 50,0%)**!
+
 ## [1.29.0] - 2026-11-23
 
 ### Hozzáadva
