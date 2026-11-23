@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.31.0] - 2026-11-23
+
+### Hozzáadva
+- 9.2 Elsőrendű lineáris differenciálegyenletek (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): standard alak $y'+P(x)y=Q(x)$ és lineáris vs. nemlineáris felismerő (Thomas 1. példa), az integráló tényező $v(x)=e^{\int P(x)\,dx}$ levezetése és 4 lépéses folyamatábrája (Thomas 2–3. példa), parciális integrálás + állandósult vs. tranziens megoldás (Thomas 4. példa, interaktív grafikonnal), RL-áramkör és az időállandó $\tau=L/R$ (interaktív $V, R, L$ szimulátorral és $1\tau, 2\tau, 3\tau$ jelölésekkel), keverési feladatok (interaktív sóoldat-tartály szimulátorral), homogén + inhomogén szuperpozíciós szerkezet ($y=y_p+y_h$), a Bernoulli-egyenlet linearizálása ($u=y^{1-n}$ folyamatábrával), 9.1–9.3 stratégiai térkép, összefoglalás és 5 tipikus buktató.
+
 ## [1.30.0] - 2026-11-23
 
 ### Hozzáadva

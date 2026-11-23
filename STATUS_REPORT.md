@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.30.0`  
+**Aktuális verzió:** `v1.31.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **60 / 120 szakasz kész** (50,0%) — **FÉLIDŐ! A teljes háromkötetes tananyag fele elkészült!**
+**Összesített haladás:** **61 / 120 szakasz kész** (50,8%) — átléptük a felét!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -16,7 +16,7 @@
 | **II. kötet** | 6. A határozott integrál alkalmazásai | 7 / 7 (`6.1`–`6.7`) | **Kész** |
 | **II. kötet** | 7. Transzcendens függvények | 8 / 8 (`7.1`–`7.8`) | **Kész** |
 | **II. kötet** | 8. Integrálási technikák | 8 / 8 (`8.1`–`8.8`) | **Kész** |
-| **II. kötet** | 9. Az integrálás további alkalmazásai | 1 / 5 (`9.1`) | **Folyamatban** |
+| **II. kötet** | 9. Az integrálás további alkalmazásai | 2 / 5 (`9.1`–`9.2`) | **Folyamatban** |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
@@ -65,6 +65,7 @@
 - **`8.7` (`v1.28.0`):** Numerikus integrálás — 8 oldal, 8 ábra/grafikon (`Widgets87.tsx`), 23 megoldott feladat.
 - **`8.8` (`v1.29.0`):** Improprius integrálok — 8 oldal, 8 ábra/grafikon (`Widgets88.tsx`), 23 megoldott feladat. *(A 8. fejezet ezzel teljes!)*
 - **`9.1` (`v1.30.0`):** Iránymező és szétválasztható változójú differenciálegyenletek — 8 oldal, 8 ábra/grafikon (`Widgets91.tsx`), 23 megoldott feladat. *(A 9. fejezet nyitószakasza — elértük a teljes háromkötetes tananyag felét: 60 / 120, 50,0%!)*
+- **`9.2` (`v1.31.0`):** Elsőrendű lineáris differenciálegyenletek — 8 oldal, 8 ábra/grafikon (`Widgets92.tsx`), 23 megoldott feladat.
 
 ## Technikai állapot
 
@@ -77,4 +78,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **9.2 Elsőrendű lineáris differenciálegyenletek**.
+4. Következő modul: **9.3 Euler-módszer**.
