@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.21.0] - 2026-11-23
+
+### Hozzáadva
+- 7.8 Hiperbolikus függvények (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): az eˣ páros (ch x) és páratlan (sh x) része interaktív építő-grafikonnal, a 6 hiperbolikus függvény és a ch²x − sh²x = 1 azonosság (egységkör vs. egységhiperbola összehasonlító ábra + th, sech, cth grafikon-galéria), deriváltak és integrálok az előjel-memóriatrükkel, a láncgörbe (katenária: y = a·ch(x/a) vs. parabola + pontos kábelhossz szimulátor), az inverz hiperbolikus (area-) függvények (arsh, arch, arth) és logaritmusos alakjuk interaktív grafikonnal, deriváltjaik (arsh x + 1/√(1+x²) érintővel), az inverz hiperbolikus integrálok és a 7.7 vs. 7.8 nagy integrál-térkép, összefoglalás és 5 tipikus buktató.
+- **Mérföldkő:** a **7. fejezet (Transzcendens függvények, 8 / 8 szakasz)** teljes egészében elkészült! (51 / 120 szakasz, 42,5%.)
+
 ## [1.20.0] - 2026-11-23
 
 ### Hozzáadva
