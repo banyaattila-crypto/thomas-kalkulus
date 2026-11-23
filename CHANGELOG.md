@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.17.0] - 2026-11-23
+
+### Hozzáadva
+- 7.4 Az aˣ és logₐx függvények (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): az aᵘ deriváltja ((aᵘ)′ = aᵘ·ln a·u′) és a (0; 1) pontbeli ln a meredekség interaktív érintő-grafikonja, az ∫ aᵘ du = aᵘ/ln a + C integrál interaktív terület-grafikonnal, a logₐ x definíciója és alapváltási képlete (logₐ x = ln x / ln a) interaktív y = x tükör-grafikonnal (0 < a < 1 esetre is!), a logₐ u deriválása és logaritmusos integrálok a logₐ x görbecsaláddal, kettős változós hatványok (u(x)ᵛ⁽ˣ⁾) két biztos módszerrel és interaktív laborral, a 10-es alapú logaritmus valós alkalmazásai (Richter-skála, decibel, pH interaktív szimulátorral), a teljes e-alapú vs. a-alapú szimmetria-mátrix és az x² = 2ˣ egyenlet 3 megoldásának interaktív grafikonja, összefoglalás és 5 tipikus buktató.
+
 ## [1.16.0] - 2026-11-23
 
 ### Hozzáadva
