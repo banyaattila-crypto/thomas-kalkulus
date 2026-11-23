@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [0.33.0] - 2026-11-23
+
+### Hozzáadva
+- 4.7 A Newton-módszer (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a Newton–Raphson-képlet levezetése linearizációból, babiloni gyökvonás és kvadratikus konvergencia (felező vs. Newton sebességverseny), transzcendens egyenletek (cos x = x, Dottie-szám), a 4 kudarc-eset (vízszintes érintő, elrohanó ∛x, 0↔1 ciklus, lassú többszörös gyök), biztonságos kezdőtipp és leállási feltétel, összefoglalás és 4 buktató.
+
 ## [0.32.0] - 2026-11-22
 
 ### Hozzáadva
