@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.6.0] - 2026-11-23
+
+### Hozzáadva
+- 5.6 Helyettesítés és görbék által közbezárt terület (7 oldal, 5 magyarázó/interaktív ábra, 21 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): helyettesítés határozott integrálban (határok átszámítása vs. visszahelyettesítés diagrammal), szimmetria-trükk páros és páratlan függvényekre [−a; a]-n (interaktív szimmetria-ábrával), két görbe által közbezárt terület függőleges (dx: felső − alsó) és vízszintes (dy: jobb − bal) szeleteléssel, egymást metsző görbék szerepcseréje, eltolási invariancia és a „Király-tulajdonság” (u = a − x), összefoglalás és 4 buktató.
+- **Mérföldkő:** az **5. fejezet (Integrálszámítás, 6 / 6 szakasz)** teljes egészében elkészült!
+
 ## [1.5.0] - 2026-11-23
 
 ### Hozzáadva
