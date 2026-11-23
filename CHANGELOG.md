@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.26.0] - 2026-11-23
+
+### Hozzáadva
+- 8.5 Trigonometrikus helyettesítések (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a három alaphelyettesítés ($\sqrt{a^2-x^2} \to a\sin\theta$, $\sqrt{a^2+x^2} \to a\operatorname{tg}\theta$, $\sqrt{x^2-a^2} \to a\sec\theta$) Püthagorasz-azonosságai és referencia-háromszögei, 3 külön interaktív derékszögű háromszög- és visszafejtő szimulátor ($\sin$, $\operatorname{tg}$, $\sec$ — előjel-tartományokkal és az $x < -a$ szekáns-csapdával), határozott integrálok határátírása $\theta$-ra (háromszög nélkül, folyamatábrával), teljes négyzetté alakítás + trigonometrikus helyettesítés kettős lépése, geometriai alkalmazások (ellipszis területe $T = \pi ab$ és parabola ívhossza interaktív grafikonnal), stratégiai döntési fa (mikor NEM kell trigonometrikus helyettesítés!), összefoglalás és 5 tipikus buktató.
+
 ## [1.25.0] - 2026-11-23
 
 ### Hozzáadva
