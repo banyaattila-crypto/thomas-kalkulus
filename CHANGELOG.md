@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.14.0] - 2026-11-23
+
+### Hozzáadva
+- 7.1 Inverz függvény deriváltja (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a 7. fejezet (Transzcendens függvények) nyitószakasza bővebb elméleti magyarázattal és több interaktív ábrával — injektivitás, nyíldiagram és interaktív horizontális teszt (tartományszűkítéssel), az inverz függvény definíciója és kétoldali semlegesítése interaktív függvénygéppel, 2 lépéses inverzkeresés és interaktív y = x tükrözési grafikon, a reciprok meredekség 3-féle magyarázata (Δx ↔ Δy háromszög, differenciálok, láncszabály) interaktív érintő-szimulátorral, az 1. Tétel és az f′(a) = 0 csapda (vízszintes → függőleges érintő x³ ↔ ∛x szimulátorral), deriválás az inverz képlete nélkül 4 lépéses élő kalkulátorral, paraméteres inverzrajzolás és Young-féle terület-tétel (∫ f + ∫ f⁻¹ = b·f(b) − a·f(a)) interaktív diagrammal, összefoglalás és 5 tipikus buktató.
+
 ## [1.13.0] - 2026-11-23
 
 ### Hozzáadva
