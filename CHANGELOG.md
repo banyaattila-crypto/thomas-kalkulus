@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.20.0] - 2026-11-23
+
+### Hozzáadva
+- 7.7 Inverz trigonometrikus függvények (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): tartományszűkítés, arcsin x és arccos x (pótszög-azonosság interaktív kettős grafikonnal), arctg x, arcctg x, arcsec x és arccsc x (interaktív grafikon-váltóval és vízszintes aszimptotákkal), a derékszögű háromszög-trükk dinamikus háromszög-generátorral, mind a 6 inverz trigonometrikus függvény deriváltja (interaktív függvény + derivált grafikonnal), a 3 arany integrálképlet a paraméterrel (miért nincs 1/a az arcsin-nál, és van az arctg/arcsec-nél + ∫ 1/(1+x²) = arctg b terület-grafikon), teljes négyzetté alakítás és számláló szétbontása folyamatábrával, a legnagyobb látószög (mozivászon-optimalizáció: x = √(ab) interaktív grafikonnal), összefoglalás és 5 tipikus buktató.
+- **Mérföldkő:** elértük az **50 elkészült szakaszt** (50 / 120, 41,7%)!
+
 ## [1.19.0] - 2026-11-23
 
 ### Hozzáadva
