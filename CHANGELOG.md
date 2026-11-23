@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.9.0] - 2026-11-23
+
+### Hozzáadva
+- 6.3 Síkgörbék hossza (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): töröttvonalas közelítés (interaktív n-szakaszos közelítővel) és a paraméteres ívhossz-képlet, híres paraméteres görbék (csillaggörbe L = 6 és ciklois L = 8a interaktív bejárással), függvénygrafikon (y = f(x)) ívhossza, a ds = √(dx²+dy²) Pitagorasz-diagram és a teljes négyzet algebrai trükk, függőleges érintő és x = g(y) változócsere, húrhossz vs. valódi ívhossz numerikus összehasonlítása, összefoglalás és 4 buktató.
+
 ## [1.8.0] - 2026-11-23
 
 ### Hozzáadva
