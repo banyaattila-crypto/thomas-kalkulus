@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.28.0] - 2026-11-23
+
+### Hozzáadva
+- 8.7 Numerikus integrálás (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a trapézformula ($1,2,\dots,2,1$ súlyok, interaktív szimulátorral és Thomas 1. példával), konvexitás-előjel ($f''>0$ felül-, $f''<0$ alulbecslés interaktív ábrával) és mért adatok átlagolása (Thomas 2. példa: 12 órás átlaghőmérséklet), a trapézformula hibakorlátja ($|E_T| \le \frac{M(b-a)^3}{12n^2}$) és interaktív $n_{\min}$-kalkulátor, a Simpson-formula levezetése és interaktív Lagrange-parabola szimulátora (Thomas 5. példa, páros $n$, $1,4,2,4,\dots,4,1$ súlyok), a harmadfokú pontossági bónusz és $|E_S| \le \frac{M(b-a)^5}{180n^4}$ hibabecslés (Trapéz vs. Simpson élő konvergencia-versenytáblázattal $\ln 2$-re és $\pi$-re), a középpont-szabály ($M_n$) érintő-magyarázata és az $S_{2n} = \frac{2M_n+T_n}{3}$ arany összefüggés, valós mérnöki adatintegrátor (folyómeder-keresztmetszet) + numerikai csapdák, összefoglalás és 5 tipikus buktató.
+
 ## [1.27.0] - 2026-11-23
 
 ### Hozzáadva

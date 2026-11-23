@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.27.0`  
+**Aktuális verzió:** `v1.28.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **57 / 120 szakasz kész** (47,5%)
+**Összesített haladás:** **58 / 120 szakasz kész** (48,3%)
 
 ## Haladás kötetenként és fejezetenként
 
@@ -15,7 +15,7 @@
 | **II. kötet** | 5. Integrálszámítás | 6 / 6 (`5.1`–`5.6`) | **Kész** |
 | **II. kötet** | 6. A határozott integrál alkalmazásai | 7 / 7 (`6.1`–`6.7`) | **Kész** |
 | **II. kötet** | 7. Transzcendens függvények | 8 / 8 (`7.1`–`7.8`) | **Kész** |
-| **II. kötet** | 8. Integrálási technikák | 6 / 8 (`8.1`–`8.6`) | **Folyamatban** |
+| **II. kötet** | 8. Integrálási technikák | 7 / 8 (`8.1`–`8.7`) | **Folyamatban** |
 | **II. kötet** | 9. Az integrálás további alkalmazásai | 0 / 5 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
@@ -62,6 +62,7 @@
 - **`8.4` (`v1.25.0`):** Trigonometrikus integrálok — 8 oldal, 8 ábra/grafikon (`Widgets84.tsx`), 23 megoldott feladat. *(A 8. fejezet fele kész!)*
 - **`8.5` (`v1.26.0`):** Trigonometrikus helyettesítések — 8 oldal, 8 ábra/grafikon (`Widgets85.tsx`), 23 megoldott feladat.
 - **`8.6` (`v1.27.0`):** Integráltáblázatok és matematikai programcsomagok — 8 oldal, 8 ábra/grafikon (`Widgets86.tsx`), 23 megoldott feladat.
+- **`8.7` (`v1.28.0`):** Numerikus integrálás — 8 oldal, 8 ábra/grafikon (`Widgets87.tsx`), 23 megoldott feladat.
 
 ## Technikai állapot
 
@@ -74,4 +75,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **8.7 Numerikus integrálás**.
+4. Következő modul: **8.8 Improprius integrálok** *(ezzel a 8. fejezet is teljessé válik!)*.
