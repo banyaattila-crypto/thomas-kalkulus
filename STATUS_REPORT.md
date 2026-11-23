@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.18.0`  
+**Aktuális verzió:** `v1.19.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **48 / 120 szakasz kész** (40,0%) — elértük a teljes háromkötetes tananyag 40%-át!
+**Összesített haladás:** **49 / 120 szakasz kész** (40,8%) — az I. kötet (1–4. fejezet) és a II. kötet 5–6. fejezete teljes, a 7. fejezet 6/8 szakasza kész!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -14,7 +14,7 @@
 | **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
 | **II. kötet** | 5. Integrálszámítás | 6 / 6 (`5.1`–`5.6`) | **Kész** |
 | **II. kötet** | 6. A határozott integrál alkalmazásai | 7 / 7 (`6.1`–`6.7`) | **Kész** |
-| **II. kötet** | 7. Transzcendens függvények | 5 / 8 (`7.1`–`7.5`) | **Folyamatban** |
+| **II. kötet** | 7. Transzcendens függvények | 6 / 8 (`7.1`–`7.6`) | **Folyamatban** |
 | **II. kötet** | 8–9. fejezet | 0 / 13 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
@@ -52,6 +52,7 @@
 - **`7.3` (`v1.16.0`):** Az exponenciális függvény — 8 oldal, 8 ábra/grafikon (`Widgets73.tsx`), 23 megoldott feladat.
 - **`7.4` (`v1.17.0`):** Az $a^x$ és $\log_a x$ függvények — 8 oldal, 8 ábra/grafikon (`Widgets74.tsx`), 23 megoldott feladat. *(A 7. fejezet fele kész!)*
 - **`7.5` (`v1.18.0`):** Exponenciális növekedés és csökkenés — 8 oldal, 8 ábra/grafikon (`Widgets75.tsx`), 23 megoldott feladat. *(Elértük a teljes háromkötetes tananyag 40%-át: 48 / 120!)*
+- **`7.6` (`v1.19.0`):** Relatív növekedési ütem — 8 oldal, 8 ábra/grafikon (`Widgets76.tsx`), 23 megoldott feladat.
 
 ## Technikai állapot
 
@@ -64,4 +65,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **7.6 Relatív növekedési ütem**.
+4. Következő modul: **7.7 Inverz trigonometrikus függvények**.

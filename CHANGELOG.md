@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.19.0] - 2026-11-23
+
+### Hozzáadva
+- 7.6 Relatív növekedési ütem (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a Proxima Centauri-paradoxon és a növekedési ütem definíciója interaktív verseny-grafikonnal, a nagy növekedési ranglétra (logaritmus ≪ hatvány ≪ exponenciális ≪ szuperexponenciális) és L’Hospital-bizonyítások, azonos növekedési ütem és tranzitivitás interaktív hányados-grafikonnal, „kis ordó” (o) és „nagy ordó” (O) interaktív burokgörbével (M és x₀ vizualizációval), számítógéptudományi alkalmazás — szekvenciális O(n) vs. bináris O(log₂ n) keresés élő szimulátorral, algoritmus-bonyolultságok (n log₂ n vs. n² vs. 2ⁿ), L = lim f/g döntési fa és a „lassú előzés” csapdája (ln x vs. x¹/ᵏ grafikonnal), összefoglalás és 5 tipikus buktató.
+
 ## [1.18.0] - 2026-11-23
 
 ### Hozzáadva
