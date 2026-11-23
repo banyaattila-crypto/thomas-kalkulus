@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.22.0] - 2026-11-23
+
+### Hozzáadva
+- 8.1 Egyszerű integrációs formulák (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a 8. fejezet (Integrálási technikák) nyitószakasza — a 22 alapintegrál + 2 új (∫ sec x dx és ∫ csc x dx) és a 7 algebrai átalakítás térképe, okos u-helyettesítés és kiegészítés teljes négyzetté (1/√(bx−x²) interaktív grafikonnal), trigonometrikus azonosságok és a gyökjel eltüntetése (√(1+cos 2x) = √2|cos x| előjel-szimulátorral), maradékos polinomosztás vizuálisan (ferde aszimptota + maradék), tört szétbontása a számláló összege mentén (diagrammal), szorzás ügyes 1-gyel (sec x terület-grafikonnal és 3 mestertrükkel), stratégiai integrál-felismerő edzőterem, összefoglalás és 5 tipikus buktató.
+
 ## [1.21.0] - 2026-11-23
 
 ### Hozzáadva
