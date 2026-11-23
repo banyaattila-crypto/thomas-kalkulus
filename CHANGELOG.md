@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.2.0] - 2026-11-23
+
+### Hozzáadva
+- 5.2 A véges összegek határértéke és a szumma jel (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a szumma jel (Σ) anatómiája és indexeltolás, véges összegek algebrai szabályai és a 3 nagy hatványösszeg-képlet (Gauss-féle lépcsőbizonyítással), pontos terület véges összegek határértékével (1−x² → 2/3, x² → 8/3, x³ → 1/4), általános felosztás, norma (‖P‖) és előjeles Riemann-összeg, miért ‖P‖ → 0 kell n → ∞ helyett, összefoglalás és 4 buktató.
+
 ## [1.1.0] - 2026-11-23
 
 ### Hozzáadva
