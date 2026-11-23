@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.5.0] - 2026-11-23
+
+### Hozzáadva
+- 5.5 A határozatlan integrál és a helyettesítési szabály (7 oldal, 5 magyarázó/interaktív ábra, 21 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): határozott vs. határozatlan integrál, az u-helyettesítés (láncszabály megfordítása) és 4 lépéses munkamenete, a 4 leggyakoribb u-választási minta és konstans-igazítás, algebrai visszahelyettesítés („marad egy x”), trigonometrikus integrálok (ekvivalens primitív függvények +C-eltolás vizuálisan, sin² x és cos² x félszög-képletekkel), háztartási váltakozó áram effektív (RMS) és csúcsfeszültsége (230 V → 325 V szimulátorral), kezdetiérték-feladatok (IVP) helyettesítéssel, összefoglalás és 4 buktató.
+
 ## [1.4.0] - 2026-11-23
 
 ### Hozzáadva

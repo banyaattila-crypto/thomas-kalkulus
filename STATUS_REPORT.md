@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.4.0`  
+**Aktuális verzió:** `v1.5.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **34 / 120 szakasz kész** (28,3%) — az I. kötet teljes (30/30), a II. kötetben `5.1`–`5.4` kész.
+**Összesített haladás:** **35 / 120 szakasz kész** (29,2%) — az I. kötet teljes (30/30), a II. kötetben `5.1`–`5.5` kész.
 
 ## Haladás kötetenként és fejezetenként
 
@@ -12,7 +12,7 @@
 | **I. kötet** | 2. Határérték és folytonosság | 7 / 7 (`2.1`–`2.7`) | **Kész** |
 | **I. kötet** | 3. Differenciálás | 8 / 8 (`3.1`–`3.8`) | **Kész** |
 | **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
-| **II. kötet** | 5. Integrálszámítás | 4 / 6 (`5.1`–`5.4`) | Folyamatban (következő: `5.5`) |
+| **II. kötet** | 5. Integrálszámítás | 5 / 6 (`5.1`–`5.5`) | Folyamatban (következő: `5.6`) |
 | **II. kötet** | 6–9. fejezet | 0 / 28 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
@@ -36,6 +36,7 @@
 - **`5.2` (`v1.2.0`):** A véges összegek határértéke és a szumma jel — 7 oldal, 5 ábra (`Widgets52.tsx`), 19 megoldott feladat.
 - **`5.3` (`v1.3.0`):** A határozott integrál — 7 oldal, 5 ábra (`Widgets53.tsx`), 21 megoldott feladat.
 - **`5.4` (`v1.4.0`):** Newton–Leibniz-tétel (az analízis alaptétele) — 8 oldal, 6 ábra (`Widgets54.tsx`), 23 megoldott feladat.
+- **`5.5` (`v1.5.0`):** A határozatlan integrál és a helyettesítési szabály — 7 oldal, 5 ábra (`Widgets55.tsx`), 21 megoldott feladat.
 
 ## Technikai állapot
 
@@ -48,4 +49,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **5.5 A határozatlan integrál és a helyettesítési szabály**.
+4. Következő modul: **5.6 Helyettesítés és görbék által közbezárt terület**.
