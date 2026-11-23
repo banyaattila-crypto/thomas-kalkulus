@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.23.0] - 2026-11-23
+
+### Hozzáadva
+- 8.2 Parciális integrálás (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a szorzatszabály megfordítása (∫ u dv = uv − ∫ v du) és geometriai terület-bizonyítása, a LIATE-prioritási sorrend interaktív „Jó vs. Rossz választás” összehasonlítóval, a „láthatatlan 1” trükk (∫ ln x, ∫ arctg x, ∫ arcsin x interaktív terület-grafikonnal), táblázatos parciális integrálás (Thomas 7–8. példa színkódolt átlós nyilakkal), a „bumeráng-trükk” ciklikus integrálokra (∫ eˣ cos x dx folyamatábrával), hatványredukciós formulák és a Wallis-integrál (∫₀^(π/2) cosⁿ x dx interaktív léptetővel), helyettesítés + parciális integrálás kettős kombó és az 5 archetípus kártyája, összefoglalás és 5 tipikus buktató.
+
 ## [1.22.0] - 2026-11-23
 
 ### Hozzáadva
