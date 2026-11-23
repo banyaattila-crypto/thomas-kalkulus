@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.2.0`  
+**Aktuális verzió:** `v1.3.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **32 / 120 szakasz kész** (26,7%) — az I. kötet teljes (30/30), a II. kötetben `5.1`–`5.2` kész.
+**Összesített haladás:** **33 / 120 szakasz kész** (27,5%) — az I. kötet teljes (30/30), a II. kötetben `5.1`–`5.3` kész.
 
 ## Haladás kötetenként és fejezetenként
 
@@ -12,7 +12,7 @@
 | **I. kötet** | 2. Határérték és folytonosság | 7 / 7 (`2.1`–`2.7`) | **Kész** |
 | **I. kötet** | 3. Differenciálás | 8 / 8 (`3.1`–`3.8`) | **Kész** |
 | **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
-| **II. kötet** | 5. Integrálszámítás | 2 / 6 (`5.1`–`5.2`) | Folyamatban (következő: `5.3`) |
+| **II. kötet** | 5. Integrálszámítás | 3 / 6 (`5.1`–`5.3`) | Folyamatban (következő: `5.4`) |
 | **II. kötet** | 6–9. fejezet | 0 / 28 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
@@ -34,6 +34,7 @@
 - **`4.8` (`v1.0.0`):** Primitív függvények — 8 oldal, 5 ábra (`Widgets48.tsx`), 21 megoldott feladat. *(A 4. fejezet és a teljes I. kötet ezzel elkészült!)*
 - **`5.1` (`v1.1.0`):** Közelítés véges összegekkel — 7 oldal, 5 ábra (`Widgets51.tsx`), 19 megoldott feladat. *(A II. kötet nyitószakasza.)*
 - **`5.2` (`v1.2.0`):** A véges összegek határértéke és a szumma jel — 7 oldal, 5 ábra (`Widgets52.tsx`), 19 megoldott feladat.
+- **`5.3` (`v1.3.0`):** A határozott integrál — 7 oldal, 5 ábra (`Widgets53.tsx`), 21 megoldott feladat.
 
 ## Technikai állapot
 
@@ -46,4 +47,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **5.3 A határozott integrál**.
+4. Következő modul: **5.4 A differenciál- és integrálszámítás alaptétele**.

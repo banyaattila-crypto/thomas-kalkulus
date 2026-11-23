@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.3.0] - 2026-11-23
+
+### Hozzáadva
+- 5.3 A határozott integrál (7 oldal, 5 magyarázó/interaktív ábra, 21 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a Riemann-integrál ε–δ definíciója és az integráljel anatómiája („néma változó”), folytonos és szakaszonként folytonos függvények integrálhatósága vs. Dirichlet-függvény, a határozott integrál 7 alaptulajdonsága vizuálisan (additivitás, konstansszorzó, max–min egyenlőtlenség bizonyítással, domináció), előjeles (nettó) terület vs. teljes geometriai terület interaktív felfedezővel, a 3 alapképlet (∫c, ∫x, ∫x²) és másodfokú polinomok integrálása, folytonos függvény átlagértéke („szintkiegyenlítés” szimulátorral), összefoglalás és 4 buktató.
+
 ## [1.2.0] - 2026-11-23
 
 ### Hozzáadva

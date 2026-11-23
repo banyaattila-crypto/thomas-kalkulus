@@ -12,7 +12,7 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 2.1–2.7 (2. fejezet: Határérték és folytonosság) | kész |
 | 3.1–3.8 (3. fejezet: Differenciálás) | kész |
 | 4.1–4.8 (4. fejezet: A derivált alkalmazásai) | kész *(I. kötet teljes!)* |
-| 5.1–5.2 (5. fejezet: Integrálszámítás) | kész (5.3-tól folyamatban) |
+| 5.1–5.3 (5. fejezet: Integrálszámítás) | kész (5.4-től folyamatban) |
 
 ## Fejlesztés
 
