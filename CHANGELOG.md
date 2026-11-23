@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.8.0] - 2026-11-23
+
+### Hozzáadva
+- 6.2 Térfogatszámítás hengerhéj-módszerrel (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a hengerhéj kiterítése (2π·r·h·dx) diagrammal, függőleges tengelyek (y-tengely és eltolt x = L egyenesek interaktív szimulátorral), vízszintes tengelyek (x-tengely és y = L, dy héjak), Gyűrű (6.1) vs. Hengerhéj (6.2) összehasonlító mátrix, különleges alkalmazások (x-kioltás és a szalvétagyűrű-paradoxon interaktív ábrával), összefoglalás és 4 buktató.
+
 ## [1.7.0] - 2026-11-23
 
 ### Hozzáadva
