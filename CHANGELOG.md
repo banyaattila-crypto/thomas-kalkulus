@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.10.0] - 2026-11-23
+
+### Hozzáadva
+- 6.4 Tehetetlenségi nyomaték és tömegközéppont (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): libikóka-szimulátor és diszkrét pontrendszer nyomatéka (M₀, Mₓ, Mᵧ), változó sűrűségű vékony rudak (δ(x) szimulátorral), 2D vékony lemezek (függőleges csík súlypontja és dMₓ = ½δ(f²−g²) dx levezetése), szimmetria és híres homogén síkidomok súlypontja (félkör 4r/(3π), parabola, háromszög h/3), görbe huzalok tömegközéppontja (félkörlemez vs. félkörhuzal 2r/π) és változó sűrűségű 2D lemezek, összefoglalás és 4 buktató.
+
 ## [1.9.0] - 2026-11-23
 
 ### Hozzáadva
