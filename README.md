@@ -13,7 +13,8 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 3.1–3.8 (3. fejezet: Differenciálás) | kész |
 | 4.1–4.8 (4. fejezet: A derivált alkalmazásai) | kész *(I. kötet teljes!)* |
 | 5.1–5.6 (5. fejezet: Integrálszámítás) | kész *(5. fejezet teljes!)* |
-| 6.1–6.6 (6. fejezet: A határozott integrál alkalmazásai) | kész (6.7-től folyamatban) |
+| 6.1–6.7 (6. fejezet: A határozott integrál alkalmazásai) | kész *(6. fejezet teljes!)* |
+| 7.1– (7. fejezet: Transzcendens függvények) | folyamatban |
 
 ## Fejlesztés
 

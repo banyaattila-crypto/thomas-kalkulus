@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.13.0] - 2026-11-23
+
+### Hozzáadva
+- 6.7 A folyadék nyomása és a folyadékra ható erők (6 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): hidrosztatikai nyomás (p = ρgh) és a hidrosztatikai paradoxon interaktív edény-szimulátorral, függőleges gátak nyomásprofilja és integrálképlete (F = ∫ ρg·h(y)·L(y) dy), háromszög és trapéz alakú gátak (csúccsal lefelé vs. felfelé megduplázódó erő!), a súlypont-csoda (F = ρg·h̄·A, tengeralattjáró körablak szimulátorral integrálás nélkül!), parabola és félkör zsilipkapuk kétféle kiszámítása, összefoglalás és 4 buktató.
+- **Mérföldkő:** a **6. fejezet (A határozott integrál alkalmazásai, 7 / 7 szakasz)** teljes egészében elkészült!
+
 ## [1.12.0] - 2026-11-23
 
 ### Hozzáadva
