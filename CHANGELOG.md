@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.0.0] - 2026-11-23
+
+### Hozzáadva
+- 4.8 Primitív függvények (8 oldal, 5 magyarázó/interaktív ábra, 21 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): primitív függvény és a +C görbecsalád, hatványszabály visszafelé (és az n = −1 tiltott eset) + alap-táblázat, a határozatlan integrál anatómiája és lineáris belső függvény, első- és másodrendű kezdetiérték-feladatok (IVP), mozgásegyenletek levezetése (a → v → s) függőleges hajítás szimulátorral, algebrai/trigonometrikus átírások, összefoglalás és 4 buktató.
+- **Mérföldkő:** a 4. fejezet (A derivált alkalmazásai) és ezzel a teljes **I. kötet** (1–4. fejezet, 30 / 30 szakasz) elkészült!
+
 ## [0.33.0] - 2026-11-23
 
 ### Hozzáadva

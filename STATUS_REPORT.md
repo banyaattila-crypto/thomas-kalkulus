@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v0.33.0`  
+**Aktuális verzió:** `v1.0.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **29 / 120 szakasz kész** (24,2%) — az I. kötet 1–3. fejezete teljes, a 4. fejezetben `4.1`–`4.7` kész.
+**Összesített haladás:** **30 / 120 szakasz kész** (25,0%) — a teljes **I. kötet** (1–4. fejezet, 30 / 30 szakasz) elkészült!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -11,8 +11,8 @@
 | **I. kötet** | 1. Bevezetés | 7 / 7 (`1.1`–`1.7`) | **Kész** |
 | **I. kötet** | 2. Határérték és folytonosság | 7 / 7 (`2.1`–`2.7`) | **Kész** |
 | **I. kötet** | 3. Differenciálás | 8 / 8 (`3.1`–`3.8`) | **Kész** |
-| **I. kötet** | 4. A derivált alkalmazásai | 7 / 8 (`4.1`–`4.7`) | Folyamatban (következő: `4.8`) |
-| **II. kötet** | 5–9. fejezet | 0 / 34 | Tervezett |
+| **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
+| **II. kötet** | 5–9. fejezet | 0 / 34 | Következő (`5.1`) |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
@@ -30,6 +30,7 @@
 - **`4.5` (`v0.31.0`):** Alkalmazott optimalizációs problémák — 8 oldal, 6 ábra (`Widgets45.tsx`), 21 megoldott feladat.
 - **`4.6` (`v0.32.0`):** Határozatlan alakok és a L’Hospital-szabály — 7 oldal, 5 ábra (`Widgets46.tsx`), 19 megoldott feladat.
 - **`4.7` (`v0.33.0`):** A Newton-módszer — 7 oldal, 5 ábra (`Widgets47.tsx`), 19 megoldott feladat.
+- **`4.8` (`v1.0.0`):** Primitív függvények — 8 oldal, 5 ábra (`Widgets48.tsx`), 21 megoldott feladat. *(A 4. fejezet és a teljes I. kötet ezzel elkészült!)*
 
 ## Technikai állapot
 
@@ -42,4 +43,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **4.8 Primitív függvények** *(ezzel lezárul a teljes I. kötet — `v1.0.0`!)*.
+4. Következő modul: **5.1 Közelítés véges összegekkel** *(II. kötet, 5. fejezet: Integrálszámítás)*.
