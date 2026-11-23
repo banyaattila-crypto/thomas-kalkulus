@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.18.0] - 2026-11-23
+
+### Hozzáadva
+- 7.5 Exponenciális növekedés és csökkenés (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): az exponenciális változás törvénye (y′ = ky ⇒ y = y₀eᵏᵗ, egyértelműség-bizonyítással és interaktív rátaszimulátorral), populációnövekedés, duplázódási idő és járvány-csökkenés (Thomas 1. példa szimulátorral és 3 lépéses recepttel), folytonosan jóváírt kamat (A = A₀eʳᵗ és a 70-es szabály összehasonlító grafikonnal), radioaktív bomlás és felezési idő (interaktív grafikon + 40 atomos bomlásrács), radiokarbonos (¹⁴C) kormeghatározó labor (T₁/₂ = 5700 év, híres leletekkel), Newton-féle hűlési és melegedési törvény (H(t) = Hₛ + (H₀ − Hₛ)e⁻ᵏᵗ interaktív szimulátorral), az 5 exponenciális modell összehasonlító térképe és féllogaritmikus (semi-log) egyenesítési teszt, összefoglalás és 5 tipikus buktató.
+
 ## [1.17.0] - 2026-11-23
 
 ### Hozzáadva
