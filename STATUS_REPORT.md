@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.0.0`  
+**Aktuális verzió:** `v1.1.0`  
 **Dátum:** 2026-11-23  
-**Összesített haladás:** **30 / 120 szakasz kész** (25,0%) — a teljes **I. kötet** (1–4. fejezet, 30 / 30 szakasz) elkészült!
+**Összesített haladás:** **31 / 120 szakasz kész** (25,8%) — az I. kötet teljes (30/30), a II. kötetben `5.1` kész.
 
 ## Haladás kötetenként és fejezetenként
 
@@ -12,7 +12,8 @@
 | **I. kötet** | 2. Határérték és folytonosság | 7 / 7 (`2.1`–`2.7`) | **Kész** |
 | **I. kötet** | 3. Differenciálás | 8 / 8 (`3.1`–`3.8`) | **Kész** |
 | **I. kötet** | 4. A derivált alkalmazásai | 8 / 8 (`4.1`–`4.8`) | **Kész** *(I. kötet teljes!)* |
-| **II. kötet** | 5–9. fejezet | 0 / 34 | Következő (`5.1`) |
+| **II. kötet** | 5. Integrálszámítás | 1 / 6 (`5.1`) | Folyamatban (következő: `5.2`) |
+| **II. kötet** | 6–9. fejezet | 0 / 28 | Tervezett |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
@@ -31,6 +32,7 @@
 - **`4.6` (`v0.32.0`):** Határozatlan alakok és a L’Hospital-szabály — 7 oldal, 5 ábra (`Widgets46.tsx`), 19 megoldott feladat.
 - **`4.7` (`v0.33.0`):** A Newton-módszer — 7 oldal, 5 ábra (`Widgets47.tsx`), 19 megoldott feladat.
 - **`4.8` (`v1.0.0`):** Primitív függvények — 8 oldal, 5 ábra (`Widgets48.tsx`), 21 megoldott feladat. *(A 4. fejezet és a teljes I. kötet ezzel elkészült!)*
+- **`5.1` (`v1.1.0`):** Közelítés véges összegekkel — 7 oldal, 5 ábra (`Widgets51.tsx`), 19 megoldott feladat. *(A II. kötet nyitószakasza.)*
 
 ## Technikai állapot
 
@@ -43,4 +45,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **5.1 Közelítés véges összegekkel** *(II. kötet, 5. fejezet: Integrálszámítás)*.
+4. Következő modul: **5.2 A véges összegek határértéke és a szumma jel**.

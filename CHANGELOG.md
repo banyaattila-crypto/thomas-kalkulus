@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.1.0] - 2026-11-23
+
+### Hozzáadva
+- 5.1 Közelítés véges összegekkel (7 oldal, 5 magyarázó/interaktív ábra, 19 feladat megoldással — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a II. kötet (5. fejezet: Integrálszámítás) nyitószakasza — görbe alatti terület téglalapokkal (Lₙ, Rₙ, Mₙ), alsó/felső összeg és garantált hibakorlát (|Rₙ−Lₙ| = |f(b)−f(a)|·Δx), megtett út sebesség-idő görbéből, térfogat közelítése hengerkorongokkal, folytonos függvény átlagértéke, összefoglalás és 4 buktató.
+
 ## [1.0.0] - 2026-11-23
 
 ### Hozzáadva
