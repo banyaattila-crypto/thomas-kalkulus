@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.6.0`  
+**Aktuális verzió:** `v2.7.0`  
 **Dátum:** 2026-11-24  
-**Összesített haladás:** **69 / 120 szakasz kész** (57,5%) — az I. és II. kötet teljes (64/64), a III. kötetből a `10.1`–`10.5` kész!
+**Összesített haladás:** **70 / 120 szakasz kész** (58,3%) — az I. és II. kötet teljes (64/64), a III. kötetből a `10.1`–`10.6` kész!
 
 ## Haladás kötetenként és fejezetenként
 
