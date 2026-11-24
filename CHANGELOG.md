@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.22.0] - 2026-11-24
+
+### Hozzáadva
+- 12.2 Vektorok (8 oldal, 8 interaktív 2D/3D SVG ábra `Widgets122.tsx`, 3 `Quiz` gyorsteszt, `Steps` egységvektor-normálás és skálázás, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): irányított szakasz és komponensalak, 3D vektorösszeadás (paralelogramma-szabály) és kivonás, standard $\mathbf{i},\mathbf{j},\mathbf{k}$ bázis és egységvektor, felező- és osztópont, fizikai alkalmazások (repülőgép szélben, statikai kötélerők egyensúlya) és iránykoszinuszok.
+
 ## [2.21.0] - 2026-11-24
 
 ### Hozzáadva
