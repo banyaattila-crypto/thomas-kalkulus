@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.13.0] - 2026-11-24
+
+### Hozzáadva
+- 11.4 Összehasonlító kritériumok (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets114.tsx`, 3 `Quiz` gyorsteszt, `Steps` gyökös sor-vizsgálat, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): majoráns- és minoránskritérium (10. tétel), $\sum 1/n! \le 3$ klasszikus majorálása, a „rossz irány” csapdája, limeszes összehasonlító kritérium ($c>0$, $c=0$, $c=\infty$), főtag-vadász módszer és aszimptotikus ekvivalenciák ($\sin(1/n)$, $1-\cos(1/n)$, $\ln(1+1/n)$, $e^{1/n}-1$).
+
 ## [2.12.0] - 2026-11-24
 
 ### Hozzáadva
