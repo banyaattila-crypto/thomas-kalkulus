@@ -4,6 +4,7 @@ import { getCachedSection, loadSection, Page, SECTIONS } from './content';
 import { Cover } from './components/Cover';
 import { TocPage, SUB, VOL_COLORS, CH_COLORS } from './components/TocPage';
 import { VERSION } from './version';
+import { useProgress } from './utils/progress';
 
 type Route = { view: 'cover' | 'toc' | 'section'; section: string; page: number };
 
@@ -29,6 +30,7 @@ export default function App() {
     return cached ? { id: initial.section, pages: cached } : null;
   });
   const [loadError, setLoadError] = useState<string | null>(null);
+  const progress = useProgress();
 
   const allSecs = TOC.flatMap((c) => c.sections);
   const readyAll = allSecs.filter((s) => SECTIONS[s.id]).length;
@@ -94,7 +96,7 @@ export default function App() {
     return (
       <div className="app">
         <div className="bg" aria-hidden />
-        <Cover onToc={() => goView('toc')} onStart={() => go('1.1')} />
+        <Cover onToc={() => goView('toc')} onStart={() => go('1.1')} doneCount={progress.count} />
       </div>
     );
   }
@@ -120,7 +122,7 @@ export default function App() {
       </header>
 
       {route.view === 'toc' ? (
-        <TocPage go={go} />
+        <TocPage go={go} done={progress.done} />
       ) : (
         <div className="layout">
           <nav className={`side ${menuOpen ? 'open' : ''}`}>
@@ -131,6 +133,7 @@ export default function App() {
               </span>
               <span className="side-all-n">
                 {readyAll} / {allSecs.length} szakasz kész
+                {progress.count > 0 ? ` · ${progress.count} elvégezve` : ''}
               </span>
             </button>
             {[1, 2, 3].map((v) => {
@@ -182,6 +185,11 @@ export default function App() {
                                   <span className="snode" />
                                   <span className="sec-id">{s.id}</span>
                                   <span className="sec-t">{s.title}</span>
+                                  {progress.isDone(s.id) && (
+                                    <span className="done-check" title="Elvégezve" aria-label="Elvégezve">
+                                      ✓
+                                    </span>
+                                  )}
                                 </button>
                               </li>
                             );
@@ -204,6 +212,7 @@ export default function App() {
             {sectionInfo && (
               <h1>
                 <span className="h1-id">{sectionInfo.sec.id}.</span> {sectionInfo.sec.title}
+                {progress.isDone(route.section) && <span className="h1-done">✓ Elvégezve</span>}
               </h1>
             )}
 
@@ -232,6 +241,13 @@ export default function App() {
                 <div className="pager">
                   <button disabled={route.page === 0} onClick={() => go(route.section, route.page - 1)}>
                     ← Előző
+                  </button>
+                  <button
+                    type="button"
+                    className={`done-btn ${progress.isDone(route.section) ? 'on' : ''}`}
+                    onClick={() => progress.toggle(route.section)}
+                  >
+                    {progress.isDone(route.section) ? '✓ Szakasz elvégezve' : '○ Megjelölés késznek'}
                   </button>
                   <button disabled={route.page === pages.length - 1} onClick={() => go(route.section, route.page + 1)}>
                     Következő →

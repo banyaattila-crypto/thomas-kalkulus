@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { DecimalWidget } from '../components/DecimalWidget';
 import { SignFlipWidget } from '../components/SignFlipWidget';
 import { IntervalWidget } from '../components/IntervalWidget';
@@ -52,6 +52,27 @@ export const S1_1: Page[] = [
         <p className="hint">
           Próbáld ki a 1/7, a 3/11 és az 5/8 törteket. Melyiknél ér véget az osztás, és melyiknél kezdődik ismétlődés?
         </p>
+
+        <Quiz
+          q={
+            <>
+              Melyik állítás igaz az <M t="0{,}4999\ldots" /> végtelen tizedes törtre?
+            </>
+          }
+          options={[
+            { label: <>Kisebb, mint <M t="0{,}5" />, de annál tetszőlegesen közel van hozzá.</> },
+            { label: <>Pontos értéke <M t="\tfrac{1}{2}" /> (ugyanaz a valós szám, mint a <M t="0{,}5" />).</>, ok: true },
+            { label: <>Irracionális szám, mert végtelen sok tizedesjegye van.</> },
+            { label: <>Nem ábrázolható a számegyenesen.</> },
+          ]}
+          explain={
+            <>
+              Ha <M t="x=0{,}4999\ldots" />, akkor <M t="10x=4{,}999\ldots" /> és <M t="100x=49{,}999\ldots" />, innen{' '}
+              <M t="90x=45" />, tehát <M t="x=\tfrac{45}{90}=\tfrac{1}{2}=0{,}5" />. A végtelen kilencesek sorozata
+              nem közelítés, hanem pontos egyenlőség.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -67,7 +88,8 @@ export const S1_1: Page[] = [
           <M t="1,2,3,\ldots" />
           ), az <strong>egész számokat</strong> (<M t="\ldots,-1,0,1,\ldots" />
           ) és a <strong>racionális számokat</strong>, amelyek felírhatók <M t="\tfrac{m}{n}" /> alakban, ahol{' '}
-          <M t="m" /> és <M t="n" /> egész, <M t="n\ne 0" />. Ha egy valós szám nem írható fel ilyen alakban, akkor <strong>irracionális</strong>.
+          <M t="m" /> és <M t="n" /> egész, <M t="n\ne 0" />. Ha egy valós szám nem írható fel ilyen alakban, akkor{' '}
+          <strong>irracionális</strong>.
         </p>
 
         <Def title="Racionális szám tizedes alakja">
@@ -133,6 +155,27 @@ export const S1_1: Page[] = [
           Egy szám nem lehet egyszerre tört alakú és nem tört alakú, vagyis a két halmaznak nincs közös eleme. Együtt
           viszont kiadják az egész <M t="\mathbb R" />-et.
         </p>
+
+        <Quiz
+          q={
+            <>
+              Melyik elemeket tartalmazza az <M t="S=\{x\in\mathbb Z : -2 < x \le 2\}" /> halmaz?
+            </>
+          }
+          options={[
+            { label: <M t="\{-2,\,-1,\,0,\,1,\,2\}" /> },
+            { label: <M t="\{-1,\,0,\,1,\,2\}" />, ok: true },
+            { label: <M t="\{-1,\,0,\,1\}" /> },
+            { label: <M t="(-2;\,2]" /> },
+          ]}
+          explain={
+            <>
+              A feltétel <M t="x\in\mathbb Z" />, tehát csak egész számokat gyűjtünk. A <M t="-2<x" /> szigorú
+              egyenlőtlenség kizárja a <M t="-2" />-t, míg az <M t="x\le 2" /> megengedi a <M t="2" />-t, így{' '}
+              <M t="S=\{-1,\,0,\,1,\,2\}" />.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -171,6 +214,26 @@ export const S1_1: Page[] = [
           meg, mert a két szám különböző előjelű. Törtes egyenlőtlenségnél ezért sokszor érdemes külön kezelni a
           nevező pozitív és negatív esetét.
         </Warn>
+
+        <Quiz
+          q={
+            <>
+              Tudjuk, hogy <M t="-3x + 6 \ge 15" />. Melyik a helyes megoldás?
+            </>
+          }
+          options={[
+            { label: <M t="x \ge -3" /> },
+            { label: <M t="x \le -3" />, ok: true },
+            { label: <M t="x \le 3" /> },
+            { label: <M t="x \ge 7" /> },
+          ]}
+          explain={
+            <>
+              Először kivonunk 6-ot: <M t="-3x \ge 9" />. Ezután <M t="-3" />-mal (negatív számmal!) osztunk, ami
+              megfordítja a reláció irányát: <M t="x \le -3" />.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -219,6 +282,22 @@ export const S1_1: Page[] = [
           A „végtelen” nem szám, hanem annak a jelölése, hogy az intervallum abba az irányba korlátlanul folytatódik. Ezért
           a végtelen mellett a zárójel mindig kerek.
         </p>
+
+        <Task
+          n={1}
+          q={
+            <>
+              Add meg a <M t="[-2;\,4)" /> és az <M t="(1;\,6]" /> intervallumok metszetét és unióját!
+            </>
+          }
+        >
+          <p>
+            A közös rész az 1-nél nagyobb, de 4-nél kisebb számokból áll, egyik végpont sincs benne mindkét halmazban:
+            <M block t="[-2;\,4)\cap(1;\,6]=(1;\,4)." />
+            Az unió mindent tartalmaz <M t="-2" />-től <M t="6" />-ig mindkét végponttal együtt:
+            <M block t="[-2;\,4)\cup(1;\,6]=[-2;\,6]." />
+          </p>
+        </Task>
       </>
     ),
   },
@@ -276,6 +355,27 @@ export const S1_1: Page[] = [
         </p>
 
         <AbsWidget />
+
+        <Quiz
+          q={
+            <>
+              Melyik intervallum az <M t="|x+2|\le 3" /> egyenlőtlenség megoldáshalmaza?
+            </>
+          }
+          options={[
+            { label: <M t="[-5;\,1]" />, ok: true },
+            { label: <M t="(-5;\,1)" /> },
+            { label: <M t="[-1;\,5]" /> },
+            { label: <M t="(-\infty;\,-5]\cup[1;\,\infty)" /> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="|x+2|=|x-(-2)|\le 3" />, a <M t="-2" /> ponttól legfeljebb 3 távolságra lévő számokat
+              keressük: <M t="-3\le x+2\le 3\ \Leftrightarrow\ -5\le x\le 1" />, vagyis a zárt <M t="[-5;\,1]" />{' '}
+              intervallumot.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -289,6 +389,53 @@ export const S1_1: Page[] = [
           Ha egy egyenlőtlenséget meg akarunk oldani, össze kell gyűjtenünk az összes olyan <M t="x" /> értéket, amely
           mellett igaz lesz. Ez a halmaz a gyakorlatban egy intervallum, vagy néhány intervallum egyesítése.
         </p>
+
+        <Steps
+          title="Abszolútértékes egyenlőtlenség feloldása"
+          problem={
+            <>
+              Oldjuk meg a valós számok halmazán a következő egyenlőtlenséget: <M t="|3x-7|<5" />.
+            </>
+          }
+          steps={[
+            {
+              title: 'Átírás kettős egyenlőtlenséggé',
+              body: (
+                <>
+                  Mivel <M t="5>0" />, a távolság-szabály alapján <M t="|3x-7|<5" /> ekvivalens ezzel:{' '}
+                  <M t="-5 < 3x - 7 < 5" />.
+                </>
+              ),
+            },
+            {
+              title: '7 hozzáadása mindhárom részhez',
+              body: (
+                <>
+                  A középső tagból eltüntetjük a <M t="-7" />-et: <M t="-5+7 < 3x < 5+7" />, azaz <M t="2 < 3x < 12" />.
+                </>
+              ),
+            },
+            {
+              title: 'Osztás pozitív 3-mal',
+              body: (
+                <>
+                  A <M t="3>0" /> miatt a relációjelek nem fordulnak meg: <M t="\tfrac{2}{3} < x < 4" />.
+                </>
+              ),
+            },
+            {
+              title: 'Intervallum alak és geometriai ellenőrzés',
+              body: (
+                <>
+                  A megoldáshalmaz a nyílt <M t="\left(\tfrac{2}{3};\,4\right)" /> intervallum. Ha elosztjuk az eredeti
+                  egyenlőtlenséget 3-mal, <M t="\left|x-\tfrac{7}{3}\right|<\tfrac{5}{3}" /> adódik: középpont{' '}
+                  <M t="c=\tfrac{7}{3}" />, sugár <M t="r=\tfrac{5}{3}" />, végpontok <M t="\tfrac{2}{3}" /> és{' '}
+                  <M t="\tfrac{12}{3}=4" />.
+                </>
+              ),
+            },
+          ]}
+        />
 
         <h3>1. Lineáris egyenlőtlenség</h3>
         <M block t="3x+2\ge 5x-4" />
@@ -361,10 +508,81 @@ export const S1_1: Page[] = [
 
   // ---------------------------------------------------------------- 7
   {
+    title: 'Összefoglaló és tipikus hibák',
+    body: (
+      <>
+        <h3>A szakasz kulcsfogalmai egy helyen</h3>
+        <table className="tbl">
+          <thead>
+            <tr><th>Téma</th><th>Lényeg / képlet</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Valós számok</strong></td>
+              <td>
+                <M t="\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}" />; racionális <M t="\Leftrightarrow" />{' '}
+                véges vagy szakaszosan ismétlődő tizedes tört; <M t="\mathbb{R}" /> teljes (nincs benne lyuk).
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Egyenlőtlenségek</strong></td>
+              <td>
+                Negatív számmal szorozva/osztva a reláció megfordul; reciprok-fordítás csak azonos előjelre érvényes.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Intervallumok</strong></td>
+              <td>
+                Kerek zárójel <M t="()" />: nyílt végpont (üres kör); szögletes <M t="[]" />: zárt végpont (tömör kör);
+                <M t="\pm\infty" /> mellett mindig kerek zárójel.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Abszolútérték</strong></td>
+              <td>
+                <M t="|x|=\sqrt{x^2}" />, <M t="|x-c|<r \Leftrightarrow c-r<x<c+r" />, komplementere{' '}
+                <M t="|x-c|\ge r \Leftrightarrow x\le c-r" /> vagy <M t="x\ge c+r" />.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Háromszög-egyenlőtlenség</strong></td>
+              <td>
+                <M t="|a+b|\le |a|+|b|" /> és a fordított alak: <M t="\big||a|-|b|\big|\le |a-b|" />.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Négy tipikus hiba, amit érdemes elkerülni</h3>
+        <Warn>
+          <strong>1. A négyzetgyök előjele:</strong> <M t="\sqrt{x^2}=x" /> csak <M t="x\ge 0" /> esetén igaz! Általánosan
+          mindig <M t="\sqrt{x^2}=|x|" />. Negatív <M t="x" />-re <M t="\sqrt{x^2}=-x>0" />.
+        </Warn>
+        <Warn>
+          <strong>2. Elfelejtett relációfordítás:</strong> a <M t="-2x < 6" /> egyenlőtlenségből <M t="-2" />-vel osztva{' '}
+          <M t="x > -3" /> lesz, nem <M t="x < -3" />. Érdemes egy próbaszámmal (pl. <M t="x=0" />) mindig gyorsan ellenőrizni.
+        </Warn>
+        <Warn>
+          <strong>3. Reciprok vegyes előjelű számokra:</strong> <M t="-2 < 3" /> igaz, de <M t="-\tfrac{1}{2} > \tfrac{1}{3}" />{' '}
+          hamis! A reciprok csak akkor fordítja meg a relációt, ha mindkét oldal azonos előjelű.
+        </Warn>
+        <Warn>
+          <strong>4. Vakon szorzás ismeretlen nevezővel:</strong> a <M t="\tfrac{4}{x+1}\le 2" /> egyenlőtlenséget nem
+          szabad egyszerűen megszorozni <M t="(x+1)" />-gyel, mert nem tudjuk az előjelét. Válassz szét eseteket (
+          <M t="x+1>0" /> és <M t="x+1<0" />), vagy rendezd nullára egy közös nevezőre hozva!
+        </Warn>
+      </>
+    ),
+  },
+
+  // ---------------------------------------------------------------- 8
+  {
     title: 'Gyakorló feladatok',
     body: (
       <>
         <p>Próbáld meg előbb önállóan megoldani, a megoldást csak utána nyisd ki.</p>
+
+        <h3>Könnyű</h3>
 
         <Task
           n={1}
@@ -380,8 +598,31 @@ export const S1_1: Page[] = [
           </p>
         </Task>
 
+        <Task n={2} q={<>Oldd meg: <M t="5-2x<3x+10" />, és írd fel a megoldást intervallum alakban!</>}>
+          <p>
+            Az <M t="x" />-es tagokat egy oldalra rendezve <M t="-5<5x" />, tehát <M t="x>-1" />. Megoldás: <M t="(-1;\,\infty)" />.
+          </p>
+        </Task>
+
         <Task
-          n={2}
+          n={3}
+          q={
+            <>
+              Írd fel abszolútértékes egyenlőtlenségként a <M t="(-3;\,7)" /> nyílt intervallumot!
+            </>
+          }
+        >
+          <p>
+            A középpont a két végpont átlaga: <M t="c=\tfrac{-3+7}{2}=2" />. A sugár a fél hossz:{' '}
+            <M t="r=\tfrac{7-(-3)}{2}=5" />. Mivel az intervallum nyílt, a keresett egyenlőtlenség:{' '}
+            <M t="|x-2|<5" />.
+          </p>
+        </Task>
+
+        <h3>Közepes</h3>
+
+        <Task
+          n={4}
           q={
             <>
               Tudjuk, hogy <M t="-1<x<4" />. Add meg a legszűkebb intervallumot, amelyben a <M t="2x-3" /> és az{' '}
@@ -390,21 +631,15 @@ export const S1_1: Page[] = [
           }
         >
           <p>
-            Szorzunk 2-vel: <M t="-2<2x<8" />, majd kivonunk 3-at: <M t="-5<2x-3<5" />.
+            Szorzunk 2-vel: <M t="-2<2x<8" />, majd kivonunk 3-at: <M t="-5<2x-3<5" />, tehát <M t="2x-3\in(-5;\,5)" />.
           </p>
           <p>
             Az <M t="x+2" /> értéke <M t="1" /> és <M t="6" /> között van, vagyis pozitív. Pozitív számoknál a reciprok
-            megfordítja a relációt: <M t="\tfrac16<\tfrac1{x+2}<1" />.
+            megfordítja a relációt: <M t="\tfrac16<\tfrac1{x+2}<1" />, azaz <M t="\tfrac{1}{x+2}\in\left(\tfrac16;\,1\right)" />.
           </p>
         </Task>
 
-        <Task n={3} q={<>Oldd meg: <M t="5-2x<3x+10" />.</>}>
-          <p>
-            Az <M t="x" />-es tagokat egy oldalra rendezve <M t="-5<5x" />, tehát <M t="x>-1" />. Megoldás: <M t="(-1;\,\infty)" />.
-          </p>
-        </Task>
-
-        <Task n={4} q={<>Oldd meg: <M t="|5-2x|\le 7" />.</>}>
+        <Task n={5} q={<>Oldd meg: <M t="|5-2x|\le 7" />.</>}>
           <p>
             <M t="-7\le 5-2x\le 7" />. Kivonunk 5-öt: <M t="-12\le -2x\le 2" />. Osztunk <M t="-2" />-vel, a relációk megfordulnak:{' '}
             <M t="6\ge x\ge -1" />. Megoldás: <M t="[-1;\,6]" />. A végpontokra ellenőrzés: <M t="x=6" />-nál <M t="|-7|=7" />,{' '}
@@ -412,7 +647,24 @@ export const S1_1: Page[] = [
           </p>
         </Task>
 
-        <Task n={5} q={<>Oldd meg az <M t="|x|+|x-2|=4" /> egyenletet.</>}>
+        <Task n={6} q={<>Oldd meg a törtes egyenlőtlenséget: <M t="\dfrac{3}{x-2} > 1" />.</>}>
+          <p>
+            Kikötés: <M t="x\neq 2" />. Rendezzük 0-ra:
+            <M block t="\frac{3}{x-2}-1=\frac{3-(x-2)}{x-2}=\frac{5-x}{x-2}>0." />
+            Egy hányados akkor pozitív, ha a számláló és a nevező azonos előjelű. A kritikus pontok <M t="2" /> és{' '}
+            <M t="5" />:
+          </p>
+          <ul>
+            <li><M t="x<2" />: számláló <M t="+" />, nevező <M t="-" /> <M t="\Rightarrow" /> negatív.</li>
+            <li><M t="2<x<5" />: számláló <M t="+" />, nevező <M t="+" /> <M t="\Rightarrow" /> pozitív (jó!).</li>
+            <li><M t="x>5" />: számláló <M t="-" />, nevező <M t="+" /> <M t="\Rightarrow" /> negatív.</li>
+          </ul>
+          <p>A megoldáshalmaz: <M t="(2;\,5)" />.</p>
+        </Task>
+
+        <h3>Nehéz</h3>
+
+        <Task n={7} q={<>Oldd meg az <M t="|x|+|x-2|=4" /> egyenletet.</>}>
           <p>Az abszolútértékek előjelváltása a 0 és a 2 helyen van, ezért három tartományt vizsgálunk.</p>
           <ul>
             <li>
@@ -428,12 +680,34 @@ export const S1_1: Page[] = [
           <p>Megoldások: <M t="x=-1" /> és <M t="x=3" />. Geometriailag: azok a pontok, amelyeknek a 0-tól és a 2-től mért távolságának összege 4.</p>
         </Task>
 
-        <Task n={6} q={<>Bizonyítsd be, hogy tetszőleges valós <M t="a,b" /> esetén <M t="\big||a|-|b|\big|\le |a-b|" />.</>}>
+        <Task n={8} q={<>Bizonyítsd be, hogy tetszőleges valós <M t="a,b" /> esetén <M t="\big||a|-|b|\big|\le |a-b|" />.</>}>
           <p>
             A háromszög-egyenlőtlenséget alkalmazzuk az <M t="a=(a-b)+b" /> felbontásra:{' '}
             <M t="|a|\le|a-b|+|b|" />, vagyis <M t="|a|-|b|\le|a-b|" />. Az <M t="a" /> és <M t="b" /> szerepét felcserélve{' '}
             <M t="|b|-|a|\le|b-a|=|a-b|" />. A két egyenlőtlenség együtt azt jelenti, hogy <M t="|a|-|b|" /> és az ellentettje is
             legfeljebb <M t="|a-b|" />, ez pedig éppen a bizonyítandó állítás.
+          </p>
+        </Task>
+
+        <Task
+          n={9}
+          q={
+            <>
+              Oldd meg a <M t="\big||x-1|-2\big| \le 1" /> egymásba ágyazott abszolútértékes egyenlőtlenséget!
+            </>
+          }
+        >
+          <p>
+            Először a külső abszolútértéket bontjuk fel:
+            <M block t="-1 \le |x-1|-2 \le 1 \ \Longleftrightarrow\ 1 \le |x-1| \le 3." />
+            Ez azt jelenti, hogy <M t="x" /> távolsága az 1-től legalább 1, de legfeljebb 3:
+          </p>
+          <ul>
+            <li>az 1-től jobbra: <M t="1+1 \le x \le 1+3" />, vagyis <M t="[2;\,4]" />;</li>
+            <li>az 1-től balra: <M t="1-3 \le x \le 1-1" />, vagyis <M t="[-2;\,0]" />.</li>
+          </ul>
+          <p>
+            A megoldáshalmaz: <M t="[-2;\,0]\cup[2;\,4]" />.
           </p>
         </Task>
       </>

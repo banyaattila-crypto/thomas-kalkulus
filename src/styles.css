@@ -504,3 +504,145 @@ h1 {
 .band-ab { fill: rgba(52, 211, 153, 0.16); }
 .verdict.ok { border-left: 4px solid var(--ok); }
 .verdict.no { border-left: 4px solid #f87171; }
+
+/* ---- Gyorsteszt (<Quiz />) ---- */
+.quiz {
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+  padding: 14px 18px 16px;
+  margin: 20px 0;
+  background: linear-gradient(155deg, rgba(14, 30, 56, 0.72), rgba(8, 12, 32, 0.78));
+}
+.quiz-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin-bottom: 8px;
+}
+.quiz-tag {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 700; color: var(--accent);
+  background: rgba(56, 189, 248, 0.14); border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 999px; padding: 2px 10px;
+}
+.quiz-reset {
+  background: none; border: 1px solid var(--line); color: var(--muted);
+  border-radius: 999px; padding: 2px 10px; font-size: 0.8rem; cursor: pointer;
+}
+.quiz-reset:hover { border-color: var(--accent); color: var(--ink); }
+.quiz-q { font-weight: 500; margin-bottom: 12px; }
+.quiz-opts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+}
+.quiz-opt {
+  display: flex; align-items: center; gap: 10px; text-align: left;
+  padding: 9px 12px; border-radius: 12px; cursor: pointer;
+  background: rgba(255, 255, 255, 0.045); border: 1px solid var(--line);
+  color: var(--ink); font-size: 0.94rem;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+.quiz-opt:hover:not(:disabled) {
+  border-color: var(--accent); background: rgba(56, 189, 248, 0.12); transform: translateY(-1px);
+}
+.quiz-opt:disabled { cursor: default; }
+.quiz-let {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.08); color: var(--accent);
+}
+.quiz-lbl { flex: 1; }
+.quiz-mark { font-weight: 800; font-size: 1rem; }
+.quiz-opt.ok {
+  border-color: var(--ok); background: rgba(52, 211, 153, 0.16); color: #ecfdf5;
+}
+.quiz-opt.ok .quiz-let { background: var(--ok); color: #052e1c; }
+.quiz-opt.ok .quiz-mark { color: var(--ok); }
+.quiz-opt.bad {
+  border-color: #f87171; background: rgba(248, 113, 113, 0.15); color: #fef2f2;
+}
+.quiz-opt.bad .quiz-let { background: #f87171; color: #2b0707; }
+.quiz-opt.bad .quiz-mark { color: #f87171; }
+.quiz-opt.dim { opacity: 0.45; }
+.quiz-fb {
+  margin-top: 12px; padding: 10px 14px; border-radius: 10px; font-size: 0.93rem;
+}
+.quiz-fb.ok {
+  border-left: 4px solid var(--ok); background: rgba(52, 211, 153, 0.11); color: #d7f5e8;
+}
+.quiz-fb.bad {
+  border-left: 4px solid #f87171; background: rgba(248, 113, 113, 0.11); color: #fee2e2;
+}
+
+/* ---- Lépésről lépésre (<Steps />) ---- */
+.steps-box {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 16px;
+  padding: 14px 18px 16px;
+  margin: 18px 0;
+  background: rgba(14, 18, 38, 0.65);
+}
+.steps-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.steps-tag {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 700; color: var(--amber);
+  background: rgba(245, 158, 11, 0.14); border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 999px; padding: 2px 10px;
+}
+.steps-title { font-weight: 700; color: var(--ink); }
+.steps-prob { margin: 6px 0 10px; }
+.steps-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.steps-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 9px 12px; border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035); border: 1px solid var(--line);
+}
+.steps-num {
+  flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--amber); color: #1a1003; font-weight: 800; font-size: 0.82rem;
+  margin-top: 2px;
+}
+.steps-body { flex: 1; min-width: 0; }
+.steps-st { font-weight: 600; color: #fde68a; margin-bottom: 2px; font-size: 0.94rem; }
+.steps-ctrl { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.steps-btn {
+  padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: 0.86rem; font-weight: 600;
+  background: rgba(255, 255, 255, 0.06); color: var(--ink); border: 1px solid var(--line);
+}
+.steps-btn:hover { border-color: var(--amber); color: #fde68a; }
+.steps-btn.primary {
+  background: rgba(245, 158, 11, 0.2); border-color: rgba(245, 158, 11, 0.55); color: #fde68a;
+}
+
+/* ---- Komplementer gomb az AbsWidget-ben ---- */
+.relbuttons { flex-wrap: wrap; }
+.relbuttons button.comp-btn {
+  margin-left: auto; font-size: 0.86rem; padding: 6px 12px;
+  border-color: rgba(251, 146, 60, 0.45); color: #fed7aa; background: rgba(251, 146, 60, 0.12);
+}
+.relbuttons button.comp-btn:hover { background: rgba(251, 146, 60, 0.24); }
+
+/* ---- Tanulói haladáskövetés (localStorage) ---- */
+.pager button.done-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px; border-radius: 999px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+  background: rgba(255, 255, 255, 0.06); color: var(--muted); border: 1px solid var(--line);
+  box-shadow: none; text-shadow: none; letter-spacing: 0;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.pager button.done-btn:hover { border-color: var(--ok); color: var(--ink); filter: none; }
+.pager button.done-btn:active { transform: translateY(1px); box-shadow: none; }
+.pager button.done-btn.on {
+  background: rgba(52, 211, 153, 0.18); border-color: var(--ok); color: var(--ok);
+}
+.done-check {
+  color: var(--ok); font-weight: 800; font-size: 0.85rem; margin-left: 4px; flex-shrink: 0;
+}
+.h1-done {
+  display: inline-block; margin-left: 10px; vertical-align: middle;
+  font-family: system-ui, sans-serif; font-size: 0.82rem; font-weight: 700;
+  padding: 2px 10px; border-radius: 999px;
+  background: rgba(52, 211, 153, 0.16); border: 1px solid rgba(52, 211, 153, 0.45);
+  color: var(--ok); -webkit-text-fill-color: var(--ok);
+}
+.pager { align-items: center; gap: 10px; flex-wrap: wrap; }

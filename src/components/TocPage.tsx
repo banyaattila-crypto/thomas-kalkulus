@@ -2,7 +2,7 @@ import { CSSProperties, ReactNode, useEffect, useRef, useState } from 'react';
 import { TOC, VOLUME_TITLES } from '../data/toc';
 import { SECTIONS } from '../content';
 
-type Props = { go: (section: string, page?: number) => void };
+type Props = { go: (section: string, page?: number) => void; done?: Set<string> };
 
 export const SUB: Record<number, string> = {
   1: 'Függvények, határérték, derivált',
@@ -294,7 +294,7 @@ function Ring({ value, size = 120, stroke = 10 }: { value: number; size?: number
 }
 
 /** Élő, kötetenként tagolt tartalomjegyzék: haladásjelzés, fejezet-emblémák, időtengelyes szakaszlista. */
-export function TocPage({ go }: Props) {
+export function TocPage({ go, done: completed = new Set() }: Props) {
   const [onlyReady, setOnlyReady] = useState(false);
   const all = TOC.flatMap((c) => c.sections);
   const ready = all.filter((s) => SECTIONS[s.id]);
@@ -340,6 +340,12 @@ export function TocPage({ go }: Props) {
                 <b>{chStarted}</b>
                 <span>megkezdett fejezet / {TOC.length}</span>
               </li>
+              {completed.size > 0 && (
+                <li>
+                  <b>{completed.size}</b>
+                  <span>elvégezve / {ready.length}</span>
+                </li>
+              )}
             </ul>
           </div>
         </div>
@@ -409,6 +415,11 @@ export function TocPage({ go }: Props) {
                               <span className="node" />
                               <span className="id">{s.id}</span>
                               <span className="t">{s.title}</span>
+                              {completed.has(s.id) && (
+                                <span className="done-check" title="Elvégezve" aria-label="Elvégezve">
+                                  ✓
+                                </span>
+                              )}
                               {rdy ? <span className="pg">{SECTIONS[s.id].pages} old.</span> : <span className="pg soon-t">hamarosan</span>}
                             </button>
                           </li>

@@ -11,7 +11,7 @@ export type SectionEntry = {
 
 /** Elkészült szakaszok: azonosító → metaadat + lusta betöltő. A többi szakasz a menüben „hamarosan” állapotú. */
 export const SECTIONS: Record<string, SectionEntry> = {
-  '1.1': { pages: 7, load: () => import('./s1_1').then((m) => m.S1_1) },
+  '1.1': { pages: 8, load: () => import('./s1_1').then((m) => m.S1_1) },
   '1.2': { pages: 8, load: () => import('./s1_2').then((m) => m.S1_2) },
   '1.3': { pages: 6, load: () => import('./s1_3').then((m) => m.S1_3) },
   '1.4': { pages: 6, load: () => import('./s1_4').then((m) => m.S1_4) },

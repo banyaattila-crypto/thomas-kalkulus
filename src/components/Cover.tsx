@@ -3,7 +3,7 @@ import { VERSION } from '../version';
 import { TOC } from '../data/toc';
 import { SECTIONS } from '../content';
 
-type Props = { onToc: () => void; onStart: () => void };
+type Props = { onToc: () => void; onStart: () => void; doneCount?: number };
 
 const SYMBOLS: { t: string; x: number; y: number; s: number; d: number }[] = [
   { t: '∫', x: 7, y: 20, s: 74, d: 0 },
@@ -29,7 +29,7 @@ const surf = (x: number, y: number) => {
  * - III. kötet: forgó 3D hullámfelület (sin r / r) a rajta keringő ∇f gradiensvektorral
  * - Plusz a lebegő matematikai szimbólumok és a csillogó Kalkulus borító
  */
-export function Cover({ onToc, onStart }: Props) {
+export function Cover({ onToc, onStart, doneCount = 0 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const totalSecs = TOC.reduce((a, c) => a + c.sections.length, 0);
@@ -375,6 +375,7 @@ export function Cover({ onToc, onStart }: Props) {
           <span className="ver">v{VERSION}</span>
           <span>
             {readySecs} / {totalSecs} szakasz kész · 3 kötet · 16 fejezet
+            {doneCount > 0 ? ` · ${doneCount} elvégezve` : ''}
           </span>
         </div>
       </div>
