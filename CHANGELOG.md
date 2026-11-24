@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.17.0] - 2026-11-24
+
+### Hozzáadva
+- 11.8 Taylor- és Maclaurin-sorok — **kétharmados mérföldkő (80 / 120 = 66,7%)!** (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets118.tsx`, 3 `Quiz` gyorsteszt, `Steps` $1/x$ ($a=2$) Taylor-fejtés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): együtthatók egyértelműsége ($c_n = f^{(n)}(a)/n!$), Taylor-polinomok és kvadratikus közelítés, $e^x$, $\sin x$, $\cos x$, $\operatorname{ch} x$, $\operatorname{sh} x$ Maclaurin-sora, nem-nulla középpont ($\ln x$ az $a=1$ körül, polinomok átírása), 6 kanonikus Maclaurin-sor zsebkalauza, Cauchy-ellenpélda ($e^{-1/x^2}$) és Euler-formula ($e^{ix}=\cos x + i\sin x$).
+
 ## [2.16.0] - 2026-11-24
 
 ### Hozzáadva
