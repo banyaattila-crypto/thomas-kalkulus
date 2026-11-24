@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { CoordWidget } from '../components/CoordWidget';
 import { SlopeWidget } from '../components/SlopeWidget';
 import { LineWidget } from '../components/LineWidget';
@@ -88,6 +88,10 @@ export const S1_2: Page[] = [
           helyről az <M t="(x_2;\,y_2)" /> helyre jut, a <strong>növekményei</strong>
         </p>
         <M block t="\Delta x = x_2 - x_1,\qquad \Delta y = y_2 - y_1." />
+        <p className="hint">
+          Előretekintés: ez a két növekmény alapozza meg később a teljes differenciálszámítást (3. fejezet), hiszen ott
+          egy görbe lokális viselkedését egyre rövidebb <M t="\Delta x" /> lépésekre húzott egyenesekkel közelítjük.
+        </p>
         <p>
           Ez mindig „vég mínusz kezdet”, ezért a növekmény lehet pozitív, negatív vagy nulla. Ha például egy pont az{' '}
           <M t="A(-2;\,1)" /> helyről a <M t="B(3;\,-4)" /> helyre megy, akkor <M t="\Delta x=3-(-2)=5" /> és{' '}
@@ -125,6 +129,22 @@ export const S1_2: Page[] = [
 
         <SlopeWidget />
         <p className="hint">Állítsd a két pontot úgy, hogy Δx = 0 legyen, és nézd meg, mi történik a meredekséggel.</p>
+
+        <Quiz
+          q={<>Mekkora a meredeksége és az irányszöge az <M t="A(-1;\,3)" /> és <M t="B(2;\,0)" /> pontokon átmenő egyenesnek?</>}
+          options={[
+            { label: <><M t="m = 1" />, <M t="\varphi = 45^\circ" /></> },
+            { label: <><M t="m = -1" />, <M t="\varphi = 135^\circ" /></>, ok: true },
+            { label: <><M t="m = -1" />, <M t="\varphi = -45^\circ" /></> },
+            { label: <><M t="m = 0" />, <M t="\varphi = 0^\circ" /></> },
+          ]}
+          explain={
+            <>
+              <M t="m = \frac{0 - 3}{2 - (-1)} = \frac{-3}{3} = -1" />. Mivel az irányszög definíció szerint{' '}
+              <M t="0^\circ \le \varphi < 180^\circ" /> tartományba esik, <M t="\operatorname{tg}\varphi = -1 \implies \varphi = 135^\circ" />.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -234,6 +254,22 @@ export const S1_2: Page[] = [
         </ul>
 
         <PerpWidget />
+
+        <Quiz
+          q={<>Melyik egyenes merőleges a <M t="2x - 3y = 6" /> egyenesre?</>}
+          options={[
+            { label: <M t="y = \tfrac{2}{3}x + 5" /> },
+            { label: <M t="y = -\tfrac{2}{3}x + 1" /> },
+            { label: <M t="y = -\tfrac{3}{2}x + 4" />, ok: true },
+            { label: <M t="y = \tfrac{3}{2}x - 2" /> },
+          ]}
+          explain={
+            <>
+              A megadott egyenes <M t="y = \frac{2}{3}x - 2" />, meredeksége <M t="m_1 = \frac{2}{3}" />. A merőleges
+              meredeksége a negatív reciprok: <M t="m_2 = -\frac{1}{m_1} = -\frac{3}{2}" />.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -285,6 +321,47 @@ export const S1_2: Page[] = [
           negatív, akkor üres halmaz. Például <M t="x^2+y^2-4x+6y+13=0" /> átalakítva <M t="(x-2)^2+(y+3)^2=0" />, ami csak a{' '}
           <M t="(2;\,-3)" /> pont.
         </p>
+
+        <Steps
+          title="Kombinált mintapélda: kör kanonikus alakja és merőleges egyenes"
+          problem={
+            <>
+              Határozd meg az <M t="x^2 + y^2 - 6x + 4y - 3 = 0" /> kör középpontját és sugarát, valamint az{' '}
+              <M t="(1;\,-2)" /> ponton átmenő, <M t="m = 2" /> meredekségű egyenesre merőleges egyenes egyenletét!
+            </>
+          }
+          steps={[
+            {
+              title: 'Teljes négyzetté alakítás x-re és y-ra',
+              body: (
+                <p>
+                  A konstans <M t="-3" />-at átvisszük, majd hozzáadjuk mindkét oldalhoz a fél együtthatók négyzetét (
+                  <M t="(-3)^2 = 9" /> és <M t="2^2 = 4" />):
+                  <M block t="(x^2 - 6x + 9) + (y^2 + 4y + 4) = 3 + 9 + 4 = 16." />
+                </p>
+              ),
+            },
+            {
+              title: 'Középpont és sugár leolvasása',
+              body: (
+                <p>
+                  Kanonikus alakban <M t="(x - 3)^2 + (y + 2)^2 = 4^2" />, tehát a kör középpontja{' '}
+                  <strong><M t="C(3;\,-2)" /></strong>, sugara <strong><M t="r = 4" /></strong>.
+                </p>
+              ),
+            },
+            {
+              title: 'A merőleges egyenes felírása',
+              body: (
+                <p>
+                  Az <M t="m = 2" /> meredekségű egyenesre merőleges egyenes meredeksége{' '}
+                  <M t="m_\perp = -\frac{1}{2}" />. A pont–meredekség képlettel az <M t="(1;\,-2)" /> ponton át:
+                  <M block t="y - (-2) = -\frac{1}{2}(x - 1) \implies y = -\frac{1}{2}x - \frac{3}{2}." />
+                </p>
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },
@@ -346,6 +423,22 @@ export const S1_2: Page[] = [
         </p>
 
         <ParabolaWidget />
+
+        <Quiz
+          q={<>Hol van az <M t="y = 2x^2 - 8x + 5" /> parabola csúcspontja?</>}
+          options={[
+            { label: <M t="(2;\,-3)" />, ok: true },
+            { label: <M t="(-2;\,29)" /> },
+            { label: <M t="(4;\,5)" /> },
+            { label: <M t="(2;\,3)" /> },
+          ]}
+          explain={
+            <>
+              <M t="x_v = -\frac{b}{2a} = -\frac{-8}{2\cdot 2} = 2" />, és behelyettesítve{' '}
+              <M t="y_v = 2\cdot 2^2 - 8\cdot 2 + 5 = 8 - 16 + 5 = -3" />. Tehát a csúcs <M t="(2;\,-3)" />.
+            </>
+          }
+        />
 
         <p className="hint">
           A későbbiekben (1.5. szakasz) látni fogjuk, hogy az <M t="y=a(x-p)^2+q" /> parabola az <M t="y=ax^2" /> parabolának a{' '}
@@ -411,7 +504,29 @@ export const S1_2: Page[] = [
             </>
           )}
         </Plane>
-        <p className="hint">A gyűrű: a kék kör belseje, a belső (rózsaszín) kör belső tartománya nélkül.</p>
+        <p className="hint">A gyűrű: a kék kör belseje, a belső (narancssárga) kör belső tartománya nélkül.</p>
+
+        <Warn>
+          Négy tipikus hiba a koordinátageometriában:
+          <ol>
+            <li>
+              <strong>Előjelcsere a kör középpontjánál:</strong> az <M t="(x + 3)^2 + (y - 2)^2 = 9" /> kör középpontja{' '}
+              <M t="(-3;\,2)" /> (nem <M t="(3;\,-2)" />), sugara pedig <M t="3" /> (nem <M t="9" />!).
+            </li>
+            <li>
+              <strong>Függőleges egyenes meredeksége:</strong> az <M t="x = 4" /> egyenes meredeksége <em>nem 0</em>,
+              hanem nem értelmezett (a 0 meredekségű egyenes vízszintes!).
+            </li>
+            <li>
+              <strong><M t="m_1 m_2 = -1" /> összekeverése az ellentettel:</strong> az <M t="m = 2" /> meredekségű
+              egyenes merőlegese <M t="-\frac{1}{2}" />, nem <M t="-2" />!
+            </li>
+            <li>
+              <strong>Egyenlőtlenség irányának tippelése:</strong> félsíknál mindig tesztelj egy egyenesen kívüli
+              próbaponttal (pl. az origóval)!
+            </li>
+          </ol>
+        </Warn>
       </>
     ),
   },
@@ -490,6 +605,16 @@ export const S1_2: Page[] = [
           <p>
             A kör egyenlete <M t="(x-1)^2+(y-1)^2=5" />. Az <em>x</em>-tengelyen <M t="y=0" />, így <M t="(x-1)^2+1=5" />, <M t="(x-1)^2=4" />, <M t="x-1=\pm2" />.
             A metszéspontok <M t="(3;\,0)" /> és <M t="(-1;\,0)" />.
+          </p>
+        </Task>
+
+        <Task n={9} q={<>Határozd meg az <M t="x^2 + y^2 - 4x + 2y - 20 = 0" /> körhöz a rajta fekvő <M t="P(5;\,3)" /> pontban húzott érintő egyenletét!</>}>
+          <p>
+            Teljes négyzetté alakítva: <M t="(x - 2)^2 + (y + 1)^2 = 25" />, így a középpont <M t="C(2;\,-1)" />, a
+            sugár <M t="5" /> (ellenőrzés: <M t="3^2 + 4^2 = 25" />, <M t="P" /> valóban a körön van). A <M t="CP" />{' '}
+            sugár meredeksége <M t="m_{CP} = \frac{3 - (-1)}{5 - 2} = \frac{4}{3}" />. Mivel az érintő merőleges a
+            sugárra, meredeksége <M t="m_e = -\frac{3}{4}" />. Egyenlete a <M t="P(5;\,3)" /> ponton át:
+            <M block t="y - 3 = -\frac{3}{4}(x - 5) \implies y = -\frac{3}{4}x + \frac{27}{4}\quad (3x + 4y = 27)." />
           </p>
         </Task>
       </>
