@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [1.32.0] - 2026-11-24
+
+### Hozzáadva
+- 9.3 Euler-módszer (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): az Euler-módszer geometriája és iterációs képlete ($y_n = y_{n-1} + f(x_{n-1}, y_{n-1})h$), lépésenkénti táblázat (Thomas 2. példa: $y'=1+y,\; y(0)=1$, interaktív szimulátorral), lokális $O(h^2)$ vs. globális $O(h)$ hiba és lépésköz-felezés, konvexitási torzítás (konvex $\Rightarrow$ alulbecslés, konkáv $\Rightarrow$ felülbecslés), javított Euler / Heun / RK2 prediktor–korrektor módszer ($O(h^2)$) és élő Euler vs. RK2 verseny, véges idejű felrobbanás ($y'=y^2$) és numerikus instabilitás ($y'=-\lambda y$, $h < 2/\lambda$ szimulátorral), visszafelé léptetés ($h<0$) és kitekintés az RK4-re, összefoglalás és 4 buktató.
+
 ## [1.31.0] - 2026-11-23
 
 ### Hozzáadva
