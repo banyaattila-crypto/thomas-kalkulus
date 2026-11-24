@@ -209,56 +209,380 @@ function emblem(n: number): ReactNode {
   }
 }
 
-/* ------------------------------------------------------------------ hero animáció: görbén futó érintő */
+/* ------------------------------------------------------------------ hero animáció: élő kalkulus-panoráma (Canvas 2D) */
 
-const HW = 900;
-const HH = 220;
-const hx = (x: number) => 60 + (x + 6) * 70;
-const hy = (y: number) => 118 - y * 38;
-const hf = (x: number) => Math.sin(0.9 * x) + 0.35 * Math.sin(2.1 * x + 1);
-const hdf = (x: number) => 0.9 * Math.cos(0.9 * x) + 0.35 * 2.1 * Math.cos(2.1 * x + 1);
+type Particle = { x: number; y: number; life: number; maxLife: number; hue: 'cyan' | 'teal' | 'amber' };
 
-function HeroCurve() {
-  const tan = useRef<SVGLineElement>(null);
-  const dot = useRef<SVGCircleElement>(null);
+function HeroCanvas({ mouseXRef }: { mouseXRef: React.MutableRefObject<number | null> }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
   useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let raf = 0;
-    const t0 = performance.now();
-    const frame = (now: number) => {
-      const t = reduce ? 3 : (now - t0) / 1000;
-      const x = -5 + ((Math.sin(t * 0.4) + 1) / 2) * 10;
-      const y = hf(x);
-      const m = hdf(x);
-      const dx = 1.5;
-      if (tan.current) {
-        tan.current.setAttribute('x1', String(hx(x - dx)));
-        tan.current.setAttribute('y1', String(hy(y - m * dx)));
-        tan.current.setAttribute('x2', String(hx(x + dx)));
-        tan.current.setAttribute('y2', String(hy(y + m * dx)));
+    let time = 0;
+    let last = performance.now();
+    let smoothX = 0.6;
+
+    // Áramló vektormező-részecskék
+    const particles: Particle[] = Array.from({ length: 42 }, (_, i) => ({
+      x: Math.random(),
+      y: Math.random(),
+      life: Math.random() * 5,
+      maxLife: 3.5 + Math.random() * 3.5,
+      hue: i % 5 === 0 ? 'amber' : i % 2 === 0 ? 'cyan' : 'teal',
+    }));
+
+    const draw = (tm: number, dt: number) => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const rect = canvas.getBoundingClientRect();
+      const w = Math.max(rect.width, 320);
+      const h = Math.max(rect.height, 180);
+      if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
+        canvas.width = Math.round(w * dpr);
+        canvas.height = Math.round(h * dpr);
       }
-      if (dot.current) {
-        dot.current.setAttribute('cx', String(hx(x)));
-        dot.current.setAttribute('cy', String(hy(y)));
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const t = reduce ? 4.2 : tm;
+
+      // 1. Mély háttér + lassan lélegző aurora fényfoltok (cián, teal, arany)
+      ctx.clearRect(0, 0, w, h);
+      const g1 = ctx.createRadialGradient(
+        w * (0.22 + 0.06 * Math.sin(t * 0.25)),
+        h * (0.35 + 0.12 * Math.cos(t * 0.3)),
+        10,
+        w * 0.22,
+        h * 0.35,
+        w * 0.45
+      );
+      g1.addColorStop(0, 'rgba(56, 189, 248, 0.22)');
+      g1.addColorStop(1, 'rgba(56, 189, 248, 0)');
+      ctx.fillStyle = g1;
+      ctx.fillRect(0, 0, w, h);
+
+      const g2 = ctx.createRadialGradient(
+        w * (0.78 + 0.05 * Math.cos(t * 0.22)),
+        h * (0.62 + 0.1 * Math.sin(t * 0.28)),
+        10,
+        w * 0.78,
+        h * 0.62,
+        w * 0.42
+      );
+      g2.addColorStop(0, 'rgba(251, 191, 36, 0.16)');
+      g2.addColorStop(0.55, 'rgba(45, 212, 191, 0.09)');
+      g2.addColorStop(1, 'rgba(45, 212, 191, 0)');
+      ctx.fillStyle = g2;
+      ctx.fillRect(0, 0, w, h);
+
+      // 2. Finom koordinátarács
+      ctx.strokeStyle = 'rgba(148, 197, 255, 0.065)';
+      ctx.lineWidth = 1;
+      const step = 36;
+      for (let x = step; x < w; x += step) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, h);
+        ctx.stroke();
       }
-      if (!reduce) raf = requestAnimationFrame(frame);
+      for (let y = step; y < h; y += step) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+      }
+
+      // 3. Áramló vektormező-részecskék (III. kötet hangulat)
+      for (const p of particles) {
+        if (!reduce) {
+          p.life += dt;
+          const vx = 0.045 + 0.025 * Math.cos(p.y * 6.2 + t * 0.6);
+          const vy = 0.032 * Math.sin(p.x * 8.0 - t * 0.7);
+          p.x += vx * dt;
+          p.y += vy * dt;
+          if (p.x > 1.05 || p.y < -0.05 || p.y > 1.05 || p.life > p.maxLife) {
+            p.x = -0.02 + Math.random() * 0.4;
+            p.y = 0.08 + Math.random() * 0.84;
+            p.life = 0;
+          }
+        }
+        const fade = Math.sin(Math.min(1, p.life / p.maxLife) * Math.PI);
+        const alpha = (0.15 + 0.42 * fade).toFixed(3);
+        const px = p.x * w;
+        const py = p.y * h;
+        const color =
+          p.hue === 'amber'
+            ? `rgba(251, 191, 36, ${alpha})`
+            : p.hue === 'teal'
+              ? `rgba(45, 212, 191, ${alpha})`
+              : `rgba(56, 189, 248, ${alpha})`;
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.moveTo(px - 10, py - Math.sin(p.x * 8 - t * 0.7) * 3.5);
+        ctx.lineTo(px, py);
+        ctx.stroke();
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(px, py, 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 4. Forgó 3D Lissajous-szalag a jobb oldalon (finom háttérelem)
+      const cx3 = w * 0.84;
+      const cy3 = h * 0.5;
+      const r3 = Math.min(w * 0.13, h * 0.44);
+      const yaw = t * 0.35;
+      const cyw = Math.cos(yaw);
+      const syw = Math.sin(yaw);
+      ctx.save();
+      ctx.strokeStyle = 'rgba(45, 212, 191, 0.2)';
+      ctx.lineWidth = 1.25;
+      ctx.beginPath();
+      const N3 = 140;
+      for (let i = 0; i <= N3; i++) {
+        const u = (i / N3) * Math.PI * 2;
+        const x3 = Math.sin(3 * u + t * 0.25);
+        const y3 = Math.cos(2 * u);
+        const z3 = Math.sin(5 * u - t * 0.18) * 0.55;
+        const xr = x3 * cyw - z3 * syw;
+        const sx3 = cx3 + xr * r3;
+        const sy3 = cy3 + y3 * r3 * 0.72;
+        if (i === 0) ctx.moveTo(sx3, sy3);
+        else ctx.lineTo(sx3, sy3);
+      }
+      ctx.stroke();
+      ctx.restore();
+
+      // 5. Fő kalkulus-görbe koordináta-rendszere
+      const midY = h * 0.56;
+      const xMin = -5.6;
+      const xMax = 5.6;
+      const sx = w / (xMax - xMin);
+      const sy = h * 0.24;
+      const X = (x: number) => (x - xMin) * sx;
+      const Y = (y: number) => midY - y * sy;
+
+      // x-tengely
+      ctx.strokeStyle = 'rgba(186, 230, 253, 0.2)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, midY);
+      ctx.lineTo(w, midY);
+      ctx.stroke();
+
+      const f = (x: number) => Math.sin(0.85 * x + 0.35 * t) + 0.36 * Math.cos(1.75 * x - 0.25 * t);
+      const df = (x: number) => 0.85 * Math.cos(0.85 * x + 0.35 * t) - 0.36 * 1.75 * Math.sin(1.75 * x - 0.25 * t);
+      const ddf = (x: number) => -0.85 * 0.85 * Math.sin(0.85 * x + 0.35 * t) - 0.36 * 1.75 * 1.75 * Math.cos(1.75 * x - 0.25 * t);
+
+      // Mozgó x₀ pont: egérkövetés (ha a hero fölött van) vagy lágy önálló siklás
+      const autoX = -3.8 + ((Math.sin(t * 0.42) + 1) / 2) * 7.6;
+      const targetX = mouseXRef.current !== null ? xMin + mouseXRef.current * (xMax - xMin) : autoX;
+      smoothX = reduce ? 0.8 : smoothX + (targetX - smoothX) * Math.min(1, dt * 6);
+      const x0 = Math.max(-4.9, Math.min(4.9, smoothX));
+      const y0 = f(x0);
+      const m0 = df(x0);
+      const dd0 = ddf(x0);
+
+      // 6. Integrál-téglalapok (Riemann-összeg) -5-től x₀-ig + lágy területkitöltés
+      const a = -5.0;
+      if (x0 > a + 0.35) {
+        ctx.beginPath();
+        ctx.moveTo(X(a), midY);
+        const stepsArea = 70;
+        for (let i = 0; i <= stepsArea; i++) {
+          const xv = a + ((x0 - a) * i) / stepsArea;
+          ctx.lineTo(X(xv), Y(f(xv)));
+        }
+        ctx.lineTo(X(x0), midY);
+        ctx.closePath();
+        const areaGrad = ctx.createLinearGradient(0, midY - sy * 1.4, 0, midY + sy);
+        areaGrad.addColorStop(0, 'rgba(56, 189, 248, 0.22)');
+        areaGrad.addColorStop(0.5, 'rgba(45, 212, 191, 0.1)');
+        areaGrad.addColorStop(1, 'rgba(56, 189, 248, 0.02)');
+        ctx.fillStyle = areaGrad;
+        ctx.fill();
+
+        const bars = 26;
+        const dx = (x0 - a) / bars;
+        for (let i = 0; i < bars; i++) {
+          const xm = a + (i + 0.5) * dx;
+          const yv = f(xm);
+          const top = Y(Math.max(yv, 0));
+          const bot = Y(Math.min(yv, 0));
+          const bw = Math.max(1.5, dx * sx - 1.5);
+          ctx.fillStyle = 'rgba(251, 191, 36, 0.085)';
+          ctx.fillRect(X(a + i * dx), top, bw, bot - top);
+          ctx.strokeStyle = 'rgba(251, 191, 36, 0.24)';
+          ctx.lineWidth = 0.9;
+          ctx.strokeRect(X(a + i * dx), top, bw, bot - top);
+        }
+      }
+
+      // 7. Szaggatott deriváltgörbe f′(x) (halvány smaragd szellemvonal)
+      ctx.save();
+      ctx.strokeStyle = 'rgba(52, 211, 153, 0.32)';
+      ctx.lineWidth = 1.6;
+      ctx.setLineDash([5, 6]);
+      ctx.beginPath();
+      for (let px = 0; px <= w; px += 4) {
+        const xv = xMin + (px / w) * (xMax - xMin);
+        const py = Y(df(xv) * 0.72);
+        if (px === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      ctx.restore();
+
+      // 8. Fő ragyogó f(x) görbe (cián–teal–arany gradienssel és glow-val)
+      const curveGrad = ctx.createLinearGradient(0, 0, w, 0);
+      curveGrad.addColorStop(0, '#38bdf8');
+      curveGrad.addColorStop(0.55, '#2dd4bf');
+      curveGrad.addColorStop(1, '#fbbf24');
+      ctx.save();
+      ctx.shadowColor = 'rgba(56, 189, 248, 0.6)';
+      ctx.shadowBlur = 12;
+      ctx.strokeStyle = curveGrad;
+      ctx.lineWidth = 2.8;
+      ctx.beginPath();
+      for (let px = 0; px <= w; px += 3) {
+        const xv = xMin + (px / w) * (xMax - xMin);
+        const py = Y(f(xv));
+        if (px === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      ctx.restore();
+
+      // 9. Lokális simulókör (görbületi kör) az x₀ pontban!
+      const px0 = X(x0);
+      const py0 = Y(y0);
+      // Képernyő-koordinátás deriváltak a pontos kör-illeszkedéshez
+      const sp = (-m0 * sy) / sx;
+      const spp = (-dd0 * sy) / (sx * sx);
+      if (Math.abs(spp) > 1e-4) {
+        const denom = Math.pow(1 + sp * sp, 1.5);
+        const Rpx = Math.abs(denom / spp);
+        if (Rpx < 220 && Rpx > 12) {
+          const factor = (1 + sp * sp) / spp;
+          const cx = px0 - sp * factor;
+          const cy = py0 + factor;
+          ctx.save();
+          ctx.strokeStyle = 'rgba(45, 212, 191, 0.38)';
+          ctx.lineWidth = 1.4;
+          ctx.setLineDash([4, 4]);
+          ctx.beginPath();
+          ctx.arc(cx, cy, Rpx, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.setLineDash([]);
+          // Görbületi sugár (normálvektor) a középpontba
+          ctx.strokeStyle = 'rgba(52, 211, 153, 0.5)';
+          ctx.lineWidth = 1.2;
+          ctx.beginPath();
+          ctx.moveTo(px0, py0);
+          ctx.lineTo(cx, cy);
+          ctx.stroke();
+          ctx.fillStyle = 'rgba(52, 211, 153, 0.75)';
+          ctx.beginPath();
+          ctx.arc(cx, cy, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      // 10. Vetítővonal az x-tengelyre
+      ctx.save();
+      ctx.strokeStyle = 'rgba(251, 191, 36, 0.32)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 4]);
+      ctx.beginPath();
+      ctx.moveTo(px0, midY);
+      ctx.lineTo(px0, py0);
+      ctx.stroke();
+      ctx.restore();
+
+      // 11. Ragyogó érintőegyenes és mozgó pont
+      const L = 125;
+      const norm = Math.hypot(1, sp);
+      const tx = (1 / norm) * L;
+      const ty = (sp / norm) * L;
+      ctx.save();
+      ctx.shadowColor = 'rgba(251, 146, 60, 0.7)';
+      ctx.shadowBlur = 10;
+      ctx.strokeStyle = '#fb923c';
+      ctx.lineWidth = 2.4;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(px0 - tx, py0 - ty);
+      ctx.lineTo(px0 + tx, py0 + ty);
+      ctx.stroke();
+      ctx.restore();
+
+      // Pulzáló dupla glória
+      const pulse = 10 + 4 * Math.sin(t * 3.2);
+      ctx.beginPath();
+      ctx.arc(px0, py0, pulse, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(251, 191, 36, 0.2)';
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(px0, py0, 5.2, 0, Math.PI * 2);
+      ctx.fillStyle = '#fbbf24';
+      ctx.fill();
+      ctx.lineWidth = 1.6;
+      ctx.strokeStyle = '#fff';
+      ctx.stroke();
+
+      // Élő f′(x₀) felirat a pont mellett
+      ctx.font = '600 11px ui-monospace, SFMono-Regular, Menlo, monospace';
+      ctx.fillStyle = 'rgba(253, 230, 138, 0.85)';
+      const mTxt = m0.toFixed(2).replace('.', ',').replace('-', '−');
+      const labelX = px0 > w - 130 ? px0 - 98 : px0 + 12;
+      const labelY = py0 < 28 ? py0 + 20 : py0 - 12;
+      ctx.fillText(`f′(x₀) = ${mTxt}`, labelX, labelY);
     };
-    raf = requestAnimationFrame(frame);
-    return () => cancelAnimationFrame(raf);
-  }, []);
-  let d = '';
-  for (let i = 0; i <= 240; i++) {
-    const x = -6 + (i / 240) * 12;
-    d += `${i ? 'L' : 'M'}${hx(x).toFixed(1)},${hy(hf(x)).toFixed(1)} `;
-  }
-  return (
-    <svg className="hero-curve" viewBox={`0 0 ${HW} ${HH}`} preserveAspectRatio="xMidYMid slice" aria-hidden>
-      <line x1={0} y1={hy(0)} x2={HW} y2={hy(0)} className="hc-axis" />
-      <path d={d} className="hc-curve" pathLength={1} />
-      <line ref={tan} className="hc-tan" />
-      <circle ref={dot} r={6} className="hc-dot" />
-    </svg>
-  );
+
+    const frame = (ts: number) => {
+      const dt = Math.min((ts - last) / 1000, 0.05);
+      last = ts;
+      time += dt;
+      draw(time, dt);
+      raf = requestAnimationFrame(frame);
+    };
+
+    const onVis = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+      } else if (!reduce && !raf) {
+        last = performance.now();
+        raf = requestAnimationFrame(frame);
+      }
+    };
+
+    const onResize = () => {
+      if (reduce) draw(0, 0);
+    };
+
+    if (reduce) {
+      draw(0, 0);
+    } else {
+      raf = requestAnimationFrame(frame);
+    }
+    document.addEventListener('visibilitychange', onVis);
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      document.removeEventListener('visibilitychange', onVis);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [mouseXRef]);
+
+  return <canvas ref={canvasRef} className="hero-canvas" aria-hidden />;
 }
 
 /* ------------------------------------------------------------------ fő oldal */
@@ -296,6 +620,7 @@ function Ring({ value, size = 120, stroke = 10 }: { value: number; size?: number
 /** Élő, kötetenként tagolt tartalomjegyzék: haladásjelzés, fejezet-emblémák, időtengelyes szakaszlista. */
 export function TocPage({ go, done: completed = new Set() }: Props) {
   const [onlyReady, setOnlyReady] = useState(false);
+  const mouseXRef = useRef<number | null>(null);
   const all = TOC.flatMap((c) => c.sections);
   const ready = all.filter((s) => SECTIONS[s.id]);
   const pagesTotal = ready.reduce((a, s) => a + SECTIONS[s.id].pages, 0);
@@ -304,8 +629,18 @@ export function TocPage({ go, done: completed = new Set() }: Props) {
   let idx = 0;
   return (
     <div className="toc-page">
-      <header className="toc-hero">
-        <HeroCurve />
+      <header
+        className="toc-hero"
+        onMouseMove={(e) => {
+          const r = e.currentTarget.getBoundingClientRect();
+          mouseXRef.current = (e.clientX - r.left) / Math.max(r.width, 1);
+        }}
+        onMouseLeave={() => {
+          mouseXRef.current = null;
+        }}
+      >
+        <HeroCanvas mouseXRef={mouseXRef} />
+        <div className="hero-scrim" aria-hidden />
         <div className="hero-body">
           <div className="hero-text">
             <div className="hero-kicker">Thomas-féle Kalkulus · I–III. kötet</div>

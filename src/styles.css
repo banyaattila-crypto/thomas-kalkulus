@@ -335,16 +335,16 @@ h1 {
 /* ---- tartalomjegyzék-oldal (v0.11) ---- */
 .toc-page { max-width: 1180px; margin: 0 auto; padding: 22px 22px 70px; }
 .toc-hero {
-  position: relative; overflow: hidden; border-radius: 22px; border: 1px solid var(--line);
-  background: linear-gradient(135deg, rgba(14,40,80,0.85), rgba(10,20,44,0.85) 55%, rgba(60,40,8,0.55));
-  box-shadow: 0 14px 50px rgba(0,0,0,0.4); animation: tocUp .7s ease both;
+  position: relative; overflow: hidden; border-radius: 22px; border: 1px solid rgba(125,211,252,0.22);
+  background: linear-gradient(135deg, rgba(10,24,52,0.94), rgba(7,15,34,0.92) 55%, rgba(22,30,44,0.9));
+  box-shadow: 0 18px 56px rgba(0,0,0,0.48), inset 0 1px 0 rgba(255,255,255,0.08); animation: tocUp .7s ease both;
 }
-.hero-curve { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.32; }
-.hc-axis { stroke: rgba(255,255,255,0.18); stroke-width: 1; }
-.hc-curve { fill: none; stroke: #38bdf8; stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; animation: tocDraw 3.2s ease-out .2s forwards; }
-.hc-tan { stroke: #fb923c; stroke-width: 2.5; stroke-linecap: round; }
-.hc-dot { fill: #fbbf24; stroke: #fff; stroke-width: 1.5; }
-.hero-body { position: relative; display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 30px 32px; }
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero-scrim {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(95deg, rgba(6,12,28,0.72) 0%, rgba(6,12,28,0.34) 48%, rgba(6,12,28,0.42) 100%);
+}
+.hero-body { position: relative; z-index: 1; display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 30px 32px; }
 .hero-kicker { color: var(--accent2); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; }
 .hero-title {
   font-family: 'Fraunces', Georgia, serif; font-size: clamp(2.1rem, 5vw, 3.2rem); margin: 4px 0 8px; line-height: 1.2; padding-bottom: 0.14em;
@@ -462,8 +462,7 @@ h1 {
 @keyframes emGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes emPop { 0% { transform: scale(0); transform-box: fill-box; transform-origin: center; } 70% { transform: scale(1.5); transform-box: fill-box; transform-origin: center; } 100% { transform: scale(1); transform-box: fill-box; transform-origin: center; } }
 @media (prefers-reduced-motion: reduce) {
-  .toc-hero, .toc-ch, .hc-curve, .ring-fg, .tl li.ready .node { animation: none !important; }
-  .hc-curve { stroke-dashoffset: 0; }
+  .toc-hero, .toc-ch, .ring-fg, .tl li.ready .node { animation: none !important; }
   .toc-ch:hover .em-l, .toc-ch:hover .em-a, .toc-ch:hover .em-bar, .toc-ch:hover .em-dot { animation: none; }
 }
 @media (max-width: 900px) {
