@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.19.0] - 2026-11-24
+
+### Hozzáadva
+- 11.10 Hatványsorok alkalmazása (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets1110.tsx`, 3 `Quiz` gyorsteszt, `Steps` Airy-egyenlet hatványsoros megoldása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): a binomiális sor ($(1+x)^m$), Einstein vs. Newton relativisztikus mozgási energia, $\arcsin x$ levezetése, differenciálegyenletek hatványsoros megoldása ($y''=xy$), nem-elemi integrálok ($\int e^{-x^2}$, $\int \frac{\sin x}{x}$, Fresnel-integrál), villám-határértékek L’Hôpital nélkül és a $\pi$ számítási versenye (Leibniz vs. Sharp vs. Machin).
+
 ## [2.18.0] - 2026-11-24
 
 ### Hozzáadva

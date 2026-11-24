@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.18.0`  
+**Aktuális verzió:** `v2.19.0`  
 **Dátum:** 2026-11-24  
-**Összesített haladás:** **81 / 120 szakasz kész** (67,5%) — az I. és II. kötet teljes (64/64), a III. kötetből a teljes 10. fejezet (`10.1`–`10.8`) és a `11.1`–`11.9` kész!
+**Összesített haladás:** **82 / 120 szakasz kész** (68,3%) — az I. és II. kötet teljes (64/64), a III. kötetből a teljes 10. fejezet (`10.1`–`10.8`) és a `11.1`–`11.10` kész!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -18,7 +18,7 @@
 | **II. kötet** | 8. Integrálási technikák | 8 / 8 (`8.1`–`8.8`) | **Kész** |
 | **II. kötet** | 9. Az integrálás további alkalmazásai | 5 / 5 (`9.1`–`9.5`) | **Kész** *(II. kötet teljes!)* |
 | **III. kötet** | 10. Kúpszeletek és polárkoordináták | 8 / 8 (`10.1`–`10.8`) | **Kész** |
-| **III. kötet** | 11. Végtelen sorozatok és sorok | 9 / 11 (`11.1`–`11.9`) | **Folyamatban** |
+| **III. kötet** | 11. Végtelen sorozatok és sorok | 10 / 11 (`11.1`–`11.10`) | **Folyamatban** |
 | **III. kötet** | 12–16. fejezet | 0 / 37 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
