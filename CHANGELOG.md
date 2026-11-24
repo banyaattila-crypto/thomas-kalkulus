@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.5.0] - 2026-11-24
+
+### Hozzáadva
+- 10.4 Kúpszeletek és paraméteres egyenletek, a ciklois (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets104.tsx`, 3 `Quiz` gyorsteszt, `Steps` ívhossz-levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): ellipszis és kör irányított paraméterezése, parabola és ferde hajítás, hiperbola trigonometrikus és hiperbolikus paraméterezése, a guruló kerék cikloisa, érintő ($\cot(t/2)$), ívhossz ($8a$), terület ($3\pi a^2$), brachisztochron-verseny és tautochron tulajdonság.
+
 ## [2.4.0] - 2026-11-24
 
 ### Hozzáadva
