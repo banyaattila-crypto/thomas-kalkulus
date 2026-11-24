@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.14.0] - 2026-11-24
+
+### Hozzáadva
+- 11.5 A hányados- és a gyökkritérium (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets115.tsx`, 3 `Quiz` gyorsteszt, `Steps` $\sum n!/n^n$ levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): D'Alembert-féle hányadoskritérium (12. tétel), faktoriális-egyszerűsítő zsebkalauz, Cauchy-féle gyökkritérium (13. tétel), a $\rho=1$ határeset csapdája, hányados vs. gyök stratégia és paraméteres sorok ($\sum x^n/n!$, $\sum nx^n/3^n$).
+
 ## [2.13.0] - 2026-11-24
 
 ### Hozzáadva
