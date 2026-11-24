@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.9.0] - 2026-11-24
+
+### Hozzáadva
+- 10.8 Kúpszeletek polárkoordinátákban — **10. fejezet teljes!** (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets108.tsx`, 3 `Quiz` gyorsteszt, `Steps` elemző kártya, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): egyenesek ($r\cos(\theta-\theta_0)=r_0$) és körök ($r=2a\cos(\theta-\theta_0)$) poláregyenlete, egységes poláris kúpszelet-képlet ($r=\frac{ke}{1\pm e\cos\theta}$ és $\sin\theta$), normalizálás és elforgatás ($\theta\to\theta-\alpha$), Kepler-pályák ($r=\frac{a(1-e^2)}{1+e\cos\theta}$) és konfokális parabolák merőleges metszése.
+
 ## [2.8.0] - 2026-11-24
 
 ### Hozzáadva
