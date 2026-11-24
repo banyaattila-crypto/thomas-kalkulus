@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.6.0] - 2026-11-24
+
+### Hozzáadva
+- 10.5 Polárkoordináták (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets105.tsx`, 3 `Quiz` gyorsteszt, `Steps` átalakító kártya, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): pólus, polártengely, negatív sugár értelmezése, egy pont végtelen sok polárneve, alapegyenletek ($r=a$, $\theta=\theta_0$) és tartományok, polár ↔ Descartes átváltás és az $\arctan(y/x)$ síknegyed-csapdája, origón átmenő körök ($r=2a\cos\theta+2b\sin\theta$) és egyenesek ($r\cos(\theta-\alpha)=d$).
+
 ## [2.5.0] - 2026-11-24
 
 ### Hozzáadva
