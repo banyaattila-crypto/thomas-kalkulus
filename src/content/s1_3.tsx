@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { FuncMachineWidget } from '../components/FuncMachineWidget';
 import { DomainWidget } from '../components/DomainWidget';
 import { SampleWidget } from '../components/SampleWidget';
@@ -185,6 +185,55 @@ export const S1_3: Page[] = [
           Az ábrán az értelmezési tartomány az x-tengely, az értékkészlet az y-tengely mentén van jelölve. Az utolsó két
           függvénynél (<M t="\tfrac{1}{x^2-4}" /> és <M t="\sqrt{x^2-1}" />) a tartomány több darabból áll.
         </p>
+
+        <Steps
+          title="Természetes értelmezési tartomány lépésről lépésre"
+          problem={<>Határozd meg a <M t="g(x) = \dfrac{\sqrt{6 - 2x}}{x - 1}" /> függvény természetes értelmezési tartományát!</>}
+          steps={[
+            {
+              title: 'Négyzetgyök alatti feltétel (negatív x-együtthatóval!)',
+              body: (
+                <p>
+                  A páros gyök alatti kifejezés nem lehet negatív:
+                  <M block t="6 - 2x \ge 0 \implies 6 \ge 2x \implies x \le 3." />
+                </p>
+              ),
+            },
+            {
+              title: 'Nevező kikötése',
+              body: (
+                <p>
+                  Nullával nem oszthatunk, ezért <M t="x - 1 \ne 0 \implies x \ne 1" />.
+                </p>
+              ),
+            },
+            {
+              title: 'A két feltétel közös része',
+              body: (
+                <p>
+                  Mivel az <M t="x = 1" /> pont beleesik a <M t="(-\infty;\,3]" /> félegyenesbe, kettévágja azt:{' '}
+                  <strong><M t="D(g) = (-\infty;\,1) \cup (1;\,3]" /></strong>.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <Quiz
+          q={<>Mi a természetes értelmezési tartománya az <M t="f(x) = \dfrac{1}{\sqrt{4 - x}}" /> függvénynek?</>}
+          options={[
+            { label: <M t="(-\infty;\,4]" /> },
+            { label: <M t="(-\infty;\,4)" />, ok: true },
+            { label: <M t="(4;\,\infty)" /> },
+            { label: <M t="\mathbb{R}\setminus\{4\}" /> },
+          ]}
+          explain={
+            <>
+              A gyök miatt <M t="4 - x \ge 0" />, de mivel a gyök a <em>nevezőben</em> áll, nem lehet <M t="0" /> sem —
+              tehát szigorúan <M t="4 - x > 0 \implies x < 4" />, vagyis <M t="(-\infty;\,4)" />!
+            </>
+          }
+        />
       </>
     ),
   },
@@ -284,6 +333,22 @@ export const S1_3: Page[] = [
           <M t="y=x^2-2" /> parabolát minden függőleges egyenes egy pontban metszi, ezért átmegy, a kör viszont elbukik: a belsejében
           haladó függőleges egyenesek mindegyike két pontban metszi.
         </Warn>
+
+        <Quiz
+          q={<>Az alábbi egyenletek közül melyik határozza meg <M t="y" />-t egyértelműen az <M t="x" /> függvényeként?</>}
+          options={[
+            { label: <M t="x^2 + y^2 = 16" /> },
+            { label: <M t="x = y^2 - 1" /> },
+            { label: <M t="y = x^2 - 1" />, ok: true },
+            { label: <M t="|y| = x" /> },
+          ]}
+          explain={
+            <>
+              Az <M t="y = x^2 - 1" /> minden <M t="x" />-hez pontosan egy <M t="y" />-t rendel (átmegy a vertikális
+              teszten). A másik háromnál pozitív <M t="x" />-ekhez két különböző <M t="\pm y" /> is tartozik.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -337,6 +402,22 @@ export const S1_3: Page[] = [
         </p>
         <PiecewiseWidget />
 
+        <Quiz
+          q={<>Mennyi <M t="\lfloor -2{,}4 \rfloor + \lceil 1{,}2 \rceil" /> értéke?</>}
+          options={[
+            { label: <M t="-1" />, ok: true },
+            { label: <M t="0" /> },
+            { label: <M t="-2" /> },
+            { label: <M t="1" /> },
+          ]}
+          explain={
+            <>
+              <M t="\lfloor -2{,}4 \rfloor = -3" /> (balra kerekítjük a legközelebbi egészre!) és{' '}
+              <M t="\lceil 1{,}2 \rceil = 2" /> (jobbra kerekítjük), így az összeg <M t="-3 + 2 = -1" />.
+            </>
+          }
+        />
+
         <h3>Képlet felírása grafikonból</h3>
         <p>
           Tegyük fel, hogy a grafikon két szakaszból áll: az <M t="(0;\,1)" /> pontból (ez a grafikon pontja) a <M t="(2;\,3)" />{' '}
@@ -357,6 +438,28 @@ export const S1_3: Page[] = [
           Az egyenlőtlenségek jeleinél a lényeg: minden <M t="x" /> pontosan egy ágba essen. A tartományok se ne fedjék át
           egymást, se ne hagyjanak lyukat.
         </p>
+
+        <Warn>
+          Négy tipikus hiba függvényeknél:
+          <ol>
+            <li>
+              <strong>Gyök a nevezőben:</strong> <M t="\frac{1}{\sqrt{x-2}}" /> esetén nem <M t="x \ge 2" />, hanem
+              szigorúan <M t="x > 2" />, mert a nevező nem lehet nulla!
+            </li>
+            <li>
+              <strong>Negatív számok egészrésze:</strong> <M t="\lfloor -2{,}4 \rfloor" /> nem <M t="-2" />, hanem{' '}
+              <M t="-3" /> — a számegyenesen mindig balra lépünk!
+            </li>
+            <li>
+              <strong>Átfedő ágak szakaszonkénti képletnél:</strong> ha mindkét ágban <M t="\le" /> és <M t="\ge" />{' '}
+              szerepel az ugrási pontban, és más értéket adnak, a szabály nem függvény!
+            </li>
+            <li>
+              <strong>Értékkészlet vs. célhalmaz:</strong> az <M t="R(f)" /> csak a ténylegesen felvett értékekből áll
+              (pl. <M t="f(x)=x^2" /> esetén <M t="[0;\,\infty)" />, nem az egész <M t="\mathbb{R}" />).
+            </li>
+          </ol>
+        </Warn>
       </>
     ),
   },
@@ -450,6 +553,15 @@ export const S1_3: Page[] = [
             <M t="C(t)=400\lceil t\rceil" />, <M t="t>0" />. Értékek: <M t="C(0{,}5)=400\cdot1=400" />, <M t="C(2)=800" />, <M t="C(2{,}1)=400\cdot3=1200" />,{' '}
             <M t="C(3)=1200" />. A grafikon lépcsős: minden egész óra elérése után ugrik 400 Ft-ot, az ugrás előtti szakasz végpontja a
             grafikon része (zárt), a következő szakasz kezdőpontja nem (nyílt).
+          </p>
+        </Task>
+
+        <Task n={9} q={<>Mi a <M t="h(x) = \lfloor x \rfloor + \lfloor -x \rfloor" /> függvény értékkészlete a valós számokon?</>}>
+          <p>
+            Ha <M t="x = k" /> egész szám, akkor <M t="\lfloor k \rfloor + \lfloor -k \rfloor = k + (-k) = 0" />. Ha{' '}
+            <M t="x" /> nem egész, akkor <M t="k < x < k + 1" /> valamely <M t="k \in \mathbb{Z}" /> egészre, innen{' '}
+            <M t="-k - 1 < -x < -k" />, tehát <M t="\lfloor x \rfloor = k" /> és <M t="\lfloor -x \rfloor = -k - 1" />,
+            összegük <M t="k + (-k - 1) = -1" />. Az értékkészlet tehát <strong><M t="\{-1;\,0\}" /></strong>!
           </p>
         </Task>
       </>

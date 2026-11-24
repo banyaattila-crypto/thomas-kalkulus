@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.20.2] - 2026-11-24
+
+### Fejlesztve
+- 1.3 Függvények és grafikonjaik (`s1_3.tsx`) frissítése az `analizis-labor.banyaattila.hu` 1.3 szakaszának nem-duplikált pedagógiai elemeivel: 1 lépésenkénti `<Steps />` természetes értelmezési tartomány levezetés ($g(x)=\frac{\sqrt{6-2x}}{x-1}$), 3 interaktív `<Quiz />` önellenőrző (gyök a nevezőben, vertikális teszt, $\lfloor -2{,}4\rfloor + \lceil 1{,}2\rceil$ egészrész-kvíz), 4 tipikus hiba blokk és 9. kihívásfeladat ($\lfloor x\rfloor + \lfloor -x\rfloor$ értékkészlete).
+
 ## [2.20.1] - 2026-11-24
 
 ### Fejlesztve
