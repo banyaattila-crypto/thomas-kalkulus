@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.20.3] - 2026-11-24
+
+### Fejlesztve
+- 1.4 Függvényosztályok és modellezés (`s1_4.tsx`) frissítése az `analizis-labor.banyaattila.hu` 1.4 szakaszának nem-duplikált elemeivel: 1 lépésenkénti `<Steps />` paritásvizsgálat ($h(x)=\frac{x^3-4x}{x^2+1}$), 3 interaktív `<Quiz />` önellenőrző (algebrai vs. transzcendens, $1/x$ monotonitási csapda, páros×páratlan szorzat kvíz) és 9. kihívásfeladat (tetszőleges függvény páros + páratlan felbontása).
+
 ## [2.20.2] - 2026-11-24
 
 ### Fejlesztve

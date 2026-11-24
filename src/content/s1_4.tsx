@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { PowerWidget } from '../components/PowerWidget';
 import { PolyWidget } from '../components/PolyWidget';
 import { ExpLogWidget } from '../components/ExpLogWidget';
@@ -114,6 +114,22 @@ export const S1_4: Page[] = [
           legjellemzőbb, legpontosabb osztályt kell választani.
         </p>
         <ClassifyWidget />
+
+        <Quiz
+          q={<>Az alábbi függvények közül melyik <strong>algebrai</strong> (és nem transzcendens)?</>}
+          options={[
+            { label: <M t="f(x) = 3^x" /> },
+            { label: <M t="g(x) = \log_2(x + 1)" /> },
+            { label: <M t="h(x) = \dfrac{\sqrt{x^2 + 5}}{x - 1}" />, ok: true },
+            { label: <M t="k(x) = \sin(x^2)" /> },
+          ]}
+          explain={
+            <>
+              A <M t="h(x)" /> polinomokból véges sok alapművelettel és gyökvonással áll elő, tehát algebrai. Az
+              exponenciális, logaritmikus és trigonometrikus függvények transzcendensek.
+            </>
+          }
+        />
       </>
     ),
   },
@@ -151,6 +167,22 @@ export const S1_4: Page[] = [
           A pontos kereső módszert, amely megmondja, hol milyen az irány, a 4.3. alfejezetben kapjuk meg, a derivált segítségével. Egyelőre
           a grafikon és a definíció az eszközünk.
         </p>
+
+        <Quiz
+          q={<>Melyik állítás igaz az <M t="f(x) = \dfrac{1}{x}" /> függvény monotonitására?</>}
+          options={[
+            { label: <>Szigorúan csökkenő a teljes <M t="\mathbb{R}\setminus\{0\}" /> tartományán</> },
+            { label: <>Szigorúan csökken a <M t="(-\infty;\,0)" /> és külön a <M t="(0;\,\infty)" /> intervallumon, de a kettő unióján nem</>, ok: true },
+            { label: <>A <M t="(-\infty;\,0)" /> intervallumon növekszik, <M t="(0;\,\infty)" />-n csökken</> },
+            { label: <>Sehol nem monoton</> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="-1 < 1" />, de <M t="f(-1) = -1 < 1 = f(1)" />, a két ág unióján nem csökkenő — csak a két
+              intervallumon külön-külön!
+            </>
+          }
+        />
       </>
     ),
   },
@@ -206,6 +238,57 @@ export const S1_4: Page[] = [
           </li>
         </ul>
         <SymmetryWidget />
+
+        <Steps
+          title="Paritásvizsgálat lépésről lépésre"
+          problem={<>Döntsd el, hogy a <M t="h(x) = \dfrac{x^3 - 4x}{x^2 + 1}" /> függvény páros, páratlan vagy egyik sem!</>}
+          steps={[
+            {
+              title: 'Az értelmezési tartomány szimmetriájának ellenőrzése',
+              body: (
+                <p>
+                  A nevező <M t="x^2 + 1 \ge 1 > 0" /> minden valós számra, így <M t="D(h) = \mathbb{R}" />, amely
+                  szimmetrikus a <M t="0" />-ra.
+                </p>
+              ),
+            },
+            {
+              title: 'Helyettesítés −x-szel',
+              body: (
+                <p>
+                  Minden <M t="x" /> helyébe <M t="-x" />-et írunk:
+                  <M block t="h(-x) = \frac{(-x)^3 - 4(-x)}{(-x)^2 + 1} = \frac{-x^3 + 4x}{x^2 + 1} = -\frac{x^3 - 4x}{x^2 + 1} = -h(x)." />
+                </p>
+              ),
+            },
+            {
+              title: 'Következtetés',
+              body: (
+                <p>
+                  Mivel <M t="h(-x) = -h(x)" />, a függvény <strong>páratlan</strong>, grafikonja középpontosan
+                  szimmetrikus az origóra.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <Quiz
+          q={<>Melyik állítás igaz egy páros <M t="f" /> és egy páratlan <M t="g" /> függvény <M t="f(x)\cdot g(x)" /> szorzatára?</>}
+          options={[
+            { label: 'Mindig páratlan', ok: true },
+            { label: 'Mindig páros' },
+            { label: 'Sem páros, sem páratlan' },
+            { label: <>Csak akkor páros, ha <M t="f(0) = 0" /></> },
+          ]}
+          explain={
+            <>
+              <M t="f(-x)\,g(-x) = f(x)\cdot(-g(x)) = -f(x)\,g(x)" />, tehát a szorzat mindig páratlan (hasonlóan a{' '}
+              <M t="(+)\cdot(-) = (-)" /> előjelszabályhoz!).
+            </>
+          }
+        />
+
         <p>
           Az egyetlen függvény, amely páros és páratlan is egyszerre, az azonosan nulla függvény: <M t="f(-x)=f(x)" /> és <M t="f(-x)=-f(x)" />{' '}
           csak úgy teljesülhet, ha <M t="f(x)=0" />.
@@ -325,6 +408,17 @@ export const S1_4: Page[] = [
           <p>
             <M t="k=T/\sqrt L=2{,}01/1=2{,}01" />. Így <M t="T(3)=2{,}01\sqrt3\approx3{,}48" /> s. A jóslat csak kis kitérésekre érvényes, és az adat egyetlen
             mérésre épül: több mérés megbízhatóbb <M t="k" />-t adna.
+          </p>
+        </Task>
+
+        <Task n={9} q={<>Igazold, hogy bármely <M t="f:\mathbb{R}\to\mathbb{R}" /> függvény felírható egy páros és egy páratlan függvény összegeként: <M t="f(x) = p(x) + q(x)" />!</>}>
+          <p>
+            Definiáljuk a következő két függvényt:
+            <M block t="p(x) = \frac{f(x) + f(-x)}{2}, \qquad q(x) = \frac{f(x) - f(-x)}{2}." />
+            Ekkor <M t="p(-x) = \frac{f(-x)+f(x)}{2} = p(x)" /> (tehát <M t="p" /> páros),{' '}
+            <M t="q(-x) = \frac{f(-x)-f(x)}{2} = -q(x)" /> (tehát <M t="q" /> páratlan), és összegük{' '}
+            <M t="p(x) + q(x) = f(x)" />! (Például az <M t="e^x" /> ilyen felbontása adja később a{' '}
+            <M t="\operatorname{ch} x" /> és <M t="\operatorname{sh} x" /> hiperbolikus függvényeket.)
           </p>
         </Task>
       </>
