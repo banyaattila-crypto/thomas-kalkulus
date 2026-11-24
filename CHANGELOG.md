@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.10.0] - 2026-11-24
+
+### Hozzáadva
+- 11.1 Sorozatok — **11. fejezet nyitószakasza!** (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets111.tsx`, 3 `Quiz` gyorsteszt, `Steps` Weierstrass+fixpont levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): sorozat fogalma, $\varepsilon$–$N$ definíció, határérték-szabályok, szendvicstétel, folytonos függvények és L'Hôpital-szabály, 6 nevezetes határérték, növekedési hierarchia, rekurzív sorozatok és Weierstrass tétele.
+
 ## [2.9.0] - 2026-11-24
 
 ### Hozzáadva
