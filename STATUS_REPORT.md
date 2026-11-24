@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v1.32.0`  
+**Aktuális verzió:** `v1.33.0`  
 **Dátum:** 2026-11-24  
-**Összesített haladás:** **62 / 120 szakasz kész** (51,7%) — már csak 2 szakasz (`9.4`–`9.5`) van hátra a teljes II. kötetből!
+**Összesített haladás:** **63 / 120 szakasz kész** (52,5%) — már csak 1 szakasz (`9.5`) van hátra a teljes II. kötetből (`v2.0.0`)!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -16,7 +16,7 @@
 | **II. kötet** | 6. A határozott integrál alkalmazásai | 7 / 7 (`6.1`–`6.7`) | **Kész** |
 | **II. kötet** | 7. Transzcendens függvények | 8 / 8 (`7.1`–`7.8`) | **Kész** |
 | **II. kötet** | 8. Integrálási technikák | 8 / 8 (`8.1`–`8.8`) | **Kész** |
-| **II. kötet** | 9. Az integrálás további alkalmazásai | 3 / 5 (`9.1`–`9.3`) | **Folyamatban** |
+| **II. kötet** | 9. Az integrálás további alkalmazásai | 4 / 5 (`9.1`–`9.4`) | **Folyamatban** |
 | **III. kötet** | 10–16. fejezet | 0 / 56 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
@@ -67,6 +67,7 @@
 - **`9.1` (`v1.30.0`):** Iránymező és szétválasztható változójú differenciálegyenletek — 8 oldal, 8 ábra/grafikon (`Widgets91.tsx`), 23 megoldott feladat. *(A 9. fejezet nyitószakasza — elértük a teljes háromkötetes tananyag felét: 60 / 120, 50,0%!)*
 - **`9.2` (`v1.31.0`):** Elsőrendű lineáris differenciálegyenletek — 8 oldal, 8 ábra/grafikon (`Widgets92.tsx`), 23 megoldott feladat.
 - **`9.3` (`v1.32.0`):** Euler-módszer — 8 oldal, 8 ábra/grafikon (`Widgets93.tsx`), 23 megoldott feladat.
+- **`9.4` (`v1.33.0`):** Autonóm differenciálegyenletek grafikus megoldása — 8 oldal, 8 ábra/grafikon (`Widgets94.tsx`), 23 megoldott feladat.
 
 ## Technikai állapot
 
@@ -79,4 +80,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **9.4 Autonóm differenciálegyenletek grafikus megoldása**.
+4. Következő modul: **9.5 Elsőrendű differenciálegyenletek alkalmazásai** *(ezzel lezárul a teljes II. kötet — `v2.0.0`!)*.
