@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.8.0] - 2026-11-24
+
+### Hozzáadva
+- 10.7 Terület és hosszúság polárkoordinátákban (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets107.tsx`, 3 `Quiz` gyorsteszt, `Steps` ívhossz-levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): körszektoros Riemann-összeg ($dA = \frac{1}{2}r^2\,d\theta$), kardioid, rózsaszirom és csigavonal-hurok területe, két polárgörbe közötti terület ($\frac{1}{2}(r_2^2-r_1^2)$), poláris ívhossz ($ds=\sqrt{r^2+(r')^2}\,d\theta$, kardioid $L=8a$) és forgástestek felszíne polárkoordinátákban.
+
 ## [2.7.0] - 2026-11-24
 
 ### Hozzáadva

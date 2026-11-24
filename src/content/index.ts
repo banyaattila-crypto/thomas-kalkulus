@@ -81,6 +81,7 @@ export const SECTIONS: Record<string, SectionEntry> = {
   '10.4': { pages: 8, load: () => import('./s10_4').then((m) => m.S10_4) },
   '10.5': { pages: 8, load: () => import('./s10_5').then((m) => m.S10_5) },
   '10.6': { pages: 8, load: () => import('./s10_6').then((m) => m.S10_6) },
+  '10.7': { pages: 8, load: () => import('./s10_7').then((m) => m.S10_7) },
 };
 
 const cache = new Map<string, Page[]>();
