@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { RadianWidget, UnitCircleWidget, TrigGraphWidget, SineWidget, IdentityWidget, CosineLawWidget } from '../components/Widgets16';
 import type { Page } from './s1_1';
 
@@ -36,9 +36,25 @@ export const S1_6: Page[] = [
         </p>
         <RadianWidget />
         <Warn>
-          Az analízisben a szögeket mindig radiánban értjük. A számológépet ilyenkor RAD módba kell állítani. A <M t="\sin30" /> értéke radiánban <M t="-0{,}988" />, míg
-          <M t="\sin30^\circ=0{,}5" />: a jelölés nélküli 30 radián, nem 30 fok.
+          Az analízisben a szögeket mindig radiánban értjük, mert csak ívmértékben lesz <M t="\lim_{\theta\to 0}\frac{\sin\theta}{\theta}=1" />,
+          és csak így maradnak tiszták a deriválási képletek (<M t="(\sin x)'=\cos x" />). A számológépet ilyenkor RAD módba kell állítani: a{' '}
+          <M t="\sin30" /> értéke radiánban <M t="-0{,}988" />, míg <M t="\sin30^\circ=0{,}5" />.
         </Warn>
+
+        <Quiz
+          q={<>Mennyi a <M t="150^\circ" /> szög radiánban kifejezve?</>}
+          options={[
+            { label: <M t="\dfrac{2\pi}{3}" /> },
+            { label: <M t="\dfrac{5\pi}{6}" />, ok: true },
+            { label: <M t="\dfrac{3\pi}{4}" /> },
+            { label: <M t="\dfrac{5\pi}{3}" /> },
+          ]}
+          explain={
+            <>
+              <M t="150^\circ \cdot \frac{\pi}{180^\circ} = \frac{15}{18}\pi = \frac{5\pi}{6}" />.
+            </>
+          }
+        />
 
         <h3>Feladatok</h3>
         <Task
@@ -318,6 +334,62 @@ export const S1_6: Page[] = [
           <M t="\tfrac\pi2" />.
         </Warn>
 
+        <Steps
+          title="Szinuszos modell felírása adatokból lépésről lépésre"
+          problem={
+            <>
+              Egy periodikus napi hőmérsékleti ciklus minimuma <M t="6^\circ\text{C}" /> (<M t="t=2" /> órakor),
+              maximuma <M t="22^\circ\text{C}" /> (<M t="t=14" /> órakor). Írd fel a modellt{' '}
+              <M t="T(t) = A\sin\!\big(\frac{2\pi}{B}(t - C)\big) + D" /> alakban!
+            </>
+          }
+          steps={[
+            {
+              title: 'Középvonal (D) és amplitúdó (A)',
+              body: (
+                <p>
+                  <M t="D = \frac{22 + 6}{2} = 14" />, és <M t="A = \frac{22 - 6}{2} = 8" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Periódus (B) meghatározása',
+              body: (
+                <p>
+                  A minimum és a maximum között fél periódus telik el: <M t="\frac{B}{2} = 14 - 2 = 12 \implies B = 24" />{' '}
+                  óra. Így <M t="\frac{2\pi}{B} = \frac{\pi}{12}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Fáziseltolás (C) és kész modell',
+              body: (
+                <p>
+                  A szinusz a középvonalon felfelé haladva indul — ez pontosan félúton van <M t="t=2" /> és{' '}
+                  <M t="t=14" /> között, tehát <M t="C = 8" /> órakor:
+                  <M block t="T(t) = 8\sin\!\left(\frac{\pi}{12}(t - 8)\right) + 14." />
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <Quiz
+          q={<>Mi az <M t="f(x) = 3\cos(4x - \pi)" /> függvény periódusa?</>}
+          options={[
+            { label: <M t="\dfrac{\pi}{2}" />, ok: true },
+            { label: <M t="2\pi" /> },
+            { label: <M t="4\pi" /> },
+            { label: <M t="\pi" /> },
+          ]}
+          explain={
+            <>
+              Itt <M t="\omega = 4" />, ezért a periódus <M t="B = \frac{2\pi}{|\omega|} = \frac{2\pi}{4} = \frac{\pi}{2}" />.
+              (Az eltolás és az amplitúdó nem változtatja meg a periódust!)
+            </>
+          }
+        />
+
         <h3>Feladatok</h3>
         <Task
           n={6}
@@ -397,6 +469,22 @@ export const S1_6: Page[] = [
         <M block t="\cos^2\theta=\dfrac{1+\cos2\theta}{2},\qquad \sin^2\theta=\dfrac{1-\cos2\theta}{2}." />
         <p>Az eszközben bármelyik azonosságot kipróbálhatod: a két oldal értéke és görbéje minden szögnél egybeesik.</p>
         <IdentityWidget />
+
+        <Quiz
+          q={<>Melyik képlet egyenlő <M t="\cos^2\theta" />-val minden <M t="\theta" /> esetén?</>}
+          options={[
+            { label: <M t="\dfrac{1 - \cos 2\theta}{2}" /> },
+            { label: <M t="\dfrac{1 + \cos 2\theta}{2}" />, ok: true },
+            { label: <M t="\dfrac{1 + \sin 2\theta}{2}" /> },
+            { label: <M t="1 + \sin^2\theta" /> },
+          ]}
+          explain={
+            <>
+              A <M t="\cos 2\theta = 2\cos^2\theta - 1" /> képletből átrendezve kapjuk:{' '}
+              <M t="\cos^2\theta = \frac{1 + \cos 2\theta}{2}" />. (A mínuszos változat a <M t="\sin^2\theta" />!)
+            </>
+          }
+        />
         <h3>Feladat</h3>
         <Task
           n={8}

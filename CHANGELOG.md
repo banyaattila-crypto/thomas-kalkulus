@@ -4,6 +4,14 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.20.4] - 2026-11-24
+
+### Fejlesztve
+- **1. fejezet (`1.5`–`1.7`) teljes modernizálása** az `analizis-labor.banyaattila.hu` nem-duplikált elemeivel (ezzel a teljes 1. fejezet `1.1`–`1.7` tartalmaz `<Quiz />` és `<Steps />` komponenseket):
+  - `1.5` (`s1_5.tsx`): `<Steps />` kompozíció-tartomány példa ($f=\sqrt{x+4},\; g=x^2-5$), 2 `<Quiz />` (eltolás $f(x-3)+2$, kiemeléses sorrend $f(2x-6)$).
+  - `1.6` (`s1_6.tsx`): radián-indoklás ($\lim \frac{\sin\theta}{\theta}=1$), `<Steps />` szinuszos hőmérséklet-modell ($T(t)=8\sin(\frac{\pi}{12}(t-8))+14$), 3 `<Quiz />` (radián átváltás, $3\cos(4x-\pi)$ periódusa, félszögképlet).
+  - `1.7` (`s1_7.tsx`): `<Steps />` extrapolációs esettanulmány ($y=2{,}4x+1{,}5$), 3 `<Quiz />` (négyzetes ablak torzítása, aliasing $\sin(80x)$, legkisebb négyzetek célfüggvénye).
+
 ## [2.20.3] - 2026-11-24
 
 ### Fejlesztve

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { WindowWidget, AspectWidget, PoleWidget, AliasWidget, RootWidget, RegressionWidget } from '../components/Widgets17';
 import type { Page } from './s1_1';
 
@@ -77,6 +77,22 @@ export const S1_7: Page[] = [
           <li>a meredekségek hamisak: a 45°-os egyenes más szögben jelenik meg.</li>
         </ul>
         <AspectWidget />
+
+        <Quiz
+          q={<>Mi történik az <M t="x^2 + y^2 = 9" /> kör képével, ha a rajzoló ablakban egy <M t="x" />-egység kétszer olyan széles képpontban, mint egy <M t="y" />-egység?</>}
+          options={[
+            { label: 'Kör marad, csak nagyobb lesz' },
+            { label: 'Vízszintesen megnyúlt ellipszisnek látszik', ok: true },
+            { label: 'Függőlegesen megnyúlt ellipszisnek látszik' },
+            { label: 'Hiperbolává torzul' },
+          ]}
+          explain={
+            <>
+              A nem azonos léptékű ablak vízszintesen 2-szeresére nyújtja a képet, így a kör 2:1 arányú fekvő ellipszisnek
+              látszik, és a merőleges egyenesek sem látszanak derékszögűnek.
+            </>
+          }
+        />
         <p>
           Ha az arányt mi akarjuk beállítani, számolni kell: a képernyő szélességét és magasságát elosztjuk az ablak megfelelő hosszaival, és a két hányadosnak egyenlőnek kell lennie. A legtöbb
           program felkínál egy „square” (négyzetes) beállítást is.
@@ -173,6 +189,22 @@ export const S1_7: Page[] = [
           Gyakorlati mérce: legalább tíz-húsz minta kell periódusonként.
         </p>
         <AliasWidget />
+
+        <Quiz
+          q={<>Miért tűnhet lassú hullámnak az <M t="y = \sin(80x)" /> grafikonja egy <M t="[-10;\,10]" /> ablakban kevés mintaponttal?</>}
+          options={[
+            { label: 'Mert a mintavételi lépésköz nagyobb a periódus felénél (aliasing)', ok: true },
+            { label: 'Mert a szinusz periódusa 80' },
+            { label: 'Mert a tengelyek nem négyzetesek' },
+            { label: 'Mert a függvény nem folytonos' },
+          ]}
+          explain={
+            <>
+              A periódus <M t="2\pi/80 \approx 0{,}0785" />; ha a mintavételi lépésköz ennél durvább, a pontok összekötése
+              hamis, alacsony frekvenciájú görbét rajzol (mintavételi torzítás, <em>aliasing</em>).
+            </>
+          }
+        />
         <p>
           A második függvény két tagot tartalmaz: egy lassú, nagy <M t="\cos x" /> tagot és egy gyors, de kis amplitúdójú <M t="\tfrac1{50}\sin50x" /> tagot. Széles ablakban a gyors tag
           láthatatlan, mert ráadásul kis amplitúdójú. Az x-tartomány szűkítése után az y-tartományt is ehhez kell igazítani, különben a kicsi ingadozás a képen elvész.
@@ -298,6 +330,56 @@ export const S1_7: Page[] = [
           A jó illeszkedés a mért tartományon belül nem igazolja a jóslatot a tartományon kívül. A mintán belüli becslés (interpoláció) általában biztonságos, a mintán túli (extrapoláció) kockázatos, főleg ha a
           modelltípust semmilyen elmélet nem támasztja alá.
         </Warn>
+
+        <Steps
+          title="Miért veszélyes a vak extrapoláció?"
+          problem={<>Egy laboratóriumi mérésben <M t="x \in [0;\,4]" /> időintervallumon lineáris trendet találtunk: <M t="y = 2{,}4x + 1{,}5" />. Miért kockázatos ebből <M t="x = 40" />-re jósolni?</>}
+          steps={[
+            {
+              title: 'Interpolációs tartomány',
+              body: (
+                <p>
+                  A legkisebb négyzetek módszerével illesztett egyenes csak a mért <M t="[0;\,4]" /> tartományon belül
+                  minimalizálja az eltérések négyzetösszegét (<M t="S(m,b) = \sum (y_i - (mx_i + b))^2" />).
+                </p>
+              ),
+            },
+            {
+              title: 'Nemlineáris jelenségek a tartományon túl',
+              body: (
+                <p>
+                  Tízszer nagyobb <M t="x" /> értéknél fizikai telítődés, csillapítás, rugó-megnyúlási határ vagy
+                  fázisváltás léphet fel, amiről az első 4 egység adatai semmit nem árulnak el.
+                </p>
+              ),
+            },
+            {
+              title: 'Következtetés',
+              body: (
+                <p>
+                  A tartományon túli <strong>extrapoláció</strong> önálló elméleti/fizikai modell nélkül sosem
+                  igazolható — mindig külön méréssel kell ellenőrizni!
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <Quiz
+          q={<>Mit minimalizál pontosan a legkisebb négyzetek módszere az <M t="(x_i;\,y_i)" /> pontokra illesztett <M t="y = mx + b" /> egyenesnél?</>}
+          options={[
+            { label: <>A pontok és az egyenes közti függőleges eltérések négyzetösszegét: <M t="\sum (y_i - (mx_i + b))^2" /></>, ok: true },
+            { label: <>Az eltérések előjeles összegét: <M t="\sum (y_i - (mx_i + b))" /></> },
+            { label: <>Csak az első és az utolsó pont közötti távolságot</> },
+            { label: <>A meredekség abszolút értékét (<M t="|m|" />)</> },
+          ]}
+          explain={
+            <>
+              A négyzetre emelés miatt a pozitív és negatív hibák nem oltják ki egymást, és a nagyobb eltérések erősebben
+              súlyozódnak: <M t="S(m,b) = \sum_{i=1}^n (y_i - (mx_i + b))^2" />.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={8}

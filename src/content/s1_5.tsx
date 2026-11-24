@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { ArithWidget, CompositeWidget, TransformWidget, OrderWidget, EllipseWidget } from '../components/Widgets15';
 import type { Page } from './s1_1';
 
@@ -118,6 +118,38 @@ export const S1_5: Page[] = [
           <M t="(g\circ f)(x)=4-(\sqrt x)^2" />, ami „csak” <M t="4-x" />-nek látszik, de a gyökvonás miatt ez csak <M t="x\ge0" />-ra él.
         </Warn>
 
+        <Steps
+          title="Összetett függvény képlete és tartománya lépésről lépésre"
+          problem={<>Adott <M t="f(x) = \sqrt{x + 4}" /> és <M t="g(x) = x^2 - 5" />. Határozd meg <M t="(f\circ g)(x)" /> képletét és értelmezési tartományát!</>}
+          steps={[
+            {
+              title: 'Behelyettesítés (belső g → külső f)',
+              body: (
+                <p>
+                  <M block t="(f\circ g)(x) = f(x^2 - 5) = \sqrt{(x^2 - 5) + 4} = \sqrt{x^2 - 1}." />
+                </p>
+              ),
+            },
+            {
+              title: 'Értelmezhetőségi feltétel felírása',
+              body: (
+                <p>
+                  A belső <M t="g(x)" /> minden <M t="x\in\mathbb{R}" />-re értelmezett; a külső négyzetgyök miatt{' '}
+                  <M t="x^2 - 1 \ge 0 \iff |x| \ge 1" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Értelmezési tartomány felírása',
+              body: (
+                <p>
+                  <strong><M t="D(f\circ g) = (-\infty;\,-1] \cup [1;\,\infty)" /></strong>.
+                </p>
+              ),
+            },
+          ]}
+        />
+
         <h3>Felbontás belső és külső függvényre</h3>
         <p>
           Egy képletnél azt kérdezd meg, mit számolsz ki először az <M t="x" />-ből. Az lesz a belső függvény. A <M t="\dfrac1{x^2+1}" /> esetén előbb{' '}
@@ -226,6 +258,22 @@ export const S1_5: Page[] = [
           közvetlenül látod.
         </p>
         <TransformWidget mode="shift" />
+
+        <Quiz
+          q={<>Hogyan kapjuk meg az <M t="y = f(x - 3) + 2" /> grafikont az <M t="y = f(x)" /> grafikonjából?</>}
+          options={[
+            { label: '3 egységgel jobbra, 2 egységgel felfelé toljuk', ok: true },
+            { label: '3 egységgel balra, 2 egységgel felfelé toljuk' },
+            { label: '3 egységgel jobbra, 2 egységgel lefelé toljuk' },
+            { label: '2 egységgel jobbra, 3 egységgel felfelé toljuk' },
+          ]}
+          explain={
+            <>
+              Az argumentumban lévő <M t="x - 3" /> jobbra tolja a grafikont 3 egységgel, a kívül álló <M t="+ 2" />{' '}
+              pedig felfelé 2 egységgel.
+            </>
+          }
+        />
         <h3>Feladat</h3>
         <Task
           n={5}
@@ -328,6 +376,22 @@ export const S1_5: Page[] = [
           <M t="f(bx-h)" />, a B görbét az <M t="f(b(x-h))" /> képlet adja. Ha egyik lépés hiányzik, a két görbe egybeesik, különben a csúcspontok eltérnek.
         </p>
         <OrderWidget />
+
+        <Quiz
+          q={<>Hogyan adódik az <M t="y = f(2x - 6)" /> grafikon az <M t="y = f(x)" />-ből, ha előbb vízszintesen méretezünk, majd eltolunk?</>}
+          options={[
+            { label: 'Vízszintesen 2-szeresére nyújtjuk, majd 6 egységgel jobbra toljuk' },
+            { label: 'Vízszintesen felére zsugorítjuk, majd 3 egységgel jobbra toljuk', ok: true },
+            { label: 'Vízszintesen felére zsugorítjuk, majd 6 egységgel jobbra toljuk' },
+            { label: 'Vízszintesen felére zsugorítjuk, majd 3 egységgel balra toljuk' },
+          ]}
+          explain={
+            <>
+              Kiemeljük a 2-t: <M t="f(2x - 6) = f\big(2(x - 3)\big)" />. Tehát előbb 2-es vízszintes zsugorítás, majd
+              3 egység jobbra tolás!
+            </>
+          }
+        />
         <h3>Feladat</h3>
         <Task
           n={7}
