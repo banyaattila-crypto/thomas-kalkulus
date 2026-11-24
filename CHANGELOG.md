@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.18.0] - 2026-11-24
+
+### Hozzáadva
+- 11.9 A Taylor-sorok konvergenciája, Taylor tétele (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets119.tsx`, 3 `Quiz` gyorsteszt, `Steps` $e$ szám $10^{-5}$ pontosságú fokszám-kalibrálása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): Taylor tétele (22. tétel) és a Lagrange-féle maradéktag, maradéktag-becslési tétel (23. tétel), $e^x$/$\sin x$/$\cos x$ konvergencia-bizonyítása, kis szögek csonkolási hibája és „bónusz fokszám”, Lagrange vs. Leibniz hibabecslés, parciális integrálásos bizonyítás integrális maradéktaggal, és $e$ irracionalitásának bizonyítása.
+
 ## [2.17.0] - 2026-11-24
 
 ### Hozzáadva
