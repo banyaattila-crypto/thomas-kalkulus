@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.21.0] - 2026-11-24
+
+### Hozzáadva
+- 12.1 Háromdimenziós koordináta-rendszerek — **12. fejezet nyitószakasza és 70,0%-os mérföldkő (84 / 120)!** (8 oldal, 8 interaktív forgatható 3D/szemléltető SVG ábra `Widgets121.tsx`, 3 `Quiz` gyorsteszt, `Steps` teljes négyzetté alakítás gömbre, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): jobbsodrású 3D koordináta-rendszer és oktánsok, koordinátasíkok és metszésegyenesek, kétszeres Pitagorasz-tétel és felezőpont, gömb egyenlete, körhenger vs. kör 3D-ben ($x^2+y^2=4$), gömb síkmetszetei, 2D vs. 3D térkép és Apollóniosz-gömb.
+
 ## [2.20.4] - 2026-11-24
 
 ### Fejlesztve
