@@ -4,6 +4,21 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.4.0] - 2026-11-24
+
+### Hozzáadva
+- 10.3 Másodfokú egyenletek és forgatások (8 oldal, 8 magyarázó/interaktív ábra és grafikon, `Quiz` és `Steps` kártyák, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a vegyes $Bxy$ tag hatása ($x^2+Bxy+y^2=4$ élő laborral), koordinátatengelyek elforgatása $\alpha$ szöggel és az inverz képletek, a $2xy=8$ hiperbola $45^\circ$-os forgatása, a vegyes tag általános eltüntetése ($\operatorname{ctg} 2\alpha = \frac{A-C}{B}$, félszög-képletek 3 előre beállított elforgatott kúpszeleten), a diszkrimináns-kritérium ($\Delta = B^2-4AC$) és forgatási invariánsok ($A+C$, $B^2-4AC$), elfajult másodfokú esetek + forgatás és teljes négyzet együttese, a CORDIC mikrolépéses forgatási algoritmus (hogyan számol $\sin\theta$-t és $\cos\theta$-t egy kalkulátor), 3 lépéses összefoglaló folyamatábra és 5 tipikus buktató.
+
+## [2.3.0] - 2026-11-24
+
+### Hozzáadva
+- 10.2 Kúpszeletek osztályozása excentricitásuk alapján (8 oldal, 8 ábra/grafikon `Widgets102.tsx`, `Quiz` és `Steps` kártyák, 23 megoldott feladat).
+
+## [2.2.0] - 2026-11-24
+
+### Hozzáadva
+- Interaktív `Quiz` (azonnali visszajelzéses gyorsteszt) és `Steps` (lépésről lépésre kibontható példa) komponensek, haladáskövetés és `1.1` próbafrissítés.
+
 ## [2.1.0] - 2026-11-24
 
 ### Hozzáadva
