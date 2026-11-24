@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.0.0] - 2026-11-24
+
+### Hozzáadva
+- 9.5 Elsőrendű differenciálegyenletek alkalmazásai (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): siklás a jégen és véges megállási távolság (Thomas 1. példa, interaktív szimulátorral), exponenciális vs. logisztikus populációmodell (Thomas 2. példa: medvenépesség) és a logisztikus DE egzakt megoldása parciális törtekkel, folyamatos hiteltörlesztés szimulátorral, szökési sebesség levezetése, ortogonális trajektóriák 4 lépéses receptje (Thomas 3. példa: $xy=a \perp x^2-y^2=b$) és interaktív galéria (körök/egyenesek, hiperbolák, parabolák/ellipszisek), a teljes II. kötet térképe, összefoglalás és 4 buktató.
+- **Mérföldkő:** a 9. fejezet és ezzel a teljes **II. kötet** (5–9. fejezet, 34 / 34 szakasz; összesítve **64 / 120 szakasz, 53,3%**) elkészült!
+
 ## [1.33.0] - 2026-11-24
 
 ### Hozzáadva
