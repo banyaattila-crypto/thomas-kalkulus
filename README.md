@@ -17,7 +17,7 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 7.1–7.8 (7. fejezet: Transzcendens függvények) | kész *(7. fejezet teljes!)* |
 | 8.1–8.8 (8. fejezet: Integrálási technikák) | kész *(8. fejezet teljes!)* |
 | 9.1–9.5 (9. fejezet: Az integrálás további alkalmazásai) | kész *(II. kötet teljes!)* |
-| 10.1-től (III. kötet: 10–16. fejezet) | folyamatban |
+| 10.1 (10. fejezet: Kúpszeletek és polárkoordináták) | folyamatban (10.1 kész) |
 
 ## Fejlesztés
 

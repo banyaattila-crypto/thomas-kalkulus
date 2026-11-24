@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.0.0`  
+**Aktuális verzió:** `v2.1.0`  
 **Dátum:** 2026-11-24  
-**Összesített haladás:** **64 / 120 szakasz kész** (53,3%) — az **I. és II. kötet TELJES** (64 / 64 szakasz)!
+**Összesített haladás:** **65 / 120 szakasz kész** (54,2%) — az I. és II. kötet teljes (64/64), elindult a III. kötet (`10.1` kész)!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -17,7 +17,8 @@
 | **II. kötet** | 7. Transzcendens függvények | 8 / 8 (`7.1`–`7.8`) | **Kész** |
 | **II. kötet** | 8. Integrálási technikák | 8 / 8 (`8.1`–`8.8`) | **Kész** |
 | **II. kötet** | 9. Az integrálás további alkalmazásai | 5 / 5 (`9.1`–`9.5`) | **Kész** *(II. kötet teljes!)* |
-| **III. kötet** | 10–16. fejezet | 0 / 56 | Következő (`10.1`) |
+| **III. kötet** | 10. Kúpszeletek és polárkoordináták | 1 / 8 (`10.1`) | **Folyamatban** |
+| **III. kötet** | 11–16. fejezet | 0 / 48 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v0.21.0` – `v0.25.0`)
 
@@ -69,6 +70,8 @@
 - **`9.3` (`v1.32.0`):** Euler-módszer — 8 oldal, 8 ábra/grafikon (`Widgets93.tsx`), 23 megoldott feladat.
 - **`9.4` (`v1.33.0`):** Autonóm differenciálegyenletek grafikus megoldása — 8 oldal, 8 ábra/grafikon (`Widgets94.tsx`), 23 megoldott feladat.
 - **`9.5` (`v2.0.0`):** Elsőrendű differenciálegyenletek alkalmazásai — 8 oldal, 8 ábra/grafikon (`Widgets95.tsx`), 23 megoldott feladat. *(A 9. fejezet és a teljes II. kötet ezzel elkészült!)*
+- **`v2.0.1`:** Kombinált, 3-kötetes animált főoldali Canvas-borító (`Cover.tsx`).
+- **`10.1` (`v2.1.0`):** Kúpszeletek és másodfokú egyenletek — 8 oldal, 8 ábra/grafikon (`Widgets101.tsx`), 23 megoldott feladat. *(A III. kötet nyitószakasza!)*
 
 ## Technikai állapot
 
@@ -81,4 +84,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív diagramok az elméleti részekben is.
 2. Rugalmas oldalszám (a tananyag terjedelméhez igazodva).
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással.
-4. Következő modul: **10.1 Kúpszeletek és másodfokú egyenletek** *(III. kötet nyitószakasza!)*.
+4. Következő modul: **10.2 Kúpszeletek osztályozása excentricitásuk alapján**.

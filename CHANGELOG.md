@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.1.0] - 2026-11-24
+
+### Hozzáadva
+- 10.1 Kúpszeletek és másodfokú egyenletek (8 oldal, 8 magyarázó/interaktív ábra és grafikon, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a III. kötet (10. fejezet: Kúpszeletek és polárkoordináták) nyitószakasza — a négy kúpszelet geometriája, parabola ($x^2=4py$, fókusz és direktrix, Thomas 1. példa), ellipszis ($PF_1+PF_2=2a$, $c^2=a^2-b^2$, Thomas 2–3. példa), hiperbola ($|PF_1-PF_2|=2a$, $c^2=a^2+b^2$, központi téglalap és aszimptoták), eltolt kúpszeletek és teljes négyzetté kiegészítés, optikai/akusztikai visszaverési tulajdonságok (parabolaantenna, suttogó galéria, Cassegrain-távcső), gyors típusfelismerő, összefoglalás és 4 buktató.
+
 ## [2.0.1] - 2026-11-24
 
 ### Módosítva
