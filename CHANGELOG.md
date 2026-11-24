@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.0.1] - 2026-11-24
+
+### Módosítva
+- Újratervezett, kombinált főoldali Canvas-animáció (`Cover.tsx`): összefűzi az eredeti borító lebegő szimbólumait, ragyogó hátterét és paraboláját az *Analízis Labor* 3-kötetes élő animációjával (I. kötet: hullámzó görbe, lélegző $\varepsilon$-sáv, mozgó érintő és élő $f'(x_0)$ meredekség; II. kötet: 28 arany-borostyán Riemann-téglalap és árnyékolt integrálterület; III. kötet: forgó 3D $\sin(r)/r$ hullámfelület és keringő $\nabla f$ gradiensvektor), `visibilitychange` és `prefers-reduced-motion` támogatással, valamint élő szakaszkészültségi kijelzővel.
+
 ## [2.0.0] - 2026-11-24
 
 ### Hozzáadva
