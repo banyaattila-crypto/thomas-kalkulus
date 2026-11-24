@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.20.0] - 2026-11-24
+
+### Hozzáadva
+- 11.11 Fourier-sorok — **a 11. fejezet TELJES (11/11)!** (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets1111.tsx`, 3 `Quiz` gyorsteszt, `Steps` négyszögjel Fourier-fejtése, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): Euler–Fourier-formulák, trigonometrikus ortogonalitás, négyszögjel és Gibbs-jelenség (~8,95%-os túllendülés), Dirichlet konvergenciatétele (felezőpont ugrásoknál), páros/páratlan szimmetria és a Bázel-probléma ($\sum 1/n^2 = \pi^2/6$), frekvenciaspektrum, általános $2L$ periódus, Taylor vs. Fourier összehasonlítás és Parseval-azonosság ($\sum 1/n^4 = \pi^4/90$).
+
 ## [2.19.0] - 2026-11-24
 
 ### Hozzáadva
