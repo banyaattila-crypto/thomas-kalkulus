@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.15.0] - 2026-11-24
+
+### Hozzáadva
+- 11.6 Alternáló sorok, abszolút és feltételes konvergencia (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets116.tsx`, 3 `Quiz` gyorsteszt, `Steps` osztályozó kártya, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): Leibniz-tétel (14. tétel), Leibniz-féle hibabecslés ($|R_n| \le u_{n+1}$), alternáló $p$-sorok, abszolút és feltételes konvergencia (16. tétel), átrendezési tétel és Riemann-paradoxon ($\ln 2$, $\frac{1}{2}\ln 2$, $\frac{3}{2}\ln 2$), kiterjesztett abszolút hányados-/gyökkritérium és a 11.2–11.6 nagy konvergencia-térképe.
+
 ## [2.14.0] - 2026-11-24
 
 ### Hozzáadva
