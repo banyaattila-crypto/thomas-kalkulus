@@ -4,6 +4,14 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.16.0] - 2026-11-24
+
+### Hozzáadva
+- 11.7 Hatványsorok (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets117.tsx`, 3 `Quiz` gyorsteszt, `Steps` végpontvizsgálati levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): hatványsor fogalma és mértani alapsor ($\frac{1}{1-x}=\sum x^n$), konvergenciasugár és -intervallum (18. tétel: $R=0$, $0<R<\infty$, $R=\infty$), végpontvizsgálat (4 intervallumtípus), tagonkénti differenciálás (19. tétel, $\frac{1}{(1-x)^2}$), tagonkénti integrálás (20. tétel, $\ln(1+x)$, $\operatorname{arctg} x$, Leibniz-formula), helyettesítés és Cauchy-szorzat (21. tétel).
+
+### Módosítva
+- Tartalomjegyzék hero animáció (`TocPage.tsx`): a korábbi statikus SVG görbét egérkövető, többrétegű Canvas 2D kalkulus-panoráma váltotta fel (lokális simulókör és normálvektor, $f'(x)$ deriváltgörbe, dinamikus Riemann-téglalapok, áramló vektormező-részecskék és forgó 3D Lissajous-szalag).
+
 ## [2.15.0] - 2026-11-24
 
 ### Hozzáadva
