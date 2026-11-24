@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.11.0] - 2026-11-24
+
+### Hozzáadva
+- 11.2 Végtelen sorok (8 oldal, 8 interaktív/szemléltető SVG ábra `Widgets112.tsx`, 3 `Quiz` gyorsteszt, `Steps` teleszkopikus levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): részletösszegek sorozata, egységnégyzetes felezés ($\sum 2^{-n}=1$), mértani sorok ($\frac{a}{1-r}$), pattogó labda és szakaszos tizedes törtek, teleszkopikus sorok, az $n$-edik tag divergenciatesztje, a harmonikus sor (Oresme-bizonyítás), linearitás és átindexelés.
+
 ## [2.10.0] - 2026-11-24
 
 ### Hozzáadva
