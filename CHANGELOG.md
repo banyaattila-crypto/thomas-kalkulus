@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.24.0] - 2026-11-25
+
+### Hozzáadva
+- 12.4 Vektoriális szorzat (8 oldal, 8 interaktív 2D/3D SVG ábra `Widgets124.tsx`, 3 `Quiz` gyorsteszt, `Steps` $3\times 3$-as determináns-levezetés, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): jobbkéz-szabály és antikommutativitás ($\mathbf{v}\times\mathbf{u}=-(\mathbf{u}\times\mathbf{v})$), $\mathbf{i},\mathbf{j},\mathbf{k}$ körforgás, $3\times 3$-as determináns, paralelogramma és háromszög területe 3D-ben, forgatónyomaték ($\boldsymbol{\tau}=\mathbf{r}\times\mathbf{F}$), vegyes szorzat és paralelepipedon térfogata, komplanarítás, Lagrange-azonosság és BAC–CAB szabály.
+
 ## [2.23.0] - 2026-11-24
 
 ### Hozzáadva
