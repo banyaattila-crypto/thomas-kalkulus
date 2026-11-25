@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.33.0] - 2026-11-26
+
+### Hozzáadva
+- 14.1 Többváltozós függvények — **a 14. fejezet nyitószakasza és 80,0%-os mérföldkő (96 / 120)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets141.tsx`, `Quiz` gyorstesztek, `Steps` a félgömb grafikonjának elemzéséhez, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): többváltozós függvények, értelmezési tartomány és értékkészlet (interaktív 2D tartomány-felfedező próbaponttal), síktartományok topológiája (belső pont, határpont, nyílt/zárt/korlátos — interaktív $\varepsilon$-körlap teszterrel), 3D függvénygrafikonok (forgatható 3D drótháló 4 felületre), szintvonalak és szintvonalas térképek (3D metszősík + 2D szintvonal szinkronban), 4 alapfelület szintvonal-ujjlenyomata (kúp vs. paraboloid vs. sík vs. nyereg), háromváltozós függvények és 3D szintfelületek (Thomas 5. példa: gömbök és síkok), Föld alatti hőmérséklet-hullám (Thomas 6. példa: csillapodás és fél éves fáziskésés szimulátorral), a dimenziók létrája (1D → 2D → 3D), összefoglalás és 5 tipikus buktató.
+
 ## [2.32.0] - 2026-11-25
 
 ### Hozzáadva

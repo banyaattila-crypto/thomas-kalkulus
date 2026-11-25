@@ -17,7 +17,11 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 7.1–7.8 (7. fejezet: Transzcendens függvények) | kész *(7. fejezet teljes!)* |
 | 8.1–8.8 (8. fejezet: Integrálási technikák) | kész *(8. fejezet teljes!)* |
 | 9.1–9.5 (9. fejezet: Az integrálás további alkalmazásai) | kész *(II. kötet teljes!)* |
-| 10.1 (10. fejezet: Kúpszeletek és polárkoordináták) | folyamatban (10.1 kész) |
+| 10.1–10.8 (10. fejezet: Kúpszeletek és polárkoordináták) | kész *(10. fejezet teljes!)* |
+| 11.1–11.11 (11. fejezet: Sorozatok és végtelen sorok) | kész *(11. fejezet teljes!)* |
+| 12.1–12.6 (12. fejezet: Vektorok és a tér geometriája) | kész *(12. fejezet teljes!)* |
+| 13.1–13.6 (13. fejezet: Vektor értékű függvények, mozgás a térben) | kész *(13. fejezet teljes!)* |
+| 14.1 (14. fejezet: Parciális deriváltak) | folyamatban (14.1 kész — **80% mérföldkő: 96/120!**) |
 
 ## Fejlesztés
 
