@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.26.0] - 2026-11-25
+
+### Hozzáadva
+- 12.6 Hengerek és másodrendű felületek — **a 12. fejezet TELJES (6/6)!** (8 oldal, 8 interaktív forgatható 3D drótvázas/szemléltető SVG ábra `Widgets126.tsx`, 3 `Quiz` gyorsteszt, `Steps` eltolt kvadrik azonosítása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): általános hengerek (parabolikus, elliptikus, hullám), mind a 6 kanonikus másodrendű felület (ellipszoid, elliptikus paraboloid, kúp, egy- és kétköpenyű hiperboloid, nyeregfelület), metszet-detektív (nyomok), kakukktojás-tengely szabály és vonalas felületek.
+
 ## [2.25.0] - 2026-11-25
 
 ### Hozzáadva
