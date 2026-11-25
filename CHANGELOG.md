@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.32.0] - 2026-11-25
+
+### Hozzáadva
+- 13.6 Bolygómozgás és műholdpályák — **a 13. fejezet TELJES (6/6)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets136.tsx`, 3 `Quiz` gyorsteszt, `Steps` a geostacionárius műhold magasságának levezetése, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): polárkoordinátás mozgó bázis ($\mathbf{u}_r, \mathbf{u}_\theta$), sebesség és gyorsulás polár alakja, centrális erőtér és $\mathbf{r}\times\mathbf{v}=\mathbf{h}$ (síkbeli pálya), Kepler I., II. és III. törvényének levezetése, kozmikus sebességek, műholdpályák (ISS, GPS, GEO), vis-viva egyenlet és Hohmann-átmeneti pálya.
+
 ## [2.31.0] - 2026-11-25
 
 ### Hozzáadva
