@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.25.0] - 2026-11-25
+
+### Hozzáadva
+- 12.5 Egyenesek és síkok a térben (8 oldal, 8 interaktív forgatható 3D/szemléltető SVG ábra `Widgets125.tsx`, 3 `Quiz` gyorsteszt, `Steps` három ponton átmenő sík levezetése, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): vektoros és paraméteres 3D egyenes, metsző vs. kitérő egyenesek, pont–egyenes távolság 3D-ben, sík normálvektoros egyenlete, egyenes–sík döféspont, két sík metszésvonala és hajlásszöge, pont–sík és párhuzamos síkok távolsága, kitérő egyenesek távolsága és tükörkép síkra.
+
 ## [2.24.0] - 2026-11-25
 
 ### Hozzáadva
