@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.34.0] - 2026-11-26
+
+### Hozzáadva
+- 14.2 Határérték és folytonosság magasabb dimenzióban (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets142.tsx`, `Quiz` gyorstesztek, `Steps` levezetések, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): $\varepsilon$–$\delta$ definíció lyukas körlapon és 1D vs. 2D megközelítés, algebrai egyszerűsítés (Thomas 2. példa) és szendvicstétel (Thomas 3. példa interaktív $\varepsilon$–$\delta$ demonstrátorral), a kétutas próba (Thomas 4. példa: $\frac{2xy}{x^2+y^2}=\sin 2\theta$ forgatható útvonal-szimulátorral), a parabola-csapda ($\frac{x^2y}{x^4+y^2}$ interaktív egyenesek vs. parabola szimulátorral), polárkoordinátás határérték-módszer ($r\to 0^+$ értéksáv-zsugorodás vizsgálóval), folytonosság és megszüntethető vs. javíthatatlan szakadás, 3D $\delta$-gömb és háromváltozós határértékek, 4 lépéses vizsgastratégiai döntési fa, összefoglalás és 5 tipikus buktató.
+
 ## [2.33.0] - 2026-11-26
 
 ### Hozzáadva
