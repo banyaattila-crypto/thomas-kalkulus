@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.30.0] - 2026-11-25
+
+### Hozzáadva
+- 13.4 Görbület és a normált főnormális (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets134.tsx`, 3 `Quiz` gyorsteszt, `Steps` az $y=e^x$ maximális görbületének megtalálása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): görbület definíciója ($\kappa=|d\mathbf{T}/ds|$), kör és egyenes görbülete, normált főnormális vektor ($\mathbf{N}=\mathbf{T}'/|\mathbf{T}'|$), simulókör és görbületi sugár ($\rho=1/\kappa$), függvénygrafikonok görbületképlete, 3D keresztszorzatos képlet ($\kappa=|\mathbf{v}\times\mathbf{a}|/|\mathbf{v}|^3$) és csavarvonal, kanyarodó jármű normális gyorsulása ($a_N=\kappa v^2$) és a $\mathbf{T}$–$\mathbf{N}$ simulósík.
+
 ## [2.29.0] - 2026-11-25
 
 ### Hozzáadva
