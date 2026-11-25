@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.28.0] - 2026-11-25
+
+### Hozzáadva
+- 13.2 Egy lövedék röppályájának leírása (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets132.tsx`, 3 `Quiz` gyorsteszt, `Steps` szikláról indított dobás teljes elemzése, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): az ideális lövedék modellje vákuumban, repülési idő, csúcsmagasság és lőtávolság ($45^\circ$-os maximum, kiegészítő szögek), Descartes-féle parabola és biztonsági parabola burkológörbe, magasabbról indított dobás ($y_0>0$), dobás ferde síkra ($\alpha_{\text{opt}}=45^\circ+\beta/2$), lineáris közegellenállás (függőleges aszimptota és határsebesség) és 3D pálya oldalszélben.
+
 ## [2.27.0] - 2026-11-25
 
 ### Hozzáadva
