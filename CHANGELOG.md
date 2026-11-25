@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.31.0] - 2026-11-25
+
+### Hozzáadva
+- 13.5 Torzió és a normált binormális (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets135.tsx`, 3 `Quiz` gyorsteszt, `Steps` a térbeli köbös görbe torziójának determinánsos kiszámítása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): normált binormális vektor ($\mathbf{B}=\mathbf{T}\times\mathbf{N}$) és a Frenet-féle TNB mozgó triéder, torzió definíciója ($d\mathbf{B}/ds=-\tau\mathbf{N}$, előjeles csavarodás, síkgörbék $\tau\equiv 0$), vegyes szorzatos 3D torzióképlet, a gyorsulás tangenciális–normális felbontása ($\mathbf{a}=a_T\mathbf{T}+a_N\mathbf{N}$, $a_B\equiv 0$), a Frenet–Serret-egyenletrendszer és a három nevezetes sík (simuló-, normál- és egyenesítő sík).
+
 ## [2.30.0] - 2026-11-25
 
 ### Hozzáadva
