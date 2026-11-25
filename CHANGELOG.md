@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.29.0] - 2026-11-25
+
+### Hozzáadva
+- 13.3 Ívhossz és a normált érintővektor — **a 13. fejezet fele kész (3/6)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets133.tsx`, 3 `Quiz` gyorsteszt, `Steps` teljes négyzet trükkös ívhossz-számítás, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): térugörbék ívhossza és töröttvonalas közelítése, ívhosszparaméter ($s(t)$, $ds/dt = |\mathbf{v}|$) és természetes paraméterezés, teljes négyzet és exponenciális spirál trükkje, normált érintővektor ($\mathbf{T}=\mathbf{v}/|\mathbf{v}|=d\mathbf{r}/ds$), orientáció és $\mathbf{T}\perp\mathbf{T}'$, Descartes/paraméteres/polár ívhossz-képletek egyesítése és a görbe normálsíkja.
+
 ## [2.28.0] - 2026-11-25
 
 ### Hozzáadva
