@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.47.0] - 2026-11-26
+
+### Hozzáadva
+- 15.5 Tömeg és nyomaték három dimenzióban — **110 / 120 szakasz kész (91,7%), már csak 10 szakasz van hátra!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets155.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): 3D tömeg változó térfogati sűrűséggel (forgatható 3D kocka 3 sűrűségprofillal), elsőrendű nyomatékok ($M_{yz}, M_{xz}, M_{xy}$ a „hiányzó betű” szabályával) és 3D tömegközéppont (Thomas 1. példa `Steps`), 4 klasszikus homogén 3D test súlypontja (kúp $h/4$, félgömb $3R/8$, paraboloid $h/3$, tetraéder $h/4$), 3D tehetetlenségi nyomatékok ($I_x, I_y, I_z$, Thomas 2. példa téglatest), 3D Steiner-tétel és inerciálissugár, a **lejtő-verseny** (tömör gömb vs. henger vs. cső), bolygófizikai belső sűrűség-modell (Föld vasmagja: $I/(MR^2) = 0{,}331$), mester-képlettár, puskakártya és 5 klasszikus buktató.
+
 ## [2.46.0] - 2026-11-26
 
 ### Hozzáadva

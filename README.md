@@ -22,7 +22,7 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 12.1–12.6 (12. fejezet: Vektorok és a tér geometriája) | kész *(12. fejezet teljes!)* |
 | 13.1–13.6 (13. fejezet: Vektor értékű függvények, mozgás a térben) | kész *(13. fejezet teljes!)* |
 | 14.1–14.10 (14. fejezet: Parciális deriváltak) | kész *(14. fejezet teljes!)* |
-| 15.1–15.4 (15. fejezet: Többes integrálok) | folyamatban (15.1–15.4 kész — 109/120) |
+| 15.1–15.5 (15. fejezet: Többes integrálok) | folyamatban (15.1–15.5 kész — 110/120) |
 
 ## Fejlesztés
 

@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.46.0`  
+**Aktuális verzió:** `v2.47.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **109 / 120 szakasz kész** (90,8%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–14. fejezet teljes, a **15. fejezet: Többes integrálok** több mint fele kész (`15.1`–`15.4`) — már csak **11 szakasz** van hátra!
+**Összesített haladás:** **110 / 120 szakasz kész** (91,7%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–14. fejezet teljes, a **15. fejezet: Többes integrálok** 71%-a kész (`15.1`–`15.5`) — már csak **10 szakasz** van hátra az egész tananyagból!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -22,7 +22,7 @@
 | **III. kötet** | 12. Vektorok és a tér geometriája | 6 / 6 (`12.1`–`12.6`) | **Kész** |
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
 | **III. kötet** | 14. Parciális deriváltak | 10 / 10 (`14.1`–`14.10`) | **Kész** *(14. fejezet teljes!)* |
-| **III. kötet** | 15. Többes integrálok | 4 / 7 (`15.1`–`15.4`) | **Folyamatban** |
+| **III. kötet** | 15. Többes integrálok | 5 / 7 (`15.1`–`15.5`) | **Folyamatban** |
 | **III. kötet** | 16. Integrálás vektormezőben | 0 / 8 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
@@ -47,6 +47,7 @@
 - **`15.2` (`v2.44.0`):** Terület, nyomaték, tömegközéppont — 8 oldal, 8 interaktív 2D ábra (`Widgets152.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(Terület kettős integrállal, változó sűrűségű lemezek, $M_x, M_y$, tömegközéppont és szimmetria, tehetetlenségi nyomatékok $I_x, I_y, I_0$, inerciálissugár, Steiner-tétel, Pappus-tétel és 2D valószínűségszámítás.)*
 - **`15.3` (`v2.45.0`):** Kettős integrálás polárkoordinátákkal — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets153.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**90,0%-OS NAGY MÉRFÖLDKŐ: 108 / 120!** $dA = r\,dr\,d\theta$, sugárnyíl-módszer, derékszögű → polár átváltás, paraboloid és kifúrt gömb térfogata, eltolt körök, a Gauss-integrál $\int_{-\infty}^\infty e^{-x^2}\,dx=\sqrt{\pi}$, lendkerék-tehetetlenség.)*
 - **`15.4` (`v2.46.0`):** Hármas integrál derékszögű koordináta-rendszerben — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets154.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(3D voxelek, Árnyék + Lándzsa módszer, $3!=6$ sorrend, $xz/yz$-vetítés, 3D sorrendcsere, 3D átlagérték, Steinmetz-test térfogata $\frac{16}{3}a^3$.)*
+- **`15.5` (`v2.47.0`):** Tömeg és nyomaték három dimenzióban — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets155.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**110 / 120 = 91,7%!** 3D tömeg, $M_{yz}, M_{xz}, M_{xy}$, klasszikus 3D súlypontok, $I_x, I_y, I_z$, 3D Steiner-tétel, lejtő-verseny, bolygófizikai belső sűrűség-modell.)*
 
 ## Technikai állapot
 
@@ -59,4 +60,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **15.5 Tömeg és nyomaték három dimenzióban**.
+4. Következő modul: **15.6 Hármas integrálok henger- és gömbi koordináta-rendszerben**.
