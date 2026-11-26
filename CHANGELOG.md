@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.39.0] - 2026-11-26
+
+### Hozzáadva
+- 14.7 Szélsőértékek és nyeregpontok — **85,0%-os mérföldkő (102 / 120 szakasz kész)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets147.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): lokális maximum/minimum és az első derivált próbája (forgatható 3D alapfelület-váltó: min, max, nyereg, nem differenciálható kúpcsúcs), nyeregpontok és a Hesse-determináns ($D = f_{xx}f_{yy}-f_{xy}^2$ interaktív előjel-térkép laborral), több kritikus pont rendszerezése ($x^3-3xy+y^3$ `Steps` és nullklinás szinttérkép), miért működik a Hesse-próba (teljes négyzet) és a $D=0$ négy arca (benne a híres Peano-csapda: $(y-x^2)(y-2x^2)$), abszolút szélsőértékek zárt, korlátos tartományokon (Weierstrass 2D, Thomas 5. példa interaktív háromszög-zónákkal), 3D nyitott doboz optimalizálás ($V=32$), legkisebb négyzetek módszere (lineáris regresszió élő reziduális négyzetekkel), mester-döntési fa, puskakártya és 5 klasszikus buktató.
+
 ## [2.38.0] - 2026-11-26
 
 ### Hozzáadva
