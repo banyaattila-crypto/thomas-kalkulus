@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.46.0] - 2026-11-26
+
+### Hozzáadva
+- 15.4 Hármas integrál derékszögű koordináta-rendszerben (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets154.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): 3D Riemann-felosztás és voxelek (forgatható $N\times N\times N$ voxel-kocka), az „Árnyék + Lándzsa” módszer (3D tetraéder mozgatható függőleges $z$-lándzsával és $xy$-árnyékkal), a $3! = 6$ integrálási sorrend (interaktív 6-gombos váltó az $x+2y+3z\le 6$ tetraéderhez), vetítés az $xz$- és $yz$-síkra (vízszintes $y = x^2+z^2$ paraboloid 3D-ben), 3D sorrendcsere (`Steps` + $0\le z\le y\le x\le 1$ szimplex), 3D átlagérték (szoba átlaghőmérséklet-szimulátor) és 3D szimmetria, a **Steinmetz-test** (két merőleges henger metszete négyzetszeletekkel, $V = \frac{16}{3}a^3$), mester-térkép, puskakártya és 5 klasszikus buktató.
+
 ## [2.45.0] - 2026-11-26
 
 ### Hozzáadva
