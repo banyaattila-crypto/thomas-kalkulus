@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.42.0`  
+**Aktuális verzió:** `v2.43.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **105 / 120 szakasz kész** (87,5% — **HÉTNYOLCAD MÉRFÖLDKŐ!**) Az I. és II. kötet teljes (64/64), a III. kötetből a **10–14. fejezet TELJES** (már csak a 15. és 16. fejezet van hátra: 15 szakasz)!
+**Összesített haladás:** **106 / 120 szakasz kész** (88,3%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–14. fejezet teljes, és elindult a **15. fejezet: Többes integrálok** (`15.1` kész)!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -22,7 +22,8 @@
 | **III. kötet** | 12. Vektorok és a tér geometriája | 6 / 6 (`12.1`–`12.6`) | **Kész** |
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
 | **III. kötet** | 14. Parciális deriváltak | 10 / 10 (`14.1`–`14.10`) | **Kész** *(14. fejezet teljes!)* |
-| **III. kötet** | 15–16. fejezet | 0 / 15 | Tervezett |
+| **III. kötet** | 15. Többes integrálok | 1 / 7 (`15.1`) | **Folyamatban** |
+| **III. kötet** | 16. Integrálás vektormezőben | 0 / 8 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
 
@@ -42,6 +43,7 @@
 - **`14.8` (`v2.40.0`):** Lagrange-multiplikátorok — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets148.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(Ortogonális gradiens tétel, 2D/3D egy és két mellékfeltételes optimalizálás, árnyékár $df^*/dc=\lambda$, zárt tartományok, szinguláris $\nabla g = \mathbf{0}$ pontok.)*
 - **`14.9` (`v2.41.0`):** Feltételes parciális deriváltak — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets149.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(Alsó index jelölés, behelyettesítés és totális differenciálos módszer, szabadsági fokok, polár-paradoxon, ciklikus szabály $= -1$, termodinamikai hőkapacitások és Mayer-reláció.)*
 - **`14.10` (`v2.42.0`):** Kétváltozós Taylor-formula — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets1410.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**A 14. fejezet TELJES (10/10) és 87,5% = 105/120 hétnyolcad mérföldkő!** 1D szakasz-trükk, kvadratikus közelítés és Hesse-mátrix, Pascal-derivált operátor, 1D sorok szorzata, a Hesse-próba bizonyítása, hibabecslés, 2D Newton-módszer vs. gradiens ereszkedés, 14. fejezet nagy szintézise.)*
+- **`15.1` (`v2.43.0`):** Kettős integrál — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets151.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(A 15. fejezet nyitószakasza! 3D Riemann-hasábok, Fubini-szeletelés, I./II. típusú tartományok, nyíl-módszer, sorrendcsere, térfogat és 2D átlagérték, szimmetria.)*
 
 ## Technikai állapot
 
@@ -54,4 +56,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **15.1 Kettős integrál** *(a 15. fejezet: Többes integrálok nyitószakasza!)*.
+4. Következő modul: **15.2 Terület, nyomaték, tömegközéppont**.

@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.43.0] - 2026-11-26
+
+### Hozzáadva
+- 15.1 Kettős integrál — **a 15. fejezet (Többes integrálok) nyitószakasza (106 / 120 = 88,3%)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets151.tsx`, `Quiz` gyorstesztek, `Steps` levezetések, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): Riemann-összeg téglalapon (forgatható 3D hasáb-közelítés $2\times 2 \dots 6\times 6$ felosztással), Fubini tétele téglalapon (3D szeletelő $dy\,dx$ vs. $dx\,dy$, Thomas 1. példa `Steps` és szorzat-villámképlet), általános I. és II. típusú tartományok (interaktív lencse függőleges/vízszintes nyilakkal), a 3 lépéses „Rajzold, Lőj, Olvasd le!” határfelíró (interaktív nyíl-söprés $y=x$ és $y=2-x^2$ között), az integrálás sorrendjének felcserélése (Thomas 4. példa: $\frac{\sin y}{y}$ és $e^{x^2}$ `Steps` + interaktív háromszög-fordító), térfogat két felület között és 2D átlagérték (3D „vízszint-kiegyenlítés” szimulátor), szimmetria-trükkök és okos sorrendválasztás (2 részintegrál helyett 1), mester-térkép, puskakártya és 5 klasszikus buktató.
+
 ## [2.42.0] - 2026-11-26
 
 ### Hozzáadva

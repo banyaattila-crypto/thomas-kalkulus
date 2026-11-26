@@ -21,7 +21,8 @@ A szövegek, a példák, a feladatok és az ábrák **saját készítésűek**; 
 | 11.1–11.11 (11. fejezet: Sorozatok és végtelen sorok) | kész *(11. fejezet teljes!)* |
 | 12.1–12.6 (12. fejezet: Vektorok és a tér geometriája) | kész *(12. fejezet teljes!)* |
 | 13.1–13.6 (13. fejezet: Vektor értékű függvények, mozgás a térben) | kész *(13. fejezet teljes!)* |
-| 14.1–14.10 (14. fejezet: Parciális deriváltak) | kész *(14. fejezet teljes! — **87,5%: 105/120!**)* |
+| 14.1–14.10 (14. fejezet: Parciális deriváltak) | kész *(14. fejezet teljes!)* |
+| 15.1 (15. fejezet: Többes integrálok) | folyamatban (15.1 kész — 106/120) |
 
 ## Fejlesztés
 
