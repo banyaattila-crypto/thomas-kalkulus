@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.41.0] - 2026-11-26
+
+### Hozzáadva
+- 14.9 Feltételes parciális deriváltak (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets149.tsx`, `Quiz` gyorstesztek, `Steps` levezetések, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): miért veszélyes önmagában a $\partial w/\partial x$ jelölés (forgatható 3D paraboloid metszet: $y$ fix vs. $z$ fix), a 3 lépéses behelyettesítéses módszer (interaktív független–függő kapcsolótáblával), a totális differenciálok (implicit) módszere (interaktív differenciál-gépezettel és $g_y=0$ szingularitás-figyelmeztetéssel), több mellékfeltétel és szabadsági fokok ($k=n-m$ számológép + `Steps`), a polár-paradoxon ($\left(\frac{\partial x}{\partial r}\right)_\theta = \left(\frac{\partial r}{\partial x}\right)_y = \cos\theta$) és a helyes reciprok-szabály, a ciklikus szabály ($\left(\frac{\partial x}{\partial y}\right)_z \left(\frac{\partial y}{\partial z}\right)_x \left(\frac{\partial z}{\partial x}\right)_y = -1$, ideális gáz élő szimulátorral), termodinamikai alkalmazások (izochor $C_V$ vs. izobár $C_P$ dugattyú-szimulátor, Mayer-reláció $C_P - C_V = nR$, van der Waals gáz), mester-térkép, puskakártya és 5 klasszikus buktató.
+
 ## [2.40.0] - 2026-11-26
 
 ### Hozzáadva
