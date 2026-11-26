@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.35.0] - 2026-11-26
+
+### Hozzáadva
+- 14.3 Parciális deriváltak (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets143.tsx`, `Quiz` gyorstesztek, `Steps` implicit parciális deriválás, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): parciális deriváltak definíciója és geometriai jelentése (interaktív 3D szeletek és érintők), „befagyasztásos” deriválás ($x^3 y^2, e^{xy}, \frac{x}{x+y}, x^y$ kártya-váltóval), implicit parciális deriválás (Thomas 5. példa) és ideális gáztörvény szimulátor, másodrendű parciális deriváltak és Clairaut/Young-tétel (Thomas 9–10. példa okos sorrenddel), a 3 klasszikus fizikai PDE (Laplace, hővezetés, hullámegyenlet interaktív gitárhúrral), a nagy figyelmeztetés (Thomas 8. példa: parciális deriváltak létezése nem garantálja a folytonosságot!), differenciálhatóság két változóban és a folytonossági lánc ($C^1 \Rightarrow$ diff. $\Rightarrow$ folytonos), összefoglalás és 5 tipikus buktató.
+
 ## [2.34.0] - 2026-11-26
 
 ### Hozzáadva

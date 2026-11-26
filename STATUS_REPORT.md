@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.34.0`  
+**Aktuális verzió:** `v2.35.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **97 / 120 szakasz kész** (80,8%) — az I. és II. kötet teljes (64/64), a III. kötetből a 10–13. fejezet teljes és a **14. fejezetből** a `14.1`–`14.2` kész!
+**Összesített haladás:** **98 / 120 szakasz kész** (81,7%) — az I. és II. kötet teljes (64/64), a III. kötetből a 10–13. fejezet teljes és a **14. fejezetből** a `14.1`–`14.3` kész!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -21,7 +21,7 @@
 | **III. kötet** | 11. Végtelen sorozatok és sorok | 11 / 11 (`11.1`–`11.11`) | **Kész** |
 | **III. kötet** | 12. Vektorok és a tér geometriája | 6 / 6 (`12.1`–`12.6`) | **Kész** |
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
-| **III. kötet** | 14. Parciális deriváltak | 2 / 10 (`14.1`–`14.2`) | **Folyamatban** |
+| **III. kötet** | 14. Parciális deriváltak | 3 / 10 (`14.1`–`14.3`) | **Folyamatban** |
 | **III. kötet** | 15–16. fejezet | 0 / 15 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
@@ -34,6 +34,7 @@
 - **13. fejezet (`v2.27.0` – `v2.32.0`, `13.1`–`13.6`):** Vektor értékű függvények, mozgás a térben — mind a 6 szakasz kész (`13.1` = **90 / 120 = 75,0% háromnegyed mérföldkő!**, lövedék röppályája, ívhossz és $\mathbf{T}$, görbület és $\mathbf{N}$, torzió, $\mathbf{B}$ és gyorsulás-felbontás, Kepler törvényei és műholdpályák).
 - **`14.1` (`v2.33.0`):** Többváltozós függvények — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets141.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(A 14. fejezet nyitószakasza — **96 / 120 = 80,0% mérföldkő!**)*
 - **`14.2` (`v2.34.0`):** Határérték és folytonosság magasabb dimenzióban — 8 oldal, 8 interaktív ábra (`Widgets142.tsx`), `Quiz`/`Steps`, 23 megoldott feladat.
+- **`14.3` (`v2.35.0`):** Parciális deriváltak — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets143.tsx`), `Quiz`/`Steps`, 23 megoldott feladat.
 
 ## Technikai állapot
 
@@ -46,4 +47,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **14.3 Parciális deriváltak**.
+4. Következő modul: **14.4 A láncszabály**.
