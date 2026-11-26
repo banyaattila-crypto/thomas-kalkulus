@@ -3,16 +3,18 @@ import { TOC, VOLUME_TITLES } from './data/toc';
 import { getCachedSection, loadSection, Page, SECTIONS } from './content';
 import { Cover } from './components/Cover';
 import { TocPage, SUB, VOL_COLORS, CH_COLORS } from './components/TocPage';
+import { FormulaHub } from './components/FormulaHub';
 import { VERSION } from './version';
 import { useProgress } from './utils/progress';
 
-type Route = { view: 'cover' | 'toc' | 'section'; section: string; page: number };
+type Route = { view: 'cover' | 'toc' | 'formulas' | 'section'; section: string; page: number };
 
 /** Hash-útvonal: #s1-1-p3  (szakasz 1.1, oldalindex 3, 0-tól). Hibás értéknél a nyitóoldalra esik vissza.
  *  Csak egyszerű #név alakú hash használható (a közzétételi keret nem enged #/útvonalat). */
 function parseHash(): Route {
   const h = window.location.hash;
   if (h === '#toc') return { view: 'toc', section: '1.1', page: 0 };
+  if (h === '#formulas') return { view: 'formulas', section: '1.1', page: 0 };
   const m = h.match(/^#s(\d+)-(\d+)-p(\d+)$/);
   if (!m) return { view: 'cover', section: '1.1', page: 0 };
   const section = `${m[1]}.${m[2]}`;
@@ -37,8 +39,20 @@ export default function App() {
 
   useEffect(() => {
     const onHash = () => setRoute(parseHash());
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        window.location.hash = '#formulas';
+        setMenuOpen(false);
+        window.scrollTo({ top: 0 });
+      }
+    };
     window.addEventListener('hashchange', onHash);
-    return () => window.removeEventListener('hashchange', onHash);
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('hashchange', onHash);
+      window.removeEventListener('keydown', onKey);
+    };
   }, []);
 
   useEffect(() => {
@@ -74,8 +88,8 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const goView = (v: 'cover' | 'toc') => {
-    window.location.hash = v === 'toc' ? '#toc' : '#cover';
+  const goView = (v: 'cover' | 'toc' | 'formulas') => {
+    window.location.hash = v === 'toc' ? '#toc' : v === 'formulas' ? '#formulas' : '#cover';
     setMenuOpen(false);
     window.scrollTo({ top: 0 });
   };
@@ -115,6 +129,13 @@ export default function App() {
           <span className="brand-sub">látványos tananyag</span>
         </button>
         <span className="top-sp" />
+        <button
+          className={`top-link ${route.view === 'formulas' ? 'on' : ''}`}
+          onClick={() => goView('formulas')}
+          title="Gyorskereső és képletgyűjtemény (Ctrl+K)"
+        >
+          ⌕ Kereső & Képletek
+        </button>
         <button className={`top-link ${route.view === 'toc' ? 'on' : ''}`} onClick={() => goView('toc')}>
           Tartalom
         </button>
@@ -123,6 +144,8 @@ export default function App() {
 
       {route.view === 'toc' ? (
         <TocPage go={go} done={progress.done} />
+      ) : route.view === 'formulas' ? (
+        <FormulaHub go={go} done={progress.done} />
       ) : (
         <div className="layout">
           <nav className={`side ${menuOpen ? 'open' : ''}`}>
