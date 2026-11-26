@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.45.0] - 2026-11-26
+
+### Hozzáadva
+- 15.3 Kettős integrálás polárkoordinátákkal — **90,0%-OS MÉRFÖLDKŐ (108 / 120 SZAKASZ KÉSZ, MÁR CSAK 12 SZAKASZ VAN HÁTRA)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets153.tsx`, `Quiz` gyorstesztek, `Steps` levezetések, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a poláris területelem ($dA = r\,dr\,d\theta$ interaktív cella-mérővel), a sugárnyíl-módszer (körgyűrű, eltolt kör, Thomas 1. példa kardioid − kör), derékszögű → polár átváltás (Thomas 2. példa `Steps` és 4-es átváltó kártya), térfogatok polárban (forgatható 3D paraboloid és hengerrel kifúrt gömb), eltolt körök ($r = 2a\cos\theta$ csapdája élő szög-söpréssel), a **Gauss-integrál** ($\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}$ `Steps` + 3D harang-szimulátor), tömeg, félkör-súlypont és lendkerék-tehetetlenség ($I_0 = \frac{1}{2}M(r_1^2+r_2^2)$), mester-térkép, puskakártya és 5 klasszikus buktató.
+
 ## [2.44.0] - 2026-11-26
 
 ### Hozzáadva
