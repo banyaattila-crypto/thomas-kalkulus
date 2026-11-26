@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.42.0] - 2026-11-26
+
+### Hozzáadva
+- 14.10 Kétváltozós Taylor-formula — **A 14. FEJEZET TELJES (10 / 10) ÉS 87,5%-OS (HÉTNYOLCAD!) MÉRFÖLDKŐ (105 / 120)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets1410.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): 1D visszavezetés a $g(t) = f(a+th, b+tk)$ szakaszon (élő metszetgörbe-szimulátorral), másodfokú (kvadratikus) közelítés és Hesse-mátrix alak (3D forgatható $e^x\cos y$ összehasonlítás: érintősík vs. paraboloid), az $n$-edfokú 2D Taylor-formula és Lagrange-maradéktag (interaktív Pascal-deriváltháromszög $m=1..4$), profi vizsgatrükk: 1D sorok szorzása és behelyettesítése (Thomas 1. példa `Steps` és élő összfokszám-szűrő mátrixszal), a 14.7-es Hesse-próba szigorú bizonyítása (kvadratikus vs. köbös dominancia-mérővel), 2D hibabecslés ($O(r^2)$ vs. $O(r^3)$ vs. $O(r^4)$), modern 2D Newton-módszer vs. gradiens ereszkedés ($x^2+8y^2$ völgyben), a teljes 14. fejezet nagy szintézistérképe, puskakártya és 5 klasszikus buktató.
+
 ## [2.41.0] - 2026-11-26
 
 ### Hozzáadva
