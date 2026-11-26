@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.56.0`  
+**Aktuális verzió:** `v3.0.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **119 / 120 szakasz kész** (99,2%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–15. fejezet teljes, a záró **16. fejezet** 7/8-a kész (`16.1`–`16.7`) — **MÁR CSAK 1 SZAKASZ (`16.8`, Gauss–Osztrogradszkij-tétel) VAN HÁTRA!**
+**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült!**
 
 ## Haladás kötetenként és fejezetenként
 
@@ -23,7 +23,7 @@
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
 | **III. kötet** | 14. Parciális deriváltak | 10 / 10 (`14.1`–`14.10`) | **Kész** *(14. fejezet teljes!)* |
 | **III. kötet** | 15. Többes integrálok | 7 / 7 (`15.1`–`15.7`) | **Kész** *(15. fejezet teljes!)* |
-| **III. kötet** | 16. Integrálás vektormezőben | 7 / 8 (`16.1`–`16.7`) | **Folyamatban** |
+| **III. kötet** | 16. Integrálás vektormezőben | 8 / 8 (`16.1`–`16.8`) | **Kész** *(III. kötet és teljes tananyag 100%!)* |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
 
@@ -57,6 +57,7 @@
 - **`16.5` (`v2.54.0`):** Felület felszíne és felületi integrál — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets165.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**117 / 120 = 97,5%!** Implicit és grafikon felszín, skalár felületi integrál, 3D fluxus, Coulomb $4\pi$, gömbhéj súlypontja és $I_z$.)*
 - **`16.6` (`v2.55.0`):** Paraméteresen adott felületek — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets166.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**118 / 120 = 98,3%!** $\mathbf{r}(u,v)$, $\mathbf{r}_u\times\mathbf{r}_v$, tórusz $4\pi^2 aR$, helikoid, paraméteres fluxus, Arkhimédész gömböv-tétele.)*
 - **`16.7` (`v2.56.0`):** Stokes-tétel — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets167.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**119 / 120 = 99,2%!** 3D rotáció, Stokes-tétel és jobbkéz-szabály, felületfüggetlenség, két null-azonosság, Faraday- és Ampère-törvény.)*
+- **`16.8` (`v3.0.0`):** A Gauss–Osztrogradszkij-tétel — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets168.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**120 / 120 = 100,0% — MIND A HÁROM KÖTET TELJES!** 3D divergencia, Gauss–Osztrogradszkij-tétel, fedőlap-trükk, elektrosztatikus Gauss-törvény, mind a 4 Maxwell-egyenlet, a kalkulus 4 alaptételének nagy egyesítése.)*
 
 ## Technikai állapot
 
@@ -69,4 +70,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő (és UTOLSÓ!) modul: **16.8 A Gauss–Osztrogradszkij-tétel** — amivel a teljes 3 kötetes *Thomas-féle Kalkulus* **120 / 120 = 100%** lesz (`v3.0.0`)!
+4. **Minden alfejezet kész (120 / 120)!** További lehetséges fejlesztések: a 2–6. fejezetek modernizálása (`<Quiz />` és `<Steps />` kiegészítése), kereső / képlettár index, vagy GitHub Release (`v3.0.0`) publikálása.

@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.0.0] - 2026-11-26
+
+### Hozzáadva — A TELJES HÁROMKÖTETES THOMAS-FÉLE KALKULUS ELKÉSZÜLT (120 / 120 = 100%)!
+- 16.8 A Gauss–Osztrogradszkij-tétel — **120 / 120 SZAKASZ KÉSZ (100,0%) — MIND A 3 KÖTET, MIND A 16 FEJEZET TELJES!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets168.tsx`, 3 `Quiz` gyorsteszt, `Steps` gömb kifelé fluxusa Gauss–Osztrogradszkij-tétellel, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): 3D divergencia ($\nabla\cdot\mathbf{F}$), a Gauss–Osztrogradszkij-tétel ($\iint_S \mathbf{F}\cdot\mathbf{n}\,d\sigma = \iiint_D (\nabla\cdot\mathbf{F})\,dV$) és 3D voxel-kioltódás, nyitott felületek lezárása a fedőlap-trükkel, üreges testek és az elektrosztatikus Gauss-törvény ($q/\varepsilon_0$), mind a 4 Maxwell-egyenlet, Green I. azonossága és a kalkulus négy alaptételének nagy egyesítése ($\int_M d\omega = \int_{\partial M}\omega$).
+
 ## [2.56.0] - 2026-11-26
 
 ### Hozzáadva
