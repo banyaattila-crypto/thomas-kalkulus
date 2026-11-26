@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.50.0] - 2026-11-26
+
+### Hozzáadva
+- 16.1 Vonalintegrál — **A ZÁRÓ, 16. FEJEZET NYITÓSZAKASZA! 113 / 120 szakasz kész (94,2%), már csak 7 szakasz van hátra!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets161.tsx`, 3 `Quiz` gyorsteszt, `Steps` vonalintegrál két szakaszból álló törtvonalon, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): skalárfüggvény vonalintegrálja és a 3D függöny területe, a 3 lépéses számítási recept ($ds = |\mathbf{v}(t)|\,dt$), szakaszonként sima görbék és útfüggés, 3D vonalintegrál csavarvonalon, vékony drótok tömege, súlypontja ($\bar{y}=\frac{2R}{\pi}$ vs. tömör félkörlemez $\frac{4R}{3\pi}$) és tehetetlenségi nyomatéka, szimmetria-trükkök körön és a skalár vs. vektoros irányfüggés előretekintése.
+
 ## [2.49.0] - 2026-11-26
 
 ### Hozzáadva
