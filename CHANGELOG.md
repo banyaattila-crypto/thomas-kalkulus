@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.44.0] - 2026-11-26
+
+### Hozzáadva
+- 15.2 Terület, nyomaték, tömegközéppont (8 oldal, 8 interaktív 2D és magyarázó SVG ábra `Widgets152.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): síkidomok területe kettős integrállal ($\operatorname{Ter}(R) = \iint_R 1\,dA$, interaktív $y=x^2$ és $y=ax$ területmérővel), változó sűrűségű vékony lemezek tömege ($M = \iint_R \delta\,dA$, 3 sűrűségmódos hőtérképpel), elsőrendű nyomatékok ($M_x, M_y$) és tömegközéppont ($\bar{x}=M_y/M, \bar{y}=M_x/M$, Thomas 3. példa `Steps` és élő háromszöglemez-súlypont vándorlással), súlypont és szimmetria (4 klasszikus síkidom: félkör $\frac{4a}{3\pi}$, háromszög $\frac{h}{3}$, parabola $\frac{2h}{5}$, téglalap), tehetetlenségi nyomatékok ($I_x, I_y, I_0$ azonos tömegű nyújtható lemezen), inerciálissugár ($R_x, R_y, R_0$) és Steiner-tétel ($I_L = I_{\text{cm}} + Md^2$ élő grafikonnal), Pappus-tétel (tórusz és gömb térfogata) és 2D valószínűségszámítási híd, mester-képlettár, puskakártya és 5 klasszikus buktató.
+
 ## [2.43.0] - 2026-11-26
 
 ### Hozzáadva
