@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.49.0] - 2026-11-26
+
+### Hozzáadva
+- 15.7 Helyettesítés többes integráloknál — **A 15. FEJEZET TELJES (7/7) — 112 / 120 szakasz kész (93,3%), már csak a 16. fejezet 8 szakasza van hátra!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets157.tsx`, 3 `Quiz` gyorsteszt, `Steps` kettős integrál ferde paralelogrammán, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): lineáris és nemlineáris $uv \to xy$ transzformációk, 2D Jacobi-determináns ($J = x_u y_v - x_v y_u$) és helyettesítési tétel, reciprok Jacobi-szabály, ellipszis területe ($\pi ab$) és hiperbolikus tartományok, 3D Jacobi-determináns (henger, gömbi és ellipszoid egyesítése), orientáció és $J$ előjele, trapéz-szimmetria trükk és ellipszoid tehetetlenségi nyomatéka ($\frac{1}{5}M(a^2+b^2)$).
+
 ## [2.48.0] - 2026-11-26
 
 ### Hozzáadva

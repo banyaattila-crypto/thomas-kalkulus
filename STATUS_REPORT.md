@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.48.0`  
+**Aktuális verzió:** `v2.49.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **111 / 120 szakasz kész** (92,5%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–14. fejezet teljes, a **15. fejezet: Többes integrálok** 6/7-e kész (`15.1`–`15.6`) — már csak **9 szakasz** van hátra az egész tananyagból!
+**Összesített haladás:** **112 / 120 szakasz kész** (93,3%) — Az I. és II. kötet teljes (64/64), a III. kötetből a **10–15. fejezet TELJES!** — már csak az utolsó, **16. fejezet (8 szakasz)** van hátra!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -22,7 +22,7 @@
 | **III. kötet** | 12. Vektorok és a tér geometriája | 6 / 6 (`12.1`–`12.6`) | **Kész** |
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
 | **III. kötet** | 14. Parciális deriváltak | 10 / 10 (`14.1`–`14.10`) | **Kész** *(14. fejezet teljes!)* |
-| **III. kötet** | 15. Többes integrálok | 6 / 7 (`15.1`–`15.6`) | **Folyamatban** |
+| **III. kötet** | 15. Többes integrálok | 7 / 7 (`15.1`–`15.7`) | **Kész** *(15. fejezet teljes!)* |
 | **III. kötet** | 16. Integrálás vektormezőben | 0 / 8 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
@@ -49,6 +49,7 @@
 - **`15.4` (`v2.46.0`):** Hármas integrál derékszögű koordináta-rendszerben — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets154.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(3D voxelek, Árnyék + Lándzsa módszer, $3!=6$ sorrend, $xz/yz$-vetítés, 3D sorrendcsere, 3D átlagérték, Steinmetz-test térfogata $\frac{16}{3}a^3$.)*
 - **`15.5` (`v2.47.0`):** Tömeg és nyomaték három dimenzióban — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets155.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**110 / 120 = 91,7%!** 3D tömeg, $M_{yz}, M_{xz}, M_{xy}$, klasszikus 3D súlypontok, $I_x, I_y, I_z$, 3D Steiner-tétel, lejtő-verseny, bolygófizikai belső sűrűség-modell.)*
 - **`15.6` (`v2.48.0`):** Hármas integrálok henger- és gömbi koordináta-rendszerben — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets156.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**111 / 120 = 92,5%!** Henger- és gömbi $dV$, fagylalttölcsér, koordináta-választó, gömb/gömbhéj $I_z$, szalvétagyűrű-paradoxon, 3D Gauss-integrál.)*
+- **`15.7` (`v2.49.0`):** Helyettesítés többes integráloknál — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets157.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**A 15. fejezet TELJES (7/7), 112 / 120 = 93,3%!** 2D/3D Jacobi-determináns, reciprok szabály, ellipszoid térfogata és $I_z$, orientáció és trapéz-szimmetria.)*
 
 ## Technikai állapot
 
@@ -61,4 +62,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **15.7 Helyettesítés többes integráloknál** (a 15. fejezet zárószakasza!).
+4. Következő modul: **16.1 Vonalintegrál** (az utolsó, 16. fejezet nyitószakasza!).
