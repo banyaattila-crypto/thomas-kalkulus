@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.48.0] - 2026-11-26
+
+### Hozzáadva
+- 15.6 Hármas integrálok henger- és gömbi koordináta-rendszerben — **111 / 120 szakasz kész (92,5%), már csak 9 szakasz van hátra!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets156.tsx`, 3 `Quiz` gyorsteszt, `Steps` fagylalttölcsér térfogata, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): hengerkoordináták ($r, \theta, z$, $dV = r\,dz\,dr\,d\theta$), paraboloid és henger integrálása, gömbi koordináták ($\rho, \phi, \theta$, Thomas-konvenció), a gömbi térfogatelem ($dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta$), a fagylalttölcsér (kúp + gömb), koordináta-rendszer választó, a gömb és gömbhéj tehetetlenségi nyomatéka ($\frac{2}{5}MR^2 \to \frac{2}{3}MR^2$), a szalvétagyűrű-paradoxon és a 3D Gauss-integrál ($\pi^{3/2}$).
+
 ## [2.47.0] - 2026-11-26
 
 ### Hozzáadva
