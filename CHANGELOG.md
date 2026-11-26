@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.56.0] - 2026-11-26
+
+### Hozzáadva
+- 16.7 Stokes-tétel — **119 / 120 szakasz kész (99,2%), MÁR CSAK EGYETLEN SZAKASZ (`16.8`) VAN HÁTRA A TELJES 3 KÖTETBŐL!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets167.tsx`, 3 `Quiz` gyorsteszt, `Steps` 3D ferde ellipszis vonalintegrálja Stokes-tétellel, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): 3D rotáció ($\nabla\times\mathbf{F}$), Stokes-tétel ($\oint_C \mathbf{F}\cdot d\mathbf{r} = \iint_S (\nabla\times\mathbf{F})\cdot\mathbf{n}\,d\sigma$) és jobbkéz-szabály, ferde 3D görbék visszavezetése síklapra, felületfüggetlenség (bonyolult kupola → lapos körlemez), a két null-azonosság ($\nabla\times(\nabla f)=\mathbf{0}$, $\nabla\cdot(\nabla\times\mathbf{F})=0$), zárt felületek és az 5-lapos nyitott kocka trükkje, Faraday- és Ampère-törvény.
+
 ## [2.55.0] - 2026-11-26
 
 ### Hozzáadva
