@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.36.0] - 2026-11-26
+
+### Hozzáadva
+- 14.4 A láncszabály (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets144.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): két- és háromváltozós láncszabály görbe mentén (Thomas 1–2. példa, interaktív fadiagram és 3D csavarvonal szimulátorral), parciális láncszabály több független változóval (Thomas 3–4. példa, interaktív ágkiemelő fadiagrammal), implicit differenciálás a $-F_x/F_y$ és $-F_x/F_z$ villámképlettel (Thomas 5. példa), polárkoordinátás láncszabály és az $f_x^2+f_y^2 = w_r^2 + \frac{1}{r^2}w_\theta^2$ invariáns élő ellenőrzője, másodrendű láncszabály és koordinátatranszformációk (Laplace-egyenlet), kapcsolt ütemek (változó henger szimulátor) és a Leibniz-féle paraméteres integrálderiválás, fadiagram-mestertérkép, összefoglalás és 5 tipikus buktató.
+
 ## [2.35.0] - 2026-11-26
 
 ### Hozzáadva
