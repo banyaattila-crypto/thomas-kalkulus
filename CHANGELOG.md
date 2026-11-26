@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.52.0] - 2026-11-26
+
+### Hozzáadva
+- 16.3 Útfüggetlenség, potenciálfüggvény, konzervatív vektormező — **115 / 120 szakasz kész (95,8%), már csak 5 szakasz van hátra!** (8 oldal, 8 interaktív 2D és magyarázó SVG ábra `Widgets163.tsx`, 3 `Quiz` gyorsteszt, `Steps` 3D potenciálfüggvény meghatározása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): konzervatív vektormezők és potenciálfüggvény ($\mathbf{F}=\nabla f$), a vonalintegrálok alaptétele ($\int_C \nabla f\cdot d\mathbf{r} = f(B)-f(A)$), 2D/3D komponens-teszt, 3 lépéses parciális integrálás, a lyukas tartomány csapdája ($\mathbb{R}^2\setminus\{(0,0)\}$), egzakt differenciálformák és a mechanikai energiamegmaradás ($K+U=\text{áll.}$).
+
 ## [2.51.0] - 2026-11-26
 
 ### Hozzáadva
