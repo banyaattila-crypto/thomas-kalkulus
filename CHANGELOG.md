@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.51.0] - 2026-11-26
+
+### Hozzáadva
+- 16.2 Vektormezők, cirkuláció, munka, áramlás — **95,0%-OS MÉRFÖLDKŐ (114 / 120 SZAKASZ KÉSZ, MÁR CSAK 6 SZAKASZ VAN HÁTRA)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets162.tsx`, 3 `Quiz` gyorsteszt, `Steps` útfüggés igazolása két görbén, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): vektormezők galériája és gradiensmező, változó erő munkája ($W=\int_C \mathbf{F}\cdot d\mathbf{r}$), differenciálforma ($\int M\,dx+N\,dy+P\,dz$) és irányfordítás, cirkuláció zárt görbe mentén ($\oint M\,dx+N\,dy$), kifelé irányuló fluxus ($\oint M\,dy-N\,dx$), kevert forrás+örvény duális elemzése, 3D munka-integrálok és a pontszerű örvény/forrás $2\pi$-invarianciája.
+
 ## [2.50.0] - 2026-11-26
 
 ### Hozzáadva

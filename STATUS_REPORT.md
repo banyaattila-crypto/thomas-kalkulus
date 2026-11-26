@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.50.0`  
+**Aktuális verzió:** `v2.51.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **113 / 120 szakasz kész** (94,2%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–15. fejezet teljes, a záró **16. fejezet: Integrálás vektormezőben** megnyitva (`16.1`) — már csak **7 szakasz** van hátra!
+**Összesített haladás:** **114 / 120 szakasz kész** (95,0% — nagy mérföldkő!) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–15. fejezet teljes, a záró **16. fejezet** 2/8-a kész (`16.1`–`16.2`) — már csak **6 szakasz** van hátra!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -23,7 +23,7 @@
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
 | **III. kötet** | 14. Parciális deriváltak | 10 / 10 (`14.1`–`14.10`) | **Kész** *(14. fejezet teljes!)* |
 | **III. kötet** | 15. Többes integrálok | 7 / 7 (`15.1`–`15.7`) | **Kész** *(15. fejezet teljes!)* |
-| **III. kötet** | 16. Integrálás vektormezőben | 1 / 8 (`16.1`) | **Folyamatban** |
+| **III. kötet** | 16. Integrálás vektormezőben | 2 / 8 (`16.1`–`16.2`) | **Folyamatban** |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
 
@@ -51,6 +51,7 @@
 - **`15.6` (`v2.48.0`):** Hármas integrálok henger- és gömbi koordináta-rendszerben — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets156.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**111 / 120 = 92,5%!** Henger- és gömbi $dV$, fagylalttölcsér, koordináta-választó, gömb/gömbhéj $I_z$, szalvétagyűrű-paradoxon, 3D Gauss-integrál.)*
 - **`15.7` (`v2.49.0`):** Helyettesítés többes integráloknál — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets157.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**A 15. fejezet TELJES (7/7), 112 / 120 = 93,3%!** 2D/3D Jacobi-determináns, reciprok szabály, ellipszoid térfogata és $I_z$, orientáció és trapéz-szimmetria.)*
 - **`16.1` (`v2.50.0`):** Vonalintegrál — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets161.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**A 16. fejezet nyitószakasza, 113 / 120 = 94,2%!** 3D függöny, $ds=|\mathbf{v}|dt$, drót súlypontja és $I_z$, kör-szimmetria, irányfüggetlenség.)*
+- **`16.2` (`v2.51.0`):** Vektormezők, cirkuláció, munka, áramlás — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets162.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**95,0% MÉRFÖLDKŐ: 114 / 120!** Vektormezők, munka $\int \mathbf{F}\cdot d\mathbf{r}$, cirkuláció $\oint M\,dx+N\,dy$, fluxus $\oint M\,dy-N\,dx$, 3D munka, pontforrás/örvény.)*
 
 ## Technikai állapot
 
@@ -63,4 +64,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **16.2 Vektormezők, cirkuláció, munka, áramlás**.
+4. Következő modul: **16.3 Útfüggetlenség, potenciálfüggvény, konzervatív vektormező**.
