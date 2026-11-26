@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.37.0] - 2026-11-26
+
+### Hozzáadva
+- 14.5 Iránymenti deriváltak és gradiens vektor — **100. ELKÉSZÜLT SZAKASZ (100 / 120 = 83,3%) és a 14. fejezet fele kész (5 / 10)!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets145.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): iránymenti derivált egységvektor irányában (360°-os iránytű-szimulátorral), a gradiens vektor ($\nabla f$) és a $D_{\mathbf{u}} f = \nabla f \cdot \mathbf{u}$ skalárszorzat-vetítés (Thomas 2. példa `Steps`), legmeredekebb emelkedés ($+\nabla f$), süllyedés ($-\nabla f$) és nulla változás (szintvonal-térkép szimulátorral), $\nabla f \perp$ szintvonal bizonyítása és ellipszis érintője (Thomas 4. példa interaktív ellipszissel), a gradiens 5 algebrai szabálya, 3D gradiens és szintfelület normálisa (Thomas 6. példa), gradiens ereszkedés (AI optimalizálás interaktív tanulási ráta szimulátorral), 4 szuperképesség összefoglaló kártya és 5 tipikus buktató.
+
 ## [2.36.0] - 2026-11-26
 
 ### Hozzáadva
