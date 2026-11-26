@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.55.0] - 2026-11-26
+
+### Hozzáadva
+- 16.6 Paraméteresen adott felületek — **118 / 120 szakasz kész (98,3%), már csak 2 szakasz (Stokes és Gauss!) van hátra!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets166.tsx`, 3 `Quiz` gyorsteszt, `Steps` a tórusz felszínének kiszámítása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): paraméteres felületek ($\mathbf{r}(u, v)$) és paramétervonalak, a négy standard paraméterezés (henger, gömb, kúp, forgásfelület), érintővektorok ($\mathbf{r}_u, \mathbf{r}_v$), normálvektor ($\mathbf{r}_u\times\mathbf{r}_v$) és felszínelem ($d\sigma = |\mathbf{r}_u\times\mathbf{r}_v|\,du\,dv$), tórusz felszíne ($4\pi^2 aR$), paraméteres skalár- és fluxus-integrál ($\mathbf{F}\cdot(\mathbf{r}_u\times\mathbf{r}_v)$), helikoid (csavarfelület) és Arkhimédész gömböv-tétele.
+
 ## [2.54.0] - 2026-11-26
 
 ### Hozzáadva
