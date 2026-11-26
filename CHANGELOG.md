@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.54.0] - 2026-11-26
+
+### Hozzáadva
+- 16.5 Felület felszíne és felületi integrál — **117 / 120 szakasz kész (97,5%), már csak 3 szakasz van hátra!** (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets165.tsx`, 3 `Quiz` gyorsteszt, `Steps` skalár felületi integrál kúpon, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): implicit felület felszíne ($d\sigma = \frac{|\nabla F|}{|\nabla F\cdot\mathbf{p}|}\,dA$), grafikon felszíne ($d\sigma = \sqrt{1+f_x^2+f_y^2}\,dA$), skalár felületi integrál (tömeg, kúphéj és félgömbhéj súlypontja $\frac{R}{2}$, gömbhéj $I_z = \frac{2}{3}MR^2$), irányított felületek és 3D fluxus ($\mathbf{n}\,d\sigma = \langle -f_x, -f_y, 1\rangle\,dA$), gömbi Coulomb-fluxus ($4\pi$ Gauss-törvény előképe), zárt felületek több lapból és vetítés $xz$/$yz$-síkra.
+
 ## [2.53.0] - 2026-11-26
 
 ### Hozzáadva

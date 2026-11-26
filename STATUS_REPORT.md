@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.53.0`  
+**Aktuális verzió:** `v2.54.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **116 / 120 szakasz kész** (96,7%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–15. fejezet teljes, a záró **16. fejezet fele kész** (`16.1`–`16.4`) — már csak **4 szakasz** van hátra!
+**Összesített haladás:** **117 / 120 szakasz kész** (97,5%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–15. fejezet teljes, a záró **16. fejezet** 5/8-a kész (`16.1`–`16.5`) — már csak **3 szakasz** van hátra!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -23,7 +23,7 @@
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
 | **III. kötet** | 14. Parciális deriváltak | 10 / 10 (`14.1`–`14.10`) | **Kész** *(14. fejezet teljes!)* |
 | **III. kötet** | 15. Többes integrálok | 7 / 7 (`15.1`–`15.7`) | **Kész** *(15. fejezet teljes!)* |
-| **III. kötet** | 16. Integrálás vektormezőben | 4 / 8 (`16.1`–`16.4`) | **Folyamatban** |
+| **III. kötet** | 16. Integrálás vektormezőben | 5 / 8 (`16.1`–`16.5`) | **Folyamatban** |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
 
@@ -54,6 +54,7 @@
 - **`16.2` (`v2.51.0`):** Vektormezők, cirkuláció, munka, áramlás — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets162.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**95,0% MÉRFÖLDKŐ: 114 / 120!** Vektormezők, munka $\int \mathbf{F}\cdot d\mathbf{r}$, cirkuláció $\oint M\,dx+N\,dy$, fluxus $\oint M\,dy-N\,dx$, 3D munka, pontforrás/örvény.)*
 - **`16.3` (`v2.52.0`):** Útfüggetlenség, potenciálfüggvény, konzervatív vektormező — 8 oldal, 8 interaktív ábra (`Widgets163.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**115 / 120 = 95,8%!** Vonalintegrálok alaptétele, komponens-teszt, 3D potenciál-keresés, lyukas tartomány csapdája, egzakt differenciálformák, energiamegmaradás.)*
 - **`16.4` (`v2.53.0`):** Green-tétel a síkban — 8 oldal, 8 interaktív ábra (`Widgets164.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**16. fejezet fele kész, 116 / 120 = 96,7%!** 2D div/rot, Green cirkulációs és fluxus-alakja, planiméter területképletek, lyukas tartományok és deformációs elv.)*
+- **`16.5` (`v2.54.0`):** Felület felszíne és felületi integrál — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets165.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**117 / 120 = 97,5%!** Implicit és grafikon felszín, skalár felületi integrál, 3D fluxus, Coulomb $4\pi$, gömbhéj súlypontja és $I_z$.)*
 
 ## Technikai állapot
 
@@ -66,4 +67,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **16.5 Felület felszíne és felületi integrál**.
+4. Következő modul: **16.6 Paraméteresen adott felületek**.
