@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.40.0] - 2026-11-26
+
+### Hozzáadva
+- 14.8 Lagrange-multiplikátorok (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets148.tsx`, `Quiz` gyorstesztek, `Steps` levezetések, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): a feltételes szélsőérték geometriája és az ortogonális gradiens tétel ($\nabla f = \lambda \nabla g$, Thomas 2. példa interaktív ellipszis–hiperbola érintkezéssel), algebrai esetszétválasztás ($x^2+2y^2$ az egységkörön `Steps` és élő kördiagrammal), 3D Lagrange egy mellékfeltétellel (ellipszoidba írt legnagyobb téglatest forgatható 3D ábrával), két mellékfeltétel 3D-ben ($\nabla f = \lambda \nabla g_1 + \mu \nabla g_2$, Thomas 4. példa sík–henger metszésellipszis `Steps` + 3D szimulátor), a $\lambda$ jelentése (árnyékár / érzékenység-tétel: $df^*/dc = \lambda$ interaktív Cobb–Douglas költségvetés-szimulátorral), a 14.7 és 14.8 egyesítése zárt tartományokon ($g\le c$), a Lagrange-módszer kudarca szinguláris pontokban ($\nabla g = \mathbf{0}$, $y^2 - x^3 = 0$ csúcspont), mester-térkép, puskakártya és 5 klasszikus buktató.
+
 ## [2.39.0] - 2026-11-26
 
 ### Hozzáadva
