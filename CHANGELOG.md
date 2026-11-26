@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.38.0] - 2026-11-26
+
+### Hozzáadva
+- 14.6 Érintősíkok és differenciálok (8 oldal, 8 interaktív 2D/3D és magyarázó SVG ábra `Widgets146.tsx`, `Quiz` gyorstesztek, `Steps` levezetés, 23 megoldott feladat — a záró oldalon 3 könnyebb + 3 közepes + 3 haladó feladat): szintfelület érintősíkja és normálegyenese ($\nabla f(P_0)\cdot(\mathbf{r}-\mathbf{r}_0)=0$, Thomas 1. példa forgatható 3D paraboloid–érintősík szimulátorral), explicit $z=f(x,y)$ érintősíkja ($z-z_0 = f_x\Delta x + f_y\Delta y$, Thomas 2. példa, összehasonlító kártyával), két felület metszésgörbéjének érintőegyenese a $\nabla f \times \nabla g$ vektoriális szorzattal (Thomas 3. példa `Steps` és interaktív 3D henger–sík ábrával), kétváltozós linearizáció $L(x,y)$ és a másodrendű maradéktag $E(x,y)$ felső korlátja (Thomas 4–5. példa élő hibatérképpel), a teljes differenciál ($df = f_x\,dx + f_y\,dy$, $\Delta f$ vs. $df$ 3D függőleges résszel), érzékenység-analízis (Thomas 7. példa: 3D henger térfogatának $r$-re vs. $h$-ra való érzékenysége), háromváltozós linearizáció és hibaterjedés (Thomas 8. példa: téglatest térfogatának maximális százalékos hibája csúszkákkal), mester-összefoglaló kártya és 5 tipikus buktató.
+
 ## [2.37.0] - 2026-11-26
 
 ### Hozzáadva

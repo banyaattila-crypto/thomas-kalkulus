@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v2.37.0`  
+**Aktuális verzió:** `v2.38.0`  
 **Dátum:** 2026-11-26  
-**Összesített haladás:** **100 / 120 szakasz kész** (83,3%) — **100. SZAKASZ MÉRFÖLDKŐ!** Az I. és II. kötet teljes (64/64), a III. kötetből a 10–13. fejezet teljes és a **14. fejezet fele kész** (`14.1`–`14.5`)!
+**Összesített haladás:** **101 / 120 szakasz kész** (84,2%) — Az I. és II. kötet teljes (64/64), a III. kötetből a 10–13. fejezet teljes és a **14. fejezet több mint fele kész** (`14.1`–`14.6`)!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -21,7 +21,7 @@
 | **III. kötet** | 11. Végtelen sorozatok és sorok | 11 / 11 (`11.1`–`11.11`) | **Kész** |
 | **III. kötet** | 12. Vektorok és a tér geometriája | 6 / 6 (`12.1`–`12.6`) | **Kész** |
 | **III. kötet** | 13. Vektor értékű függvények, mozgás a térben | 6 / 6 (`13.1`–`13.6`) | **Kész** |
-| **III. kötet** | 14. Parciális deriváltak | 5 / 10 (`14.1`–`14.5`) | **Folyamatban** |
+| **III. kötet** | 14. Parciális deriváltak | 6 / 10 (`14.1`–`14.6`) | **Folyamatban** |
 | **III. kötet** | 15–16. fejezet | 0 / 15 | Tervezett |
 
 ## Legutóbbi mérföldkövek (`v2.1.0` – `v2.32.0`)
@@ -37,6 +37,7 @@
 - **`14.3` (`v2.35.0`):** Parciális deriváltak — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets143.tsx`), `Quiz`/`Steps`, 23 megoldott feladat.
 - **`14.4` (`v2.36.0`):** A láncszabály — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets144.tsx`), `Quiz`/`Steps`, 23 megoldott feladat.
 - **`14.5` (`v2.37.0`):** Iránymenti deriváltak és gradiens vektor — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets145.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**100. elkészült szakasz mérföldkő: 100 / 120 = 83,3%**, a 14. fejezet fele kész!)*
+- **`14.6` (`v2.38.0`):** Érintősíkok és differenciálok — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets146.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(Szintfelület és grafikon érintősíkja, $\nabla f\times\nabla g$ metszésgörbe-érintő, linearizáció, maradéktag-becslés, teljes differenciál, érzékenység és hibaterjedés.)*
 
 ## Technikai állapot
 
@@ -49,4 +50,4 @@
 1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
 2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
 3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. Következő modul: **14.6 Érintősíkok és differenciálok**.
+4. Következő modul: **14.7 Szélsőértékek és nyeregpontok**.
