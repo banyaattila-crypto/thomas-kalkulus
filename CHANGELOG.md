@@ -4,6 +4,11 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [2.53.0] - 2026-11-26
+
+### Hozzáadva
+- 16.4 Green-tétel a síkban — **A 16. FEJEZET FELE KÉSZ (4/8) — 116 / 120 szakasz kész (96,7%), már csak 4 szakasz van hátra!** (8 oldal, 8 interaktív 2D és magyarázó SVG ábra `Widgets164.tsx`, 3 `Quiz` gyorsteszt, `Steps` ijesztő zárt vonalintegrál 5 másodperces megoldása, 23 megoldott feladat — a záró oldalon 3 könnyű + 3 közepes + 3 nehéz feladat): 2D divergencia és skaláris rotáció (lapátkerék), Green-tétel cirkulációs ($\oint M\,dx+N\,dy=\iint(N_x-M_y)\,dA$) és fluxus- ($\oint M\,dy-N\,dx=\iint(M_x+N_y)\,dA$) alakja, belső él-kioltódás, területszámítás vonalintegrállal (ellipszis, asztroid, cipőfűző-képlet), lyukas tartományok és deformációs elv, I. típusú bizonyítás és nyitott görbe lezárása.
+
 ## [2.52.0] - 2026-11-26
 
 ### Hozzáadva
