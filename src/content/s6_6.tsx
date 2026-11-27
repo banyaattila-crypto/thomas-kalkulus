@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   GravityEscapeDiagram,
   HangingChainWidget,
@@ -163,7 +163,7 @@ export const S6_6: Page[] = [
       <>
         <Story>
           <p>
-            Hogyan számoljuk ki, mennyi munka kell egy földalatti hengeres, kúpos vagy félgömb alakú víztartály kiürítéséhez? A felső vízréteget alig kell megemelni, az alján lévő vizet viszont a teljes mélységből fel kell emelni! Vágjuk fel a vizet <strong>vékony vízszintes rétegekre</strong>!
+            Hogyan számoljuk ki, mennyi munka kell egy föld alatti hengeres, kúpos vagy félgömb alakú víztartály kiürítéséhez? A felső vízréteget alig kell megemelni, az alján lévő vizet viszont a teljes mélységből fel kell emelni! Vágjuk fel a vizet <strong>vékony vízszintes rétegekre</strong>!
           </p>
         </Story>
         <Def title="Tartály kiszivattyúzásának munkája">
@@ -406,6 +406,48 @@ export const S6_6: Page[] = [
           </p>
           <M block t="\frac{1}{2}(40)(0{,}10)^2 = 0{,}20\text{ J} = 0{,}05\cdot 9{,}8\cdot h \implies h = \frac{0{,}20}{0{,}49} \approx \mathbf{0{,}408\text{ m} = 40{,}8\text{ cm}}." />
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Rugó nyújtásának munkája Hooke-törvénnyel"
+          source="Analízis-labor"
+          problem={
+            <>
+              Egy <M t="k = 120\text{ N/m}" /> rugóállandójú rugót <M t="0{,}1\text{ m}" /> megnyúlástól <M t="0{,}3\text{ m}" />-ig nyújtunk tovább. Mekkora munkát végzünk?
+            </>
+          }
+          steps={[
+            {
+              title: 'Erőfüggvény felírása (Hooke-törvény)',
+              body: (
+                <p>
+                  A nyugalmi helyzettől mért <M t="x" /> elmozdulásnál <M t="F(x) = 120x\;\text{(N)}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Munkaintegrál kiértékelése',
+              body: (
+                <M block t="W = \int_{0{,}1}^{0{,}3} 120x\,dx = \Bigl[60x^2\Bigr]_{0{,}1}^{0{,}3} = 60(0{,}09 - 0{,}01) = \mathbf{4{,}8\text{ J}}." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={<>Ha egy rugó megnyújtását megduplázzuk (nyugalmi helyzetből), hányszorosára nő a befektetett munka?</>}
+          options={[
+            { label: <>Kétszeresére</> },
+            { label: <>Négyszeresére</>, ok: true },
+            { label: <>Nyolcszorosára</> },
+            { label: <>Nem változik</> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="W = \frac{1}{2}kx^2" />, a munka négyzetesen arányos a megnyúlással.
+            </>
+          }
+        />
       </>
     ),
   },

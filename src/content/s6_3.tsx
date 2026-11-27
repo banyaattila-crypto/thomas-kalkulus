@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   ArcDifferentialDiagram,
   ArcLengthComparisonWidget,
@@ -401,6 +401,27 @@ export const S6_3: Page[] = [
           </p>
           <M block t="L_{\text{új}} = \int_{ka}^{kb}\sqrt{1+\bigl[f'(X/k)\bigr]^2}\,dX = k\int_{a}^{b}\sqrt{1+\bigl[f'(x)\bigr]^2}\,dx = \mathbf{kL}. \quad\blacksquare" />
         </Task>
+
+        <h3>Gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Miért szükséges az <M t="f'" /> folytonossága (simaság) az ívhosszképlet alkalmazásához?
+            </>
+          }
+          options={[
+            { label: <>Hogy a függvény pozitív legyen</> },
+            { label: <>Hogy a <M t="\sqrt{1 + [f'(x)]^2}" /> integrandus folytonos és integrálható legyen</>, ok: true },
+            { label: <>Hogy a görbe zárt legyen</> },
+            { label: <>Hogy <M t="f''(x) = 0" /> legyen</> },
+          ]}
+          explain={
+            <>
+              Ha <M t="f'" /> folytonos <M t="[a;\,b]" />-n, akkor a gyökös integrandus is folytonos, így a Riemann-integrál biztosan létezik.
+            </>
+          }
+        />
       </>
     ),
   },

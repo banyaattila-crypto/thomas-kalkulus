@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   CentroidForceShortcutWidget,
   HydrostaticParadoxWidget,
@@ -87,7 +87,7 @@ export const S6_7: Page[] = [
           n={3}
           q={
             <>
-              Egy <M t="4\text{ m}" /> széles, <M t="3\text{ m}" /> magas téglalap alakú zsilipkapu felső éle pontosan a vízfelszínen van. Mekkora erő nyomja a vizet felőli oldalát (<M t="\rho g" />-vel és kN-ban)?
+              Egy <M t="4\text{ m}" /> széles, <M t="3\text{ m}" /> magas téglalap alakú zsilipkapu felső éle pontosan a vízfelszínen van. Mekkora erő nyomja a víz felőli oldalát (<M t="\rho g" />-vel és kN-ban)?
             </>
           }
         >
@@ -396,6 +396,23 @@ export const S6_7: Page[] = [
           </p>
           <M block t="F = \rho g\cdot 2\cdot 8 = \mathbf{16\rho g} \approx \mathbf{156{,}8\text{ kN}}." />
         </Task>
+
+        <h3>Gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Függ-e egy függőleges zsilipkapura ható hidrosztatikai erő a mögötte lévő víztározó hosszúságától (a tó méretétől)?</>}
+          options={[
+            { label: <>Igen, a tó teljes tömegétől függ</> },
+            { label: <>Csak akkor nem, ha a fal ferde</> },
+            { label: <>Igen, a tó szélességével arányos</> },
+            { label: <>Nem, kizárólag a vízmélységtől, a folyadék sűrűségétől és a kapu geometriájától</>, ok: true },
+          ]}
+          explain={
+            <>
+              A hidrosztatikai paradoxon értelmében a nyomás csak a mélységtől függ (<M t="p = \rho g h" />).
+            </>
+          }
+        />
       </>
     ),
   },

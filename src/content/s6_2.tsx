@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   HorizontalShellWidget,
   NapkinRingWidget,
@@ -404,6 +404,60 @@ export const S6_2: Page[] = [
             Ellenőrzés: <M t="\dfrac{\pi\cdot 6^3}{6} = 36\pi\text{ cm}^3" /> ✓
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Parabola forgatása hengerhéj-módszerrel"
+          source="Analízis-labor"
+          problem={
+            <>
+              Forgassuk meg az <M t="y = 4x - x^2" /> parabola és az <M t="x" />-tengely közötti tartományt az <M t="y" />-tengely körül hengerhéj-módszerrel!
+            </>
+          }
+          steps={[
+            {
+              title: 'Zérushelyek (integrálási határok)',
+              body: (
+                <p>
+                  <M t="4x - x^2 = 0 \implies x(4-x) = 0 \implies x = 0" /> és <M t="x = 4" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Hengerhéj sugara és magassága',
+              body: (
+                <p>
+                  Egy <M t="x \in [0;\,4]" /> helyen lévő vékony hengerhéj sugara <M t="r = x" />, magassága pedig <M t="h = 4x - x^2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Térfogat-integrál kiértékelése',
+              body: (
+                <M block t="V = 2\pi\int_{0}^{4} x(4x - x^2)\,dx = 2\pi\left[\frac{4x^3}{3} - \frac{x^4}{4}\right]_{0}^{4} = 2\pi\left(\frac{256}{3} - 64\right) = \mathbf{\frac{128\pi}{3}}." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik forgástengely esetén használunk <M t="x" /> szerinti integrálást a hengerhéj-módszerben?
+            </>
+          }
+          options={[
+            { label: <>Vízszintes tengely (<M t="x" />-tengely) esetén</> },
+            { label: <>Csak ferde tengely esetén</> },
+            { label: <>Függőleges tengely (pl. <M t="y" />-tengely vagy <M t="x = L" />) esetén</>, ok: true },
+            { label: <>Mindig <M t="y" /> szerint kell integrálni</> },
+          ]}
+          explain={
+            <>
+              Függőleges tengelynél a tengellyel párhuzamos csíkok vastagsága <M t="dx" />, így <M t="x" /> szerint integrálunk.
+            </>
+          }
+        />
       </>
     ),
   },

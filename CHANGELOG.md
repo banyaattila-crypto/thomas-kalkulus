@@ -4,6 +4,16 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.5.0] - 2026-11-27
+
+### Hozzáadva — 6. fejezet Analízis-labor integráció és tartalmi revízió (`6.1`–`6.7`)
+- **6.1–6.7 szakaszok (`s6_1.tsx`–`s6_7.tsx`)**: beépítve az Analízis-labor 2 nem duplikált `<Steps />` példája (`6.2`, `6.6`) és mind a 7 `<Quiz />` gyorstesztje (`6.1`–`6.7`), egységes `Analízis-labor` forrás-jelvénnyel. A meglévő feladatokkal egyező vagy közel egyező példák (`6.1` 14. feladat, `6.3` 13. feladat, `6.4` 3. feladat, `6.5` 7. feladat, `6.7` 4. feladat) duplikátumként kiszűrve.
+
+### Javítva
+- **`6.1`**: elgépelés javítva (`ne vontsd ki` → `ne vond ki`).
+- **`6.6`**: helyesírási javítás (`földalatti` → `föld alatti`).
+- **`6.7`**: elgépelés javítva a 3. feladat szövegében (`a vizet felőli oldalát` → `a víz felőli oldalát`).
+
 ## [3.4.0] - 2026-11-27
 
 ### Hozzáadva — 5. fejezet Analízis-labor integráció és tartalmi revízió (`5.1`–`5.6`)

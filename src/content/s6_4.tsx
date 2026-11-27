@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   PlateCentroidExplorerWidget,
   SeesawBalanceWidget,
@@ -425,6 +425,23 @@ export const S6_4: Page[] = [
           </p>
           <M block t="M_x = \int_{0}^{h} y\cdot\frac{b}{h}(h-y)\,dy = \frac{b}{h}\left[\frac{h}{2}y^2 - \frac{y^3}{3}\right]_{0}^{h} = \frac{bh^2}{6} \implies \bar{y} = \frac{bh^2/6}{bh/2} = \mathbf{\frac{h}{3}}. \quad\blacksquare" />
         </Task>
+
+        <h3>Gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Miért eshet egy homogén vékony félkörív tömegközéppontja magán a dróton kívülre?</>}
+          options={[
+            { label: <>Mert az integrál negatív lesz</> },
+            { label: <>Csak változó sűrűségnél fordulhat elő</> },
+            { label: <>Mert a tömegközéppont a tömegeloszlás súlyozott átlaga, nem feltétlenül eleme a testnek</>, ok: true },
+            { label: <>Ez fizikai képtelenség</> },
+          ]}
+          explain={
+            <>
+              Nem konvex alakzatoknál (pl. félkörív, L-idom, gyűrű) a súlypont gyakran az alakzat anyagán kívülre esik.
+            </>
+          }
+        />
       </>
     ),
   },

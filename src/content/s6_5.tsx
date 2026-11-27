@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   FrustumBandDiagram,
   PappusReverseDiagram,
@@ -403,6 +403,27 @@ export const S6_5: Page[] = [
           </p>
           <M block t="S = 2\pi\int_{0}^{2} x(x^2+1)\,dx = 2\pi\left[\frac{x^4}{4}+\frac{x^2}{2}\right]_{0}^{2} = 2\pi(4+2) = \mathbf{12\pi}." />
         </Task>
+
+        <h3>Gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Miért hibás az <M t="S = \int_a^b 2\pi f(x)\,dx" /> képlet forgásfelület felszínére?
+            </>
+          }
+          options={[
+            { label: <>Mert <M t="dx" /> helyett a görbe menti <M t="ds = \sqrt{1+(f')^2}\,dx" /> ívelemre van szükség</>, ok: true },
+            { label: <>Mert <M t="2\pi" /> helyett <M t="\pi" /> kell</> },
+            { label: <>Mert <M t="f(x)^2" /> kellene bele</> },
+            { label: <>Csak negatív függvénynél hibás</> },
+          ]}
+          explain={
+            <>
+              A vízszintes hengersávok figyelmen kívül hagyják a palást meredekségét, így alulbecsülik a felszínt; helyettük csonkakúp-övekre (<M t="2\pi f(x)\,ds" />) van szükség.
+            </>
+          }
+        />
       </>
     ),
   },

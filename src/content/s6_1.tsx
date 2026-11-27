@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   AxisChoiceComparatorWidget,
   CavalieriSlicingWidget,
@@ -298,7 +298,7 @@ export const S6_1: Page[] = [
           <p><strong>4 tipikus buktató — ezekre vigyázz!</strong></p>
           <ol className="steps">
             <li>
-              <strong><M t="R^2 - r^2 \neq (R-r)^2" />!</strong> A gyűrű területe <M t="\pi R^2 - \pi r^2" />, SOHA ne vontsd ki a sugarakat négyzetre emelés előtt!
+              <strong><M t="R^2 - r^2 \neq (R-r)^2" />!</strong> A gyűrű területe <M t="\pi R^2 - \pi r^2" />, SOHA ne vond ki a sugarakat négyzetre emelés előtt!
             </li>
             <li>
               <strong>Elfelejtett <M t="\pi" /> vagy négyzetre emelés:</strong> forgástestnél minden szelet kör vagy körgyűrű, a <M t="\pi" /> és a négyzet kötelező!
@@ -432,6 +432,23 @@ export const S6_1: Page[] = [
           </p>
           <M block t="V = \frac{\pi h}{r_2-r_1}\int_{r_1}^{r_2} u^2\,du = \frac{\pi h}{3}\cdot\frac{r_2^3-r_1^3}{r_2-r_1} = \mathbf{\frac{\pi h}{3}\left(r_1^2 + r_1 r_2 + r_2^2\right)}." />
         </Task>
+
+        <h3>Gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mi a leggyakoribb hiba a gyűrűmódszer képletének felírásakor?</>}
+          options={[
+            { label: <><M t="\pi" />-vel szorozni az integrált</> },
+            { label: <><M t="(R - r)^2" />-et írni <M t="R^2 - r^2" /> helyett</>, ok: true },
+            { label: <>A metszéspontokat venni integrálási határnak</> },
+            { label: <>Az <M t="x" />-tengelyre merőleges szeletet venni</> },
+          ]}
+          explain={
+            <>
+              A körgyűrű területe két kör területének különbsége: <M t="\pi R^2 - \pi r^2 = \pi(R^2 - r^2)" />, nem pedig <M t="\pi(R-r)^2" />.
+            </>
+          }
+        />
       </>
     ),
   },
