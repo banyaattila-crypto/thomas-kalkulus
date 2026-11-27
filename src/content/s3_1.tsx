@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   DefDerivStepsWidget,
   GraphOfDerivWidget,
@@ -45,7 +45,7 @@ export const S3_1: Page[] = [
           <tbody>
             <tr>
               <td><M t="f'(x)" /> vagy <M t="y'" /></td>
-              <td>„f vessző x” (Newton-féle, rövid és áttekinthető)</td>
+              <td>„f vessző x” (Lagrange-féle, rövid és áttekinthető)</td>
             </tr>
             <tr>
               <td><M t="\dfrac{dy}{dx}" /> vagy <M t="\dfrac{df}{dx}" /></td>
@@ -145,6 +145,39 @@ export const S3_1: Page[] = [
           Kattintsd végig az alábbi interaktív levezetés négy lépését mindhárom függvénynél, majd húzd az <M t="x" /> csúszkát, hogy lásd: a kész képlet valóban pontosan a pontbeli érintő meredekségét adja!
         </p>
         <DefDerivStepsWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Gyökfüggvény deriváltja és értelmezési tartománya"
+          problem={
+            <>
+              Határozzuk meg az <M t="f(x) = \sqrt{x + 3}" /> függvény deriváltját a definícióból, és adjuk meg <M t="f'" /> értelmezési tartományát!
+            </>
+          }
+          steps={[
+            {
+              title: 'Differenciahányados gyöktelenítése',
+              body: (
+                <M block t="\frac{\sqrt{x+h+3}-\sqrt{x+3}}{h} = \frac{(x+h+3)-(x+3)}{h\big(\sqrt{x+h+3}+\sqrt{x+3}\big)} = \frac{1}{\sqrt{x+h+3}+\sqrt{x+3}}." />
+              ),
+            },
+            {
+              title: 'Határérték h → 0 mellett',
+              body: (
+                <p>
+                  <M t="f'(x) = \dfrac{1}{2\sqrt{x+3}}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Értelmezési tartományok összehasonlítása',
+              body: (
+                <p>
+                  Míg <M t="D_f = [-3;\,\infty)" />, a derivált csak <M t="D_{f'} = (-3;\,\infty)" />-en létezik (az <M t="x = -3" /> végpontban függőleges az érintő).
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Feladatok</h3>
         <Task
           n={4}
@@ -365,6 +398,25 @@ export const S3_1: Page[] = [
           Ez azt jelenti, hogy egy deriváltfüggvénynek — még akkor is, ha esetleg nem mindenütt folytonos — <strong>soha nem lehet ugrásszakadása</strong>! Így például az <M t="U(x)" /> egységugrásfüggvény (amely <M t="0" />-ról hirtelen <M t="1" />-re ugrik) nem lehet egyetlen <M t="\mathbb{R}" />-en differenciálható függvény deriváltja sem.
         </p>
         <HierarchyWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik függvény folytonos <M t="x = 0" />-ban, de <strong>NEM</strong> differenciálható ott?
+            </>
+          }
+          options={[
+            { label: <M t="f(x) = |x|" />, ok: true },
+            { label: <M t="f(x) = x^2" /> },
+            { label: <M t="f(x) = \sin x" /> },
+            { label: <M t="f(x) = \dfrac{1}{x}" /> },
+          ]}
+          explain={
+            <>
+              Az <M t="|x|" /> grafikonja az origóban folytonos, de a bal oldali derivált <M t="-1" />, a jobb oldali <M t="+1" />, így töréspontja van.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={12}

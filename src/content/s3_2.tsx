@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   HigherDerivWidget,
   HorizTangentWidget,
@@ -221,6 +221,31 @@ export const S3_2: Page[] = [
         <p>
           <em>Tipp:</em> a nevezőben lévő <M t="(t^2+1)^2" /> négyzetet <strong>szinte soha nem érdemes felbontani</strong> — szorzat alakban sokkal átláthatóbb, és könnyebb vele később egyszerűsíteni vagy előjelet vizsgálni!
         </p>
+        <Steps
+          source="Analízis-labor"
+          title="Racionális tört deriválása hányadosszabállyal"
+          problem={
+            <>
+              Deriváljuk az <M t="y = \dfrac{x^2 + 3}{2x - 1}" /> függvényt!
+            </>
+          }
+          steps={[
+            {
+              title: 'Számláló és nevező deriváltjai',
+              body: (
+                <p>
+                  Legyen <M t="u = x^2 + 3" /> (<M t="u' = 2x" />) és <M t="v = 2x - 1" /> (<M t="v' = 2" />).
+                </p>
+              ),
+            },
+            {
+              title: 'Hányadosszabály és összevonás',
+              body: (
+                <M block t="y' = \frac{(2x - 1)(2x) - (x^2 + 3)\cdot 2}{(2x - 1)^2} = \frac{4x^2 - 2x - 2x^2 - 6}{(2x - 1)^2} = \frac{2x^2 - 2x - 6}{(2x - 1)^2}." />
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={7}
@@ -273,6 +298,25 @@ export const S3_2: Page[] = [
           Sok időt és előjelhibát spórolsz meg, ha deriválás előtt ránézel a kifejezésre: ha egyszerű algebrai átírással (zárójelfelbontás, tagonkénti osztás, negatív kitevő) polinom-szerű összeggé alakítható, <strong>mindig érdemes előbb átírni!</strong>
         </p>
         <RuleChoiceWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="f(x) = x^3 - 5x^{-2}" /> függvény deriváltja?
+            </>
+          }
+          options={[
+            { label: <M t="3x^2 + 10x^{-3}" />, ok: true },
+            { label: <M t="3x^2 - 10x^{-3}" /> },
+            { label: <M t="3x^2 + 10x^{-1}" /> },
+            { label: <M t="3x^2 - 5x^{-3}" /> },
+          ]}
+          explain={
+            <>
+              A negatív kitevővel szorozva az előjel megfordul, a kitevő pedig eggyel csökken: <M t="(-5x^{-2})' = (-5)(-2)x^{-3} = +10x^{-3}" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={9}
@@ -318,7 +362,7 @@ export const S3_2: Page[] = [
             <thead>
               <tr>
                 <th>rend</th>
-                <th>Newton-féle</th>
+                <th>Lagrange-féle</th>
                 <th>Leibniz-féle</th>
                 <th>operátoros</th>
               </tr>

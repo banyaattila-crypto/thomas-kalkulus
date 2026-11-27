@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   CircleImplicitWidget,
   FoliumWidget,
@@ -33,6 +33,25 @@ export const S3_6: Page[] = [
           Nézd meg a körnél (<M t="x^2+y^2=25" />): mindkét oldalt deriválva <M t="2x + 2y\frac{dy}{dx} = 0" />, amiből egyetlen sorban <M t="\dfrac{dy}{dx}=-\dfrac{x}{y}" />!
         </p>
         <CircleImplicitWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha <M t="x^2 + y^2 = 25" />, mennyi <M t="\dfrac{dy}{dx}" /> a <M t="(3;\,4)" /> pontban?
+            </>
+          }
+          options={[
+            { label: <M t="-\dfrac{3}{4}" />, ok: true },
+            { label: <M t="\dfrac{3}{4}" /> },
+            { label: <M t="-\dfrac{4}{3}" /> },
+            { label: <M t="\dfrac{4}{3}" /> },
+          ]}
+          explain={
+            <>
+              Implicit deriválással <M t="2x + 2yy' = 0 \implies y' = -\dfrac{x}{y} = -\dfrac{3}{4}" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={1}
@@ -95,6 +114,50 @@ export const S3_6: Page[] = [
         <p>
           Figyeld meg: az eredményben <M t="x" /> és <M t="y" /> is szerepel — ez teljesen természetes! Ha egy konkrét <M t="(x_0;\,y_0)" /> pontban keresed a meredekséget, mindkét koordinátát behelyettesíted.
         </p>
+        <Steps
+          source="Analízis-labor"
+          title="Elforgatott ellipszis meredeksége egy adott pontban"
+          problem={
+            <>
+              Határozzuk meg az <M t="x^2 + xy + y^2 = 7" /> görbe érintőjének meredekségét az <M t="(1;\,2)" /> pontban!
+            </>
+          }
+          steps={[
+            {
+              title: 'Pont ellenőrzése',
+              body: (
+                <p>
+                  <M t="1^2 + 1\cdot 2 + 2^2 = 1 + 2 + 4 = 7" />, tehát az <M t="(1;\,2)" /> pont rajta van a görbén.
+                </p>
+              ),
+            },
+            {
+              title: 'Implicit deriválás x szerint',
+              body: (
+                <>
+                  <p>A középső <M t="xy" /> tagra szorzatszabályt alkalmazunk:</p>
+                  <M block t="2x + (1\cdot y + xy') + 2yy' = 0." />
+                </>
+              ),
+            },
+            {
+              title: 'Rendezés y′-re',
+              body: (
+                <p>
+                  <M t="y'(x + 2y) = -(2x + y) \implies y' = -\dfrac{2x + y}{x + 2y}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Behelyettesítés az (1; 2) pontban',
+              body: (
+                <p>
+                  <M t="m = -\dfrac{2(1) + 2}{1 + 2(2)} = -\dfrac{4}{5}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
@@ -260,7 +323,7 @@ export const S3_6: Page[] = [
           }
         >
           <p>
-            <M t="y'=\dfrac{2}{3}(1-6x)^{-1/3}\cdot(-6)=\dfrac{-4}{(1-6x)^{1/3}}" />. Az <M t="x=\dfrac{1}{6}" /> helyen nincs értelmezve (ott függőleges az érintő).
+            <M t="y'=\dfrac{2}{3}(1-6x)^{-1/3}\cdot(-6)=\dfrac{-4}{(1-6x)^{1/3}}" />. Az <M t="x=\dfrac{1}{6}" /> helyen nincs értelmezve (ott hegyes tüske van).
           </p>
         </Task>
       </>

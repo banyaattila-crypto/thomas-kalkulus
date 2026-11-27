@@ -4,6 +4,17 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.2.0] - 2026-11-27
+
+### Hozzáadva — 3. fejezet Analízis-labor integráció és tartalmi revízió (`3.1`–`3.8`)
+- **3.1–3.8 szakaszok (`s3_1.tsx`–`s3_8.tsx`)**: beépítve az Analízis-labor 6 nem duplikált `<Steps />` példája (`3.1`, `3.2`, `3.4`, `3.5`, `3.6`, `3.7`) és mind a 8 `<Quiz />` gyorstesztje (`3.1`–`3.8`), egységes `Analízis-labor` forrás-jelvénnyel. A `3.3` ($s(t)=t^3-6t^2+9t$) és `3.8` ($\sqrt{16{,}4}$) példái pontos egyezés miatt duplikátumként kihagyva.
+
+### Javítva
+- **`3.1` & `3.2`**: a vesszős deriváltjelölés ($f'(x), y'$) helyesen **Lagrange-féle** jelölésként feltüntetve (korábban Newton-féle szerepelt).
+- **`3.4`**: elgépelés javítva (`elékerülne` → `előkerülne`).
+- **`3.6`**: a 10. feladatnál ($y=(1-6x)^{2/3}$, $x=1/6$) pontosítva: **hegyes tüske**, nem függőleges érintő.
+- **`3.8`**: névelőhiba javítva (`a f(x)` → `az f(x)`).
+
 ## [3.1.0] - 2026-11-26
 
 ### Hozzáadva — 2. fejezet Analízis-labor integráció (`2.1`–`2.7`, duplikátum-szűréssel)

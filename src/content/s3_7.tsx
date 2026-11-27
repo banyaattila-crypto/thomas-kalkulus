@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   BalloonAngleWidget,
   ConeTankWidget,
@@ -24,6 +24,25 @@ export const S3_7: Page[] = [
         </p>
         <M block t="V=\frac{4}{3}\pi r^3 \;\xrightarrow{\;d/dt\;}\; \frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt} \;\Longrightarrow\; \frac{dr}{dt} = \frac{1}{4\pi r^2}\frac{dV}{dt}." />
         <RelatedRatesStepsDiagram />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Egy kör sugara <M t="2\text{ cm/s}" /> sebességgel nő. Milyen ütemben nő a területe (<M t="A = \pi r^2" />), amikor <M t="r = 5\text{ cm}" />?
+            </>
+          }
+          options={[
+            { label: <M t="20\pi\text{ cm}^2/\text{s}" />, ok: true },
+            { label: <M t="10\pi\text{ cm}^2/\text{s}" /> },
+            { label: <M t="50\pi\text{ cm}^2/\text{s}" /> },
+            { label: <M t="4\pi\text{ cm}^2/\text{s}" /> },
+          ]}
+          explain={
+            <>
+              <M t="\dfrac{dA}{dt} = 2\pi r\dfrac{dr}{dt} = 2\pi(5)(2) = 20\pi\text{ cm}^2/\text{s}" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={1}
@@ -76,6 +95,39 @@ export const S3_7: Page[] = [
           </li>
         </ul>
         <SlidingLadderWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Fal mentén csúszó 5 méteres rúd"
+          problem={
+            <>
+              Egy <M t="5\text{ m}" /> hosszú rúd a falnak támaszkodik. Az alja <M t="0{,}6\text{ m/s}" /> sebességgel csúszik el a faltól. Milyen gyorsan csúszik lefelé a teteje abban a pillanatban, amikor az alja <M t="3\text{ m}" />-re van a faltól?
+            </>
+          }
+          steps={[
+            {
+              title: 'Kényszerkapcsolat és pillanatnyi magasság',
+              body: (
+                <p>
+                  Pitagorasz-tételből <M t="x(t)^2 + y(t)^2 = 25" />. Amikor <M t="x = 3\text{ m}" />, akkor <M t="y = \sqrt{25 - 9} = 4\text{ m}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Deriválás az idő (t) szerint',
+              body: (
+                <M block t="2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -\frac{x}{y}\frac{dx}{dt}." />
+              ),
+            },
+            {
+              title: 'Behelyettesítés a deriválás után',
+              body: (
+                <p>
+                  <M t="\dfrac{dy}{dt} = -\dfrac{3}{4}\cdot 0{,}6 = -0{,}45\text{ m/s}" />, tehát a teteje <M t="0{,}45\text{ m/s}" /> sebességgel csúszik lefelé.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   SinCosDerivWidget,
   SpringOscWidget,
@@ -37,7 +37,7 @@ export const S3_4: Page[] = [
         <TrigCycleDiagram />
         <Warn>
           <p>
-            Ezek a gyönyörű képletek <strong>kizárólag radiánban</strong> érvényesek! Ha fokban mérnéd <M t="x" />-et, minden egyes deriváláskor elékerülne egy <M t="\frac{\pi}{180}" /> szorzó (<M t="\frac{d}{dx}\sin(x^\circ)=\frac{\pi}{180}\cos(x^\circ)" />).
+            Ezek a gyönyörű képletek <strong>kizárólag radiánban</strong> érvényesek! Ha fokban mérnéd <M t="x" />-et, minden egyes deriváláskor előkerülne egy <M t="\frac{\pi}{180}" /> szorzó (<M t="\frac{d}{dx}\sin(x^\circ)=\frac{\pi}{180}\cos(x^\circ)" />).
           </p>
         </Warn>
         <h3>Gyors ellenőrző feladatok</h3>
@@ -200,6 +200,39 @@ export const S3_4: Page[] = [
           Mivel mind a hat alapvető trigonometrikus függvény differenciálható értelmezési tartománya minden pontjában, a 3.1-es 1. Tétel szerint <strong>mindegyik folytonos is</strong> ott — ezért határértékeiket a belső pontokban egyszerű behelyettesítéssel számolhatjuk ki! Például:
         </p>
         <M block t="\lim_{x\to 0}\frac{\sqrt{2+\sec x}}{\cos(\pi\operatorname{tg} x)} = \frac{\sqrt{2+1}}{\cos(0)} = \sqrt{3}." />
+        <Steps
+          source="Analízis-labor"
+          title="Szorzatszabály + meglepő egyszerűsödés"
+          problem={
+            <>
+              Határozzuk meg az <M t="y = x\sin x + \cos x" /> függvény deriváltját!
+            </>
+          }
+          steps={[
+            {
+              title: 'Szorzatszabály az első tagra',
+              body: (
+                <p>
+                  <M t="(x\sin x)' = 1\cdot\sin x + x\cos x = \sin x + x\cos x" />.
+                </p>
+              ),
+            },
+            {
+              title: 'A második tag deriváltja',
+              body: (
+                <p>
+                  <M t="(\cos x)' = -\sin x" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Összevonás',
+              body: (
+                <M block t="y' = \sin x + x\cos x - \sin x = x\cos x." />
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={7}
@@ -249,6 +282,25 @@ export const S3_4: Page[] = [
         <p>
           Például <M t="\dfrac{d^{50}}{dx^{50}}(\cos x)" /> esetén <M t="50 = 4\cdot 12 + 2" /> (maradék 2), tehát az eredmény megegyezik a 2. deriválttal: <M t="-\cos x" />!
         </p>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mennyi a <M t="\dfrac{d^4}{dx^4}(\cos x)" /> negyedik derivált?
+            </>
+          }
+          options={[
+            { label: <M t="\cos x" />, ok: true },
+            { label: <M t="-\cos x" /> },
+            { label: <M t="\sin x" /> },
+            { label: <M t="-\sin x" /> },
+          ]}
+          explain={
+            <>
+              <M t="\cos x \to -\sin x \to -\cos x \to \sin x \to \cos x" />; a deriválás 4-es periódusú.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={9}

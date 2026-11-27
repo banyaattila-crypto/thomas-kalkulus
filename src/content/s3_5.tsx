@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   ChainStepperWidget,
   GearChainWidget,
@@ -87,6 +87,25 @@ export const S3_5: Page[] = [
           Ha a belső függvény maga is összetett, egyszerűen folytatod a hámozást egészen a legbelső <M t="x" />-ig! Nézzük a <M t="g(t)=\operatorname{tg}\big(5-\sin(2t)\big)" /> függvényt:
         </p>
         <M block t="g'(t) = \underbrace{\sec^2\big(5-\sin(2t)\big)}_{\text{1. külső: tg}} \cdot \underbrace{\big(-\cos(2t)\big)}_{\text{2. középső: }5-\sin} \cdot \underbrace{2}_{\text{3. legbelső: }2t} = -2\cos(2t)\sec^2\big(5-\sin(2t)\big)." />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="f(x) = \sin(3x^2 + 1)" /> függvény deriváltja?
+            </>
+          }
+          options={[
+            { label: <M t="6x\cos(3x^2 + 1)" />, ok: true },
+            { label: <M t="\cos(3x^2 + 1)" /> },
+            { label: <M t="3\cos(6x)" /> },
+            { label: <M t="6x\sin(3x^2 + 1)" /> },
+          ]}
+          explain={
+            <>
+              Külső derivált: <M t="\cos(3x^2 + 1)" />, megszorozva a belső deriválttal: <M t="(3x^2 + 1)' = 6x" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
@@ -244,6 +263,39 @@ export const S3_5: Page[] = [
           <M block t="\frac{d^2 y}{dx^2} = \frac{d}{dx}(y') = \frac{dy'/dt}{dx/dt}." />
         </Def>
         <ParamSlopeWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Paraméteres ellipszis érintőjének meredeksége"
+          problem={
+            <>
+              Határozzuk meg az <M t="x(t) = 2\cos t" />, <M t="y(t) = 3\sin t" /> ellipszis érintőjének meredekségét a <M t="t = \dfrac{\pi}{4}" /> helyen!
+            </>
+          }
+          steps={[
+            {
+              title: 'Paraméter szerinti deriváltak',
+              body: (
+                <p>
+                  <M t="\dfrac{dx}{dt} = -2\sin t" /> és <M t="\dfrac{dy}{dt} = 3\cos t" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Hányados felírása',
+              body: (
+                <M block t="\frac{dy}{dx} = \frac{3\cos t}{-2\sin t} = -\frac{3}{2}\operatorname{ctg} t." />
+              ),
+            },
+            {
+              title: 'Behelyettesítés t = π/4 esetén',
+              body: (
+                <p>
+                  Mivel <M t="\operatorname{ctg}(\pi/4) = 1" />, a keresett meredekség <M t="m = -\dfrac{3}{2}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Mintapélda a második deriváltra</h3>
         <p>
           Legyen <M t="x=t-t^2" /> és <M t="y=t-t^3" />!

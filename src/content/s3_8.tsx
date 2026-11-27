@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   BinomialApproxWidget,
   DifferentialFlowDiagram,
@@ -309,6 +309,25 @@ export const S3_8: Page[] = [
           Vagyis egy <M t="2\%" />-os sugárhiba a kör területében (<M t="n=2" />) kb. <strong><M t="4\%" /></strong>, a gömb térfogatában (<M t="n=3" />) pedig kb. <strong><M t="6\%" /></strong> hibát okoz! A derivált <M t="f'(a)" /> nagysága pedig a függvény <strong>érzékenységét</strong> méri: minél nagyobb <M t="|f'(a)|" />, annál érzékenyebb a kimenet a bemenet kis hibáira.
         </p>
         <ErrorPropagationWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Egy kocka élhosszát <M t="1\%" />-os hibával mérjük. A differenciál-közelítés szerint körülbelül mekkora lesz a térfogat (<M t="V = x^3" />) relatív hibája?
+            </>
+          }
+          options={[
+            { label: <M t="3\%" />, ok: true },
+            { label: <M t="1\%" /> },
+            { label: <M t="6\%" /> },
+            { label: <M t="9\%" /> },
+          ]}
+          explain={
+            <>
+              <M t="\dfrac{dV}{V} = \dfrac{3x^2\,dx}{x^3} = 3\dfrac{dx}{x}" />, tehát a térfogat relatív hibája az él relatív hibájának háromszorosa: <M t="3\%" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={9}
@@ -465,7 +484,7 @@ export const S3_8: Page[] = [
           n={14}
           q={
             <>
-              Határozd meg a <M t="f(x)=\dfrac{1}{\sqrt{1+2x}}" /> függvény linearizációját <M t="a=0" />-ban, és becsüld meg <M t="\dfrac{1}{\sqrt{1{,}08}}" /> értékét!
+              Határozd meg az <M t="f(x)=\dfrac{1}{\sqrt{1+2x}}" /> függvény linearizációját <M t="a=0" />-ban, és becsüld meg <M t="\dfrac{1}{\sqrt{1{,}08}}" /> értékét!
             </>
           }
         >

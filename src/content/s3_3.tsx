@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   GeoRateWidget,
   MarginalEconWidget,
@@ -96,6 +96,25 @@ export const S3_3: Page[] = [
           Próbáld ki az alábbi sebesség–idő grafikonon, hogyan olvasható le a haladási irány, a megállás és a legnagyobb gyorsaság!
         </p>
         <VelocityGraphWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha egy test sebessége <M t="v(t) < 0" /> és gyorsulása <M t="a(t) < 0" />, akkor a gyorsasága (<M t="|v|" />) éppen…
+            </>
+          }
+          options={[
+            { label: 'növekszik (negatív irányban gyorsul)', ok: true },
+            { label: 'csökken' },
+            { label: 'állandó' },
+            { label: 'nulla' },
+          ]}
+          explain={
+            <>
+              Mivel a sebesség és a gyorsulás azonos előjelű, a test egyre gyorsabban halad a negatív irányba, tehát a sebesség abszolút értéke (<M t="|v|" />) nő.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
