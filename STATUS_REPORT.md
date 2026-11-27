@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v3.0.0`  
-**Dátum:** 2026-11-26  
-**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült!**
+**Aktuális verzió:** `v3.5.0`  
+**Dátum:** 2026-11-27  
+**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült**, folyamatban az **Analízis-labor integráció és tartalmi revízió** (`2.1`–`6.7` kész, következő: **7. fejezet**).
 
 ## Haladás kötetenként és fejezetenként
 
@@ -58,6 +58,13 @@
 - **`16.6` (`v2.55.0`):** Paraméteresen adott felületek — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets166.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**118 / 120 = 98,3%!** $\mathbf{r}(u,v)$, $\mathbf{r}_u\times\mathbf{r}_v$, tórusz $4\pi^2 aR$, helikoid, paraméteres fluxus, Arkhimédész gömböv-tétele.)*
 - **`16.7` (`v2.56.0`):** Stokes-tétel — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets167.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**119 / 120 = 99,2%!** 3D rotáció, Stokes-tétel és jobbkéz-szabály, felületfüggetlenség, két null-azonosság, Faraday- és Ampère-törvény.)*
 - **`16.8` (`v3.0.0`):** A Gauss–Osztrogradszkij-tétel — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets168.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**120 / 120 = 100,0% — MIND A HÁROM KÖTET TELJES!** 3D divergencia, Gauss–Osztrogradszkij-tétel, fedőlap-trükk, elektrosztatikus Gauss-törvény, mind a 4 Maxwell-egyenlet, a kalkulus 4 alaptételének nagy egyesítése.)*
+- **Kereső & Képlettár Hub + GitHub Release (`v3.0.0`):** Globális kereső és 48 válogatott tétel/képlet gyűjteménye (`#formulas`, `Ctrl+K` / `Cmd+K`, LaTeX másolás), valamint önálló offline egyfájlos HTML csatolva a `v3.0.0` GitHub Release-hez.
+- **Analízis-labor integráció és tartalmi revízió (`v3.1.0` – `v3.5.0`, `2.1`–`6.7`):** Nem duplikált `<Steps />` és `<Quiz />` elemek beépítése egységes `source="Analízis-labor"` forrás-jelvénnyel, valamint szakmai és nyelvi hibák javítása:
+  - **2. fejezet (`v3.1.0`, `2.1`–`2.7`):** 7 `<Steps />` + 7 `<Quiz />` (`.src-badge` forrás-jelvény bevezetése).
+  - **3. fejezet (`v3.2.0`, `3.1`–`3.8`):** 6 `<Steps />` + 8 `<Quiz />` (2 duplikált példa kiszűrve), 5 szakmai/nyelvi javítás.
+  - **4. fejezet (`v3.3.0`, `4.1`–`4.8`):** 3 `<Steps />` + 6 `<Quiz />` (5 példa és 2 kvíz kiszűrve), 4 javítás.
+  - **5. fejezet (`v3.4.0`, `5.1`–`5.6`):** 6 `<Steps />` + 5 `<Quiz />` (1 kvíz kiszűrve), 5 javítás.
+  - **6. fejezet (`v3.5.0`, `6.1`–`6.7`):** 2 `<Steps />` + 7 `<Quiz />` (5 duplikált példa kiszűrve), 3 javítás.
 
 ## Technikai állapot
 
@@ -67,7 +74,6 @@
 
 ## Következő lépések és irányelvek
 
-1. Gazdagabb magyarázó SVG-ábrák és interaktív 2D/3D diagramok minden új szakaszban (8 widget / szakasz).
-2. `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések minden szakaszban.
-3. Szakaszvégi lépcsőzetes gyakorlóblokk: 3 könnyebb + 3 közepes + 3 nehezebb feladat megoldással (összesen 23 feladat / szakasz).
-4. **Minden alfejezet kész (120 / 120)!** További lehetséges fejlesztések: a 2–6. fejezetek modernizálása (`<Quiz />` és `<Steps />` kiegészítése), kereső / képlettár index, vagy GitHub Release (`v3.0.0`) publikálása.
+1. **Analízis-labor integráció és tartalmi revízió folytatása:** következő a **7. fejezet (`7.1`–`7.8`, Transzcendens függvények)**, majd a további fejezetek végigvitele szigorú duplikáció-szűréssel és `source="Analízis-labor"` jelöléssel.
+2. Gazdagabb magyarázó SVG-ábrák, `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések egységesítése a régebbi fejezetekben.
+3. Szakmai, matematikai és helyesírási revízió minden átnézett szakaszon.
