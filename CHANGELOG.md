@@ -4,6 +4,16 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.3.0] - 2026-11-27
+
+### Hozzáadva — 4. fejezet Analízis-labor integráció és tartalmi revízió (`4.1`–`4.8`)
+- **4.1–4.8 szakaszok (`s4_1.tsx`–`s4_8.tsx`)**: beépítve az Analízis-labor 3 nem duplikált `<Steps />` példája (`4.1`, `4.2`, `4.5`) és 6 nem duplikált `<Quiz />` gyorstesztje (`4.1`, `4.2`, `4.3`, `4.4`, `4.7`, `4.8`), egységes `Analízis-labor` forrás-jelvénnyel. A már meglévő feladatokkal egyező példák (`4.3`, `4.4`, `4.6`, `4.7`, `4.8`) és kvízek (`4.5`, `4.6`) duplikátumként kiszűrve.
+
+### Javítva
+- **`4.4`**: elgépelés javítva (`kétetlen előjel` → `mindössze két előjel`).
+- **`4.7`**: két magyar névelőhiba javítva (`az \sin x` → `a \sin x`, `az 9. feladatban` → `a 9. feladatban`).
+- **`4.8`**: elavult `(v1.0.0)` verzióhivatkozás eltávolítva a kötetzáró doboz címéből.
+
 ## [3.2.0] - 2026-11-27
 
 ### Hozzáadva — 3. fejezet Analízis-labor integráció és tartalmi revízió (`3.1`–`3.8`)

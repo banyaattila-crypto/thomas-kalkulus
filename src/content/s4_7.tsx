@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   ConvergenceRaceWidget,
   CosEqualsXWidget,
@@ -143,7 +143,7 @@ export const S4_7: Page[] = [
           n={5}
           q={
             <>
-              Írd fel a Newton-formulát az <M t="\sin x = \dfrac{x}{2}" /> egyenlet pozitív gyökének megkereséséhez!
+              Írd fel a Newton-formulát a <M t="\sin x = \dfrac{x}{2}" /> egyenlet pozitív gyökének megkereséséhez!
             </>
           }
         >
@@ -185,6 +185,25 @@ export const S4_7: Page[] = [
           <li><strong>Lassulás többszörös gyöknél:</strong> ha <M t="f(r)=0" /> ÉS <M t="f'(r)=0" /> (pl. <M t="x^2=0" />), elveszik a kvadratikus sebesség, és csak lassan, lineárisan közelít!</li>
         </ol>
         <NewtonFailWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mikor akad el azonnal a Newton-módszer egy <M t="x_n" /> lépésnél?
+            </>
+          }
+          options={[
+            { label: <>Ha <M t="f'(x_n) = 0" /> (vízszintes az érintő)</>, ok: true },
+            { label: <>Ha <M t="f(x_n) > 0" /></> },
+            { label: <>Ha <M t="x_n < 0" /></> },
+            { label: <>Ha <M t="f''(x_n) > 0" /></> },
+          ]}
+          explain={
+            <>
+              Vízszintes érintő nem metszi az <M t="x" />-tengelyt, és a Newton-képletben nullával való osztás lépne fel.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={7}
@@ -248,7 +267,7 @@ export const S4_7: Page[] = [
           n={10}
           q={
             <>
-              Számítsd ki az 9. feladatban (<M t="x^3+x-1=0" />) <M t="x_1" />-et <M t="x_0=1" /> kezdőtippből!
+              Számítsd ki a 9. feladatban (<M t="x^3+x-1=0" />) <M t="x_1" />-et <M t="x_0=1" /> kezdőtippből!
             </>
           }
         >

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   LagrangeSecantWidget,
   ParallelCurvesWidget,
@@ -140,6 +140,60 @@ export const S4_2: Page[] = [
           <strong>A bizonyítás gyönyörű ötlete:</strong> vonjuk ki <M t="f(x)" />-ből az <M t="AB" /> szelő egyenesének egyenletét! Az így kapott függőleges eltérés <M t="h(x) = f(x) - f(a) - \frac{f(b)-f(a)}{b-a}(x-a)" /> a két végpontban nulla (<M t="h(a)=h(b)=0" />), így <strong>Rolle tétele</strong> szerint van olyan <M t="c" />, ahol <M t="h'(c)=0 \iff f'(c) = \frac{f(b)-f(a)}{b-a}" />!
         </p>
         <LagrangeSecantWidget />
+        <Steps
+          source="Analízis-labor"
+          title="A Lagrange-féle c pont meghatározása"
+          problem={
+            <>
+              Határozzuk meg az <M t="f(x) = x^2 + 3x" /> függvényhez tartozó <M t="c" /> értéket az <M t="[1;\,5]" /> intervallumon!
+            </>
+          }
+          steps={[
+            {
+              title: 'A szelő meredeksége (átlagos változás)',
+              body: (
+                <p>
+                  <M t="\dfrac{f(5) - f(1)}{5 - 1} = \dfrac{40 - 4}{4} = 9" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Az első derivált felírása',
+              body: (
+                <p>
+                  <M t="f'(x) = 2x + 3" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Az f′(c) = 9 egyenlet megoldása',
+              body: (
+                <p>
+                  <M t="2c + 3 = 9 \implies c = 3 \in (1;\,5)" />.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Miért nem alkalmazható a Lagrange-tétel az <M t="f(x) = |x|" /> függvényre a <M t="[-1;\,1]" /> intervallumon?
+            </>
+          }
+          options={[
+            { label: <>Mert az <M t="x = 0" /> belső pontban nem differenciálható</>, ok: true },
+            { label: <>Mert nem folytonos <M t="[-1;\,1]" />-en</> },
+            { label: <>Mert <M t="f(-1) = f(1)" /></> },
+            { label: 'Mert a végpontokban nem deriválható' },
+          ]}
+          explain={
+            <>
+              A tétel megköveteli a nyílt <M t="(-1;\,1)" /> intervallum minden pontjában a differenciálhatóságot, de <M t="|x|" /> a <M t="0" />-ban megtörik.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={5}

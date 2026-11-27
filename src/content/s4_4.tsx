@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   ConcavityTangentWidget,
   CurveSketchStepsDiagram,
@@ -88,7 +88,7 @@ export const S4_4: Page[] = [
     body: (
       <>
         <p>
-          Egy függvénygrafikon teljes alakját minden egyes részintervallumon <strong>kétetlen előjel</strong> határozza meg: <M t="f'" /> (merre megy?) és <M t="f''" /> (merre görbül?). E kettő pontosan <strong>négyféle</strong> görbe-alapelemet ad — ha ezt a négyet ismered, bármilyen függvényt meg tudsz rajzolni, mint egy kirakóst!
+          Egy függvénygrafikon teljes alakját minden egyes részintervallumon <strong>mindössze két előjel</strong> határozza meg: <M t="f'" /> (merre megy?) és <M t="f''" /> (merre görbül?). E kettő pontosan <strong>négyféle</strong> görbe-alapelemet ad — ha ezt a négyet ismered, bármilyen függvényt meg tudsz rajzolni, mint egy kirakóst!
         </p>
         <FourShapesDiagram />
         <p>
@@ -169,6 +169,25 @@ export const S4_4: Page[] = [
           </li>
         </ul>
         <InflectionGalleryWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi a helyzet az <M t="f(x) = x^4" /> függvénynél az <M t="x = 0" /> pontban, ahol <M t="f''(0) = 0" />?
+            </>
+          }
+          options={[
+            { label: 'Nem inflexiós pont, hanem lokális minimum', ok: true },
+            { label: 'Inflexiós pont' },
+            { label: 'Lokális maximum' },
+            { label: 'Szakadási pont' },
+          ]}
+          explain={
+            <>
+              Mivel <M t="f''(x) = 12x^2 \ge 0" /> nem vált előjelet <M t="0" />-ban, a görbe mindenütt konvex, <M t="x = 0" />-ban pedig lokális (sőt abszolút) minimuma van.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={5}

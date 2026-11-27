@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   ClosedIntervalMethodWidget,
   CriticalPointsGalleryWidget,
@@ -189,6 +189,25 @@ export const S4_1: Page[] = [
           Ez azt jelenti, hogy egy függvénynek <strong>CSAK kétféle helyen lehet szélsőértéke</strong>: a kritikus pontokban és az intervallum végpontjaiban! Viszont vigyázz: <em>nem minden kritikus pont szélsőérték!</em>
         </p>
         <CriticalPointsGalleryWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha <M t="f'(c) = 0" />, akkor biztosan van lokális szélsőértéke az <M t="f" /> függvénynek <M t="c" />-ben?
+            </>
+          }
+          options={[
+            { label: <>Nem feltétlenül (ellenpélda: <M t="f(x) = x^3" /> a <M t="0" />-ban)</>, ok: true },
+            { label: 'Igen, mindig' },
+            { label: <>Csak akkor, ha <M t="f" /> polinom</> },
+            { label: <>Igen, ha <M t="c > 0" /></> },
+          ]}
+          explain={
+            <>
+              Az <M t="f'(c) = 0" /> szükséges, de nem elégséges feltétel; az <M t="x^3" />-nak vízszintes érintőjű inflexiós pontja van <M t="0" />-ban, szélsőértéke nincs.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={7}
@@ -247,6 +266,49 @@ export const S4_1: Page[] = [
           </ol>
         </Def>
         <ClosedIntervalMethodWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Abszolút szélsőértékek zárt intervallumon"
+          problem={
+            <>
+              Keressük meg az <M t="f(x) = x^3 - 3x^2 - 9x + 5" /> függvény abszolút szélsőértékeit a <M t="[-2;\,4]" /> zárt intervallumon!
+            </>
+          }
+          steps={[
+            {
+              title: 'Deriválás és szorzattá bontás',
+              body: (
+                <p>
+                  <M t="f'(x) = 3x^2 - 6x - 9 = 3(x - 3)(x + 1)" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Kritikus pontok szűrése',
+              body: (
+                <p>
+                  <M t="f'(x) = 0 \implies x = -1" /> és <M t="x = 3" /> (mindkettő beleesik a <M t="(-2;\,4)" /> intervallumba).
+                </p>
+              ),
+            },
+            {
+              title: 'Kiértékelés a kritikus pontokban és a végpontokban',
+              body: (
+                <p>
+                  <M t="f(-2) = 3" />, <M t="f(-1) = 10" />, <M t="f(3) = -22" />, <M t="f(4) = -15" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Abszolút szélsőértékek leolvasása',
+              body: (
+                <p>
+                  <strong>Abszolút maximum: <M t="10" /></strong> (<M t="x = -1" />-nél), <strong>abszolút minimum: <M t="-22" /></strong> (<M t="x = 3" />-nál).
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={9}

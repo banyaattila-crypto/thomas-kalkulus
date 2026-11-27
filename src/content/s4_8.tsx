@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   AntiderivFamilyWidget,
   InitialValueWidget,
@@ -115,6 +115,25 @@ export const S4_8: Page[] = [
         <p>
           <strong>Linearitás:</strong> konstans szorzó kiemelhető (<M t="\int c\,f = c\int f" />), összeg és különbség pedig tagonként integrálható (<M t="\int (f\pm g) = \int f \pm \int g" />)!
         </p>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="\int (6x^2 + \sec^2 x)\,dx" /> határozatlan integrál?
+            </>
+          }
+          options={[
+            { label: <M t="2x^3 + \operatorname{tg} x + C" />, ok: true },
+            { label: <M t="12x + \operatorname{tg} x + C" /> },
+            { label: <M t="2x^3 + \sec x + C" /> },
+            { label: <M t="3x^3 + \operatorname{tg} x + C" /> },
+          ]}
+          explain={
+            <>
+              Deriválással azonnal ellenőrizhető: <M t="(2x^3 + \operatorname{tg} x + C)' = 6x^2 + \sec^2 x" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
@@ -374,7 +393,7 @@ export const S4_8: Page[] = [
             </tr>
           </tbody>
         </table>
-        <Def title="Gratulálunk — befejezted a teljes I. kötetet! (v1.0.0)">
+        <Def title="Gratulálunk — befejezted a teljes I. kötetet!">
           <p>
             Ezzel a szakasszal lezárult a <strong>4. fejezet (A derivált alkalmazásai)</strong> és az egész <strong>I. kötet</strong> (mind a 30 szakasz: <em>1. Bevezetés → 2. Határérték és folytonosság → 3. Differenciálás → 4. A derivált alkalmazásai</em>)! A II. kötet az <strong>5. fejezettel (Integrálszámítás)</strong> folytatódik, ahol a primitív függvények és a görbe alatti területek a Newton–Leibniz-tételben forrnak össze!
           </p>

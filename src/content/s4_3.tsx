@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   AsymptoteTrapWidget,
   FirstDerivTestCasesWidget,
@@ -91,6 +91,25 @@ export const S4_3: Page[] = [
           </ul>
         </Def>
         <FirstDerivTestCasesWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha <M t="f'(x) = (x - 1)^2(x - 4)" />, hol van lokális minimuma az <M t="f" /> függvénynek?
+            </>
+          }
+          options={[
+            { label: <M t="x = 4" />, ok: true },
+            { label: <M t="x = 1" /> },
+            { label: <><M t="x = 1" /> és <M t="x = 4" /></> },
+            { label: 'Sehol' },
+          ]}
+          explain={
+            <>
+              Az <M t="(x-1)^2" /> mindig nemnegatív, így <M t="x = 1" />-nél nincs előjelváltás; <M t="x = 4" />-nél vált <M t="f'" /> negatívról pozitívra (<M t="-\to +" />).
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}

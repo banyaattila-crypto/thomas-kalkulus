@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Steps, Story, Task, Warn } from '../components/ui';
 import {
   CanOptWidget,
   InscribedRectWidget,
@@ -88,6 +88,49 @@ export const S4_5: Page[] = [
           <li><strong>Igazolás (zárt intervallum):</strong> <M t="V(0)=0" />, <M t="V(4)=4\cdot 16^2 = 1024\;\text{cm}^3" />, <M t="V(12)=0" /> → abszolút maximum <M t="x=4" /> cm-nél!</li>
         </ul>
         <OpenBoxWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Nyitott doboz optimalizálása 18×18 cm-es lemezből"
+          problem={
+            <>
+              Egy <M t="18\text{ cm}\times 18\text{ cm}" />-es fémlemez sarkaiból <M t="x" /> oldalú négyzeteket vágunk ki és nyitott dobozt hajtogatunk. Mekkora <M t="x" /> adja a legnagyobb térfogatot?
+            </>
+          }
+          steps={[
+            {
+              title: 'Célfüggvény és fizikai tartomány',
+              body: (
+                <p>
+                  Térfogat: <M t="V(x) = x(18 - 2x)^2 = 4x^3 - 72x^2 + 324x" />, ahol <M t="0 < x < 9" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Deriválás és kritikus pontok',
+              body: (
+                <p>
+                  <M t="V'(x) = 12x^2 - 144x + 324 = 12(x - 3)(x - 9) = 0" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Igazolás második deriválttal',
+              body: (
+                <p>
+                  Az egyetlen belső kritikus pont <M t="x = 3\text{ cm}" />, ekkor <M t="V''(3) = 24(3) - 144 = -72 < 0" /> (maximum).
+                </p>
+              ),
+            },
+            {
+              title: 'Maximális térfogat',
+              body: (
+                <p>
+                  <M t="V(3) = 3\cdot 12^2 = 432\text{ cm}^3" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <p>
           <strong>Nagypélda 2 (folyóparti kerítés):</strong> <M t="120" /> m drótkerítéssel egy egyenes folyópart mentén akarunk téglalap alakú karámot elkeríteni (a folyó felőli oldalra nem kell kerítés!). Ekkor a mellékfeltétel <M t="2x+y=120 \Rightarrow y=120-2x" />, a terület <M t="A(x)=x(120-2x)=120x-2x^2" />. Deriválva <M t="A'(x)=120-4x=0 \Rightarrow x=30" /> m, <M t="y=60" /> m! Figyeld meg: itt <em>nem</em> négyzet az optimum, hanem <M t="1:2" /> arányú téglalap (<M t="A_{\max}=1800\;\text{m}^2" />)!
         </p>
