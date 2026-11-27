@@ -749,3 +749,10 @@ h1 {
 }
 .fcard-copy:hover { color: var(--ink); border-color: var(--fc); }
 .fcard-copy.ok { color: var(--ok); border-color: var(--ok); background: rgba(52, 211, 153, 0.14); }
+
+/* ---- Forrás-jelvény (pl. Analízis-labor) ---- */
+.src-badge {
+  font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700;
+  color: #2dd4bf; background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.4); border-radius: 999px; padding: 2px 9px;
+}

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { LawsWidget, RationalWidget, StepsWidget, SandwichWidget, FailWidget, StrategyWidget } from '../components/Widgets22';
 import type { Page } from './s1_1';
 
@@ -159,6 +159,42 @@ export const S2_2: Page[] = [
         <p>
           Az egyszerűsítés csak <M t="x\neq c" /> esetén igaz, de a határérték éppen az <M t="x\neq c" /> értékekről szól, ezért ez nem okoz gondot. Az eredeti és az átalakított függvény grafikonja csak egyetlen pontban tér el: az eredetin ott „lyuk” van.
         </p>
+        <Steps
+          source="Analízis-labor"
+          title="Gyökös 0/0 alak konjugálttal"
+          problem={
+            <>
+              Számítsuk ki a <M t="\lim_{x\to 4}\dfrac{\sqrt{x+5}-3}{x-4}" /> határértéket!
+            </>
+          }
+          steps={[
+            {
+              title: 'Bővítés a számláló konjugáltjával',
+              body: (
+                <>
+                  <p>Behelyettesítve <M t="0/0" /> alakot kapunk. Szorozzuk meg a számlálót és a nevezőt <M t="(\sqrt{x+5}+3)" />-mal:</p>
+                  <M block t="\frac{(\sqrt{x+5}-3)(\sqrt{x+5}+3)}{(x-4)(\sqrt{x+5}+3)} = \frac{(x+5)-9}{(x-4)(\sqrt{x+5}+3)}." />
+                </>
+              ),
+            },
+            {
+              title: 'Egyszerűsítés (x ≠ 4)',
+              body: (
+                <p>
+                  A számláló <M t="x - 4" />, amellyel <M t="x \neq 4" /> mellett egyszerűsíthetünk: <M t="\dfrac{1}{\sqrt{x+5}+3}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Közvetlen behelyettesítés',
+              body: (
+                <p>
+                  Most már a nevező nem nulla: <M t="\dfrac{1}{\sqrt{4+5}+3} = \dfrac{1}{3+3} = \dfrac{1}{6}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Feladatok</h3>
         <Task
           n={5}
@@ -229,6 +265,25 @@ export const S2_2: Page[] = [
         <p>
           Egy hasznos következmény: ha <M t="\lim_{x\to c}|f(x)|=0" />, akkor <M t="\lim_{x\to c}f(x)=0" /> is fennáll, mert <M t="-|f|\le f\le|f|" />. A szinuszfüggvény belső tulajdonságaiból (<M t="|\sin\theta|\le|\theta|" />) kapjuk: <M t="\lim_{\theta\to0}\sin\theta=0" />.
         </p>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mennyi <M t="\lim_{x\to 0} x^2\cos\!\left(\dfrac{1}{x}\right)" /> értéke?
+            </>
+          }
+          options={[
+            { label: <M t="0" />, ok: true },
+            { label: <M t="1" /> },
+            { label: 'Nem létezik' },
+            { label: <M t="\infty" /> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="-1 \le \cos(1/x) \le 1" />, ezért <M t="-x^2 \le x^2\cos(1/x) \le x^2" />. Mindkét korlát <M t="0" />-hoz tart, így a szendvicstétel szerint a határérték <M t="0" />.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={8}

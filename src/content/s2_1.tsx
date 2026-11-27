@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { SecantWidget, LimitTableWidget, ApproachWidget, ValueWidget, NoLimitWidget, FloatTrapWidget } from '../components/Widgets21';
 import type { Page } from './s1_1';
 
@@ -89,6 +89,37 @@ export const S2_1: Page[] = [
             <strong>érintője</strong> <M t="P" />-ben, és az érintő meredeksége a pillanatnyi változási sebesség.
           </p>
         </Def>
+        <Steps
+          source="Analízis-labor"
+          title="Átlagsebességtől a pillanatnyi sebességig"
+          problem={
+            <>
+              Egy függőlegesen kilőtt műszer magassága <M t="s(t) = 30t - 5t^2" /> méter. Számítsuk ki az átlagsebességet az <M t="[1;\,1+h]" /> intervallumon, majd a <M t="t = 1\text{ s}" /> pillanatnyi sebességet!
+            </>
+          }
+          steps={[
+            {
+              title: 'Differenciahányados felírása',
+              body: (
+                <M block t="\frac{s(1+h)-s(1)}{h} = \frac{\big[30(1+h) - 5(1+h)^2\big] - 25}{h}." />
+              ),
+            },
+            {
+              title: 'Kibontás és egyszerűsítés',
+              body: (
+                <M block t="\frac{30 + 30h - 5 - 10h - 5h^2 - 25}{h} = \frac{20h - 5h^2}{h} = 20 - 5h \qquad (h \neq 0)." />
+              ),
+            },
+            {
+              title: 'Határátmenet h → 0',
+              body: (
+                <p>
+                  Ha <M t="h \to 0" />, akkor <M t="20 - 5h \to 20\text{ m/s}" /> — ez a műszer pillanatnyi sebessége <M t="t = 1\text{ s}" />-kor.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Feladatok</h3>
         <Task
           n={3}
@@ -205,6 +236,25 @@ export const S2_1: Page[] = [
           Ha a függvényt polinomokból és trigonometrikus függvényekből művelettel állítjuk elő, és <M t="x_0" /> az értelmezési tartományban van, a határérték gyakran egyszerű behelyettesítéssel kapható (például{' '}
           <M t="\lim_{x\to2}(5x-3)=7" />). Ezeket az állításokat a 2.2-ben pontosítjuk, és a 2.3-ban be is bizonyítjuk.
         </p>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Befolyásolja-e az <M t="f(x_0)" /> függvényérték a <M t="\lim_{x\to x_0} f(x)" /> határérték létezését vagy értékét?
+            </>
+          }
+          options={[
+            { label: <>Nem, a határérték csak az <M t="x_0" /> környezetében (<M t="x \neq x_0" />) felvett értékektől függ</>, ok: true },
+            { label: <>Igen, mindig egyenlő <M t="f(x_0)" />-lal</> },
+            { label: <>Csak akkor létezik határérték, ha <M t="f(x_0)" /> értelmezett</> },
+            { label: <>Igen, ha <M t="f(x_0) = 0" />, a határérték is 0</> },
+          ]}
+          explain={
+            <>
+              A határérték fogalma kizárólag az <M t="x \neq x_0" /> pontokra támaszkodik; maga az <M t="f(x_0)" /> lehet eltérő, vagy akár hiányozhat is.
+            </>
+          }
+        />
         <h3>Feladat</h3>
         <Task
           n={7}

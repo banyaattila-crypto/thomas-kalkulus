@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import { EpsDeltaGame, RecipeWidget, SafeDeltaWidget, SumWidget } from '../components/Widgets23';
 import type { Page } from './s1_1';
 
@@ -183,6 +183,60 @@ export const S2_3: Page[] = [
         <p>
           A bizonyítás azért érvényes, mert a δ egyetlen képlet <M t="\varepsilon" />-ból, így <em>minden</em> ε-ra működik.
         </p>
+        <Steps
+          source="Analízis-labor"
+          title="Lineáris határérték ε–δ bizonyítása"
+          problem={
+            <>
+              Bizonyítsuk az <M t="\varepsilon" />–<M t="\delta" /> definícióval, hogy <M t="\lim_{x\to 3}(4x - 5) = 7" />!
+            </>
+          }
+          steps={[
+            {
+              title: 'A cél-egyenlőtlenség felírása',
+              body: (
+                <p>
+                  Legyen adott tetszőleges <M t="\varepsilon > 0" />. Azt szeretnénk, hogy <M t="|(4x - 5) - 7| < \varepsilon" /> teljesüljön.
+                </p>
+              ),
+            },
+            {
+              title: 'Kiemelés és δ megsejtése',
+              body: (
+                <p>
+                  Átalakítva: <M t="|4x - 12| = 4|x - 3| < \varepsilon \iff |x - 3| < \dfrac{\varepsilon}{4}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'A δ megválasztása és ellenőrzés',
+              body: (
+                <p>
+                  Válasszuk <M t="\delta = \dfrac{\varepsilon}{4}" />-et! Ekkor <M t="0 < |x - 3| < \delta \implies |(4x - 5) - 7| = 4|x - 3| < 4 \cdot \dfrac{\varepsilon}{4} = \varepsilon" />. <span aria-hidden>∎</span>
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Az <M t="f(x) = 3x + 1" /> függvénynél <M t="x_0 = 2" />, <M t="L = 7" /> és <M t="\varepsilon = 0{,}06" /> esetén mi a legnagyobb jó <M t="\delta" />?
+            </>
+          }
+          options={[
+            { label: <M t="\delta = 0{,}02" />, ok: true },
+            { label: <M t="\delta = 0{,}18" /> },
+            { label: <M t="\delta = 0{,}06" /> },
+            { label: <M t="\delta = 0{,}03" /> },
+          ]}
+          explain={
+            <>
+              <M t="|3x + 1 - 7| = 3|x - 2| < 0{,}06 \implies |x - 2| < 0{,}02" />, így a legnagyobb megfelelő választás <M t="\delta = 0{,}02" />.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={6}

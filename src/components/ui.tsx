@@ -51,11 +51,13 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 /** Azonnali visszajelzéses, feleletválasztós gyorsteszt magyarázattal. */
 export function Quiz({
   title = 'Gyorsteszt',
+  source,
   q,
   options,
   explain,
 }: {
   title?: string;
+  source?: string;
   q: ReactNode;
   options: QuizOption[];
   explain: ReactNode;
@@ -68,6 +70,7 @@ export function Quiz({
     <div className="quiz">
       <div className="quiz-head">
         <span className="quiz-tag">{title}</span>
+        {source && <span className="src-badge">{source}</span>}
         {answered && (
           <button className="quiz-reset" onClick={() => setPicked(null)}>
             Újrapróbálás
@@ -115,10 +118,12 @@ export type StepItem = { title: string; body: ReactNode };
 /** Lépésenként kibontható kidolgozott példa-kártya. */
 export function Steps({
   title,
+  source,
   problem,
   steps,
 }: {
   title: string;
+  source?: string;
   problem: ReactNode;
   steps: StepItem[];
 }) {
@@ -129,6 +134,7 @@ export function Steps({
     <div className="steps-box">
       <div className="steps-head">
         <span className="steps-tag">Lépésről lépésre</span>
+        {source && <span className="src-badge">{source}</span>}
         <span className="steps-title">{title}</span>
       </div>
       <div className="steps-prob">{problem}</div>

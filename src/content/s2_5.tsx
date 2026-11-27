@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   BDeltaWidget,
   DominantTermWidget,
@@ -36,6 +36,60 @@ export const S2_5: Page[] = [
           Ha mindkét oldalról ugyanabba az irányba szalad el a függvény — például <M t="1/x^2" /> esetén —, akkor „kétoldali” végtelen határértékről beszélünk: <M t="\lim_{x\to 0}\frac{1}{x^2}=+\infty" />.
         </p>
         <InfNearPointWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Kétoldali előjelvizsgálat pólusnál"
+          problem={
+            <>
+              Határozzuk meg a <M t="\lim_{x\to 3^+}\dfrac{x+2}{x-3}" /> és <M t="\lim_{x\to 3^-}\dfrac{x+2}{x-3}" /> határértékeket!
+            </>
+          }
+          steps={[
+            {
+              title: 'A számláló határértéke',
+              body: (
+                <p>
+                  Mindkét oldalról a számláló <M t="3 + 2 = 5 > 0" />-hoz tart (nem nulla!).
+                </p>
+              ),
+            },
+            {
+              title: 'Jobb oldali közelítés (x → 3⁺)',
+              body: (
+                <p>
+                  Ha <M t="x \to 3^+" />, akkor <M t="x - 3 \to 0^+" /> (pozitív), tehát a hányados <M t="+\infty" />-be tart.
+                </p>
+              ),
+            },
+            {
+              title: 'Bal oldali közelítés (x → 3⁻)',
+              body: (
+                <p>
+                  Ha <M t="x \to 3^-" />, akkor <M t="x - 3 \to 0^-" /> (negatív), tehát a hányados <M t="-\infty" />-be tart. Az <M t="x = 3" /> egyenes kétoldali függőleges aszimptota.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mennyi a <M t="\lim_{x\to 2}\dfrac{-5}{(x-2)^2}" /> határérték?
+            </>
+          }
+          options={[
+            { label: <M t="-\infty" />, ok: true },
+            { label: <M t="+\infty" /> },
+            { label: <M t="0" /> },
+            { label: <>Jobbról <M t="+\infty" />, balról <M t="-\infty" /></> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="(x-2)^2 \to 0^+" /> mindkét oldalról, a negatív számláló miatt a hányados mindkét oldalról <M t="-\infty" />-be tart.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={1}

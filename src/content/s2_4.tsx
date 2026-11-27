@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AsymptoteWidget,
   InfLimitWidget,
@@ -363,6 +363,48 @@ export const S2_4: Page[] = [
           Mivel <M t="\lim_{x\to\pm\infty}\frac{6}{x+1}=0" />, a görbe és az <M t="y=x-3" /> egyenes függőleges távolsága 0-hoz tart: az <M t="y=x-3" /> a függvény <strong>ferde aszimptotája</strong>.
         </p>
         <AsymptoteWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Trigonometrikus és végtelenbeli határérték együtt"
+          problem={
+            <>
+              Számítsuk ki a <M t="\lim_{x\to 0}\dfrac{\sin(5x)}{3x}" /> és a <M t="\lim_{x\to\infty}\dfrac{4x^2-7x+1}{2x^2+5}" /> határértékeket!
+            </>
+          }
+          steps={[
+            {
+              title: 'Argumentum egyeztetése 5-tel',
+              body: (
+                <M block t="\lim_{x\to 0}\frac{\sin(5x)}{3x} = \lim_{x\to 0}\frac{5}{3}\cdot\frac{\sin(5x)}{5x} = \frac{5}{3}\cdot 1 = \frac{5}{3}." />
+              ),
+            },
+            {
+              title: 'Osztás a nevező főhatványával (x²)',
+              body: (
+                <M block t="\lim_{x\to\infty}\frac{4x^2-7x+1}{2x^2+5} = \lim_{x\to\infty}\frac{4-\frac{7}{x}+\frac{1}{x^2}}{2+\frac{5}{x^2}} = \frac{4}{2} = 2." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="f(x) = \dfrac{3x^2 + 1}{x - 2}" /> görbe ferde aszimptotája?
+            </>
+          }
+          options={[
+            { label: <M t="y = 3x + 6" />, ok: true },
+            { label: <M t="y = 3x" /> },
+            { label: <M t="y = 3x - 6" /> },
+            { label: 'Nincs ferde aszimptotája' },
+          ]}
+          explain={
+            <>
+              Polinomosztással: <M t="\dfrac{3x^2+1}{x-2} = 3x + 6 + \dfrac{13}{x-2}" />, így a ferde aszimptota <M t="y = 3x + 6" />.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={11}

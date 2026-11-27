@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   BolzanoWidget,
   CompositeLimitWidget,
@@ -119,6 +119,25 @@ export const S2_6: Page[] = [
         <p>
           Fontos megjegyzés: egy <M t="c" /> pont akkor is lehet szakadási hely, ha <em>nem eleme az értelmezési tartománynak</em> (például <M t="1/x^2" /> esetén <M t="x=0" />).
         </p>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen típusú szakadása van az <M t="f(x) = \dfrac{x^2 - 9}{x - 3}" /> függvénynek az <M t="x = 3" /> helyen?
+            </>
+          }
+          options={[
+            { label: 'Megszüntethető szakadás', ok: true },
+            { label: 'Ugrási szakadás' },
+            { label: 'Végtelen szakadás' },
+            { label: 'Nincs szakadása' },
+          ]}
+          explain={
+            <>
+              Mivel <M t="\lim_{x\to 3} f(x) = \lim_{x\to 3}(x+3) = 6" /> véges, az <M t="f(3) = 6" /> kiterjesztéssel a szakadás megszüntethető.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={4}
@@ -258,6 +277,41 @@ export const S2_6: Page[] = [
         </p>
         <M block t="f(x)=\frac{x^2-x-6}{x^2-9}=\frac{(x-3)(x+2)}{(x-3)(x+3)}=\frac{x+2}{x+3}\quad(x\ne 3) \;\Longrightarrow\; F(3)=\frac{5}{6}." />
         <ExtensionWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Paraméteres darabos függvény folytonossá tétele"
+          problem={
+            <>
+              Milyen <M t="k" /> érték esetén folytonos mindenütt az <M t="f(x) = \begin{cases} x^2 + 2, & x < 2 \\ kx - 2, & x \ge 2 \end{cases}" /> függvény?
+            </>
+          }
+          steps={[
+            {
+              title: 'A csatlakozási pont azonosítása',
+              body: (
+                <p>
+                  A két ág külön-külön polinom, így <M t="x \neq 2" />-re biztosan folytonosak. Az egyetlen kritikus pont <M t="x = 2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Bal és jobb oldali határérték felírása',
+              body: (
+                <p>
+                  Balról: <M t="\lim_{x\to 2^-}(x^2 + 2) = 6" />. Jobbról (és magában a pontban): <M t="f(2) = 2k - 2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Egyenlet megoldása k-ra',
+              body: (
+                <p>
+                  A folytonossághoz <M t="2k - 2 = 6 \implies 2k = 8 \implies k = 4" /> szükséges.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Feladatok</h3>
         <Task
           n={10}

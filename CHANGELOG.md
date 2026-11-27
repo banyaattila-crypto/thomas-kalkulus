@@ -4,6 +4,12 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.1.0] - 2026-11-26
+
+### Hozzáadva — 2. fejezet Analízis-labor integráció (`2.1`–`2.7`, duplikátum-szűréssel)
+- **Forrás-jelvény (`source="Analízis-labor"`)** a `<Quiz />` és `<Steps />` komponenseken (`src/components/ui.tsx`, `src/styles.css`), így a tananyagban vizuálisan is egyértelműen látható, mely kártyák érkeztek az Analízis-laborból.
+- **2.1–2.7 szakaszok (`s2_1.tsx`–`s2_7.tsx`)**: mind a 7 szakaszba beépítve az Analízis-labor nem duplikált `<Steps />` kidolgozott példái (7 db) és `<Quiz />` gyorstesztjei (7 db). A már meglévő elméleti kártyák és interaktív widgetek (szelő, szendvicstétel, $\varepsilon$–$\delta$ játék, aszimptoták, szakadáskatalógus, Bolzano, érintő-labor) duplikátumként kihagyva.
+
 ## [3.0.0] - 2026-11-26
 
 ### Hozzáadva — A TELJES HÁROMKÖTETES THOMAS-FÉLE KALKULUS ELKÉSZÜLT (120 / 120 = 100%)!

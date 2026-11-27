@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   SecantToTangentWidget,
   TangentExplorerWidget,
@@ -92,6 +92,58 @@ export const S2_7: Page[] = [
         </p>
         <M block t="m=\lim_{h\to 0}\frac{\frac{1}{a+h}-\frac{1}{a}}{h}=\lim_{h\to 0}\frac{a-(a+h)}{ha(a+h)}=\lim_{h\to 0}\frac{-1}{a(a+h)}=-\frac{1}{a^2}." />
         <TangentExplorerWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Érintő egyenlete definícióból"
+          problem={
+            <>
+              Írjuk fel az <M t="f(x) = x^2 + 2x" /> parabola <M t="x_0 = 1" /> pontbeli érintőjének egyenletét a definíció alapján!
+            </>
+          }
+          steps={[
+            {
+              title: 'Az érintési pont magassága',
+              body: (
+                <p>
+                  Függvényérték: <M t="f(1) = 1^2 + 2\cdot 1 = 3" />, tehát az érintési pont <M t="P(1;\,3)" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Differenciahányados egyszerűsítése',
+              body: (
+                <M block t="\frac{\big[(1+h)^2 + 2(1+h)\big] - 3}{h} = \frac{1 + 2h + h^2 + 2 + 2h - 3}{h} = \frac{4h + h^2}{h} = 4 + h." />
+              ),
+            },
+            {
+              title: 'Meredekség és érintő egyenlete',
+              body: (
+                <p>
+                  Határérték <M t="h \to 0" /> mellett: <M t="m = 4" />. Az érintő egyenlete: <M t="y = 3 + 4(x - 1) = 4x - 1" />.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="y = 1/x" /> hiperbola érintőjének meredeksége az <M t="x = 2" /> pontban?
+            </>
+          }
+          options={[
+            { label: <M t="-\dfrac{1}{4}" />, ok: true },
+            { label: <M t="\dfrac{1}{4}" /> },
+            { label: <M t="-\dfrac{1}{2}" /> },
+            { label: <M t="-4" /> },
+          ]}
+          explain={
+            <>
+              <M t="\lim_{h\to 0}\dfrac{\frac{1}{2+h}-\frac{1}{2}}{h} = \lim_{h\to 0}\dfrac{-1}{2(2+h)} = -\dfrac{1}{4}" />.
+            </>
+          }
+        />
         <h3>Feladatok</h3>
         <Task
           n={3}
