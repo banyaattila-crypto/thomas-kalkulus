@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   ACVoltageRMSWidget,
   AlgebraicSubStepDiagram,
@@ -93,6 +93,39 @@ export const S5_5: Page[] = [
           <strong>Vigyázat!</strong> Csak <em>állandó számot</em> szabad kiemelni vagy pótolni! Ha <M t="\int \cos(x^2)\,dx" />-nél hiányzik az <M t="x" />, azt <strong>nem</strong> szabad <M t="\frac{1}{2x}" />-ként kiemelni az integráljel elé, mert <M t="x" /> változó!
         </p>
         <USubstitutionMatcherWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Gyökös integrál u-helyettesítéssel"
+          problem={
+            <>
+              Számítsuk ki az <M t="\displaystyle\int x^2\sqrt{2x^3 + 5}\,dx" /> határozatlan integrált!
+            </>
+          }
+          steps={[
+            {
+              title: 'Helyettesítés és differenciál',
+              body: (
+                <p>
+                  Válasszuk <M t="u = 2x^3 + 5" />-öt; ekkor <M t="du = 6x^2\,dx \implies x^2\,dx = \dfrac{1}{6}\,du" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Integrálás u szerint',
+              body: (
+                <M block t="\frac{1}{6}\int u^{1/2}\,du = \frac{1}{6}\cdot\frac{2}{3}u^{3/2} + C = \frac{1}{9}u^{3/2} + C." />
+              ),
+            },
+            {
+              title: 'Visszahelyettesítés x-re',
+              body: (
+                <p>
+                  <M t="\dfrac{1}{9}(2x^3 + 5)^{3/2} + C" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
@@ -202,6 +235,25 @@ export const S5_5: Page[] = [
           Miért jó mindhárom? Mert a Pitagorasz-azonosság (<M t="\sin^2 x + \cos^2 x = 1" />) miatt <strong>csak egy állandóban különböznek</strong> (<M t="\sin^2 x - (-\cos^2 x) = 1" />), amit a <M t="+C" /> elnyel!
         </p>
         <EquivalentPrimitivesWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="\displaystyle\int \sin(4x)\cos(4x)\,dx" /> határozatlan integrál (<M t="u = \sin(4x)" /> választással)?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{1}{8}\sin^2(4x) + C" />, ok: true },
+            { label: <M t="\dfrac{1}{2}\sin^2(4x) + C" /> },
+            { label: <M t="-\dfrac{1}{4}\cos^2(4x) + C" /> },
+            { label: <M t="\dfrac{1}{4}\sin^2(4x) + C" /> },
+          ]}
+          explain={
+            <>
+              <M t="u = \sin(4x) \implies du = 4\cos(4x)\,dx" />, így <M t="\dfrac{1}{4}\int u\,du = \dfrac{1}{8}u^2 + C = \dfrac{1}{8}\sin^2(4x) + C" />.
+            </>
+          }
+        />
         <h3>Hogyan integráljuk a <M t="\sin^2 x" /> és <M t="\cos^2 x" /> függvényeket?</h3>
         <p>
           Itt hiányzik a külső <M t="\cos x" /> vagy <M t="\sin x" /> szorzó, ezért a sima <M t="u=\sin x" /> nem működik! A trükk a <strong>félszög-azonosság</strong>, amely első hatványra csökkenti a fokszámot:

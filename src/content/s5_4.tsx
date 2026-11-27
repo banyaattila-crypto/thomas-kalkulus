@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AreaAccumulationWidget,
   FTCLoopDiagram,
@@ -127,7 +127,7 @@ export const S5_4: Page[] = [
           }
         >
           <p>
-            Az integrandus <M t="f(t)=\sqrt{1+t^3}" /> folytonos <M t="t > -1" /> esetén, így a Newton–Leibniz-tétel 1. része azonnal adja: <M t="\mathbf{\sqrt{1+x^3}}" />! (Észre sem kell venni, hogy az alsó határ <M t="2" /> — bármely állandó <M t="a" /> ugyanezt a deriváltat adja.)
+            Az integrandus <M t="f(t)=\sqrt{1+t^3}" /> folytonos <M t="t > -1" /> esetén, így a Newton–Leibniz-tétel 1. része azonnal adja: <M t="\mathbf{\sqrt{1+x^3}}" />! (Mivel bármely állandó <M t="a > -1" /> alsó határ ugyanezt a deriváltat adja.)
           </p>
         </Task>
         <Task
@@ -157,6 +157,31 @@ export const S5_4: Page[] = [
           </p>
         </Story>
         <LeibnizRuleDiagram />
+        <Steps
+          source="Analízis-labor"
+          title="Változó felső határ deriválása láncszabállyal"
+          problem={
+            <>
+              Határozzuk meg a <M t="G(x) = \displaystyle\int_2^{x^3}\sqrt{1+t^2}\,dt" /> függvény deriváltját!
+            </>
+          }
+          steps={[
+            {
+              title: 'Newton–Leibniz 1. rész + láncszabály',
+              body: (
+                <p>
+                  A felső határ <M t="u(x) = x^3" />, deriváltja <M t="u'(x) = 3x^2" />, az integrandus <M t="f(t) = \sqrt{1+t^2}" /> pedig mindenütt folytonos.
+                </p>
+              ),
+            },
+            {
+              title: 'Behelyettesítés és szorzás a belső deriválttal',
+              body: (
+                <M block t="G'(x) = f(x^3)\cdot(x^3)' = \sqrt{1 + (x^3)^2}\cdot 3x^2 = 3x^2\sqrt{1 + x^6}." />
+              ),
+            },
+          ]}
+        />
         <h3>Hogyan működik a 3. és 4. eset?</h3>
         <p>
           Ha <M t="y = \int_a^{u(x)} f(t)\,dt" />, akkor ez két függvény összetétele: <M t="y = F(u)" /> és <M t="u = u(x)" />. A láncszabály szerint:

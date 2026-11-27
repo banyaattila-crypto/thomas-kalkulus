@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   ExactAreaLimitWidget,
   GaussSumWidget,
@@ -142,6 +142,47 @@ export const S5_2: Page[] = [
           </li>
         </ol>
         <ExactAreaLimitWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Pontos terület jobb oldali Riemann-összegekkel"
+          problem={
+            <>
+              Számítsuk ki az <M t="f(x) = 3x^2" /> görbe alatti pontos területet a <M t="[0;\,2]" /> intervallumon jobb oldali Riemann-összegek határértékével!
+            </>
+          }
+          steps={[
+            {
+              title: 'Egyenletes felosztás',
+              body: (
+                <p>
+                  <M t="n" /> egyenlő részre osztva: <M t="\Delta x = \dfrac{2}{n}" />, jobb végpontok <M t="c_k = \dfrac{2k}{n}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Riemann-összeg és négyzetszám-képlet',
+              body: (
+                <M block t="S_n = \sum_{k=1}^n 3\left(\frac{2k}{n}\right)^2\frac{2}{n} = \frac{24}{n^3}\sum_{k=1}^n k^2 = \frac{24}{n^3}\cdot\frac{n(n+1)(2n+1)}{6}." />
+              ),
+            },
+            {
+              title: 'Egyszerűsítés',
+              body: (
+                <p>
+                  <M t="S_n = 4\left(1 + \dfrac{1}{n}\right)\left(2 + \dfrac{1}{n}\right)" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Határátmenet n → ∞',
+              body: (
+                <p>
+                  <M t="\lim_{n\to\infty} S_n = 4\cdot 1\cdot 2 = \mathbf{8}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={5}
@@ -198,6 +239,25 @@ export const S5_2: Page[] = [
           <strong>Figyelj az előjelre!</strong> Ha <M t="f(c_k)>0" />, a téglalap az <M t="x" />-tengely fölött áll, és <em>pozitív</em> tagot ad. Ha <M t="f(c_k)<0" />, a téglalap az <M t="x" />-tengely alatt van, és <strong>negatív</strong> tagot ad! A Riemann-összeg tehát <em>előjeles (nettó) területet</em> közelít.
         </p>
         <RiemannSignedWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi a <M t="P = \{0;\; 0{,}3;\; 0{,}5;\; 1{,}4;\; 2{,}0\}" /> felosztás <M t="\|P\|" /> normája?
+            </>
+          }
+          options={[
+            { label: <M t="0{,}9" />, ok: true },
+            { label: <M t="0{,}6" /> },
+            { label: <M t="0{,}5" /> },
+            { label: <M t="2{,}0" /> },
+          ]}
+          explain={
+            <>
+              A részintervallumok hossza <M t="0{,}3;\; 0{,}2;\; 0{,}9;\; 0{,}6" />, a legnagyobb ezek közül <M t="0{,}9" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={7}
@@ -452,7 +512,7 @@ export const S5_2: Page[] = [
           n={19}
           q={
             <>
-              <em>Teleszkópikus összeg:</em> számítsd ki a <M t="\lim_{n\to\infty}\sum_{k=1}^{n}\left(\dfrac{1}{k}-\dfrac{1}{k+1}\right)" /> határértéket!
+              <em>Teleszkopikus összeg:</em> számítsd ki a <M t="\lim_{n\to\infty}\sum_{k=1}^{n}\left(\dfrac{1}{k}-\dfrac{1}{k+1}\right)" /> határértéket!
             </>
           }
         >

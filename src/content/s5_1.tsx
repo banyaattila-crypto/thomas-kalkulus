@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AverageValueWidget,
   CylinderSlicesWidget,
@@ -35,6 +35,47 @@ export const S5_1: Page[] = [
           </ul>
         </Def>
         <RiemannRectsWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Felezőponti téglalap-közelítés (M₄)"
+          problem={
+            <>
+              Közelítsük az <M t="f(x) = 4 - x^2" /> görbe alatti területet a <M t="[0;\,2]" /> intervallumon <M t="n = 4" /> egyenlő téglalappal, a felezőponti szabály segítségével!
+            </>
+          }
+          steps={[
+            {
+              title: 'Lépésköz és felezőpontok',
+              body: (
+                <p>
+                  <M t="\Delta x = \dfrac{2 - 0}{4} = 0{,}5" />. A részintervallumok felezőpontjai: <M t="c_1 = 0{,}25,\; c_2 = 0{,}75,\; c_3 = 1{,}25,\; c_4 = 1{,}75" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Függvényértékek a felezőpontokban',
+              body: (
+                <p>
+                  <M t="f(0{,}25) = 3{,}9375" />, <M t="f(0{,}75) = 3{,}4375" />, <M t="f(1{,}25) = 2{,}4375" />, <M t="f(1{,}75) = 0{,}9375" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Összegzés',
+              body: (
+                <M block t="M_4 = 0{,}5\cdot(3{,}9375 + 3{,}4375 + 2{,}4375 + 0{,}9375) = 0{,}5\cdot 10{,}75 = 5{,}375." />
+              ),
+            },
+            {
+              title: 'Összehasonlítás a pontos értékkel',
+              body: (
+                <p>
+                  A pontos érték <M t="\dfrac{16}{3} \approx 5{,}3333" />, tehát a felezőponti közelítés hibája már <M t="n = 4" />-nél is csupán <M t="0{,}0417" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={1}
@@ -95,6 +136,25 @@ export const S5_1: Page[] = [
           </p>
         </Def>
         <UpperLowerDiffWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha <M t="f(x)" /> szigorúan növekvő az <M t="[a;\,b]" /> intervallumon, melyik végpontválasztás adja a <strong>felső</strong> (felülről közelítő) összeget?
+            </>
+          }
+          options={[
+            { label: 'A részintervallumok jobb oldali végpontjai', ok: true },
+            { label: 'A részintervallumok bal oldali végpontjai' },
+            { label: 'A felezőpontok' },
+            { label: 'Mindig egyenlőek' },
+          ]}
+          explain={
+            <>
+              Növekvő függvény minden <M t="[x_{k-1};\,x_k]" /> részintervallumon a jobb oldali <M t="x_k" /> végpontban veszi fel a maximumát.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
@@ -154,7 +214,7 @@ export const S5_1: Page[] = [
           n={6}
           q={
             <>
-              Miért mondhatjuk biztosan a 5. feladatban, hogy a valódi megtett út <M t="38" /> m és <M t="52" /> m között van?
+              Miért mondhatjuk biztosan az 5. feladatban, hogy a valódi megtett út <M t="38" /> m és <M t="52" /> m között van?
             </>
           }
         >
@@ -187,7 +247,7 @@ export const S5_1: Page[] = [
           n={7}
           q={
             <>
-              Becsüld meg egy <M t="H=4" /> m magas, <M t="R=2" /> m alapsugarú egyenes kúp térfogatát <M t="n=4" /> egyenlő vastagságú (<M t="\Delta y=1" /> m) <em>középponti</em> hengerkoronggal! (A <M t="y" /> magasságban a sugár <M t="r(y) = 2 - 0{,}5y" />.)
+              Becsüld meg egy <M t="H=4" /> m magas, <M t="R=2" /> m alapsugarú egyenes kúp térfogatát <M t="n=4" /> egyenlő vastagságú (<M t="\Delta y=1" /> m) <em>középponti</em> hengerkoronggal! (Az <M t="y" /> magasságban a sugár <M t="r(y) = 2 - 0{,}5y" />.)
             </>
           }
         >
@@ -347,7 +407,7 @@ export const S5_1: Page[] = [
           n={12}
           q={
             <>
-              Számítsd ki az 11. feladatban <M t="M_4" /> értékét! Mit veszel észre?
+              Számítsd ki a 11. feladatban <M t="M_4" /> értékét! Mit veszel észre?
             </>
           }
         >

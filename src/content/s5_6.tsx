@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AreaBetweenCurvesWidget,
   CrossingCurvesWidget,
@@ -93,6 +93,25 @@ export const S5_6: Page[] = [
           <strong>Miért igaz?</strong> Bontsuk fel <M t="0" />-nál: <M t="\int_{-a}^0 f(x)\,dx + \int_0^a f(x)\,dx" />. Az elsőben végezzük el az <M t="u=-x" /> helyettesítést (<M t="du=-dx" />, határok <M t="a\to 0" />): <M t="\int_{-a}^0 f(x)\,dx = \int_0^a f(-u)\,du" />. Ha <M t="f" /> páros, ez éppen <M t="+\int_0^a f" /> (duplázódik); ha páratlan, akkor <M t="-\int_0^a f" /> (kiejtik egymást)!
         </p>
         <SymmetryIntegralWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mennyi <M t="\displaystyle\int_{-3}^{3}\bigl(x^5\cos x + 2\bigr)\,dx" /> értéke szimmetria alapján?
+            </>
+          }
+          options={[
+            { label: <M t="12" />, ok: true },
+            { label: <M t="0" /> },
+            { label: <M t="6" /> },
+            { label: <M t="24" /> },
+          ]}
+          explain={
+            <>
+              Az <M t="x^5\cos x" /> páratlan, integrálja <M t="[-3;\,3]" />-on <M t="0" />; marad <M t="\int_{-3}^3 2\,dx = 2\cdot 6 = 12" />.
+            </>
+          }
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={3}
@@ -144,6 +163,42 @@ export const S5_6: Page[] = [
           <strong>Fontos felismerés:</strong> a képlet akkor is <em>pontosan</em> igaz, ha az egyik vagy mindkét görbe az <M t="x" />-tengely <strong>alatt</strong> fut! Miért? Mert egy függőleges téglalap magassága mindig <M t="y_{\text{felső}} - y_{\text{alsó}} = f(x) - g(x) \ge 0" />, akár pozitívak, akár negatívak a koordináták! (Próbáld ki a 3. fület az ábrán!)
         </p>
         <AreaBetweenCurvesWidget />
+        <Steps
+          source="Analízis-labor"
+          title="Parabola és egyenes közbezárt területe"
+          problem={
+            <>
+              Számítsuk ki az <M t="y = 6 - x^2" /> parabola és az <M t="y = x" /> egyenes által közbezárt tartomány területét!
+            </>
+          }
+          steps={[
+            {
+              title: 'Metszéspontok meghatározása',
+              body: (
+                <p>
+                  <M t="6 - x^2 = x \implies x^2 + x - 6 = (x + 3)(x - 2) = 0 \implies x_1 = -3,\; x_2 = 2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Felső − alsó felírása és integrálása',
+              body: (
+                <>
+                  <p>A <M t="[-3;\,2]" /> intervallumon a parabola van felül:</p>
+                  <M block t="A = \int_{-3}^{2}(6 - x^2 - x)\,dx = \left[6x - \frac{x^3}{3} - \frac{x^2}{2}\right]_{-3}^{2}." />
+                </>
+              ),
+            },
+            {
+              title: 'Behelyettesítés',
+              body: (
+                <p>
+                  <M t="\left(12 - \dfrac{8}{3} - 2\right) - \left(-18 + 9 - \dfrac{9}{2}\right) = \dfrac{22}{3} - \left(-\dfrac{27}{2}\right) = \mathbf{\dfrac{125}{6}}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
         <h3>Ha nincsenek megadva az a, b határok</h3>
         <p>
           Ha a feladat azt mondja, hogy <em>„a két görbe által közrezárt tartomány területe”</em>, akkor először oldd meg az <strong><M t="f(x)=g(x)" /> egyenletet</strong> — a megoldások adják az <M t="a" /> és <M t="b" /> metszéspontokat!

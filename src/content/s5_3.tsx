@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AverageValueWidget,
   IntegrabilityCompareDiagram,
@@ -180,6 +180,39 @@ export const S5_3: Page[] = [
         <p>
           Mivel ez <em>minden</em> Riemann-összegre teljesül, a <M t="\|P\|\to 0" /> határértékre — vagyis magára az integrálra — is megmarad!
         </p>
+        <Steps
+          source="Analízis-labor"
+          title="Additivitás, határcsere és linearitás együtt"
+          problem={
+            <>
+              Adott <M t="\int_0^3 f(x)\,dx = 7" /> és <M t="\int_3^5 f(x)\,dx = -2" />. Számítsuk ki az <M t="\int_5^0 \bigl(2f(x) - 1\bigr)\,dx" /> integrál értékét!
+            </>
+          }
+          steps={[
+            {
+              title: 'Additivitás',
+              body: (
+                <p>
+                  <M t="\int_0^5 f(x)\,dx = \int_0^3 f(x)\,dx + \int_3^5 f(x)\,dx = 7 + (-2) = 5" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Határfelcserélés',
+              body: (
+                <p>
+                  <M t="\int_5^0 f(x)\,dx = -\int_0^5 f(x)\,dx = -5" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Linearitás és konstans integrálja',
+              body: (
+                <M block t="\int_5^0 \bigl(2f(x) - 1\bigr)\,dx = 2\int_5^0 f(x)\,dx - \int_5^0 1\,dx = 2(-5) - (0 - 5) = -10 + 5 = -5." />
+              ),
+            },
+          ]}
+        />
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={5}
@@ -238,6 +271,25 @@ export const S5_3: Page[] = [
           Próbáld ki az alábbi interaktív ábrán! Figyeld meg, ahogy az <M t="f(x)=x-1" /> függvénynél <M t="b=3" />-nál a negatív (piros) és a pozitív (kék) háromszög pontosan <strong>kiejti egymást</strong>: a határozott integrál <M t="0" />, miközben a befestett teljes geometriai terület <M t="4" />!
         </p>
         <SignedAreaExplorerWidget />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="f(x) = \sin x" /> függvény integrálja a <M t="[0;\,2\pi]" /> intervallumon, és mi a görbe által közrezárt teljes geometriai terület?
+            </>
+          }
+          options={[
+            { label: <>Integrál: <M t="0" />, teljes terület: <M t="4" /></>, ok: true },
+            { label: <>Integrál: <M t="4" />, teljes terület: <M t="4" /></> },
+            { label: <>Integrál: <M t="0" />, teljes terület: <M t="2" /></> },
+            { label: <>Integrál: <M t="2" />, teljes terület: <M t="0" /></> },
+          ]}
+          explain={
+            <>
+              A <M t="[0;\,\pi]" /> feletti <M t="+2" /> és a <M t="[\pi;\,2\pi]" /> alatti <M t="-2" /> nettó összege <M t="0" />, míg az abszolút területek összege <M t="|2| + |-2| = 4" />.
+            </>
+          }
+        />
         <h3>Hogyan számolj geometriával? (3 klasszikus alakzat)</h3>
         <ul>
           <li><strong>Konstans függvény</strong> (<M t="f(x)=c" />): téglalap, előjeles területe <M t="c(b-a)" />.</li>

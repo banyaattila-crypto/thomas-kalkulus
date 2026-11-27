@@ -4,6 +4,16 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.4.0] - 2026-11-27
+
+### Hozzáadva — 5. fejezet Analízis-labor integráció és tartalmi revízió (`5.1`–`5.6`)
+- **5.1–5.6 szakaszok (`s5_1.tsx`–`s5_6.tsx`)**: beépítve az Analízis-labor mind a 6 nem duplikált `<Steps />` példája (`5.1`–`5.6`) és 5 nem duplikált `<Quiz />` gyorstesztje (`5.1`, `5.2`, `5.3`, `5.5`, `5.6`), egységes `Analízis-labor` forrás-jelvénnyel. Az `5.4` kvíze ($\frac{d}{dx}\int_x^5 \cos(t^2)\,dt$) a meglévő 17b feladattal való egyezés miatt duplikátumként kiszűrve.
+
+### Javítva
+- **`5.1`**: három magyar névelőhiba javítva (`a 5. feladatban` → `az 5. feladatban`, `A y magasságban` → `Az y magasságban`, `az 11. feladatban` → `a 11. feladatban`).
+- **`5.2`**: helyesírási javítás (`Teleszkópikus` → `Teleszkopikus`).
+- **`5.4`**: a 3. feladat megjegyzése pontosítva ($a > -1$ értelmezési tartományi feltétel).
+
 ## [3.3.0] - 2026-11-27
 
 ### Hozzáadva — 4. fejezet Analízis-labor integráció és tartalmi revízió (`4.1`–`4.8`)
