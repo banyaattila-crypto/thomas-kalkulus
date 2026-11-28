@@ -550,6 +550,28 @@ export const S11_1: Page[] = [
             <li><M t="\lim_{u\to 0^+}\dfrac{1 - \cos u}{u^2} = \lim_{u\to 0^+}\dfrac{2\sin^2(u/2)}{u^2} = \dfrac{1}{2}" />!</li>
           </ul>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="a_n = \dfrac{\sin n}{n}" /> sorozat határértéke <M t="n \to \infty" /> esetén?
+            </>
+          }
+          options={[
+            { label: <><M t="0" /> (szendvicstétel alapján)</>, ok: true },
+            { label: <M t="1" /> },
+            { label: 'Oszcillál, nincs határértéke' },
+            { label: <M t="\infty" /> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="-\dfrac{1}{n} \le \dfrac{\sin n}{n} \le \dfrac{1}{n}" />, és mindkét szélső sorozat{' '}
+              <M t="0" />-hoz tart, a szendvicstétel szerint <M t="a_n \to 0" />.
+            </>
+          }
+        />
       </>
     ),
   },

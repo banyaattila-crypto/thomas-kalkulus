@@ -4,6 +4,20 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.10.0] - 2026-11-28
+
+### Hozzáadva — 11. fejezet Analízis-labor integráció és tartalmi revízió (`11.1`–`11.11`)
+- **11.1–11.11 szakaszok (`s11_1.tsx`–`s11_11.tsx`)**: beépítve az Analízis-labor 2 nem duplikált `<Steps />` példája (`11.5`, `11.8`) és 8 nem duplikált `<Quiz />` gyorstesztje (`11.1`, `11.2`, `11.3`, `11.5`, `11.6`, `11.8`, `11.9`, `11.11`), egységes `Analízis-labor` forrás-jelvénnyel és magyar tizedesvesszőre/helyesírásra igazítva. A meglévő anyaggal egyező vagy közel egyező 9 példa (`11.1`–`11.4`, `11.6`, `11.7`, `11.9`–`11.11`) és 3 kvíz (`11.4` 20. feladat, `11.7` 2. oldali kvíz, `11.10` 1. feladat) duplikátumként kiszűrve.
+
+### Javítva
+- **`11.3`**: magyar névelőhiba javítva (`Az 8.8-as` → `A 8.8-as`).
+- **`11.5`**: két helyesírási hiba javítva (`konvergencia-tartományát` → `konvergenciatartományát`, `polinom-törtekre` → `polinomtörtekre`).
+- **`11.7`**: három magyar névelőhiba javítva (`a f(x) = ...` → `az f(x) = ...`).
+- **`11.8`**: 20 magyar névelőhiba (`a f(x) = ...` → `az f(x) = ...`, `A n!` → `Az n!`) és két helyesírási hiba (`nem-nulla` → `nem nulla`) javítva.
+- **`11.9`**: öt magyar névelőhiba (`a/A f(x)` → `az/Az f(x)`, `a e^x` → `az e^x`) és két helyesírási hiba (`4.-fokú` → `4. fokú`, `nem-alternáló` → `nem alternáló`) javítva.
+- **`11.10`**: hét magyar névelőhiba (`a y'... / y(0)` → `az y'... / y(0)`, `a f(x)` → `az f(x)`) és öt helyesírási hiba (`nem-nulla` → `nem nulla`, `Nem-elemi` → `Nem elemi`) javítva.
+- **`11.11`**: 14 magyar névelőhiba javítva (`a/A f(x)` → `az/Az f(x)`, `az g(x)` → `a g(x)`).
+
 ## [3.9.0] - 2026-11-28
 
 ### Hozzáadva — 10. fejezet Analízis-labor integráció és tartalmi revízió (`10.1`–`10.8`, III. kötet nyitása)

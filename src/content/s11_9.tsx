@@ -47,7 +47,7 @@ export const S11_9: Page[] = [
 
         <TaylorRemainderVisualWidget />
 
-        <Task n={1} q={<>Írd fel a <M t="f(x) = e^x" /> függvény <M t="a = 0" /> körüli Taylor-formuláját <M t="n = 3" /> rendig a Lagrange-féle maradéktaggal!</>}>
+        <Task n={1} q={<>Írd fel az <M t="f(x) = e^x" /> függvény <M t="a = 0" /> körüli Taylor-formuláját <M t="n = 3" /> rendig a Lagrange-féle maradéktaggal!</>}>
           <p>
             Mivel <M t="f^{(k)}(x) = e^x" /> minden <M t="k" />-ra:
             <M block t="e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{e^c}{4!}x^4," />
@@ -55,7 +55,7 @@ export const S11_9: Page[] = [
           </p>
         </Task>
 
-        <Task n={2} q={<>Írd fel a <M t="f(x) = \ln x" /> függvény <M t="a = 1" /> körüli Taylor-formuláját <M t="n = 2" /> rendig a maradéktaggal együtt!</>}>
+        <Task n={2} q={<>Írd fel az <M t="f(x) = \ln x" /> függvény <M t="a = 1" /> körüli Taylor-formuláját <M t="n = 2" /> rendig a maradéktaggal együtt!</>}>
           <p>
             <M t="f(1)=0" />, <M t="f'(1)=1" />, <M t="f''(1)=-1" />, és <M t="f'''(t) = 2/t^3" />. Tehát:
             <M block t="\ln x = (x-1) - \frac{(x-1)^2}{2} + \frac{2/c^3}{3!}(x-1)^3 = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3c^3}," />
@@ -189,7 +189,7 @@ export const S11_9: Page[] = [
             <M t="\frac{0{,}5^4}{24} \approx 0{,}0026" /> (sok), <M t="n=4" /> esetén{' '}
             <M t="\frac{0{,}5^5}{120} \approx 0{,}00026" /> (még sok), <M t="n=5" /> esetén{' '}
             <M t="\frac{0{,}5^6}{720} \approx 2{,}17\cdot 10^{-5} < 10^{-4}" />! Mivel <M t="P_4(x) \equiv P_5(x)" />,
-            elég a 4.-fokú <M t="1 - \frac{x^2}{2} + \frac{x^4}{24}" /> polinom!
+            elég a 4. fokú <M t="1 - \frac{x^2}{2} + \frac{x^4}{24}" /> polinom!
           </p>
         </Task>
 
@@ -350,7 +350,7 @@ export const S11_9: Page[] = [
               hanem a <strong>maximum</strong> az egész <M t="[a, x]" /> (vagy <M t="[x, a]" />) szakaszon!
             </li>
             <li>
-              <strong>Leibniz-korlát nem-alternáló sorra:</strong> pl. <M t="e^x" /> pozitív <M t="x" />-re nem
+              <strong>Leibniz-korlát nem alternáló sorra:</strong> pl. <M t="e^x" /> pozitív <M t="x" />-re nem
               alternál, ott tilos az első elhagyott tagot hibakorlátnak venni!
             </li>
             <li>
@@ -362,7 +362,7 @@ export const S11_9: Page[] = [
         </Warn>
 
         <Quiz
-          q={<>A <M t="f(x) = \ln(1+x)" /> függvény <M t="a = 0" /> körüli <M t="P_2(x)" /> polinomjának hibáját becsüljük <M t="x \in [-0{,}2, 0{,}2]" />-n. Melyik pontban veszi fel a maximumát <M t="|f'''(t)| = \frac{2}{(1+t)^3}" />?</>}
+          q={<>Az <M t="f(x) = \ln(1+x)" /> függvény <M t="a = 0" /> körüli <M t="P_2(x)" /> polinomjának hibáját becsüljük <M t="x \in [-0{,}2, 0{,}2]" />-n. Melyik pontban veszi fel a maximumát <M t="|f'''(t)| = \frac{2}{(1+t)^3}" />?</>}
           options={[
             { label: <M t="t = 0" /> },
             { label: <M t="t = 0{,}2" /> },
@@ -403,7 +403,7 @@ export const S11_9: Page[] = [
       <>
         <h3>Könnyű feladatok</h3>
 
-        <Task n={15} q={<>Írd fel a <M t="f(x) = \cos x" /> függvény <M t="a = 0" /> körüli <M t="n = 3" /> rendű Taylor-formuláját a Lagrange-maradéktaggal!</>}>
+        <Task n={15} q={<>Írd fel az <M t="f(x) = \cos x" /> függvény <M t="a = 0" /> körüli <M t="n = 3" /> rendű Taylor-formuláját a Lagrange-maradéktaggal!</>}>
           <p>
             <M t="\cos x = 1 - \frac{x^2}{2!} + \frac{\cos c}{4!}x^4" />, ahol <M t="c" /> a <M t="0" /> és{' '}
             <M t="x" /> között van.
@@ -416,7 +416,7 @@ export const S11_9: Page[] = [
           </p>
         </Task>
 
-        <Task n={17} q={<>Becsüld meg a <M t="e^x \approx 1 + x + \frac{x^2}{2}" /> közelítés hibáját <M t="|x| \le 0{,}1" /> esetén!</>}>
+        <Task n={17} q={<>Becsüld meg az <M t="e^x \approx 1 + x + \frac{x^2}{2}" /> közelítés hibáját <M t="|x| \le 0{,}1" /> esetén!</>}>
           <p>
             <M t="t \in [-0{,}1, 0{,}1]" />-en <M t="e^t \le e^{0{,}1} < 1{,}2" /> (vagy egyszerűen <M t="< 2" />).
             Így <M t="|R_2(x)| \le \frac{1{,}2 \cdot 0{,}1^3}{6} = 0{,}0002" />.
@@ -477,6 +477,27 @@ export const S11_9: Page[] = [
             <M block t="|R_2(x)| \le \frac{10/27}{6}(0{,}1)^3 = \frac{5}{81}\cdot 10^{-3} \approx 6{,}17\cdot 10^{-5}." />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="e^{i\pi/2}" /> kifejezés értéke az Euler-képlet szerint?
+            </>
+          }
+          options={[
+            { label: <M t="i" />, ok: true },
+            { label: <M t="-1" /> },
+            { label: <M t="1" /> },
+            { label: <M t="-i" /> },
+          ]}
+          explain={
+            <>
+              <M t="e^{i\pi/2} = \cos(\pi/2) + i\sin(\pi/2) = 0 + i\cdot 1 = i" />.
+            </>
+          }
+        />
       </>
     ),
   },

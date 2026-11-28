@@ -364,7 +364,7 @@ export const S11_7: Page[] = [
           </p>
         </Task>
 
-        <Task n={12} q={<>Add meg a <M t="f(x) = \frac{x^2}{2 + x}" /> függvény origó körüli hatványsorát és konvergenciasugarát!</>}>
+        <Task n={12} q={<>Add meg az <M t="f(x) = \frac{x^2}{2 + x}" /> függvény origó körüli hatványsorát és konvergenciasugarát!</>}>
           <p>
             Kiemeljük a <M t="2" />-t a nevezőből:
             <M block t="\frac{x^2}{2 + x} = \frac{x^2}{2}\cdot\frac{1}{1 - (-x/2)} = \frac{x^2}{2}\sum_{n=0}^\infty \left(-\frac{x}{2}\right)^n = \sum_{n=0}^\infty \frac{(-1)^n}{2^{n+1}} x^{n+2}." />
@@ -498,7 +498,7 @@ export const S11_7: Page[] = [
           </p>
         </Task>
 
-        <Task n={20} q={<>Írd fel a <M t="f(x) = \operatorname{arctg}(2x)" /> függvény hatványsorát és konvergenciasugarát!</>}>
+        <Task n={20} q={<>Írd fel az <M t="f(x) = \operatorname{arctg}(2x)" /> függvény hatványsorát és konvergenciasugarát!</>}>
           <p>
             Helyettesítsük <M t="2x" />-et az <M t="\operatorname{arctg} u" /> sorába:
             <M block t="\operatorname{arctg}(2x) = \sum_{n=0}^\infty (-1)^n \frac{(2x)^{2n+1}}{2n+1} = \sum_{n=0}^\infty (-1)^n \frac{2^{2n+1}}{2n+1} x^{2n+1}." />
@@ -527,7 +527,7 @@ export const S11_7: Page[] = [
           </p>
         </Task>
 
-        <Task n={23} q={<>Határozd meg a <M t="f(x) = \ln\!\left(\frac{1+x}{1-x}\right)" /> függvény hatványsorát, és számítsd ki belőle <M t="\ln 2" /> értékét 3 taggal (<M t="x = \frac{1}{3}" /> segítségével)!</>}>
+        <Task n={23} q={<>Határozd meg az <M t="f(x) = \ln\!\left(\frac{1+x}{1-x}\right)" /> függvény hatványsorát, és számítsd ki belőle <M t="\ln 2" /> értékét 3 taggal (<M t="x = \frac{1}{3}" /> segítségével)!</>}>
           <p>
             <M t="\ln\!\left(\frac{1+x}{1-x}\right) = \ln(1+x) - \ln(1-x)" />. Kivonva a két sort, a páros hatványok
             kiesnek:

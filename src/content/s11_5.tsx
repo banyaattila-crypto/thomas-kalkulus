@@ -287,7 +287,7 @@ export const S11_5: Page[] = [
       <>
         <p>
           A 11.7-es szakaszban hatványsorokat (<M t="\sum c_n x^n" />) fogunk vizsgálni. A hányados- és gyökkritérium
-          már most megmutatja, hogyan találjuk meg egy paraméteres sor konvergencia-tartományát!
+          már most megmutatja, hogyan találjuk meg egy paraméteres sor konvergenciatartományát!
         </p>
 
         <ExponentialVsFactorialRaceWidget />
@@ -360,7 +360,7 @@ export const S11_5: Page[] = [
           taggal</strong> (<M t="a_{n+1}/a_n" />)! Ha megfordítod, pontosan az ellenkezőjét kapod a konvergenciára!
         </Warn>
         <Warn>
-          <strong>4. Hányadoskritérium használata tiszta polinom-törtekre:</strong> racionális tagoknál{' '}
+          <strong>4. Hányadoskritérium használata tiszta polinomtörtekre:</strong> racionális tagoknál{' '}
           <M t="\rho" /> mindig <M t="1" /> lesz — felesleges számolás, használj összehasonlítást!
         </Warn>
 
@@ -480,6 +480,63 @@ export const S11_5: Page[] = [
             <strong>konvergens</strong>!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Hányadoskritérium polinom × exponenciális / faktoriális sorra"
+          source="Analízis-labor"
+          problem={
+            <>
+              Vizsgáljuk a <M t="\sum_{n=1}^\infty \dfrac{n^2 \cdot 3^n}{n!}" /> sor konvergenciáját!
+            </>
+          }
+          steps={[
+            {
+              title: 'Hányados felírása és egyszerűsítése',
+              body: (
+                <M block t="\frac{a_{n+1}}{a_n} = \frac{(n+1)^2 \cdot 3^{n+1}}{(n+1)!} \cdot \frac{n!}{n^2 \cdot 3^n} = \frac{3(n+1)^2}{n^2(n+1)} = \frac{3(n+1)}{n^2}." />
+              ),
+            },
+            {
+              title: 'Határérték kiszámítása',
+              body: (
+                <p>
+                  <M t="\rho = \lim_{n\to\infty} \dfrac{3(n+1)}{n^2} = 0 < 1" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Következtetés',
+              body: (
+                <p>
+                  A sor tehát <strong>konvergens</strong> (sőt, a faktoriális miatt villámgyorsan).
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mit mond a hányadoskritérium a <M t="\sum_{n=1}^\infty \dfrac{1}{n^2}" /> sorra?
+            </>
+          }
+          options={[
+            { label: <><M t="\rho = 1" />, tehát a hányadoskritérium nem dönt</>, ok: true },
+            { label: <><M t="\rho = 0" />, tehát konvergens</> },
+            { label: <><M t="\rho = \tfrac{1}{2}" />, tehát konvergens</> },
+            { label: <><M t="\rho = 2" />, tehát divergens</> },
+          ]}
+          explain={
+            <>
+              <M t="\dfrac{n^2}{(n+1)^2} \to 1" />, ezért minden <M t="p" />-sor esetén a hányados- és a gyökkritérium
+              eredménytelen.
+            </>
+          }
+        />
       </>
     ),
   },

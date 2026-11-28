@@ -80,7 +80,7 @@ export const S11_11: Page[] = [
         <OrthogonalityWidget />
 
         <Quiz
-          q={<>Ha a <M t="f(x) = a_0 + \sum_{n=1}^\infty (a_n \cos nx + b_n \sin nx)" /> egyenlet mindkét oldalát megszorozzuk <M t="\cos(3x)" />-szel és integráljuk <M t="[-\pi, \pi]" />-n, mi marad meg a jobb oldalon?</>}
+          q={<>Ha az <M t="f(x) = a_0 + \sum_{n=1}^\infty (a_n \cos nx + b_n \sin nx)" /> egyenlet mindkét oldalát megszorozzuk <M t="\cos(3x)" />-szel és integráljuk <M t="[-\pi, \pi]" />-n, mi marad meg a jobb oldalon?</>}
           options={[
             { label: <M t="2\pi a_3" /> },
             { label: <M t="\pi a_3" />, ok: true },
@@ -125,7 +125,7 @@ export const S11_11: Page[] = [
 
         <Steps
           title="A szimmetrikus négyszögjel Fourier-sora"
-          problem={<>Határozd meg a <M t="f(x) = \begin{cases} -1, & -\pi < x < 0, \\ 1, & 0 < x < \pi \end{cases}" /> (<M t="2\pi" />-periodikus) függvény Fourier-sorát!</>}
+          problem={<>Határozd meg az <M t="f(x) = \begin{cases} -1, & -\pi < x < 0, \\ 1, & 0 < x < \pi \end{cases}" /> (<M t="2\pi" />-periodikus) függvény Fourier-sorát!</>}
           steps={[
             {
               title: 'Átlagérték (a₀) és aₙ koszinusz-együtthatók',
@@ -175,7 +175,7 @@ export const S11_11: Page[] = [
           </p>
         </Task>
 
-        <Task n={6} q={<>Add meg az <M t="g(x) = \begin{cases} 1, & 0 \le x \le \pi, \\ 2, & \pi < x < 2\pi \end{cases}" /> függvény (Thomas 1. példa) Fourier-sorát a fenti eredményből!</>}>
+        <Task n={6} q={<>Add meg a <M t="g(x) = \begin{cases} 1, & 0 \le x \le \pi, \\ 2, & \pi < x < 2\pi \end{cases}" /> függvény (Thomas 1. példa) Fourier-sorát a fenti eredményből!</>}>
           <p>
             Vegyük észre, hogy <M t="g(x) = \frac{3}{2} - \frac{1}{2}f(x)" /> (ahol <M t="f" /> a szimmetrikus
             négyszögjel)! Ezért integrálás nélkül is megkapjuk:
@@ -223,7 +223,7 @@ export const S11_11: Page[] = [
           </p>
         </Task>
 
-        <Task n={8} q={<>Mihez konvergál a <M t="f(x) = e^x" /> (<M t="-\pi < x < \pi" />, <M t="2\pi" />-periodikusan kiterjesztve) Fourier-sora az <M t="x = \pi" /> pontban?</>}>
+        <Task n={8} q={<>Mihez konvergál az <M t="f(x) = e^x" /> (<M t="-\pi < x < \pi" />, <M t="2\pi" />-periodikusan kiterjesztve) Fourier-sora az <M t="x = \pi" /> pontban?</>}>
           <p>
             Balról <M t="e^\pi" />, jobbról a periodicitás miatt <M t="e^{-\pi}" /> a határérték. Az összeg tehát{' '}
             <M t="\frac{e^\pi + e^{-\pi}}{2} = \operatorname{ch}\pi" />!
@@ -255,7 +255,7 @@ export const S11_11: Page[] = [
         <EvenOddFourierWidget />
 
         <Quiz
-          q={<>Milyen Fourier-sora van a <M t="f(x) = x^2" /> (<M t="-\pi \le x \le \pi" />) függvénynek?</>}
+          q={<>Milyen Fourier-sora van az <M t="f(x) = x^2" /> (<M t="-\pi \le x \le \pi" />) függvénynek?</>}
           options={[
             { label: <>Csak <M t="\sin(nx)" /> tagokat tartalmaz (<M t="a_0 = a_n = 0" />)</> },
             { label: <>Csak <M t="a_0" /> és <M t="\cos(nx)" /> tagokat tartalmaz (minden <M t="b_n = 0" />)</>, ok: true },
@@ -270,7 +270,7 @@ export const S11_11: Page[] = [
           }
         />
 
-        <Task n={9} q={<>A <M t="f(x) = x^2" /> (<M t="-\pi \le x \le \pi" />) Fourier-sora: <M t="x^2 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n}{n^2}\cos(nx)" />. Vezessük le belőle Euler híres <M t="\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}" /> formuláját!</>}>
+        <Task n={9} q={<>Az <M t="f(x) = x^2" /> (<M t="-\pi \le x \le \pi" />) Fourier-sora: <M t="x^2 = \frac{\pi^2}{3} + 4\sum_{n=1}^\infty \frac{(-1)^n}{n^2}\cos(nx)" />. Vezessük le belőle Euler híres <M t="\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}" /> formuláját!</>}>
           <p>
             A <M t="2\pi" />-periodikus kiterjesztés <M t="x = \pi" />-ben is folytonos (<M t="(-\pi)^2 = \pi^2" />)!
             Írjuk be <M t="x = \pi" />-t, használva <M t="\cos(n\pi) = (-1)^n" />:
@@ -347,7 +347,7 @@ export const S11_11: Page[] = [
               <M t="\cos(n\pi)" /> váltakozva <M t="-1" /> és <M t="+1" />!
             </li>
             <li>
-              <strong>Végponti ugrás figyelmen kívül hagyása:</strong> a <M t="f(x) = x" /> folytonos{' '}
+              <strong>Végponti ugrás figyelmen kívül hagyása:</strong> az <M t="f(x) = x" /> folytonos{' '}
               <M t="(-\pi, \pi)" />-n, de periodikus kiterjesztése <M t="\pm\pi" />-nél <em>ugrik</em> (<M t="\pi" />-ről{' '}
               <M t="-\pi" />-re), így ott <M t="0" />-hoz konvergál!
             </li>
@@ -359,7 +359,7 @@ export const S11_11: Page[] = [
         </Warn>
 
         <Quiz
-          q={<>Mi a <M t="f(x) = 1" /> (<M t="0 < x < \pi" />), <M t="f(x) = 0" /> (<M t="-\pi < x < 0" />) függvény <M t="a_0" /> konstans Fourier-együtthatója?</>}
+          q={<>Mi az <M t="f(x) = 1" /> (<M t="0 < x < \pi" />), <M t="f(x) = 0" /> (<M t="-\pi < x < 0" />) függvény <M t="a_0" /> konstans Fourier-együtthatója?</>}
           options={[
             { label: <M t="0" /> },
             { label: <M t="\frac{1}{2}" />, ok: true },
@@ -374,7 +374,7 @@ export const S11_11: Page[] = [
           }
         />
 
-        <Task n={13} q={<>Igaz-e, hogy a <M t="f(x) = \cos^2 x" /> függvény Fourier-sora véges? Írd fel!</>}>
+        <Task n={13} q={<>Igaz-e, hogy az <M t="f(x) = \cos^2 x" /> függvény Fourier-sora véges? Írd fel!</>}>
           <p>
             Igen! A félszög-képlettel <M t="\cos^2 x = \frac{1}{2} + \frac{1}{2}\cos(2x)" /> — ez már maga a Fourier-sor
             (<M t="a_0 = \frac{1}{2}" />, <M t="a_2 = \frac{1}{2}" />, minden más 0)!
@@ -399,14 +399,14 @@ export const S11_11: Page[] = [
       <>
         <h3>Könnyű feladatok</h3>
 
-        <Task n={15} q={<>Írd fel a <M t="f(x) = \sin^2 x" /> függvény Fourier-sorát integrálás nélkül!</>}>
+        <Task n={15} q={<>Írd fel az <M t="f(x) = \sin^2 x" /> függvény Fourier-sorát integrálás nélkül!</>}>
           <p>
             <M t="\sin^2 x = \frac{1}{2} - \frac{1}{2}\cos(2x)" />, tehát <M t="a_0 = \frac{1}{2}" />,{' '}
             <M t="a_2 = -\frac{1}{2}" />, minden más együttható 0.
           </p>
         </Task>
 
-        <Task n={16} q={<>Számítsd ki a <M t="f(x) = \begin{cases} 0, & -\pi < x < 0, \\ 3, & 0 < x < \pi \end{cases}" /> függvény <M t="a_0" /> és <M t="b_1" /> együtthatóját!</>}>
+        <Task n={16} q={<>Számítsd ki az <M t="f(x) = \begin{cases} 0, & -\pi < x < 0, \\ 3, & 0 < x < \pi \end{cases}" /> függvény <M t="a_0" /> és <M t="b_1" /> együtthatóját!</>}>
           <p>
             <M t="a_0 = \frac{1}{2\pi}\int_0^\pi 3\,dx = \frac{3}{2}" />.{' '}
             <M t="b_1 = \frac{1}{\pi}\int_0^\pi 3\sin x\,dx = \frac{3}{\pi}[-\cos x]_0^\pi = \frac{6}{\pi}" />.
@@ -422,7 +422,7 @@ export const S11_11: Page[] = [
 
         <h3>Közepes feladatok</h3>
 
-        <Task n={18} q={<>Határozd meg a <M t="f(x) = x" /> (<M t="-\pi < x < \pi" />, <M t="2\pi" />-periodikus) fűrészfogjel Fourier-sorát!</>}>
+        <Task n={18} q={<>Határozd meg az <M t="f(x) = x" /> (<M t="-\pi < x < \pi" />, <M t="2\pi" />-periodikus) fűrészfogjel Fourier-sorát!</>}>
           <p>
             Páratlan, tehát <M t="a_0 = a_n = 0" />. Parciális integrálással:
             <M block t="b_n = \frac{2}{\pi}\int_0^\pi x\sin(nx)\,dx = \frac{2}{\pi}\left[-\frac{x\cos(nx)}{n}\right]_0^\pi = \frac{2(-1)^{n+1}}{n}." />
@@ -430,7 +430,7 @@ export const S11_11: Page[] = [
           </p>
         </Task>
 
-        <Task n={19} q={<>Határozd meg a <M t="f(x) = |x|" /> (<M t="-\pi \le x \le \pi" />) háromszöghullám Fourier-sorát!</>}>
+        <Task n={19} q={<>Határozd meg az <M t="f(x) = |x|" /> (<M t="-\pi \le x \le \pi" />) háromszöghullám Fourier-sorát!</>}>
           <p>
             Páros, tehát <M t="b_n = 0" />. <M t="a_0 = \frac{1}{\pi}\int_0^\pi x\,dx = \frac{\pi}{2}" />.{' '}
             <M t="a_n = \frac{2}{\pi}\int_0^\pi x\cos(nx)\,dx = \frac{2}{\pi n^2}\big((-1)^n - 1\big)" />. Páros{' '}
@@ -447,7 +447,7 @@ export const S11_11: Page[] = [
 
         <h3>Nehéz feladatok</h3>
 
-        <Task n={21} q={<>Határozd meg a <M t="f(x) = x^2" /> (<M t="-\pi \le x \le \pi" />) Fourier-sorának <M t="a_n" /> együtthatóit kétszeri parciális integrálással!</>}>
+        <Task n={21} q={<>Határozd meg az <M t="f(x) = x^2" /> (<M t="-\pi \le x \le \pi" />) Fourier-sorának <M t="a_n" /> együtthatóit kétszeri parciális integrálással!</>}>
           <p>
             <M t="a_0 = \frac{1}{\pi}\int_0^\pi x^2\,dx = \frac{\pi^2}{3}" />. Kétszeri parciális integrálással:
             <M block t="a_n = \frac{2}{\pi}\int_0^\pi x^2\cos(nx)\,dx = \frac{2}{\pi}\left[\frac{x^2\sin nx}{n} + \frac{2x\cos nx}{n^2} - \frac{2\sin nx}{n^3}\right]_0^\pi = \frac{4(-1)^n}{n^2}." />
@@ -470,6 +470,28 @@ export const S11_11: Page[] = [
             Kivonva <M t="\frac{2\pi^4}{9}" />-et: <M t="\frac{8\pi^4}{45} = 16\sum_{n=1}^\infty \frac{1}{n^4} \implies \sum_{n=1}^\infty \frac{1}{n^4} = \frac{\pi^4}{90}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Miért tűnik el minden <M t="b_k" /> szinuszos együttható egy páros (<M t="f(-x) = f(x)" />) függvény
+              Fourier-sorából?
+            </>
+          }
+          options={[
+            { label: <>Mert <M t="f(x)\sin(kx)" /> páratlan függvény, így szimmetrikus <M t="[-\pi,\,\pi]" /> integrálja <M t="0" /></>, ok: true },
+            { label: <>Mert <M t="\sin(kx)" /> mindig pozitív</> },
+            { label: <>Mert a koszinuszok összege mindig <M t="0" /></> },
+            { label: 'Csak folytonos függvényekre igaz' },
+          ]}
+          explain={
+            <>
+              Páros és páratlan függvény szorzata páratlan, ezért <M t="[-\pi,\,\pi]" />-n vett integrálja pontosan nulla.
+            </>
+          }
+        />
       </>
     ),
   },

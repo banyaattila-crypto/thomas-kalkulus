@@ -529,6 +529,28 @@ export const S11_2: Page[] = [
             <M t="\sum_{n=N}^\infty a_n" />-nel — Weierstrass tétele szerint tehát <M t="\sum a_n^2" /> konvergens!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mennyi a <M t="\sum_{n=0}^\infty 3\left(-\dfrac{1}{2}\right)^n" /> mértani sor összege?
+            </>
+          }
+          options={[
+            { label: <M t="2" />, ok: true },
+            { label: <M t="6" /> },
+            { label: <M t="1{,}5" /> },
+            { label: 'Divergens' },
+          ]}
+          explain={
+            <>
+              Első tag <M t="a = 3" />, hányados <M t="r = -\dfrac{1}{2}" />, így{' '}
+              <M t="S = \dfrac{3}{1 - (-1/2)} = \dfrac{3}{3/2} = 2" />.
+            </>
+          }
+        />
       </>
     ),
   },

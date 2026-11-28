@@ -99,7 +99,7 @@ export const S11_8: Page[] = [
           }
         />
 
-        <Task n={3} q={<>Határozd meg a <M t="f(x) = \sqrt{1 + x}" /> függvény <M t="P_2(x)" /> kvadratikus Maclaurin-polinomját, és közelítsd vele <M t="\sqrt{1{,}1}" /> értékét!</>}>
+        <Task n={3} q={<>Határozd meg az <M t="f(x) = \sqrt{1 + x}" /> függvény <M t="P_2(x)" /> kvadratikus Maclaurin-polinomját, és közelítsd vele <M t="\sqrt{1{,}1}" /> értékét!</>}>
           <p>
             <M t="f(0) = 1" />, <M t="f'(x) = \frac{1}{2}(1+x)^{-1/2} \implies f'(0) = \frac{1}{2}" />,{' '}
             <M t="f''(x) = -\frac{1}{4}(1+x)^{-3/2} \implies f''(0) = -\frac{1}{4}" />. Így:
@@ -109,7 +109,7 @@ export const S11_8: Page[] = [
           </p>
         </Task>
 
-        <Task n={4} q={<>Add meg a <M t="f(x) = \sec x = \frac{1}{\cos x}" /> függvény <M t="P_2(x)" /> Maclaurin-polinomját!</>}>
+        <Task n={4} q={<>Add meg az <M t="f(x) = \sec x = \frac{1}{\cos x}" /> függvény <M t="P_2(x)" /> Maclaurin-polinomját!</>}>
           <p>
             <M t="f(0) = 1" />, <M t="f'(x) = \sec x \operatorname{tg} x \implies f'(0) = 0" />,{' '}
             <M t="f''(x) = \sec x(\operatorname{tg}^2 x + \sec^2 x) \implies f''(0) = 1" />. Tehát{' '}
@@ -134,8 +134,8 @@ export const S11_8: Page[] = [
         <ExpMaclaurinWidget />
 
         <Steps
-          title="Taylor-sor levezetése nem-nulla középpont körül"
-          problem={<>Határozd meg a <M t="f(x) = \frac{1}{x}" /> függvény <M t="a = 2" /> körüli Taylor-sorát és konvergenciaintervallumát!</>}
+          title="Taylor-sor levezetése nem nulla középpont körül"
+          problem={<>Határozd meg az <M t="f(x) = \frac{1}{x}" /> függvény <M t="a = 2" /> körüli Taylor-sorát és konvergenciaintervallumát!</>}
           steps={[
             {
               title: 'Első néhány derivált kiszámítása',
@@ -182,7 +182,7 @@ export const S11_8: Page[] = [
           </p>
         </Task>
 
-        <Task n={6} q={<>Határozd meg a <M t="f(x) = e^x" /> függvény <M t="a = 1" /> körüli Taylor-sorát!</>}>
+        <Task n={6} q={<>Határozd meg az <M t="f(x) = e^x" /> függvény <M t="a = 1" /> körüli Taylor-sorát!</>}>
           <p>
             Mivel <M t="f^{(n)}(1) = e^1 = e" /> minden <M t="n" />-re:
             <M block t="e^x = \sum_{n=0}^{\infty} \frac{e}{n!}(x - 1)^n = e\left(1 + (x-1) + \frac{(x-1)^2}{2!} + \cdots\right)." />
@@ -260,7 +260,7 @@ export const S11_8: Page[] = [
         </Def>
 
         <Quiz
-          q={<>Mi a <M t="f(x) = \ln x" /> függvény <M t="a = 1" /> körüli Taylor-sorának konvergenciasugara?</>}
+          q={<>Mi az <M t="f(x) = \ln x" /> függvény <M t="a = 1" /> körüli Taylor-sorának konvergenciasugara?</>}
           options={[
             { label: <M t="R = 0" /> },
             { label: <M t="R = 1" />, ok: true },
@@ -275,7 +275,7 @@ export const S11_8: Page[] = [
           }
         />
 
-        <Task n={9} q={<>Írd fel a <M t="f(x) = x^3 - 2x + 4" /> polinom Taylor-sorát az <M t="a = 2" /> pont körül!</>}>
+        <Task n={9} q={<>Írd fel az <M t="f(x) = x^3 - 2x + 4" /> polinom Taylor-sorát az <M t="a = 2" /> pont körül!</>}>
           <p>
             <M t="f(2) = 8 - 4 + 4 = 8" />, <M t="f'(x) = 3x^2 - 2 \implies f'(2) = 10" />,{' '}
             <M t="f''(x) = 6x \implies f''(2) = 12" />, <M t="f'''(x) = 6 \implies f'''(2) = 6" />, a magasabb
@@ -284,7 +284,7 @@ export const S11_8: Page[] = [
           </p>
         </Task>
 
-        <Task n={10} q={<>Határozd meg a <M t="f(x) = \cos x" /> függvény <M t="a = \frac{\pi}{2}" /> körüli Taylor-sorát!</>}>
+        <Task n={10} q={<>Határozd meg az <M t="f(x) = \cos x" /> függvény <M t="a = \frac{\pi}{2}" /> körüli Taylor-sorát!</>}>
           <p>
             Használhatjuk a <M t="\cos x = -\sin(x - \tfrac{\pi}{2})" /> azonosságot (vagy a deriváltakat):
             <M block t="\cos x = -\sum_{n=0}^{\infty} (-1)^n \frac{(x - \pi/2)^{2n+1}}{(2n+1)!} = -\left(x-\frac{\pi}{2}\right) + \frac{(x-\pi/2)^3}{3!} - \cdots" />
@@ -314,7 +314,7 @@ export const S11_8: Page[] = [
           helyettesítéssel és trigonometrikus azonosságokkal!
         </p>
 
-        <Task n={11} q={<>Add meg a <M t="f(x) = e^{-x^2}" /> és a <M t="g(x) = x\sin(2x)" /> függvények Maclaurin-sorát!</>}>
+        <Task n={11} q={<>Add meg az <M t="f(x) = e^{-x^2}" /> és a <M t="g(x) = x\sin(2x)" /> függvények Maclaurin-sorát!</>}>
           <p>
             Az <M t="e^u" /> sorba <M t="u = -x^2" />-et írva:{' '}
             <M t="e^{-x^2} = \sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{n!} = 1 - x^2 + \frac{x^4}{2!} - \frac{x^6}{3!} + \cdots" />.
@@ -323,7 +323,7 @@ export const S11_8: Page[] = [
           </p>
         </Task>
 
-        <Task n={12} q={<>Határozd meg a <M t="f(x) = \cos^2 x" /> függvény Maclaurin-sorát a félszög-képlettel!</>}>
+        <Task n={12} q={<>Határozd meg az <M t="f(x) = \cos^2 x" /> függvény Maclaurin-sorát a félszög-képlettel!</>}>
           <p>
             Mivel <M t="\cos^2 x = \frac{1 + \cos(2x)}{2}" />, az <M t="u = 2x" /> helyettesítéssel:
             <M block t="\cos^2 x = \frac{1}{2} + \frac{1}{2}\sum_{n=0}^\infty (-1)^n \frac{(2x)^{2n}}{(2n)!} = 1 + \sum_{n=1}^\infty (-1)^n \frac{2^{2n-1}}{(2n)!} x^{2n} = 1 - x^2 + \frac{x^4}{3} - \cdots" />
@@ -352,7 +352,7 @@ export const S11_8: Page[] = [
           Négy tipikus hiba Taylor- és Maclaurin-soroknál:
           <ol>
             <li>
-              <strong>A <M t="n!" /> osztó elfelejtése:</strong> a képlet <M t="\frac{f^{(n)}(a)}{n!}(x-a)^n" />, nem{' '}
+              <strong>Az <M t="n!" /> osztó elfelejtése:</strong> a képlet <M t="\frac{f^{(n)}(a)}{n!}(x-a)^n" />, nem{' '}
               <M t="f^{(n)}(a)(x-a)^n" />!
             </li>
             <li>
@@ -371,7 +371,7 @@ export const S11_8: Page[] = [
         </Warn>
 
         <Quiz
-          q={<>Mennyi a <M t="f(x) = e^{-x^2}" /> függvény hatodik deriváltja az origóban, azaz <M t="f^{(6)}(0)" />?</>}
+          q={<>Mennyi az <M t="f(x) = e^{-x^2}" /> függvény hatodik deriváltja az origóban, azaz <M t="f^{(6)}(0)" />?</>}
           options={[
             { label: <M t="-1" /> },
             { label: <M t="-120" />, ok: true },
@@ -387,7 +387,7 @@ export const S11_8: Page[] = [
           }
         />
 
-        <Task n={13} q={<>Határozd meg a <M t="f(x) = \frac{\sin x}{x}" /> (<M t="f(0) = 1" />) függvény Maclaurin-sorát!</>}>
+        <Task n={13} q={<>Határozd meg az <M t="f(x) = \frac{\sin x}{x}" /> (<M t="f(0) = 1" />) függvény Maclaurin-sorát!</>}>
           <p>
             A <M t="\sin x" /> sorát tagonként elosztva <M t="x" />-szel:
             <M block t="\frac{\sin x}{x} = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n+1)!} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \cdots \qquad (x \in \mathbb{R})." />
@@ -410,20 +410,20 @@ export const S11_8: Page[] = [
       <>
         <h3>Könnyű feladatok</h3>
 
-        <Task n={15} q={<>Írd fel a <M t="f(x) = e^{3x}" /> függvény Maclaurin-sorát és első négy tagját!</>}>
+        <Task n={15} q={<>Írd fel az <M t="f(x) = e^{3x}" /> függvény Maclaurin-sorát és első négy tagját!</>}>
           <p>
             <M t="u = 3x" /> helyettesítéssel:{' '}
             <M t="e^{3x} = \sum_{n=0}^\infty \frac{3^n x^n}{n!} = 1 + 3x + \frac{9}{2}x^2 + \frac{9}{2}x^3 + \cdots" />.
           </p>
         </Task>
 
-        <Task n={16} q={<>Add meg a <M t="f(x) = \sin(2x)" /> függvény <M t="P_5(x)" /> Maclaurin-polinomját!</>}>
+        <Task n={16} q={<>Add meg az <M t="f(x) = \sin(2x)" /> függvény <M t="P_5(x)" /> Maclaurin-polinomját!</>}>
           <p>
             <M t="P_5(x) = (2x) - \frac{(2x)^3}{3!} + \frac{(2x)^5}{5!} = 2x - \frac{4}{3}x^3 + \frac{4}{15}x^5" />.
           </p>
         </Task>
 
-        <Task n={17} q={<>Írd fel a <M t="f(x) = 2x^2 - 5x + 1" /> polinom Taylor-sorát az <M t="a = 1" /> pont körül!</>}>
+        <Task n={17} q={<>Írd fel az <M t="f(x) = 2x^2 - 5x + 1" /> polinom Taylor-sorát az <M t="a = 1" /> pont körül!</>}>
           <p>
             <M t="f(1) = -2" />, <M t="f'(1) = -1" />, <M t="f''(1) = 4" />. Így:{' '}
             <M t="2x^2 - 5x + 1 = -2 - (x-1) + 2(x-1)^2" />.
@@ -432,7 +432,7 @@ export const S11_8: Page[] = [
 
         <h3>Közepes feladatok</h3>
 
-        <Task n={18} q={<>Határozd meg a <M t="f(x) = \sqrt{x}" /> függvény <M t="a = 4" /> körüli <M t="P_2(x)" /> Taylor-polinomját, és közelítsd vele <M t="\sqrt{4{,}2}" />-t!</>}>
+        <Task n={18} q={<>Határozd meg az <M t="f(x) = \sqrt{x}" /> függvény <M t="a = 4" /> körüli <M t="P_2(x)" /> Taylor-polinomját, és közelítsd vele <M t="\sqrt{4{,}2}" />-t!</>}>
           <p>
             <M t="f(4) = 2" />, <M t="f'(4) = \frac{1}{2\sqrt{4}} = \frac{1}{4}" />,{' '}
             <M t="f''(4) = -\frac{1}{4\cdot 4^{3/2}} = -\frac{1}{32}" />. Így:
@@ -441,14 +441,14 @@ export const S11_8: Page[] = [
           </p>
         </Task>
 
-        <Task n={19} q={<>Írd fel a <M t="f(x) = \ln(x)" /> függvény <M t="a = 2" /> körüli Taylor-sorát és konvergenciasugarát!</>}>
+        <Task n={19} q={<>Írd fel az <M t="f(x) = \ln(x)" /> függvény <M t="a = 2" /> körüli Taylor-sorát és konvergenciasugarát!</>}>
           <p>
             <M t="\ln x = \ln(2 + (x-2)) = \ln 2 + \ln\!\left(1 + \frac{x-2}{2}\right) = \ln 2 + \sum_{n=1}^\infty (-1)^{n-1}\frac{(x-2)^n}{n\cdot 2^n}" />.
             A konvergenciasugár <M t="R = 2" />, az intervallum <M t="(0, 4]" />.
           </p>
         </Task>
 
-        <Task n={20} q={<>Add meg a <M t="f(x) = \sin^2 x" /> függvény Maclaurin-sorát!</>}>
+        <Task n={20} q={<>Add meg az <M t="f(x) = \sin^2 x" /> függvény Maclaurin-sorát!</>}>
           <p>
             <M t="\sin^2 x = \frac{1 - \cos(2x)}{2} = \frac{1}{2}\sum_{n=1}^\infty (-1)^{n-1}\frac{(2x)^{2n}}{(2n)!} = \sum_{n=1}^\infty (-1)^{n-1}\frac{2^{2n-1}}{(2n)!} x^{2n} = x^2 - \frac{x^4}{3} + \frac{2x^6}{45} - \cdots" />
           </p>
@@ -456,7 +456,7 @@ export const S11_8: Page[] = [
 
         <h3>Nehéz feladatok</h3>
 
-        <Task n={21} q={<>Határozd meg a <M t="f(x) = \frac{1}{(1+x)^2}" /> függvény <M t="a = 0" /> körüli Maclaurin-sorát, és add meg belőle <M t="f^{(10)}(0)" /> értékét!</>}>
+        <Task n={21} q={<>Határozd meg az <M t="f(x) = \frac{1}{(1+x)^2}" /> függvény <M t="a = 0" /> körüli Maclaurin-sorát, és add meg belőle <M t="f^{(10)}(0)" /> értékét!</>}>
           <p>
             A <M t="\frac{1}{1+x} = \sum_{n=0}^\infty (-1)^n x^n" /> sort deriválva:{' '}
             <M t="-\frac{1}{(1+x)^2} = \sum_{n=1}^\infty (-1)^n n x^{n-1}" />, innen{' '}
@@ -466,7 +466,7 @@ export const S11_8: Page[] = [
           </p>
         </Task>
 
-        <Task n={22} q={<>Add meg a <M t="f(x) = e^x \cos x" /> függvény Maclaurin-sorának első négy nem-nulla tagját Cauchy-szorzattal!</>}>
+        <Task n={22} q={<>Add meg az <M t="f(x) = e^x \cos x" /> függvény Maclaurin-sorának első négy nem nulla tagját Cauchy-szorzattal!</>}>
           <p>
             Szorozzuk össze a két sort <M t="x^4" />-ig:
             <M block t="\left(1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \cdots\right)\left(1 - \frac{x^2}{2} + \frac{x^4}{24} - \cdots\right)" />
@@ -482,6 +482,56 @@ export const S11_8: Page[] = [
             Innen <M t="x = \pi" />-re kapjuk a matematika leghíresebb azonosságát: <M t="e^{i\pi} + 1 = 0" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Az ln x függvény a = 1 pontbeli 3. fokú Taylor-polinomja"
+          source="Analízis-labor"
+          problem={
+            <>
+              Írjuk fel az <M t="f(x) = \ln x" /> függvény <M t="a = 1" /> pontbeli 3. fokú Taylor-polinomját!
+            </>
+          }
+          steps={[
+            {
+              title: 'Deriváltak kiszámítása az a = 1 pontban',
+              body: (
+                <p>
+                  <M t="f(1) = \ln 1 = 0" />, <M t="f'(x) = x^{-1} \Rightarrow f'(1) = 1" />,{' '}
+                  <M t="f''(x) = -x^{-2} \Rightarrow f''(1) = -1" />,{' '}
+                  <M t="f'''(x) = 2x^{-3} \Rightarrow f'''(1) = 2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Behelyettesítés a Taylor-képletbe',
+              body: (
+                <M block t="P_3(x) = 0 + 1(x-1) + \frac{-1}{2!}(x-1)^2 + \frac{2}{3!}(x-1)^3 = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3}." />
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="f(x) = \cos x" /> függvény Maclaurin-sorában az <M t="x^4" /> tag együtthatója?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{1}{24}" />, ok: true },
+            { label: <M t="-\dfrac{1}{24}" /> },
+            { label: <M t="\dfrac{1}{4}" /> },
+            { label: <M t="0" /> },
+          ]}
+          explain={
+            <>
+              <M t="\cos x = 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \cdots" />, és <M t="4! = 24" />.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -77,7 +77,7 @@ export const S11_3: Page[] = [
     body: (
       <>
         <p>
-          Az 8.8-as szakaszban megtanultuk kiszámítani az <M t="\int_1^\infty f(x)\,dx" /> improprius integrálokat. Az{' '}
+          A 8.8-as szakaszban megtanultuk kiszámítani az <M t="\int_1^\infty f(x)\,dx" /> improprius integrálokat. Az{' '}
           <strong>integrálkritérium</strong> hidat ver a diszkrét összegek és a folytonos integrálok közé!
         </p>
 
@@ -529,6 +529,29 @@ export const S11_3: Page[] = [
             (A valódi érték <M t="1{,}6449" />, gyönyörűen középen van!)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Igaz-e, hogy ha <M t="\int_1^\infty f(x)\,dx = 5" />, akkor <M t="\sum_{n=1}^\infty f(n)" /> összege is
+              pontosan <M t="5" />?
+            </>
+          }
+          options={[
+            { label: 'Nem, az integrálkritérium csak a konvergenciát garantálja, az értékek eltérhetnek', ok: true },
+            { label: 'Igen, mindig egyenlőek' },
+            { label: <>Csak ha <M t="f(1) = 0" /></> },
+            { label: <>Csak <M t="p" />-sorokra igaz</> },
+          ]}
+          explain={
+            <>
+              Például <M t="\int_1^\infty x^{-2}\,dx = 1" />, míg{' '}
+              <M t="\sum_{n=1}^\infty n^{-2} = \dfrac{\pi^2}{6} \approx 1{,}6449" />.
+            </>
+          }
+        />
       </>
     ),
   },

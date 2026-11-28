@@ -84,7 +84,7 @@ export const S11_10: Page[] = [
 
         <ArcsinDerivationDiagram />
 
-        <Task n={3} q={<>Add meg a <M t="\sqrt[3]{1 + x^2}" /> függvény Maclaurin-sorának első három nem-nulla tagját!</>}>
+        <Task n={3} q={<>Add meg a <M t="\sqrt[3]{1 + x^2}" /> függvény Maclaurin-sorának első három nem nulla tagját!</>}>
           <p>
             <M t="m = \frac{1}{3}" /> és <M t="x \mapsto x^2" />: <M t="\binom{1/3}{1} = \frac{1}{3}" />,{' '}
             <M t="\binom{1/3}{2} = \frac{\frac{1}{3}(-\frac{2}{3})}{2} = -\frac{1}{9}" />. Tehát:
@@ -120,7 +120,7 @@ export const S11_10: Page[] = [
 
         <Steps
           title="Hatványsoros megoldás: az Airy-egyenlet (y″ = x·y)"
-          problem={<>Oldd meg a <M t="y'' = x y" /> differenciálegyenletet a <M t="y(0) = 1,\; y'(0) = 0" /> kezdeti feltételekkel!</>}
+          problem={<>Oldd meg az <M t="y'' = x y" /> differenciálegyenletet az <M t="y(0) = 1,\; y'(0) = 0" /> kezdeti feltételekkel!</>}
           steps={[
             {
               title: 'Hatványsor-próba és második derivált',
@@ -162,7 +162,7 @@ export const S11_10: Page[] = [
           ]}
         />
 
-        <Task n={5} q={<>Oldd meg hatványsorral a <M t="y' = 2x y,\; y(0) = 1" /> kezdetiérték-problémát, és ismerd fel a kapott elemi függvényt!</>}>
+        <Task n={5} q={<>Oldd meg hatványsorral az <M t="y' = 2x y,\; y(0) = 1" /> kezdetiérték-problémát, és ismerd fel a kapott elemi függvényt!</>}>
           <p>
             <M t="\sum_{n=1}^\infty n c_n x^{n-1} = \sum_{n=0}^\infty 2c_n x^{n+1}" />. Ebből <M t="c_1 = 0" /> és{' '}
             <M t="(k+1)c_{k+1} = 2c_{k-1}" />. Mivel <M t="c_0 = 1" />, minden páratlan együttható 0, a párosak pedig{' '}
@@ -170,7 +170,7 @@ export const S11_10: Page[] = [
           </p>
         </Task>
 
-        <Task n={6} q={<>Határozd meg a <M t="y' - y = x,\; y(0) = 0" /> differenciálegyenlet hatványsoros megoldását!</>}>
+        <Task n={6} q={<>Határozd meg az <M t="y' - y = x,\; y(0) = 0" /> differenciálegyenlet hatványsoros megoldását!</>}>
           <p>
             <M t="c_0 = 0" />. Behelyettesítve: <M t="(c_1 - c_0) + (2c_2 - c_1)x + (3c_3 - c_2)x^2 + \cdots = x" />.
             Innen <M t="c_1 = 0" />, <M t="2c_2 = 1 \implies c_2 = \frac{1}{2!}" />, <M t="c_3 = \frac{1}{3!}" />,{' '}
@@ -183,7 +183,7 @@ export const S11_10: Page[] = [
 
   /* ============================================================== 4. OLDAL */
   {
-    title: 'Nem-elemi integrálok kiszámítása hatványsorral',
+    title: 'Nem elemi integrálok kiszámítása hatványsorral',
     body: (
       <>
         <p>
@@ -331,7 +331,7 @@ export const S11_10: Page[] = [
             </li>
             <li>
               <strong>Túl korai csonkolás határértéknél:</strong> ha a számlálóban <M t="x^2" />-es tagok kiejtik
-              egymást, legalább a következő nem-nulla hatványig (<M t="x^4" />) ki kell írni a sort!
+              egymást, legalább a következő nem nulla hatványig (<M t="x^4" />) ki kell írni a sort!
             </li>
             <li>
               <strong>Indexeltolás elrontása DE-knél:</strong> <M t="y'" /> és <M t="y''" /> összehasonlítása előtt
@@ -398,7 +398,7 @@ export const S11_10: Page[] = [
           </p>
         </Task>
 
-        <Task n={17} q={<>Írd fel a <M t="\int_0^x e^{-t^3}\,dt" /> függvény Maclaurin-sorának első három nem-nulla tagját!</>}>
+        <Task n={17} q={<>Írd fel a <M t="\int_0^x e^{-t^3}\,dt" /> függvény Maclaurin-sorának első három nem nulla tagját!</>}>
           <p>
             <M t="e^{-t^3} = 1 - t^3 + \frac{t^6}{2} - \cdots" />. Integrálva: <M t="x - \frac{x^4}{4} + \frac{x^7}{14} - \cdots" />.
           </p>
@@ -423,7 +423,7 @@ export const S11_10: Page[] = [
           </p>
         </Task>
 
-        <Task n={20} q={<>Oldd meg hatványsorral a <M t="y' + 3y = 0,\; y(0) = 2" /> egyenletet!</>}>
+        <Task n={20} q={<>Oldd meg hatványsorral az <M t="y' + 3y = 0,\; y(0) = 2" /> egyenletet!</>}>
           <p>
             <M t="(n+1)c_{n+1} + 3c_n = 0 \implies c_{n+1} = \frac{-3}{n+1}c_n" />. Mivel <M t="c_0 = 2" />, kapjuk{' '}
             <M t="c_n = 2\frac{(-3)^n}{n!}" />, azaz <M t="y(x) = 2e^{-3x}" />.
@@ -432,7 +432,7 @@ export const S11_10: Page[] = [
 
         <h3>Nehéz feladatok</h3>
 
-        <Task n={21} q={<>Határozd meg a <M t="y'' + y = 0,\; y(0) = 0,\; y'(0) = 1" /> harmonikus rezgőmozgás egyenletének hatványsoros megoldását!</>}>
+        <Task n={21} q={<>Határozd meg az <M t="y'' + y = 0,\; y(0) = 0,\; y'(0) = 1" /> harmonikus rezgőmozgás egyenletének hatványsoros megoldását!</>}>
           <p>
             <M t="c_0 = 0, c_1 = 1" />. A <M t="\sum (n+2)(n+1)c_{n+2}x^n + \sum c_n x^n = 0" /> egyenletből{' '}
             <M t="c_{n+2} = -\frac{c_n}{(n+2)(n+1)}" />. Minden páros együttható 0, a páratlanok:{' '}
@@ -440,7 +440,7 @@ export const S11_10: Page[] = [
           </p>
         </Task>
 
-        <Task n={22} q={<>Írd fel a <M t="f(x) = \operatorname{arsh} x = \ln(x + \sqrt{1+x^2})" /> Maclaurin-sorának első három nem-nulla tagját az <M t="f'(x) = \frac{1}{\sqrt{1+x^2}}" /> binomiális sorának integrálásával!</>}>
+        <Task n={22} q={<>Írd fel az <M t="f(x) = \operatorname{arsh} x = \ln(x + \sqrt{1+x^2})" /> Maclaurin-sorának első három nem nulla tagját az <M t="f'(x) = \frac{1}{\sqrt{1+x^2}}" /> binomiális sorának integrálásával!</>}>
           <p>
             <M t="\frac{1}{\sqrt{1+t^2}} = 1 - \frac{1}{2}t^2 + \frac{3}{8}t^4 - \cdots" />. Integrálva <M t="0" />-tól{' '}
             <M t="x" />-ig (<M t="\operatorname{arsh} 0 = 0" />):

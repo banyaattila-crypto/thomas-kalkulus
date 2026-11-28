@@ -508,6 +508,28 @@ export const S11_6: Page[] = [
             világát!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen típusú az <M t="1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \cdots" /> alternáló harmonikus sor?
+            </>
+          }
+          options={[
+            { label: 'Feltételesen konvergens', ok: true },
+            { label: 'Abszolút konvergens' },
+            { label: 'Divergens' },
+            { label: 'Mértani sor' },
+          ]}
+          explain={
+            <>
+              Leibniz tétele szerint konvergens (összege <M t="\ln 2" />), de az abszolút értékek sora (
+              <M t="\sum \tfrac{1}{n}" />) divergens.
+            </>
+          }
+        />
       </>
     ),
   },
