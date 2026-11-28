@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v3.15.0`  
+**Aktuális verzió:** `v3.15.1`  
 **Dátum:** 2026-11-28  
-**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült**, és a teljes **Analízis-labor integráció és tartalmi revízió (`2.1`–`16.8`) is 100%-ban befejeződött**!
+**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült**, a teljes **Analízis-labor integráció és tartalmi revízió (`2.1`–`16.8`)** és a **záró kódbázis-audit (`v3.15.1`)** is 100%-ban befejeződött!
 
 ## Haladás kötetenként és fejezetenként
 
@@ -75,6 +75,7 @@
   - **14. fejezet (`v3.13.0`, `14.1`–`14.10`):** 4 `<Steps />` + 8 `<Quiz />` (6 példa és 2 kvíz kiszűrve), 25 szakmai/nyelvi javítás.
   - **15. fejezet (`v3.14.0`, `15.1`–`15.7`):** 5 `<Quiz />` (7 példa és 2 kvíz kiszűrve), 15 nyelvi/helyesírási javítás.
   - **16. fejezet (`v3.15.0`, `16.1`–`16.8`):** 2 `<Steps />` + 4 `<Quiz />` (6 példa és 4 kvíz kiszűrve), 17 nyelvi/helyesírási javítás *(mind a három kötet revíziója TELJES!)*.
+- **Záró kódbázis-audit (`v3.15.1`):** Teljes 277 fájlos átvizsgálás (27 534 KaTeX képlet 0 hibával, 268 `<Quiz />` és 115 `<Steps />` hibátlan). Javítva: lapozáskori React állapot-visszaállítás (`App.tsx`), duplikált feladatszámozás (`s1_1.tsx`), II. kötet alcíme (`TocPage.tsx`), 6 helyesírási, 19 névelő- és 37 `L’Hôpital` névírási egységesítés.
 
 ## Technikai állapot
 

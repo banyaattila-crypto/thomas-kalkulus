@@ -489,7 +489,7 @@ export const S1_2: Page[] = [
             <M t="1\le x^2+y^2\le4" />.
           </li>
           <li>
-            A <M t="y>2x-1" /> félsíkot az <M t="y=2x-1" /> egyenes választja el a sík többi részétől. Hogy melyik oldalról
+            Az <M t="y>2x-1" /> félsíkot az <M t="y=2x-1" /> egyenes választja el a sík többi részétől. Hogy melyik oldalról
             van szó, <em>ellenőrző ponttal</em> döntjük el: az origóra <M t="0>-1" /> igaz, tehát az origót tartalmazó oldal a
             megoldás, az egyenes pontjai nélkül.
           </li>

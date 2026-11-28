@@ -145,7 +145,7 @@ export const S9_4: Page[] = [
             <M t="g(y) = 2 + y - y^2 \implies g'(y) = 1 - 2y" />, így <M t="y'' = (1 - 2y)(y+1)(2-y)" />.
           </p>
           <p>
-            A nem-egyensúlyi zérushely: <M t="1 - 2y = 0 \implies \mathbf{y = 0{,}5}" /> (ez az inflexiós szint!).
+            A nem egyensúlyi zérushely: <M t="1 - 2y = 0 \implies \mathbf{y = 0{,}5}" /> (ez az inflexiós szint!).
           </p>
         </Task>
         <Task

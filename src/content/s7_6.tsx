@@ -49,12 +49,12 @@ export const S7_6: Page[] = [
           n={1}
           q={
             <>
-              Igazold a L’Hospital-szabállyal, hogy <M t="e^x" /> gyorsabban növekszik, mint <M t="x^2" />, amikor <M t="x \to \infty" />!
+              Igazold a L’Hôpital-szabállyal, hogy <M t="e^x" /> gyorsabban növekszik, mint <M t="x^2" />, amikor <M t="x \to \infty" />!
             </>
           }
         >
           <p>
-            Kétszeres L’Hospital-szabállyal (<M t="\infty/\infty" />):
+            Kétszeres L’Hôpital-szabállyal (<M t="\infty/\infty" />):
             <M block t="\lim_{x\to\infty}\frac{e^x}{x^2} = \lim_{x\to\infty}\frac{e^x}{2x} = \lim_{x\to\infty}\frac{e^x}{2} = \mathbf{\infty}." />
           </p>
         </Task>
@@ -67,7 +67,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            L’Hospital-szabállyal: <M t="\displaystyle\lim_{x\to\infty}\frac{\ln x}{x} = \lim_{x\to\infty}\frac{1/x}{1} = \mathbf{0}" /> ✓
+            L’Hôpital-szabállyal: <M t="\displaystyle\lim_{x\to\infty}\frac{\ln x}{x} = \lim_{x\to\infty}\frac{1/x}{1} = \mathbf{0}" /> ✓
           </p>
         </Task>
       </>
@@ -88,7 +88,7 @@ export const S7_6: Page[] = [
         <Def title="A 3 alaptörvény (x → ∞)">
           <ol className="steps">
             <li>
-              <strong>Bármely <M t="a > 1" /> alapú exponenciális legyőz bármely polinomot (<M t="x^n" />):</strong> <M t="n" />-szeres L’Hospital-szabállyal <M t="\displaystyle\lim_{x\to\infty}\frac{x^n}{e^x} = \lim_{x\to\infty}\frac{n!}{e^x} = 0" /> — még <M t="x^{1\,000\,000}" /> is alulmarad <M t="e^x" />-szel szemben!
+              <strong>Bármely <M t="a > 1" /> alapú exponenciális legyőz bármely polinomot (<M t="x^n" />):</strong> <M t="n" />-szeres L’Hôpital-szabállyal <M t="\displaystyle\lim_{x\to\infty}\frac{x^n}{e^x} = \lim_{x\to\infty}\frac{n!}{e^x} = 0" /> — még <M t="x^{1\,000\,000}" /> is alulmarad <M t="e^x" />-szel szemben!
             </li>
             <li>
               <strong>Bármely pozitív kitevőjű hatvány (<M t="x^p,\; p>0" />) legyőz bármely logaritmust:</strong> <M t="\displaystyle\lim_{x\to\infty}\frac{\ln x}{x^p} = \lim_{x\to\infty}\frac{1/x}{px^{p-1}} = \lim_{x\to\infty}\frac{1}{px^p} = 0" />!
@@ -179,7 +179,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            L’Hospital-szabállyal: <M t="\displaystyle\lim_{x\to\infty}\frac{\ln(x^2+1)}{\ln x} = \lim_{x\to\infty}\frac{2x/(x^2+1)}{1/x} = \lim_{x\to\infty}\frac{2x^2}{x^2+1} = \mathbf{2} \in (0;\,\infty)" /> ✓
+            L’Hôpital-szabállyal: <M t="\displaystyle\lim_{x\to\infty}\frac{\ln(x^2+1)}{\ln x} = \lim_{x\to\infty}\frac{2x/(x^2+1)}{1/x} = \lim_{x\to\infty}\frac{2x^2}{x^2+1} = \mathbf{2} \in (0;\,\infty)" /> ✓
           </p>
         </Task>
       </>
@@ -368,7 +368,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            Legyen <M t="p = 10^{-6} > 0" />. L’Hospital-szabállyal:
+            Legyen <M t="p = 10^{-6} > 0" />. L’Hôpital-szabállyal:
             <M block t="\lim_{x\to\infty}\frac{\ln x}{x^p} = \lim_{x\to\infty}\frac{1/x}{px^{p-1}} = \lim_{x\to\infty}\frac{1}{px^p} = \mathbf{0}." />
           </p>
         </Task>
@@ -381,7 +381,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            L’Hospital-szabállyal: <M t="\displaystyle\lim_{x\to\infty}\frac{\ln(x+99)}{\ln x} = \lim_{x\to\infty}\frac{1/(x+99)}{1/x} = \lim_{x\to\infty}\frac{x}{x+99} = \mathbf{1}" /> ⇒ <strong>azonos ütemben</strong> nőnek!
+            L’Hôpital-szabállyal: <M t="\displaystyle\lim_{x\to\infty}\frac{\ln(x+99)}{\ln x} = \lim_{x\to\infty}\frac{1/(x+99)}{1/x} = \lim_{x\to\infty}\frac{x}{x+99} = \mathbf{1}" /> ⇒ <strong>azonos ütemben</strong> nőnek!
           </p>
         </Task>
       </>
@@ -510,7 +510,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            <M t="x > |a|" /> esetén a hányados <M t="\infty/\infty" />, így L’Hospital-szabállyal:
+            <M t="x > |a|" /> esetén a hányados <M t="\infty/\infty" />, így L’Hôpital-szabállyal:
             <M block t="\lim_{x\to\infty}\frac{\ln(x+a)}{\ln x} = \lim_{x\to\infty}\frac{1/(x+a)}{1/x} = \lim_{x\to\infty}\frac{x}{x+a} = \lim_{x\to\infty}\frac{1}{1 + a/x} = \mathbf{1}." />
             Tehát <M t="\ln(x+a)" /> minden <M t="a" />-ra azonos ütemű <M t="\ln x" />-szel!
           </p>
@@ -564,7 +564,7 @@ export const S7_6: Page[] = [
               ),
             },
             {
-              title: '10-szeres L’Hospital-szabály',
+              title: '10-szeres L’Hôpital-szabály',
               body: (
                 <p>
                   10 egymást követő deriválás után a számláló <M t="10!" /> konstans, a nevező pedig <M t="(0{,}1)^{10} e^{0{,}1x} \to \infty" />.

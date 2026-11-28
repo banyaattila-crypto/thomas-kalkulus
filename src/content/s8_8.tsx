@@ -41,7 +41,7 @@ export const S8_8: Page[] = [
             <li>
               Ha <M t="f" /> folytonos <M t="(-\infty, \infty)" />-n:{' '}
               <M t="\displaystyle\int_{-\infty}^{\infty} f(x)\,dx = \int_{-\infty}^{c} f(x)\,dx + \int_c^{\infty} f(x)\,dx" />{' '}
-              (tetszőleges <M t="c" />-re, és <strong>mindkét</strong> fél-integrálnak külön konvergensnek kell lennie!).
+              (tetszőleges <M t="c" />-re, és <strong>mindkét</strong> félintegrálnak külön konvergensnek kell lennie!).
             </li>
           </ol>
           <p style={{ marginTop: 6 }}>

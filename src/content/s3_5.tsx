@@ -123,7 +123,7 @@ export const S3_5: Page[] = [
           n={4}
           q={
             <>
-              Háromszemű lánc: deriváld a <M t="y=\sin\big(\cos(3x)\big)" /> függvényt!
+              Háromszemű lánc: deriváld az <M t="y=\sin\big(\cos(3x)\big)" /> függvényt!
             </>
           }
         >

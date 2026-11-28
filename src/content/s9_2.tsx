@@ -315,7 +315,7 @@ export const S9_2: Page[] = [
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={13}
-          q={<>Milyen <M t="u" /> helyettesítéssel válik lineárissá a <M t="y' + \frac{1}{x}y = x y^3" /> Bernoulli-egyenlet, és mi lesz a lineáris egyenlet <M t="u" />-ra?</>}
+          q={<>Milyen <M t="u" /> helyettesítéssel válik lineárissá az <M t="y' + \frac{1}{x}y = x y^3" /> Bernoulli-egyenlet, és mi lesz a lineáris egyenlet <M t="u" />-ra?</>}
         >
           <p>
             <M t="n=3 \implies u = y^{1-3} = y^{-2}" />. Mivel <M t="1-n = -2" />, a lineáris egyenlet:{' '}
@@ -324,7 +324,7 @@ export const S9_2: Page[] = [
         </Task>
         <Task
           n={14}
-          q={<>Oldd meg a <M t="y' - y = e^{-x} y^2" /> Bernoulli-egyenletet (Thomas példája)!</>}
+          q={<>Oldd meg az <M t="y' - y = e^{-x} y^2" /> Bernoulli-egyenletet (Thomas példája)!</>}
         >
           <p>
             <M t="n=2 \Rightarrow u = y^{-1}" />, innen <M t="u' + u = -e^{-x}" />. Integráló tényező{' '}

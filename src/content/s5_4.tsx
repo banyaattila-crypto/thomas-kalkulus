@@ -448,13 +448,13 @@ export const S5_4: Page[] = [
             <li><strong>Második derivált (<M t="g''(x)=f'(x)" />):</strong> ahol <M t="f" /> növekszik, ott <M t="g" /> <em>konvex</em> (alulról); ahol <M t="f" /> csökken, ott <M t="g" /> <em>konkáv</em>; ahol <M t="f" />-nek szélsőértéke van, ott <M t="g" />-nek <strong>inflexiós pontja</strong> van!</li>
           </ul>
         </Def>
-        <h3>Integrálos egyenletek és L’Hospital-szabály</h3>
+        <h3>Integrálos egyenletek és L’Hôpital-szabály</h3>
         <p>
           Ha egy egyenletben ismeretlen függvény szerepel az integráljel alatt — például <M t="\int_0^x f(t)\,dt = x\cos(\pi x)" /> —, egyszerűen <strong>deriváljuk mindkét oldalt <M t="x" /> szerint</strong>! A bal oldalon az 1. tétel miatt eltűnik az integráljel, és azonnal megkapjuk <M t="f(x)" />-et:
         </p>
         <M block t="f(x) = \frac{d}{dx}\bigl(x\cos(\pi x)\bigr) = \cos(\pi x) - \pi x\sin(\pi x)." />
         <p>
-          Hasonlóan, egy <M t="\frac{0}{0}" /> alakú határértékben (ahol a számlálóban <M t="\int_a^x f(t)\,dt" /> áll) a <strong>L’Hospital-szabály</strong> (4.6) és a Newton–Leibniz-tétel 1. része tökéletes párost alkot!
+          Hasonlóan, egy <M t="\frac{0}{0}" /> alakú határértékben (ahol a számlálóban <M t="\int_a^x f(t)\,dt" /> áll) a <strong>L’Hôpital-szabály</strong> (4.6) és a Newton–Leibniz-tétel 1. része tökéletes párost alkot!
         </p>
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
@@ -609,12 +609,12 @@ export const S5_4: Page[] = [
           n={21}
           q={
             <>
-              <em>L’Hospital + FTC 1:</em> számítsd ki a <M t="\displaystyle\lim_{x\to 0}\frac{1}{x^3}\int_{0}^{x}\frac{t^2}{t^4+1}\,dt" /> határértéket!
+              <em>L’Hôpital + FTC 1:</em> számítsd ki a <M t="\displaystyle\lim_{x\to 0}\frac{1}{x^3}\int_{0}^{x}\frac{t^2}{t^4+1}\,dt" /> határértéket!
             </>
           }
         >
           <p>
-            <M t="x\to 0" /> esetén mind a számláló (<M t="\int_0^0 = 0" />), mind a nevező (<M t="0" />) nullához tart (<M t="\frac{0}{0}" />). Alkalmazzuk a L’Hospital-szabályt és a Newton–Leibniz-tétel 1. részét:
+            <M t="x\to 0" /> esetén mind a számláló (<M t="\int_0^0 = 0" />), mind a nevező (<M t="0" />) nullához tart (<M t="\frac{0}{0}" />). Alkalmazzuk a L’Hôpital-szabályt és a Newton–Leibniz-tétel 1. részét:
           </p>
           <M block t="\lim_{x\to 0}\frac{\dfrac{x^2}{x^4+1}}{3x^2} = \lim_{x\to 0}\frac{1}{3(x^4+1)} = \mathbf{\frac{1}{3}}." />
         </Task>

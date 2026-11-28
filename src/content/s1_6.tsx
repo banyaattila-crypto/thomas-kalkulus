@@ -273,7 +273,7 @@ export const S1_6: Page[] = [
     body: (
       <>
         <p>
-          Az 1.5-ben megtanult átalakítások a szögfüggvényekre is érvényesek. A <M t="y=d+A\sin\big(\omega(x-c)\big)" /> általános szinuszfüggvény négy paramétere mind egy
+          Az 1.5-ben megtanult átalakítások a szögfüggvényekre is érvényesek. Az <M t="y=d+A\sin\big(\omega(x-c)\big)" /> általános szinuszfüggvény négy paramétere mind egy
           jól ismert átalakításnak felel meg:
         </p>
         <table className="tbl">

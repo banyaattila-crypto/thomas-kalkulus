@@ -12,19 +12,19 @@ import type { Page } from './s1_1';
 export const S4_6: Page[] = [
   // ---------------------------------------------------------------- 1
   {
-    title: 'Miért működik a L’Hospital-szabály? (A nagyító-bizonyítás)',
+    title: 'Miért működik a L’Hôpital-szabály? (A nagyító-bizonyítás)',
     body: (
       <>
         <Story>
           <p>
-            1696-ban jelent meg a világ első nyomtatott kalkulus-tankönyve, Guillaume de L’Hospital márki tollából — benne egy zseniális szabály, amelyet valójában a svájci matematikus, <strong>Johann Bernoulli</strong> fedezett fel (és fizetségért cserébe átengedett a márkinak!). A <strong>L’Hospital-szabály</strong> a határérték-számítás svájci bicskája: a makacs <M t="\frac{0}{0}" /> és <M t="\frac{\infty}{\infty}" /> alakokat pillanatok alatt elintézi deriválással!
+            1696-ban jelent meg a világ első nyomtatott kalkulus-tankönyve, Guillaume de L’Hôpital márki tollából — benne egy zseniális szabály, amelyet valójában a svájci matematikus, <strong>Johann Bernoulli</strong> fedezett fel (és fizetségért cserébe átengedett a márkinak!). A <strong>L’Hôpital-szabály</strong> a határérték-számítás svájci bicskája: a makacs <M t="\frac{0}{0}" /> és <M t="\frac{\infty}{\infty}" /> alakokat pillanatok alatt elintézi deriválással!
           </p>
         </Story>
         <p>
           <strong>De MIÉRT működik?</strong> Emlékezz a 3.8-ból a <em>linearizációra</em>! Ha <M t="f(a)=0" /> és <M t="g(a)=0" />, akkor <M t="x=a" /> közvetlen közelében mindkét görbe szinte azonos az érintőegyenesével:
         </p>
         <M block t="f(x) \approx f'(a)(x-a), \qquad g(x) \approx g'(a)(x-a) \;\Longrightarrow\; \frac{f(x)}{g(x)} \approx \frac{f'(a)(x-a)}{g'(a)(x-a)} = \frac{f'(a)}{g'(a)}!" />
-        <Def title="L’Hospital-szabály (első, egyszerű alak)">
+        <Def title="L’Hôpital-szabály (első, egyszerű alak)">
           <p>
             Ha <M t="f(a) = g(a) = 0" />, <M t="f" /> és <M t="g" /> differenciálható <M t="x=a" />-ban, és <M t="g'(a) \ne 0" />, akkor:
           </p>
@@ -36,7 +36,7 @@ export const S4_6: Page[] = [
           n={1}
           q={
             <>
-              Számítsd ki L’Hospital-szabállyal: <M t="\lim_{x\to 0}\dfrac{\sin(5x)}{3x}" />!
+              Számítsd ki L’Hôpital-szabállyal: <M t="\lim_{x\to 0}\dfrac{\sin(5x)}{3x}" />!
             </>
           }
         >
@@ -48,7 +48,7 @@ export const S4_6: Page[] = [
           n={2}
           q={
             <>
-              Számítsd ki L’Hospital-szabállyal: <M t="\lim_{x\to 2}\dfrac{x^2 - 4}{x^3 - 8}" />!
+              Számítsd ki L’Hôpital-szabállyal: <M t="\lim_{x\to 2}\dfrac{x^2 - 4}{x^3 - 8}" />!
             </>
           }
         >
@@ -62,7 +62,7 @@ export const S4_6: Page[] = [
 
   // ---------------------------------------------------------------- 2
   {
-    title: 'Az erős L’Hospital-szabály és a Cauchy-középértéktétel',
+    title: 'Az erős L’Hôpital-szabály és a Cauchy-középértéktétel',
     body: (
       <>
         <p>
@@ -77,7 +77,7 @@ export const S4_6: Page[] = [
         <p>
           Ha <M t="f(a)=g(a)=0" /> és <M t="b=x" />, akkor ebből azonnal adódik <M t="\dfrac{f(x)}{g(x)} = \dfrac{f'(c)}{g'(c)}" /> (ahol <M t="c" /> az <M t="a" /> és <M t="x" /> között van, tehát ha <M t="x\to a" />, akkor <M t="c\to a" /> is!). Ebből kapjuk a teljes, általános szabályt:
         </p>
-        <Def title="Erős L’Hospital-szabály (0/0 és ∞/∞ alakokra)">
+        <Def title="Erős L’Hôpital-szabály (0/0 és ∞/∞ alakokra)">
           <p>
             Ha <M t="\lim_{x\to a}\dfrac{f(x)}{g(x)}" /> (ahol <M t="a" /> lehet valós szám, <M t="a^+" />, <M t="a^-" />, <M t="+\infty" /> vagy <M t="-\infty" />) határozatlan <strong><M t="\frac{0}{0}" /></strong> vagy <strong><M t="\frac{\infty}{\infty}" /></strong> alakú, és létezik <M t="\lim_{x\to a}\dfrac{f'(x)}{g'(x)}" /> (véges szám vagy <M t="\pm\infty" />), akkor:
           </p>
@@ -97,14 +97,14 @@ export const S4_6: Page[] = [
           }
         >
           <p>
-            <M t="0/0 \xrightarrow{\text{L’H}} \lim\dfrac{\sec^2 x - 1}{3x^2} = \lim\dfrac{\operatorname{tg}^2 x}{3x^2} = \dfrac{1}{3}\cdot 1^2 = \dfrac{1}{3}" />! (Vagy még két L’Hospital-lépéssel is <M t="\frac{1}{3}" />.)
+            <M t="0/0 \xrightarrow{\text{L’H}} \lim\dfrac{\sec^2 x - 1}{3x^2} = \lim\dfrac{\operatorname{tg}^2 x}{3x^2} = \dfrac{1}{3}\cdot 1^2 = \dfrac{1}{3}" />! (Vagy még két L’Hôpital-lépéssel is <M t="\frac{1}{3}" />.)
           </p>
         </Task>
         <Task
           n={4}
           q={
             <>
-              Számítsd ki: <M t="\lim_{x\to\infty}\dfrac{4x^2 - 7x + 1}{2x^2 + 3x - 5}" /> L’Hospital-szabállyal!
+              Számítsd ki: <M t="\lim_{x\to\infty}\dfrac{4x^2 - 7x + 1}{2x^2 + 3x - 5}" /> L’Hôpital-szabállyal!
             </>
           }
         >
@@ -118,15 +118,15 @@ export const S4_6: Page[] = [
 
   // ---------------------------------------------------------------- 3
   {
-    title: 'Mikor TILOS L’Hospital-szabályt használni? A 3 csapda',
+    title: 'Mikor TILOS L’Hôpital-szabályt használni? A 3 csapda',
     body: (
       <>
         <p>
-          A L’Hospital-szabály olyan kényelmes, hogy sokan reflexből minden törtre ráeresztik — és belesétálnak a három klasszikus csapda egyikébe! Nézd meg mindhármat, hogy te soha ne hibázz:
+          A L’Hôpital-szabály olyan kényelmes, hogy sokan reflexből minden törtre ráeresztik — és belesétálnak a három klasszikus csapda egyikébe! Nézd meg mindhármat, hogy te soha ne hibázz:
         </p>
         <TrapDetectorWidget />
         <p>
-          <strong>Aranyszabály:</strong> minden egyes L’Hospital-lépés előtt <em>hangosan</em> (vagy a papírra zárójelben) ellenőrizd: „Valóban <M t="\frac{0}{0}" /> vagy <M t="\frac{\infty}{\infty}" />?” És ha egy egyszerűsítés (pl. <M t="\cos x" /> behelyettesítése, <M t="x" />-szel osztás) könnyebb, mindig az algebrai egyszerűsítés az első!
+          <strong>Aranyszabály:</strong> minden egyes L’Hôpital-lépés előtt <em>hangosan</em> (vagy a papírra zárójelben) ellenőrizd: „Valóban <M t="\frac{0}{0}" /> vagy <M t="\frac{\infty}{\infty}" />?” És ha egy egyszerűsítés (pl. <M t="\cos x" /> behelyettesítése, <M t="x" />-szel osztás) könnyebb, mindig az algebrai egyszerűsítés az első!
         </p>
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
@@ -145,12 +145,12 @@ export const S4_6: Page[] = [
           n={6}
           q={
             <>
-              Számítsd ki ügyesen (L’Hospital nélkül!): <M t="\lim_{x\to\infty}\dfrac{2x - \cos x}{5x + 3}" />!
+              Számítsd ki ügyesen (L’Hôpital nélkül!): <M t="\lim_{x\to\infty}\dfrac{2x - \cos x}{5x + 3}" />!
             </>
           }
         >
           <p>
-            Ha L’Hospitalt használnál, <M t="\lim\dfrac{2+\sin x}{5}" /> oszcillálna! Viszont <M t="x" />-szel elosztva: <M t="\lim_{x\to\infty}\dfrac{2 - (\cos x)/x}{5 + 3/x} = \dfrac{2 - 0}{5 + 0} = \dfrac{2}{5}" />!
+            Ha L’Hôpitalt használnál, <M t="\lim\dfrac{2+\sin x}{5}" /> oszcillálna! Viszont <M t="x" />-szel elosztva: <M t="\lim_{x\to\infty}\dfrac{2 - (\cos x)/x}{5 + 3/x} = \dfrac{2 - 0}{5 + 0} = \dfrac{2}{5}" />!
           </p>
         </Task>
       </>
@@ -163,7 +163,7 @@ export const S4_6: Page[] = [
     body: (
       <>
         <p>
-          A L’Hospital-szabály <em>közvetlenül</em> csak a <M t="\frac{0}{0}" /> és a <M t="\frac{\infty}{\infty}" /> hányadosokra működik. Mi a teendő, ha szorzat (<M t="0\cdot\infty" />) vagy különbség (<M t="\infty-\infty" />) jelenik meg? <strong>Alakítsd át törtté!</strong>
+          A L’Hôpital-szabály <em>közvetlenül</em> csak a <M t="\frac{0}{0}" /> és a <M t="\frac{\infty}{\infty}" /> hányadosokra működik. Mi a teendő, ha szorzat (<M t="0\cdot\infty" />) vagy különbség (<M t="\infty-\infty" />) jelenik meg? <strong>Alakítsd át törtté!</strong>
         </p>
         <IndeterminateMapDiagram />
         <ul>
@@ -224,7 +224,7 @@ export const S4_6: Page[] = [
           </p>
           <ol>
             <li>Vegyük a természetes logaritmust: <M t="\ln y = \ln\bigl(f(x)^{g(x)}\bigr) = g(x)\cdot\ln f(x)" /> (ez már <M t="0\cdot\infty" /> alak!).</li>
-            <li>Számítsuk ki <M t="L = \lim \ln y" /> értékét L’Hospital-szabállyal (miután a 7. fejezetben megtanultuk <M t="(\ln x)' = 1/x" />-et).</li>
+            <li>Számítsuk ki <M t="L = \lim \ln y" /> értékét L’Hôpital-szabállyal (miután a 7. fejezetben megtanultuk <M t="(\ln x)' = 1/x" />-et).</li>
             <li>Ne felejts el <strong>visszaalakítani</strong>: ha <M t="\ln y \to L" />, akkor <M t="y = e^{\ln y} \to \mathbf{e^L}" />!</li>
           </ol>
         </Def>
@@ -272,7 +272,7 @@ export const S4_6: Page[] = [
           <tbody>
             <tr>
               <td><M t="\frac{0}{0}" /> vagy <M t="\frac{\infty}{\infty}" /></td>
-              <td>L’Hospital: <M t="\lim \frac{f}{g} = \lim \frac{f'}{g'}" /> (külön deriválva!)</td>
+              <td>L’Hôpital: <M t="\lim \frac{f}{g} = \lim \frac{f'}{g'}" /> (külön deriválva!)</td>
             </tr>
             <tr>
               <td><M t="0\cdot\infty" /></td>
@@ -291,7 +291,7 @@ export const S4_6: Page[] = [
         <h3>Négy klasszikus hiba</h3>
         <Warn>
           <p>
-            <strong>1. Hányadosszabály alkalmazása L’Hospital helyett!</strong> A L’Hospital-szabályban <strong>KÜLÖN</strong> deriválod a számlálót és <strong>KÜLÖN</strong> a nevezőt: <M t="\dfrac{f'(x)}{g'(x)}" />, és NEM a tört deriváltját (<M t="\frac{f'g-fg'}{g^2}" />) veszed!
+            <strong>1. Hányadosszabály alkalmazása L’Hôpital helyett!</strong> A L’Hôpital-szabályban <strong>KÜLÖN</strong> deriválod a számlálót és <strong>KÜLÖN</strong> a nevezőt: <M t="\dfrac{f'(x)}{g'(x)}" />, és NEM a tört deriváltját (<M t="\frac{f'g-fg'}{g^2}" />) veszed!
           </p>
         </Warn>
         <Warn>
@@ -301,7 +301,7 @@ export const S4_6: Page[] = [
         </Warn>
         <Warn>
           <p>
-            <strong>3. Nem határozatlan alakok deriválása:</strong> <M t="\frac{0}{\infty}=0" />, <M t="\frac{5}{0^+}=+\infty" />, <M t="\infty+\infty=\infty" /> — ezekre tilos L’Hospitalt alkalmazni!
+            <strong>3. Nem határozatlan alakok deriválása:</strong> <M t="\frac{0}{\infty}=0" />, <M t="\frac{5}{0^+}=+\infty" />, <M t="\infty+\infty=\infty" /> — ezekre tilos L’Hôpitalt alkalmazni!
           </p>
         </Warn>
         <Warn>
@@ -435,10 +435,10 @@ export const S4_6: Page[] = [
           }
         >
           <p>
-            1. L’Hospital (<M t="0/0" />): <M t="\lim_{x\to 0}\dfrac{2\cos(2x)+k}{3x^2}" />. Ahhoz, hogy ez véges lehessen (ne <M t="\pm\infty" />), a számlálónak is <M t="0" />-hoz kell tartania: <M t="2(1)+k=0 \Rightarrow \mathbf{k=-2}" />!
+            1. L’Hôpital (<M t="0/0" />): <M t="\lim_{x\to 0}\dfrac{2\cos(2x)+k}{3x^2}" />. Ahhoz, hogy ez véges lehessen (ne <M t="\pm\infty" />), a számlálónak is <M t="0" />-hoz kell tartania: <M t="2(1)+k=0 \Rightarrow \mathbf{k=-2}" />!
           </p>
           <p>
-            Ekkor még kétszer L’Hospital: <M t="\lim\dfrac{-4\sin(2x)}{6x} \xrightarrow{0/0} \lim\dfrac{-8\cos(2x)}{6} = -\dfrac{4}{3}" />!
+            Ekkor még kétszer L’Hôpital: <M t="\lim\dfrac{-4\sin(2x)}{6x} \xrightarrow{0/0} \lim\dfrac{-8\cos(2x)}{6} = -\dfrac{4}{3}" />!
           </p>
         </Task>
       </>

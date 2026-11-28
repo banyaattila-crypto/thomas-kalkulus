@@ -51,7 +51,7 @@ export const TOC: Chapter[] = [
       'Monoton függvények és az első derivált teszt',
       'Konvexitás és a függvénygörbe felrajzolása',
       'Alkalmazott optimalizációs problémák',
-      'Határozatlan alakok és a L’Hospital-szabály',
+      'Határozatlan alakok és a L’Hôpital-szabály',
       'A Newton-módszer',
       'Primitív függvények',
     ]),

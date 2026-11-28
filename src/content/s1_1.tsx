@@ -101,7 +101,7 @@ export const S1_1: Page[] = [
           Hogy miért ismétlődik: ha <M t="m/n" />-t hosszú osztással számoljuk, minden lépés után a maradék egy{' '}
           <M t="0,1,\ldots,n-1" /> közötti szám. Ha ennyi lépés alatt nem lett 0 a maradék, akkor legkésőbb az{' '}
           <M t="n" />-edik lépés után már előfordult olyan maradék, amilyen korábban is volt, és onnantól az osztás a
-          korábbi számjegyeket ismétli. A megfordítás is igaz. Például a <M t="x=0{,}\overline{27}" /> szám így alakítható
+          korábbi számjegyeket ismétli. A megfordítás is igaz. Például az <M t="x=0{,}\overline{27}" /> szám így alakítható
           törtté:
         </p>
         <M block t="100x=27{,}\overline{27},\quad 100x-x=27\ \Rightarrow\ x=\tfrac{27}{99}=\tfrac{3}{11}." />
@@ -585,7 +585,7 @@ export const S1_1: Page[] = [
         <h3>Könnyű</h3>
 
         <Task
-          n={1}
+          n={2}
           q={
             <>
               Írd fel tizedes tört alakban az <M t="\tfrac{5}{12}" /> számot, és tört alakban a <M t="0{,}\overline{54}" /> számot.
@@ -598,14 +598,14 @@ export const S1_1: Page[] = [
           </p>
         </Task>
 
-        <Task n={2} q={<>Oldd meg: <M t="5-2x<3x+10" />, és írd fel a megoldást intervallum alakban!</>}>
+        <Task n={3} q={<>Oldd meg: <M t="5-2x<3x+10" />, és írd fel a megoldást intervallum alakban!</>}>
           <p>
             Az <M t="x" />-es tagokat egy oldalra rendezve <M t="-5<5x" />, tehát <M t="x>-1" />. Megoldás: <M t="(-1;\,\infty)" />.
           </p>
         </Task>
 
         <Task
-          n={3}
+          n={4}
           q={
             <>
               Írd fel abszolútértékes egyenlőtlenségként a <M t="(-3;\,7)" /> nyílt intervallumot!
@@ -622,7 +622,7 @@ export const S1_1: Page[] = [
         <h3>Közepes</h3>
 
         <Task
-          n={4}
+          n={5}
           q={
             <>
               Tudjuk, hogy <M t="-1<x<4" />. Add meg a legszűkebb intervallumot, amelyben a <M t="2x-3" /> és az{' '}
@@ -639,7 +639,7 @@ export const S1_1: Page[] = [
           </p>
         </Task>
 
-        <Task n={5} q={<>Oldd meg: <M t="|5-2x|\le 7" />.</>}>
+        <Task n={6} q={<>Oldd meg: <M t="|5-2x|\le 7" />.</>}>
           <p>
             <M t="-7\le 5-2x\le 7" />. Kivonunk 5-öt: <M t="-12\le -2x\le 2" />. Osztunk <M t="-2" />-vel, a relációk megfordulnak:{' '}
             <M t="6\ge x\ge -1" />. Megoldás: <M t="[-1;\,6]" />. A végpontokra ellenőrzés: <M t="x=6" />-nál <M t="|-7|=7" />,{' '}
@@ -647,7 +647,7 @@ export const S1_1: Page[] = [
           </p>
         </Task>
 
-        <Task n={6} q={<>Oldd meg a törtes egyenlőtlenséget: <M t="\dfrac{3}{x-2} > 1" />.</>}>
+        <Task n={7} q={<>Oldd meg a törtes egyenlőtlenséget: <M t="\dfrac{3}{x-2} > 1" />.</>}>
           <p>
             Kikötés: <M t="x\neq 2" />. Rendezzük 0-ra:
             <M block t="\frac{3}{x-2}-1=\frac{3-(x-2)}{x-2}=\frac{5-x}{x-2}>0." />
@@ -664,7 +664,7 @@ export const S1_1: Page[] = [
 
         <h3>Nehéz</h3>
 
-        <Task n={7} q={<>Oldd meg az <M t="|x|+|x-2|=4" /> egyenletet.</>}>
+        <Task n={8} q={<>Oldd meg az <M t="|x|+|x-2|=4" /> egyenletet.</>}>
           <p>Az abszolútértékek előjelváltása a 0 és a 2 helyen van, ezért három tartományt vizsgálunk.</p>
           <ul>
             <li>
@@ -680,7 +680,7 @@ export const S1_1: Page[] = [
           <p>Megoldások: <M t="x=-1" /> és <M t="x=3" />. Geometriailag: azok a pontok, amelyeknek a 0-tól és a 2-től mért távolságának összege 4.</p>
         </Task>
 
-        <Task n={8} q={<>Bizonyítsd be, hogy tetszőleges valós <M t="a,b" /> esetén <M t="\big||a|-|b|\big|\le |a-b|" />.</>}>
+        <Task n={9} q={<>Bizonyítsd be, hogy tetszőleges valós <M t="a,b" /> esetén <M t="\big||a|-|b|\big|\le |a-b|" />.</>}>
           <p>
             A háromszög-egyenlőtlenséget alkalmazzuk az <M t="a=(a-b)+b" /> felbontásra:{' '}
             <M t="|a|\le|a-b|+|b|" />, vagyis <M t="|a|-|b|\le|a-b|" />. Az <M t="a" /> és <M t="b" /> szerepét felcserélve{' '}
@@ -690,7 +690,7 @@ export const S1_1: Page[] = [
         </Task>
 
         <Task
-          n={9}
+          n={10}
           q={
             <>
               Oldd meg a <M t="\big||x-1|-2\big| \le 1" /> egymásba ágyazott abszolútértékes egyenlőtlenséget!

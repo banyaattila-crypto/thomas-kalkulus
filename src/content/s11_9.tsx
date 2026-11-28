@@ -251,7 +251,7 @@ export const S11_9: Page[] = [
         <LagrangeVsLeibnizWidget />
 
         <Quiz
-          q={<>A <M t="e^{0{,}5} \approx 1 + 0{,}5 + \frac{0{,}5^2}{2}" /> közelítés hibáját szeretnéd felülről becsülni. Melyik módszert használhatod?</>}
+          q={<>Az <M t="e^{0{,}5} \approx 1 + 0{,}5 + \frac{0{,}5^2}{2}" /> közelítés hibáját szeretnéd felülről becsülni. Melyik módszert használhatod?</>}
           options={[
             { label: <>A Leibniz-féle alternáló soros hibabecslést</> },
             { label: <>A Lagrange-féle maradéktag-becslést</>, ok: true },
@@ -267,7 +267,7 @@ export const S11_9: Page[] = [
           }
         />
 
-        <Task n={9} q={<>Becsüld meg a <M t="e^{-0{,}2} \approx 1 - 0{,}2 + \frac{0{,}2^2}{2}" /> közelítés hibáját (a) Leibniz-korláttal, (b) Lagrange-maradéktaggal!</>}>
+        <Task n={9} q={<>Becsüld meg az <M t="e^{-0{,}2} \approx 1 - 0{,}2 + \frac{0{,}2^2}{2}" /> közelítés hibáját (a) Leibniz-korláttal, (b) Lagrange-maradéktaggal!</>}>
           <p>
             (a) Mivel <M t="e^{-0{,}2} = 1 - 0{,}2 + \frac{0{,}2^2}{2!} - \frac{0{,}2^3}{3!} + \cdots" /> alternáló és
             tagjai csökkennek, a Leibniz-korlát az első elhagyott tag: <M t="\frac{0{,}2^3}{6} \approx 0{,}001333" />.

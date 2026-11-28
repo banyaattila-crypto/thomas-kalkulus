@@ -381,7 +381,7 @@ export const S2_1: Page[] = [
             <M t="\dfrac{\frac1{2+h}-\frac12}{h}=\dfrac{2-(2+h)}{2(2+h)h}=\dfrac{-h}{2(2+h)h}=-\dfrac{1}{2(2+h)}" />, ha <M t="h\ne0" />.
           </p>
           <p>
-            Ha <M t="h\to0" />: <M t="-\dfrac{1}{2\cdot2}=-\dfrac14" />. A <M t="y=1/x" /> grafikon <M t="(2;\tfrac12)" /> pontbeli érintőjének meredeksége <M t="-\tfrac14" />, az érintő lefelé hajlik.
+            Ha <M t="h\to0" />: <M t="-\dfrac{1}{2\cdot2}=-\dfrac14" />. Az <M t="y=1/x" /> grafikon <M t="(2;\tfrac12)" /> pontbeli érintőjének meredeksége <M t="-\tfrac14" />, az érintő lefelé hajlik.
           </p>
         </Task>
 

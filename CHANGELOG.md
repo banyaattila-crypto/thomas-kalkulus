@@ -4,6 +4,14 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.15.1] - 2026-11-28
+
+### Javítva — Teljes kódbázis-audit (`1.1`–`16.8`, komponensek és adatok)
+- **Lapozási állapot-visszaállítás (`App.tsx`)**: az `<article className="card">` megkapta a `key={`${route.section}-${route.page}`}` kulcsot, így szakasz- és oldalváltáskor a `<Task>`, `<Quiz>` és `<Steps>` komponensek állapota mindig tisztán alaphelyzetbe áll.
+- **Feladatszámozás (`s1_1.tsx`)**: a duplikált `1.` sorszám megszüntetve (a 8. oldali gyakorlófeladatok `2`–`10`-ig számozva).
+- **Kötet-alcím (`TocPage.tsx`)**: a II. kötet alcíme pontosítva (`Integrálás és sorok alapjai` → `Integrálás és differenciálegyenletek`).
+- **Helyesírás, névelők és névírás**: 6 kötőjeles hiba (`FormulaHub.tsx`, `s8_8.tsx`, `s9_4.tsx`, `s10_1.tsx`, `s10_5.tsx`), 19 magyar névelőhiba (`s1_1`–`s11_10`), valamint 37 `L’Hospital` → `L’Hôpital` névírási egységesítés (`toc.ts`, `s4_6.tsx`, `s5_4.tsx`, `s7_6.tsx`).
+
 ## [3.15.0] - 2026-11-28
 
 ### Hozzáadva — 16. fejezet Analízis-labor integráció és tartalmi revízió (`16.1`–`16.8`) — TELJES!

@@ -83,7 +83,7 @@ export const S3_4: Page[] = [
         </p>
         <ul>
           <li>
-            <strong>Hol a leggyorsabb?</strong> Ahol <M t="|\sin t|=1" />, vagyis éppen a <M t="s=0" /> <em>nyugalmi helyzeten áthaladva</em>! A végpontokban (<M t="s=\pm 5" />) egy pillanatra megáll (<M t="v=0" />).
+            <strong>Hol a leggyorsabb?</strong> Ahol <M t="|\sin t|=1" />, vagyis éppen az <M t="s=0" /> <em>nyugalmi helyzeten áthaladva</em>! A végpontokban (<M t="s=\pm 5" />) egy pillanatra megáll (<M t="v=0" />).
           </li>
           <li>
             <strong>Merre hat a gyorsulás?</strong> Mivel <M t="a(t)=-s(t)" />, a gyorsulás mindig az elmozdulással <em>ellentétes irányú</em>: fent lefelé húzza a testet, lent felfelé tolja vissza a rugó!

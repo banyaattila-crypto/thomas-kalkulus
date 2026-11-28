@@ -82,7 +82,7 @@ export function FormulaHub({ go, done }: Props) {
       <div className="fhub-hero">
         <h1>Kereső és képletgyűjtemény</h1>
         <p className="fhub-sub">
-          Azonnali ékezet-független keresés mind a <b>120 szakasz</b> és a <b>{FORMULAS.length} legfontosabb tétel / képlet</b> között (I–III. kötet). Gyorsbillentyű: <kbd>Ctrl</kbd>+<kbd>K</kbd>.
+          Azonnali ékezetfüggetlen keresés mind a <b>120 szakasz</b> és a <b>{FORMULAS.length} legfontosabb tétel / képlet</b> között (I–III. kötet). Gyorsbillentyű: <kbd>Ctrl</kbd>+<kbd>K</kbd>.
         </p>
 
         <div className="fhub-search-wrap">

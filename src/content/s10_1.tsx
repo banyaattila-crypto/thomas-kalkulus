@@ -449,7 +449,7 @@ export const S10_1: Page[] = [
         </Task>
         <Task
           n={22}
-          q={<>A Föld ellipszispályán kering a Nap (az egyik fókusz) körül: a legkisebb naptávolsága (perihélium, <M t="a-c" />) kb. <M t="147{,}1" /> millió km, a legnagyobb (aphélium, <M t="a+c" />) kb. <M t="152{,}1" /> millió km. Mennyi az <M t="a" /> fél-nagytengely és a <M t="c" /> lineáris excentricitás?</>}
+          q={<>A Föld ellipszispályán kering a Nap (az egyik fókusz) körül: a legkisebb naptávolsága (perihélium, <M t="a-c" />) kb. <M t="147{,}1" /> millió km, a legnagyobb (aphélium, <M t="a+c" />) kb. <M t="152{,}1" /> millió km. Mennyi az <M t="a" /> félnagytengely és a <M t="c" /> lineáris excentricitás?</>}
         >
           <p>
             Összeadva: <M t="2a = 299{,}2 \implies a = \mathbf{149{,}6}" /> M km (1 csillagászati egység!). Kivonva:{' '}

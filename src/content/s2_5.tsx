@@ -21,7 +21,7 @@ export const S2_5: Page[] = [
           </p>
         </Story>
         <p>
-          A 2.4-es szakaszban a <M t="x\to\pm\infty" /> esetet néztük meg (mit csinál a függvény messze az origótól). Most a tükörképét vizsgáljuk: mi történik, ha <M t="x" /> egy <strong>véges</strong> <M t="c" /> számhoz közelít, de a függvényértékek minden határon túl nőnek vagy csökkennek?
+          A 2.4-es szakaszban az <M t="x\to\pm\infty" /> esetet néztük meg (mit csinál a függvény messze az origótól). Most a tükörképét vizsgáljuk: mi történik, ha <M t="x" /> egy <strong>véges</strong> <M t="c" /> számhoz közelít, de a függvényértékek minden határon túl nőnek vagy csökkennek?
         </p>
         <p>
           Vegyük az <M t="f(x)=1/x" /> függvényt! Ahogy <M t="x\to 0^+" />, a függvényértékek bármely előre megadott pozitív <M t="B" /> korlátot túllépnek; ahogy <M t="x\to 0^-" />, bármely negatív korlát alá süllyednek. Ezt így rövidítjük:

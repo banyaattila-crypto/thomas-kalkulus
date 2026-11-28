@@ -147,9 +147,9 @@ export const S10_5: Page[] = [
           q={<>Melyik tartományt írja le a <M t="2 \le r \le 4,\ 0 \le \theta \le \pi" /> poláris egyenlőtlenségrendszer?</>}
           options={[
             { label: 'Teljes körgyűrű 2 és 4 sugár között' },
-            { label: 'Felső fél-körgyűrű 2 és 4 sugár között (y ≥ 0)', ok: true },
+            { label: 'Felső félkörgyűrű 2 és 4 sugár között (y ≥ 0)', ok: true },
             { label: 'Félkörlap 4 sugárral' },
-            { label: 'Jobb oldali fél-körgyűrű (x ≥ 0)' },
+            { label: 'Jobb oldali félkörgyűrű (x ≥ 0)' },
           ]}
           explain={
             <>

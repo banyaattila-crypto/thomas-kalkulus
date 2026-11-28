@@ -293,7 +293,7 @@ export const S6_4: Page[] = [
               <strong><M t="M_x" /> és <M t="M_y" /> összecserélése!</strong> Az <M t="y" />-tengelytől mért távolság <strong><M t="x" /></strong>, ezért <M t="\bar{x}=M_y/M" />; az <M t="x" />-tengelytől mért távolság <strong><M t="y" /></strong>, ezért <M t="\bar{y}=M_x/M" />!
             </li>
             <li>
-              <strong>A <M t="\frac{1}{2}" /> és a <M t="f^2-g^2" /> elrontása:</strong> <M t="M_x" /> képletében <M t="\frac{1}{2}(f^2-g^2)" /> áll (mert a csík közepe <M t="\frac{f+g}{2}" /> magasságban van), NEM <M t="(f-g)^2" />!
+              <strong>A <M t="\frac{1}{2}" /> és az <M t="f^2-g^2" /> elrontása:</strong> <M t="M_x" /> képletében <M t="\frac{1}{2}(f^2-g^2)" /> áll (mert a csík közepe <M t="\frac{f+g}{2}" /> magasságban van), NEM <M t="(f-g)^2" />!
             </li>
             <li>
               <strong>Elfelejtett osztás <M t="M" />-mel (vagy <M t="A" />-val):</strong> a nyomaték még nem koordináta — a végén mindig ossz a teljes tömeggel/területtel!

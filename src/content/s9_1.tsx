@@ -58,7 +58,7 @@ export const S9_1: Page[] = [
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={1}
-          q={<>Ellenőrizd, hogy <M t="y = \frac{C}{x} + 2" /> megoldása-e a <M t="y' = \frac{1}{x}(2-y)" /> egyenletnek <M t="x > 0" />-ra (Thomas 1. példa)!</>}
+          q={<>Ellenőrizd, hogy <M t="y = \frac{C}{x} + 2" /> megoldása-e az <M t="y' = \frac{1}{x}(2-y)" /> egyenletnek <M t="x > 0" />-ra (Thomas 1. példa)!</>}
         >
           <p>
             Bal oldal: <M t="y' = -\frac{C}{x^2}" />. Jobb oldal:{' '}
@@ -289,7 +289,7 @@ export const S9_1: Page[] = [
         <h3>Gyors ellenőrző feladatok</h3>
         <Task
           n={11}
-          q={<>Oldd meg implicit alakban a <M t="y' = \frac{3x^2+4x+2}{2(y-1)}" /> egyenletet az <M t="y(0) = -1" /> feltétellel (Thomas 36. feladat)!</>}
+          q={<>Oldd meg implicit alakban az <M t="y' = \frac{3x^2+4x+2}{2(y-1)}" /> egyenletet az <M t="y(0) = -1" /> feltétellel (Thomas 36. feladat)!</>}
         >
           <p>
             <M t="\int 2(y-1)\,dy = \int (3x^2+4x+2)\,dx \implies y^2 - 2y = x^3 + 2x^2 + 2x + C" />.
@@ -374,7 +374,7 @@ export const S9_1: Page[] = [
             </li>
             <li>
               <strong>Iránymező:</strong> minden <M t="(x,y)" /> pontban <M t="f(x,y)" /> meredekségű érintődarabka;
-              a <M t="f(x,y)=0" /> görbe a nulla-izoklina.
+              az <M t="f(x,y)=0" /> görbe a nulla-izoklina.
             </li>
             <li>
               <strong>Szeparábilis recept:</strong> <M t="\frac{dy}{dx} = g(x)H(y) \implies \int\frac{dy}{H(y)} = \int g(x)\,dx" />{' '}
@@ -478,7 +478,7 @@ export const S9_1: Page[] = [
         </Task>
         <Task
           n={23}
-          q={<>Oldd meg a <M t="y' = \sqrt{y},\; y(0) = 0" /> egyenletet! Hány megoldása van ennek a kezdetiérték-problémának?</>}
+          q={<>Oldd meg az <M t="y' = \sqrt{y},\; y(0) = 0" /> egyenletet! Hány megoldása van ennek a kezdetiérték-problémának?</>}
         >
           <p>
             <strong>Végtelen sok!</strong> Egyrészt <M t="y \equiv 0" /> megoldás, másrészt szétválasztva{' '}

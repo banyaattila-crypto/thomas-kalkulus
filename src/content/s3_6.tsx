@@ -272,7 +272,7 @@ export const S3_6: Page[] = [
             1. <M t="y+xy'+2yy'=0 \Rightarrow y'=-\dfrac{y}{x+2y}" />. A <M t="(0;\,1)" /> pontban <M t="y'=-\dfrac{1}{2}" />.
           </p>
           <p>
-            2. A <M t="y+xy'+2yy'=0" /> egyenletet közvetlenül újra deriválva (gyorsabb!): <M t="2y'+xy''+2(y')^2+2yy''=0" />. Behelyettesítve <M t="x=0, y=1, y'=-1/2" />-et: <M t="-1 + 0 + \dfrac{1}{2} + 2y'' = 0 \Rightarrow y''=\dfrac{1}{4}" />.
+            2. Az <M t="y+xy'+2yy'=0" /> egyenletet közvetlenül újra deriválva (gyorsabb!): <M t="2y'+xy''+2(y')^2+2yy''=0" />. Behelyettesítve <M t="x=0, y=1, y'=-1/2" />-et: <M t="-1 + 0 + \dfrac{1}{2} + 2y'' = 0 \Rightarrow y''=\dfrac{1}{4}" />.
           </p>
         </Task>
       </>

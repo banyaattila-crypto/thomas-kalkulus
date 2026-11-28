@@ -442,7 +442,7 @@ export const S4_4: Page[] = [
             <strong>4. Első derivált:</strong> <M t="f'(x) = \dfrac{2x(x^2-1) - x^2(2x)}{(x^2-1)^2} = \dfrac{-2x}{(x^2-1)^2}" />. Egyetlen kritikus pont: <M t="x=0" />!
           </li>
           <li>
-            <strong>5. Második derivált:</strong> <M t="f''(x) = \dfrac{-2(x^2-1)^2 - (-2x)\cdot 2(x^2-1)(2x)}{(x^2-1)^4} = \dfrac{6x^2 + 2}{(x^2-1)^3}" />. Mivel <M t="6x^2+2 > 0" /> mindig, <M t="f''" /> <em>sehol nem nulla</em> — csak a <M t="x=\pm 1" /> aszimptotáknál vált előjelet!
+            <strong>5. Második derivált:</strong> <M t="f''(x) = \dfrac{-2(x^2-1)^2 - (-2x)\cdot 2(x^2-1)(2x)}{(x^2-1)^4} = \dfrac{6x^2 + 2}{(x^2-1)^3}" />. Mivel <M t="6x^2+2 > 0" /> mindig, <M t="f''" /> <em>sehol nem nulla</em> — csak az <M t="x=\pm 1" /> aszimptotáknál vált előjelet!
           </li>
         </ul>
         <table className="tbl">

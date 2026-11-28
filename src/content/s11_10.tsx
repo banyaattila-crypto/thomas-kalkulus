@@ -78,7 +78,7 @@ export const S11_10: Page[] = [
         <RelativityEnergyWidget />
 
         <p>
-          Ugyanez a <M t="m = -\frac{1}{2}" /> binomiális sor adja az <M t="\arcsin x" /> Maclaurin-sorát is, tagonkénti
+          Ugyanez az <M t="m = -\frac{1}{2}" /> binomiális sor adja az <M t="\arcsin x" /> Maclaurin-sorát is, tagonkénti
           integrálással:
         </p>
 

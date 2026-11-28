@@ -6,7 +6,7 @@ type Props = { go: (section: string, page?: number) => void; done?: Set<string> 
 
 export const SUB: Record<number, string> = {
   1: 'Függvények, határérték, derivált',
-  2: 'Integrálás és sorok alapjai',
+  2: 'Integrálás és differenciálegyenletek',
   3: 'Több változó és vektoranalízis',
 };
 

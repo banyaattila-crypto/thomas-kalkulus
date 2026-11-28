@@ -252,7 +252,7 @@ export default function App() {
                     />
                   ))}
                 </div>
-                <article className="card">
+                <article key={`${route.section}-${route.page}`} className="card">
                   <h2>
                     <span className="pg">
                       {route.page + 1}/{pages.length}
