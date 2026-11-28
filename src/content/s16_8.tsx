@@ -21,7 +21,7 @@ export const S16_8: Page[] = [
         <Story>
           <p>
             Elérkeztünk a háromkötetes <em>Thomas-féle Kalkulus</em> <strong>120., utolsó alfejezetéhez</strong>! A
-            nagy finálé hőse a <strong>Gauss–Osztrogradszkij-tétel</strong> (divergencia-tétel), amely egy zárt 3D
+            nagy finálé hőse a <strong>Gauss–Osztrogradszkij-tétel</strong> (divergenciatétel), amely egy zárt 3D
             felületen kiáramló <em>fluxust</em> alakít át a test belsejében vett <em>hármas integrállá</em>!
           </p>
         </Story>
@@ -58,7 +58,7 @@ export const S16_8: Page[] = [
 
   /* ============================================================== 2. OLDAL */
   {
-    title: 'A Gauss–Osztrogradszkij-tétel (divergencia-tétel)',
+    title: 'A Gauss–Osztrogradszkij-tétel (divergenciatétel)',
     body: (
       <>
         <p>
@@ -66,7 +66,7 @@ export const S16_8: Page[] = [
           falain oltódik ki minden belső fluxus — és csak a külső zárt burok marad!
         </p>
 
-        <Def title="A Gauss–Osztrogradszkij-tétel (divergencia-tétel)">
+        <Def title="A Gauss–Osztrogradszkij-tétel (divergenciatétel)">
           <p>
             Legyen <M t="D" /> zárt, korlátos 3D test, amelynek határa a szakaszonként sima, zárt,{' '}
             <strong>kifelé irányított</strong> <M t="S = \partial D" /> felület (<M t="\mathbf{n}" /> kifelé mutató
@@ -311,7 +311,7 @@ export const S16_8: Page[] = [
           explain={
             <>
               <M t="\iiint_D (\nabla\cdot\mathbf{F})\,dV = \iint_{\partial D} \mathbf{F}\cdot\mathbf{n}\,d\sigma" /> —
-              ez a 3D divergencia-tétel (Gauss–Osztrogradszkij-tétel)!
+              ez a 3D divergenciatétel (Gauss–Osztrogradszkij-tétel)!
             </>
           }
         />
@@ -408,6 +408,24 @@ export const S16_8: Page[] = [
             (Gratulálunk — ezzel befejezted a teljes 120 szakaszos <em>Thomas-féle Kalkulus</em> tananyagot!)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mi a <M t="\nabla\cdot(\nabla\times\mathbf{G})" /> (egy rotáció divergenciájának) értéke bármely kétszer folytonosan differenciálható <M t="\mathbf{G}" /> vektormezőre?</>}
+          options={[
+            { label: <>Mindig <M t="0" /></>, ok: true },
+            { label: <>Mindig <M t="1" /></> },
+            { label: <><M t="|\mathbf{G}|" /></> },
+            { label: <><M t="\nabla^2\mathbf{G}" /></> },
+          ]}
+          explain={
+            <>
+              A vegyes parciális deriváltak felcserélhetősége (Clairaut-tétel) miatt minden tag páronként kiejti egymást:{' '}
+              <M t="\operatorname{div}(\operatorname{rot}\mathbf{G}) \equiv 0" />.
+            </>
+          }
+        />
       </>
     ),
   },

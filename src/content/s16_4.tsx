@@ -397,7 +397,7 @@ export const S16_4: Page[] = [
 
         <h3>Nehéz feladatok</h3>
 
-        <Task n={21} q={<>Számítsd ki az <M t="\oint_C (y^2\,dx + 3xy\,dy)" /> integrált az <M t="1 \le x^2 + y^2 \le 4,\; y \ge 0" /> felső fél-körgyűrű CCW kerületén!</>}>
+        <Task n={21} q={<>Számítsd ki az <M t="\oint_C (y^2\,dx + 3xy\,dy)" /> integrált az <M t="1 \le x^2 + y^2 \le 4,\; y \ge 0" /> felső félkörgyűrű CCW kerületén!</>}>
           <p>
             <M t="N_x - M_y = 3y - 2y = y = r\sin\theta" />. Polárban:{' '}
             <M t="\int_0^\pi \sin\theta\,d\theta \int_1^2 r^2\,dr = 2 \cdot \frac{8 - 1}{3} = \frac{14}{3}" />!

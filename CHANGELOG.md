@@ -4,6 +4,21 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.15.0] - 2026-11-28
+
+### Hozzáadva — 16. fejezet Analízis-labor integráció és tartalmi revízió (`16.1`–`16.8`) — TELJES!
+- **16.1–16.8 szakaszok (`s16_1.tsx`–`s16_8.tsx`)**: beépítve az Analízis-labor 2 nem duplikált `<Steps />` példája (`16.1`, `16.3`) és 4 nem duplikált `<Quiz />` gyorstesztje (`16.1`, `16.3`, `16.6`, `16.8`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre igazítva. A meglévő anyaggal egyező vagy közel egyező 6 példa (`16.2` 4. és 17. feladat, `16.4` 4. oldal, `16.5` 3. feladat, `16.6` 8. és 12. feladat, `16.7` 2. és 7. feladat, `16.8` 3. oldal és 18. feladat) és 4 kvíz (`16.2` 2. oldal, `16.4` 5. oldal, `16.5` 8. feladat, `16.7` 4. oldal) duplikátumként kiszűrve.
+- Ezzel a teljes háromkötetes tananyag (`1.1`–`16.8`, 120 / 120 szakasz) Analízis-labor integrációja és tartalmi revíziója **100%-osan lezárult**.
+
+### Javítva
+- **`16.1`**: magyar névelőhiba javítva (`a \mathbf{r}(t)` → `az \mathbf{r}(t)`).
+- **`16.2`**: két helyesírási hiba (`munka-integrálban` → `munkaintegrálban`, `munka-integrálok` → `munkaintegrálok`) és névelőhiba (`A M dx + N dy` → `Az M dx + N dy`) javítva.
+- **`16.3`**: helyesírási (`brakisztochron` → `brachisztokron`) és névelőhiba (`a U(x, y, z)` → `az U(x, y, z)`) javítva.
+- **`16.4`**: helyesírási hiba javítva (`fél-körgyűrű` → `félkörgyűrű`).
+- **`16.6`**: három magyar névelőhiba (`a \mathbf{r}(...)` → `az \mathbf{r}(...)` 3×) és egy helyesírási hiba (`hossz-tényező` → `hossztényező`) javítva.
+- **`16.7`**: két magyar névelőhiba javítva (`a y + z = 2` → `az y + z = 2`, `a r sugarú` → `az r sugarú`).
+- **`16.8`**: négy helyesírási hiba javítva (`divergencia-tétel` → `divergenciatétel` 4×).
+
 ## [3.14.0] - 2026-11-28
 
 ### Hozzáadva — 15. fejezet Analízis-labor integráció és tartalmi revízió (`15.1`–`15.7`)

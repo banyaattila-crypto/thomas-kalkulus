@@ -122,7 +122,7 @@ export const S16_6: Page[] = [
 
         <TangentPatchNormal3DWidget />
 
-        <Task n={5} q={<>Számítsd ki a <M t="\mathbf{r}(\phi, \theta) = \langle a\sin\phi\cos\theta,\; a\sin\phi\sin\theta,\; a\cos\phi \rangle" /> gömb <M t="|\mathbf{r}_\phi \times \mathbf{r}_\theta|" /> felszínelem-tényezőjét!</>}>
+        <Task n={5} q={<>Számítsd ki az <M t="\mathbf{r}(\phi, \theta) = \langle a\sin\phi\cos\theta,\; a\sin\phi\sin\theta,\; a\cos\phi \rangle" /> gömb <M t="|\mathbf{r}_\phi \times \mathbf{r}_\theta|" /> felszínelem-tényezőjét!</>}>
           <p>
             <M t="\mathbf{r}_\phi = a\langle \cos\phi\cos\theta, \cos\phi\sin\theta, -\sin\phi \rangle" />,{' '}
             <M t="\mathbf{r}_\theta = a\langle -\sin\phi\sin\theta, \sin\phi\cos\theta, 0 \rangle" />.
@@ -131,7 +131,7 @@ export const S16_6: Page[] = [
           </p>
         </Task>
 
-        <Task n={6} q={<>Írd fel a <M t="\mathbf{r}(u, v) = \langle u\cos v,\; u\sin v,\; v \rangle" /> helikoid érintősíkját az <M t="(u, v) = (1, 0)" /> pontban!</>}>
+        <Task n={6} q={<>Írd fel az <M t="\mathbf{r}(u, v) = \langle u\cos v,\; u\sin v,\; v \rangle" /> helikoid érintősíkját az <M t="(u, v) = (1, 0)" /> pontban!</>}>
           <p>
             Pont: <M t="(1; 0; 0)" />. <M t="\mathbf{r}_u(1,0) = \langle 1, 0, 0 \rangle" />,{' '}
             <M t="\mathbf{r}_v(1,0) = \langle 0, 1, 1 \rangle" />, normálvektor{' '}
@@ -258,7 +258,7 @@ export const S16_6: Page[] = [
         <p>
           Ha fluxust számolunk paraméteres felületen, a <M t="\mathbf{n} = \pm\frac{\mathbf{r}_u\times\mathbf{r}_v}{|\mathbf{r}_u\times\mathbf{r}_v|}" />{' '}
           és a <M t="d\sigma = |\mathbf{r}_u\times\mathbf{r}_v|\,du\,dv" /> szorzatából megint{' '}
-          <strong>eltűnik a hossz-tényező</strong>!
+          <strong>eltűnik a hossztényező</strong>!
         </p>
 
         <Def title="Fluxus paraméteres felületen">
@@ -345,7 +345,7 @@ export const S16_6: Page[] = [
           </p>
         </Task>
 
-        <Task n={16} q={<>Add meg a <M t="\mathbf{r}(u, v) = \langle u,\; v,\; 3u + 4v \rangle" /> sík normálvektorát és <M t="|\mathbf{r}_u\times\mathbf{r}_v|" /> értékét!</>}>
+        <Task n={16} q={<>Add meg az <M t="\mathbf{r}(u, v) = \langle u,\; v,\; 3u + 4v \rangle" /> sík normálvektorát és <M t="|\mathbf{r}_u\times\mathbf{r}_v|" /> értékét!</>}>
           <p>
             <M t="\mathbf{r}_u\times\mathbf{r}_v = \langle -3, -4, 1 \rangle" />, hossza <M t="\sqrt{26}" />.
           </p>
@@ -404,6 +404,23 @@ export const S16_6: Page[] = [
             <M t="|\mathbf{r}_x\times\mathbf{r}_\theta| = |\mathbf{r}_x||\mathbf{r}_\theta| = \sqrt{1+(f')^2}\cdot f(x)" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mit reprezentál geometriailag az <M t="|\mathbf{r}_u \times \mathbf{r}_v|\,\Delta u\,\Delta v" /> mennyiség egy paraméteres felületen?</>}
+          options={[
+            { label: <>Az érintősíkban lévő, <M t="\Delta u\,\mathbf{r}_u" /> és <M t="\Delta v\,\mathbf{r}_v" /> által kifeszített elemi paralelogramma területét</>, ok: true },
+            { label: 'A felület görbületét' },
+            { label: 'A felület alatti térfogatot' },
+            { label: 'A paramétervonal hosszát' },
+          ]}
+          explain={
+            <>
+              Két vektor vektoriális szorzatának hossza pontosan az általuk kifeszített paralelogramma területe.
+            </>
+          }
+        />
       </>
     ),
   },

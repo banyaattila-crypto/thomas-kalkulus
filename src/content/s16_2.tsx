@@ -72,7 +72,7 @@ export const S16_2: Page[] = [
           <M block t="W = \int_C \mathbf{F}\cdot\mathbf{T}\,ds = \int_C \mathbf{F}\cdot d\mathbf{r} = \int_a^b \mathbf{F}\big(\mathbf{r}(t)\big)\cdot \mathbf{r}'(t)\,dt." />
           <p>
             <strong>Csodás egyszerűsítés:</strong> mivel <M t="\mathbf{T}\,ds = \frac{\mathbf{r}'(t)}{|\mathbf{r}'(t)|}\,|\mathbf{r}'(t)|\,dt = \mathbf{r}'(t)\,dt" />,
-            a munka-integrálban <strong>nincs négyzetgyök</strong>!
+            a munkaintegrálban <strong>nincs négyzetgyök</strong>!
           </p>
         </Def>
 
@@ -249,7 +249,7 @@ export const S16_2: Page[] = [
           explain={
             <>
               <M t="\mathbf{n}\,ds = \langle dy, -dx \rangle" />, így{' '}
-              <M t="\mathbf{F}\cdot\mathbf{n}\,ds = M\,dy - N\,dx" />! (A <M t="M\,dx + N\,dy" /> a cirkuláció!)
+              <M t="\mathbf{F}\cdot\mathbf{n}\,ds = M\,dy - N\,dx" />! (Az <M t="M\,dx + N\,dy" /> a cirkuláció!)
             </>
           }
         />
@@ -301,7 +301,7 @@ export const S16_2: Page[] = [
 
   /* ============================================================== 7. OLDAL */
   {
-    title: 'Háromdimenziós munka-integrálok',
+    title: 'Háromdimenziós munkaintegrálok',
     body: (
       <>
         <p>

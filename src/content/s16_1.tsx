@@ -405,13 +405,64 @@ export const S16_1: Page[] = [
           </p>
         </Task>
 
-        <Task n={23} q={<>Számítsd ki az <M t="\int_C \frac{1}{x^2+y^2+1}\,ds" /> integrált a <M t="\mathbf{r}(t) = \langle \cos t,\; \sin t,\; t \rangle" /> (<M t="0 \le t \le \pi" />) csavarvonalon, majd az <M t="\int_C \frac{1}{z^2+1}\,ds" /> integrált is!</>}>
+        <Task n={23} q={<>Számítsd ki az <M t="\int_C \frac{1}{x^2+y^2+1}\,ds" /> integrált az <M t="\mathbf{r}(t) = \langle \cos t,\; \sin t,\; t \rangle" /> (<M t="0 \le t \le \pi" />) csavarvonalon, majd az <M t="\int_C \frac{1}{z^2+1}\,ds" /> integrált is!</>}>
           <p>
             Mindkettőnél <M t="ds = \sqrt{2}\,dt" />. Az elsőben <M t="x^2+y^2+1 = 2" />, így{' '}
             <M t="\frac{\sqrt{2}}{2}\pi" />. A másodikban{' '}
             <M t="\sqrt{2}\int_0^\pi \frac{dt}{t^2+1} = \sqrt{2}\arctan(\pi)" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          source="Analízis-labor"
+          title="Skalár vonalintegrál köríven"
+          problem={<>Számítsd ki az <M t="\int_C (x + y)\,ds" /> vonalintegrált az <M t="x^2 + y^2 = 4" /> kör első síknegyedbeli ívén a <M t="(2; 0)" /> ponttól a <M t="(0; 2)" /> pontig!</>}
+          steps={[
+            {
+              title: '1. Paraméterezés',
+              body: (
+                <>
+                  <M t="\mathbf{r}(t) = \langle 2\cos t,\; 2\sin t \rangle" />, ahol <M t="0 \le t \le \frac{\pi}{2}" />.
+                </>
+              ),
+            },
+            {
+              title: '2. Ívhosszelem (ds)',
+              body: (
+                <>
+                  <M t="|\mathbf{r}'(t)| = \sqrt{(-2\sin t)^2 + (2\cos t)^2} = 2" />, tehát <M t="ds = 2\,dt" />.
+                </>
+              ),
+            },
+            {
+              title: '3. Integrálás',
+              body: (
+                <>
+                  <M block t="\int_0^{\pi/2} (2\cos t + 2\sin t)\cdot 2\,dt = 4\bigl[\sin t - \cos t\bigr]_0^{\pi/2} = 4\bigl(1 - (-1)\bigr) = 8." />
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Függ-e egy skalárfüggvény <M t="\int_C f\,ds" /> vonalintegráljának előjele a <M t="C" /> görbe bejárási irányától?</>}
+          options={[
+            { label: <>Nem, mert <M t="ds = |\mathbf{r}'(t)|\,dt > 0" /> mindig pozitív ívhosszelem</>, ok: true },
+            { label: 'Igen, ellentétes irányban előjelet vált' },
+            { label: 'Csak zárt görbén nem függ' },
+            { label: 'Mindig nulla' },
+          ]}
+          explain={
+            <>
+              Az ívhossz szerinti skalár vonalintegrál független a görbe irányításától (ellentétben a vektormező
+              munkaintegráljával).
+            </>
+          }
+        />
       </>
     ),
   },

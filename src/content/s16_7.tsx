@@ -125,7 +125,7 @@ export const S16_7: Page[] = [
           problem={
             <>
               Számítsd ki az <M t="\oint_C (-y^2\,dx + x\,dy + z^2\,dz)" /> integrált, ahol <M t="C" /> az{' '}
-              <M t="x^2 + y^2 = 1" /> henger és a <M t="y + z = 2" /> sík metszésgörbéje (felülről nézve CCW)!
+              <M t="x^2 + y^2 = 1" /> henger és az <M t="y + z = 2" /> sík metszésgörbéje (felülről nézve CCW)!
             </>
           }
           steps={[
@@ -312,7 +312,7 @@ export const S16_7: Page[] = [
 
         <Task n={13} q={<>Egy végtelen egyenes vezetékben <M t="I" /> áram folyik. Ampère-törvénnyel (<M t="\oint_C \mathbf{B}\cdot d\mathbf{r} = \mu_0 I" />) határozd meg a <M t="B" /> mágneses indukció nagyságát <M t="r" /> távolságban!</>}>
           <p>
-            Szimmetriából a <M t="r" /> sugarú körön <M t="B" /> állandó és érintőirányú:{' '}
+            Szimmetriából az <M t="r" /> sugarú körön <M t="B" /> állandó és érintőirányú:{' '}
             <M t="B \cdot 2\pi r = \mu_0 I \Rightarrow B = \dfrac{\mu_0 I}{2\pi r}" />!
           </p>
         </Task>

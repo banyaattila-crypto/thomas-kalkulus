@@ -332,12 +332,12 @@ export const S16_3: Page[] = [
           explain={
             <>
               A gravitáció konzervatív, így <M t="\frac{1}{2}mv^2 = mgh \Rightarrow v = \sqrt{2gh}" /> teljesen
-              független a pálya alakjától! (Az <em>idő</em> viszont függ a pályától — lásd brakisztochron!)
+              független a pálya alakjától! (Az <em>idő</em> viszont függ a pályától — lásd brachisztokron!)
             </>
           }
         />
 
-        <Task n={13} q={<>Mutasd meg, hogy a 3D rugóerő <M t="\mathbf{F} = -k\langle x, y, z \rangle" /> konzervatív, és add meg a <M t="U(x, y, z)" /> potenciális energiáját!</>}>
+        <Task n={13} q={<>Mutasd meg, hogy a 3D rugóerő <M t="\mathbf{F} = -k\langle x, y, z \rangle" /> konzervatív, és add meg az <M t="U(x, y, z)" /> potenciális energiáját!</>}>
           <p>
             <M t="U(x, y, z) = \frac{1}{2}k(x^2 + y^2 + z^2)" />, hiszen{' '}
             <M t="-\nabla U = -k\langle x, y, z \rangle = \mathbf{F}" />!
@@ -424,6 +424,60 @@ export const S16_3: Page[] = [
             <M t="\ln e - \ln 1 = 1" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          source="Analízis-labor"
+          title="2D potenciálfüggvény és munka kiszámítása"
+          problem={<>Mutasd meg, hogy az <M t="\mathbf{F}(x, y) = (2xy + 1)\mathbf{i} + (x^2 + 3y^2)\mathbf{j}" /> vektormező konzervatív, keresd meg a potenciálját, és számítsd ki a munkáját a <M t="(0; 0)" /> pontból az <M t="(1; 2)" /> pontba!</>}
+          steps={[
+            {
+              title: '1. Konzervativitási teszt',
+              body: (
+                <>
+                  <M t="\frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}" />, és <M t="\mathbb{R}^2" />{' '}
+                  egyszeresen összefüggő <M t="\implies" /> a vektormező konzervatív.
+                </>
+              ),
+            },
+            {
+              title: '2. Potenciálfüggvény meghatározása',
+              body: (
+                <>
+                  Integráljunk <M t="x" /> szerint: <M t="f(x, y) = \int (2xy + 1)\,dx = x^2 y + x + g(y)" />.
+                  Deriválva <M t="y" /> szerint: <M t="x^2 + g'(y) = x^2 + 3y^2 \implies g'(y) = 3y^2 \implies g(y) = y^3" />.
+                </>
+              ),
+            },
+            {
+              title: '3. Munka a vonalintegrálok alaptételével',
+              body: (
+                <>
+                  A potenciál <M t="f(x, y) = x^2 y + x + y^3" />, így a munka{' '}
+                  <M t="W = f(1, 2) - f(0, 0) = (2 + 1 + 8) - 0 = 11" />.
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Melyik 2D vektormező konzervatív az egész síkon?</>}
+          options={[
+            { label: <><M t="\mathbf{F} = y\mathbf{i} + x\mathbf{j}" /></>, ok: true },
+            { label: <><M t="\mathbf{F} = -y\mathbf{i} + x\mathbf{j}" /></> },
+            { label: <><M t="\mathbf{F} = x^2\mathbf{i} + xy\mathbf{j}" /></> },
+            { label: <><M t="\mathbf{F} = y^2\mathbf{i} + x^2\mathbf{j}" /></> },
+          ]}
+          explain={
+            <>
+              Az <M t="\mathbf{F} = y\mathbf{i} + x\mathbf{j}" /> mezőre <M t="M_y = 1 = N_x" />, potenciálfüggvénye{' '}
+              <M t="f(x, y) = xy" />.
+            </>
+          }
+        />
       </>
     ),
   },
