@@ -134,14 +134,14 @@ export const S13_6: Page[] = [
           <M block t="\frac{dA}{dt} = \frac{1}{2}r^2\dot{\theta} = \frac{|\mathbf{h}|}{2} = \text{állandó}." />
           <p>
             A Napot a bolygóval összekötő vezérsugár <strong>egyenlő idők alatt egyenlő területeket súrol</strong>!
-            Ennek azonnali következménye, hogy a perihéliumban (<M t="r_{\min}" />) és az aphéliumban (<M t="r_{\max}" />):
+            Ennek azonnali következménye, hogy a perihéliumban (<M t="r_{\min}" />) és az aféliumban (<M t="r_{\max}" />):
           </p>
           <M block t="r_{\min} v_{\max} = r_{\max} v_{\min} \quad\Longrightarrow\quad \frac{v_{\max}}{v_{\min}} = \frac{r_{\max}}{r_{\min}} = \frac{1 + e}{1 - e}." />
         </Def>
 
         <KeplerSecondLawWidget />
 
-        <Task n={5} q={<>Egy bolygó ellipszispályájának excentricitása <M t="e = 0{,}5" />. Hányszor gyorsabb a perihéliumban, mint az aphéliumban?</>}>
+        <Task n={5} q={<>Egy bolygó ellipszispályájának excentricitása <M t="e = 0{,}5" />. Hányszor gyorsabb a perihéliumban, mint az aféliumban?</>}>
           <p>
             <M t="\frac{v_{\max}}{v_{\min}} = \frac{1 + 0{,}5}{1 - 0{,}5} = \frac{1{,}5}{0{,}5} = 3" /> — háromszor
             gyorsabb napközelben!
@@ -182,7 +182,7 @@ export const S13_6: Page[] = [
 
         <OrbitConicTypesWidget />
 
-        <Task n={7} q={<>Egy műhold Föld-középponttól mért legkisebb távolsága <M t="r_{\min} = 7000\text{ km}" />, legnagyobb távolsága <M t="r_{\max} = 21000\text{ km}" />. Mennyi a fél nagytengely (<M t="a" />) és az excentricitás (<M t="e" />)?</>}>
+        <Task n={7} q={<>Egy műhold Föld-középponttól mért legkisebb távolsága <M t="r_{\min} = 7000\text{ km}" />, legnagyobb távolsága <M t="r_{\max} = 21000\text{ km}" />. Mennyi a félnagytengely (<M t="a" />) és az excentricitás (<M t="e" />)?</>}>
           <p>
             <M t="a = \frac{r_{\min} + r_{\max}}{2} = 14000\text{ km}" />,{' '}
             <M t="e = \frac{r_{\max} - r_{\min}}{r_{\max} + r_{\min}} = \frac{14000}{28000} = 0{,}5" />.
@@ -222,7 +222,7 @@ export const S13_6: Page[] = [
         <KeplerThirdLawWidget />
 
         <Quiz
-          q={<>Egy bolygó fél nagytengelye pontosan 4-szerese a Földének (<M t="a = 4\text{ CSE}" />). Hány földi év a keringési ideje?</>}
+          q={<>Egy bolygó félnagytengelye pontosan 4-szerese a Földének (<M t="a = 4\text{ CSE}" />). Hány földi év a keringési ideje?</>}
           options={[
             { label: <M t="2\text{ év}" /> },
             { label: <M t="4\text{ év}" /> },
@@ -236,7 +236,7 @@ export const S13_6: Page[] = [
           }
         />
 
-        <Task n={9} q={<>Egy kisbolygó keringési ideje a Nap körül <M t="T = 27\text{ év}" />. Mekkora a pályája fél nagytengelye CSE-ben?</>}>
+        <Task n={9} q={<>Egy kisbolygó keringési ideje a Nap körül <M t="T = 27\text{ év}" />. Mekkora a pályája félnagytengelye CSE-ben?</>}>
           <p>
             <M t="a^3 = T^2 = 27^2 = 729 \Rightarrow a = 27^{2/3} = 3^2 = 9\text{ CSE}" />.
           </p>
@@ -362,8 +362,8 @@ export const S13_6: Page[] = [
 
         <Task n={13} q={<>Számítsd ki a Föld (<M t="r_1 = 1\text{ CSE}" />) és a Mars (<M t="r_2 = 1{,}52\text{ CSE}" />) közötti Hohmann-átmeneti repülés idejét!</>}>
           <p>
-            Az átmeneti ellipszis fél nagytengelye <M t="a = \frac{1 + 1{,}52}{2} = 1{,}26\text{ CSE}" />. Teljes
-            keringési ideje <M t="T = 1{,}26^{3/2} \approx 1{,}414\text{ év}" />. A fél-ellipszis ideje:{' '}
+            Az átmeneti ellipszis félnagytengelye <M t="a = \frac{1 + 1{,}52}{2} = 1{,}26\text{ CSE}" />. Teljes
+            keringési ideje <M t="T = 1{,}26^{3/2} \approx 1{,}414\text{ év}" />. A félellipszis ideje:{' '}
             <M t="t = \frac{T}{2} \approx 0{,}707\text{ év} \approx 8{,}5\text{ hónap}" />!
           </p>
         </Task>
@@ -392,13 +392,13 @@ export const S13_6: Page[] = [
           </p>
         </Task>
 
-        <Task n={16} q={<>Egy üstökös fél nagytengelye <M t="a = 16\text{ CSE}" />. Hány év a keringési ideje a Nap körül?</>}>
+        <Task n={16} q={<>Egy üstökös félnagytengelye <M t="a = 16\text{ CSE}" />. Hány év a keringési ideje a Nap körül?</>}>
           <p>
             <M t="T = 16^{3/2} = 4^3 = 64\text{ év}" />.
           </p>
         </Task>
 
-        <Task n={17} q={<>Egy bolygó keringési ideje <M t="T = 8\text{ év}" />. Mekkora a pályája fél nagytengelye?</>}>
+        <Task n={17} q={<>Egy bolygó keringési ideje <M t="T = 8\text{ év}" />. Mekkora a pályája félnagytengelye?</>}>
           <p>
             <M t="a = 8^{2/3} = 2^2 = 4\text{ CSE}" />.
           </p>
@@ -446,13 +446,31 @@ export const S13_6: Page[] = [
           </p>
         </Task>
 
-        <Task n={23} q={<>Mutasd meg, hogy egy ellipszispályán a bolygó teljes fajlagos mechanikai energiája <M t="E = \frac{1}{2}v^2 - \frac{GM}{r} = -\frac{GM}{2a}" /> állandó (és csak a fél nagytengelytől függ)!</>}>
+        <Task n={23} q={<>Mutasd meg, hogy egy ellipszispályán a bolygó teljes fajlagos mechanikai energiája <M t="E = \frac{1}{2}v^2 - \frac{GM}{r} = -\frac{GM}{2a}" /> állandó (és csak a félnagytengelytől függ)!</>}>
           <p>
             A vis-viva egyenletet 2-vel osztva: <M t="\frac{1}{2}v^2 = \frac{GM}{r} - \frac{GM}{2a}" />, átrendezve{' '}
             <M t="\frac{1}{2}v^2 - \frac{GM}{r} = -\frac{GM}{2a}" />! Mivel <M t="E < 0" />, a pálya zárt (kötött);{' '}
             <M t="E = 0" /> esetén parabola (<M t="a\to\infty" />), <M t="E > 0" /> esetén hiperbola.
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q="Hol mozog a legnagyobb pályamenti sebességgel egy ellipszispályán keringő bolygó?"
+          options={[
+            { label: <>Perihéliumban (napközelben, ahol <M t="r" /> a legkisebb)</>, ok: true },
+            { label: 'Aféliumban (naptávolban)' },
+            { label: 'A kistengely végpontjaiban' },
+            { label: 'Sebessége végig állandó' },
+          ]}
+          explain={
+            <>
+              Mivel <M t="r^2\dot{\theta} = r_0 v_0" /> állandó, kisebb <M t="r" /> távolságnál nagyobb szög- és
+              pályamenti sebesség szükséges az azonos területi sebességhez.
+            </>
+          }
+        />
       </>
     ),
   },

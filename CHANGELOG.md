@@ -4,6 +4,19 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.12.0] - 2026-11-28
+
+### Hozzáadva — 13. fejezet Analízis-labor integráció és tartalmi revízió (`13.1`–`13.6`)
+- **13.1–13.6 szakaszok (`s13_1.tsx`–`s13_6.tsx`)**: beépítve az Analízis-labor 2 nem duplikált `<Steps />` példája (`13.1`, `13.5`) és 2 nem duplikált `<Quiz />` gyorstesztje (`13.2`, `13.6`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre igazítva. A meglévő anyaggal egyező vagy közel egyező 4 példa (`13.2` 1–2. feladat, `13.3` 1. és 7. feladat, `13.4` 5. feladat, `13.6` 5. oldali kvíz) és 4 kvíz (`13.1` 7. oldal, `13.3` 2. oldal, `13.4` 1. feladat, `13.5` 5. oldal) duplikátumként kiszűrve.
+
+### Javítva
+- **`13.1`**: helyesírási hiba javítva (`nem-kommutativitása` → `nem kommutativitása`).
+- **`13.2`**: négy magyar névelőhiba (`a r(t)` → `az r(t)`, `a y(t)` → `az y(t)` 2×, `az v_\infty` → `a v_\infty`) és névírási egységesítés (`L’Hospital` → `L’Hôpital`).
+- **`13.3`**: elgépelés (`térugörbén` → `térgörbén`), névelőhiba (`a r(t)` → `az r(t)`) és helyesírási hiba (`ívhossz-képlet` → `ívhosszképlet`) javítva.
+- **`13.4`**: elgépelés (`térugörbe` → `térgörbe`) és két magyar névelőhiba (`a N(t)` → `az N(t)`, `a r(t)` → `az r(t)`) javítva.
+- **`13.5`**: hibás HTML-beágyazás (`<ul>` a `<p>` belsejében a 11. feladatban), névelőhiba (`a n = ...` → `az n = ...`) és helyesírási hiba (`kúp-spirál` → `kúpspirál`) javítva.
+- **`13.6`**: 10 helyesírási javítás (`aphéliumban` → `aféliumban` 2×, `fél nagytengely` → `félnagytengely` 7×, `fél-ellipszis` → `félellipszis`).
+
 ## [3.11.0] - 2026-11-28
 
 ### Hozzáadva — 12. fejezet Analízis-labor integráció és tartalmi revízió (`12.1`–`12.6`)

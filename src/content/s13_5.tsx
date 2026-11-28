@@ -193,7 +193,7 @@ export const S13_5: Page[] = [
 
         <Task n={6} q={<>Miért nulla a torziója minden olyan görbének, amely az <M t="x + 2y - z = 5" /> síkban fekszik?</>}>
           <p>
-            Mert a <M t="\mathbf{n} = \langle 1, 2, -1 \rangle" /> síknormálisra <M t="\mathbf{r}'\cdot\mathbf{n} = \mathbf{r}''\cdot\mathbf{n} = \mathbf{r}'''\cdot\mathbf{n} = 0" />.
+            Mert az <M t="\mathbf{n} = \langle 1, 2, -1 \rangle" /> síknormálisra <M t="\mathbf{r}'\cdot\mathbf{n} = \mathbf{r}''\cdot\mathbf{n} = \mathbf{r}'''\cdot\mathbf{n} = 0" />.
             A három derivált egy síkban (komplanáris) van, így a vegyes szorzatuk <M t="0 \Rightarrow \tau = 0" />!
           </p>
         </Task>
@@ -309,12 +309,12 @@ export const S13_5: Page[] = [
           <p>
             <M t="t = 0" />-nál: <M t="\mathbf{T} = \frac{1}{\sqrt{2}}\langle 0, 1, 1 \rangle" />,{' '}
             <M t="\mathbf{N} = \langle -1, 0, 0 \rangle" />, <M t="\mathbf{B} = \frac{1}{\sqrt{2}}\langle 0, -1, 1 \rangle" />.
-            <ul>
-              <li><strong>Simulósík</strong> (<M t="\perp\mathbf{B}" />): <M t="-y + z = 0 \Rightarrow z = y" />.</li>
-              <li><strong>Normálsík</strong> (<M t="\perp\mathbf{T}" />): <M t="y + z = 0 \Rightarrow z = -y" />.</li>
-              <li><strong>Egyenesítő sík</strong> (<M t="\perp\mathbf{N}" />): <M t="x = 1" />.</li>
-            </ul>
           </p>
+          <ul>
+            <li><strong>Simulósík</strong> (<M t="\perp\mathbf{B}" />): <M t="-y + z = 0 \Rightarrow z = y" />.</li>
+            <li><strong>Normálsík</strong> (<M t="\perp\mathbf{T}" />): <M t="y + z = 0 \Rightarrow z = -y" />.</li>
+            <li><strong>Egyenesítő sík</strong> (<M t="\perp\mathbf{N}" />): <M t="x = 1" />.</li>
+          </ul>
         </Task>
 
         <Task n={12} q={<>Melyik síkban fekszik mindig a gyorsulásvektor <M t="\mathbf{a}(t_0)" /> és a sebességvektor <M t="\mathbf{v}(t_0)" /> is?</>}>
@@ -438,7 +438,7 @@ export const S13_5: Page[] = [
           </p>
         </Task>
 
-        <Task n={22} q={<>Számítsd ki az <M t="\mathbf{r}(t) = \langle e^t\cos t,\; e^t\sin t,\; e^t \rangle" /> kúp-spirál torzióját általános <M t="t" />-re!</>}>
+        <Task n={22} q={<>Számítsd ki az <M t="\mathbf{r}(t) = \langle e^t\cos t,\; e^t\sin t,\; e^t \rangle" /> kúpspirál torzióját általános <M t="t" />-re!</>}>
           <p>
             <M t="\mathbf{r}' = e^t\langle c-s, s+c, 1 \rangle" />,{' '}
             <M t="\mathbf{r}'' = e^t\langle -2s, 2c, 1 \rangle" />,{' '}
@@ -456,6 +456,58 @@ export const S13_5: Page[] = [
             Skalárszorozva <M t="\mathbf{B}" />-vel: <M t="\mathbf{a}'\cdot\mathbf{B} = \kappa\tau v_0^3" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Az általános csavarvonal görbülete és torziója"
+          source="Analízis-labor"
+          problem={
+            <>
+              Adjuk meg az <M t="\mathbf{r}(t) = \langle a\cos t,\; a\sin t,\; bt \rangle" /> (<M t="a, b > 0" />)
+              csavarvonal görbületét és torzióját!
+            </>
+          }
+          steps={[
+            {
+              title: 'Első három derivált kiszámítása',
+              body: (
+                <p>
+                  <M t="\mathbf{v} = \langle -a\sin t,\; a\cos t,\; b \rangle" />,{' '}
+                  <M t="\mathbf{a} = \langle -a\cos t,\; -a\sin t,\; 0 \rangle" />,{' '}
+                  <M t="\mathbf{a}' = \langle a\sin t,\; -a\cos t,\; 0 \rangle" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Vektoriális szorzat és hosszak',
+              body: (
+                <p>
+                  <M t="\mathbf{v}\times\mathbf{a} = \langle ab\sin t,\; -ab\cos t,\; a^2 \rangle" />, hossza{' '}
+                  <M t="|\mathbf{v}\times\mathbf{a}| = a\sqrt{a^2 + b^2}" />, míg{' '}
+                  <M t="|\mathbf{v}| = \sqrt{a^2 + b^2}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Görbület kiszámítása',
+              body: (
+                <M block t="\kappa = \frac{a\sqrt{a^2 + b^2}}{(a^2 + b^2)^{3/2}} = \frac{a}{a^2 + b^2}." />
+              ),
+            },
+            {
+              title: 'Vegyes szorzat és torzió',
+              body: (
+                <>
+                  <p>
+                    <M t="(\mathbf{v}\times\mathbf{a})\cdot\mathbf{a}' = a^2 b\sin^2 t + a^2 b\cos^2 t + 0 = a^2 b" />,
+                    innen a torzió:
+                  </p>
+                  <M block t="\tau = \frac{a^2 b}{a^2(a^2 + b^2)} = \frac{b}{a^2 + b^2}." />
+                </>
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },

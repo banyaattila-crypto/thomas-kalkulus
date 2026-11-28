@@ -195,7 +195,7 @@ export const S13_1: Page[] = [
           ]}
           explain={
             <>
-              A szorzatszabály ugyanúgy két tagból áll, és a keresztszorzat nem-kommutativitása miatt mindkét tagban{' '}
+              A szorzatszabály ugyanúgy két tagból áll, és a keresztszorzat nem kommutativitása miatt mindkét tagban{' '}
               <M t="\mathbf{u}" /> marad elöl, <M t="\mathbf{v}" /> hátul.
             </>
           }
@@ -500,6 +500,48 @@ export const S13_1: Page[] = [
             <strong>3 sugarú gömbön</strong> (<M t="x^2 + y^2 + z^2 = 9" />) fekszik!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Sebességnagyság és v · a kiszámítása térgörbén"
+          source="Analízis-labor"
+          problem={
+            <>
+              Egy részecske pályája <M t="\mathbf{r}(t) = (2\cos t)\,\mathbf{i} + (2\sin t)\,\mathbf{j} + t^2\,\mathbf{k}" />.
+              Határozzuk meg a sebessége nagyságát és a <M t="\mathbf{v}\cdot\mathbf{a}" /> skalárszorzat értékét{' '}
+              <M t="t = 1" />-nél!
+            </>
+          }
+          steps={[
+            {
+              title: 'Deriválás (sebesség és gyorsulás)',
+              body: (
+                <p>
+                  <M t="\mathbf{v}(t) = \langle -2\sin t,\; 2\cos t,\; 2t \rangle" />,{' '}
+                  <M t="\mathbf{a}(t) = \langle -2\cos t,\; -2\sin t,\; 2 \rangle" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Sebességnagyság kiszámítása',
+              body: (
+                <p>
+                  <M t="|\mathbf{v}(t)| = \sqrt{4\sin^2 t + 4\cos^2 t + 4t^2} = 2\sqrt{1 + t^2}" />, így{' '}
+                  <M t="|\mathbf{v}(1)| = \mathbf{2\sqrt{2}}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Skalárszorzat kiszámítása',
+              body: (
+                <p>
+                  <M t="\mathbf{v}\cdot\mathbf{a} = 4\sin t\cos t - 4\cos t\sin t + 4t = 4t" />, tehát{' '}
+                  <M t="t = 1" />-nél <M t="\mathbf{v}(1)\cdot\mathbf{a}(1) = \mathbf{4}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },

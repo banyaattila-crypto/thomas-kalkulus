@@ -68,7 +68,7 @@ export const S13_2: Page[] = [
       <>
         <p>
           Vízszintes terepen (<M t="y_0 = 0" />) a három legfontosabb kérdés: mikor éri el a tetőpontot, milyen
-          magasra jut, és milyen messze ér földet? Mindhárom egyetlen sor algebra a <M t="\mathbf{r}(t)" /> képletből!
+          magasra jut, és milyen messze ér földet? Mindhárom egyetlen sor algebra az <M t="\mathbf{r}(t)" /> képletből!
         </p>
 
         <Def title="Vízszintes terep (y₀ = 0) kulcsképletei">
@@ -211,7 +211,7 @@ export const S13_2: Page[] = [
               ),
             },
             {
-              title: 'Repülési idő a y(t) = 0 egyenletből',
+              title: 'Repülési idő az y(t) = 0 egyenletből',
               body: (
                 <>
                   <M t="40 + 10t - 5t^2 = 0 \;\Rightarrow\; t^2 - 2t - 8 = 0 \;\Rightarrow\; (t-4)(t+2) = 0" />. Mivel{' '}
@@ -264,7 +264,7 @@ export const S13_2: Page[] = [
       <>
         <p>
           Mi történik, ha a talaj nem vízszintes, hanem <M t="\beta" /> szöget zár be a vízszintessel (azaz egyenlete{' '}
-          <M t="y = x\tan\beta" />)? A becsapódási időt egyszerűen a <M t="y(t) = x(t)\tan\beta" /> egyenletből
+          <M t="y = x\tan\beta" />)? A becsapódási időt egyszerűen az <M t="y(t) = x(t)\tan\beta" /> egyenletből
           kapjuk!
         </p>
 
@@ -337,7 +337,7 @@ export const S13_2: Page[] = [
               <strong>függőleges aszimptotája</strong> van!
             </li>
             <li>
-              A függőleges sebesség az <M t="v_\infty = -\dfrac{g}{k}" /> <strong>határsebességhez</strong> tart.
+              A függőleges sebesség a <M t="v_\infty = -\dfrac{g}{k}" /> <strong>határsebességhez</strong> tart.
             </li>
           </ul>
         </Def>
@@ -356,7 +356,7 @@ export const S13_2: Page[] = [
           </p>
         </Task>
 
-        <Task n={12} q={<>Mutasd meg L’Hospital-szabállyal, hogy <M t="\lim_{k\to 0^+} \frac{v_0\cos\alpha}{k}(1 - e^{-kt}) = (v_0\cos\alpha)t" />!</>}>
+        <Task n={12} q={<>Mutasd meg L’Hôpital-szabállyal, hogy <M t="\lim_{k\to 0^+} \frac{v_0\cos\alpha}{k}(1 - e^{-kt}) = (v_0\cos\alpha)t" />!</>}>
           <p>
             A <M t="k \to 0^+" /> határérték <M t="0/0" /> alakú. A számlálót és nevezőt <M t="k" /> szerint deriválva:{' '}
             <M t="\lim_{k\to 0^+} \frac{v_0\cos\alpha \cdot t e^{-kt}}{1} = (v_0\cos\alpha)t" /> — visszakaptuk a
@@ -503,6 +503,24 @@ export const S13_2: Page[] = [
             <M t="|v_\infty| = 5\text{ m/s}" />. A 90%-hoz <M t="1 - e^{-2t} = 0{,}9 \Rightarrow e^{-2t} = 0{,}1 \Rightarrow t = \frac{\ln 10}{2} \approx 1{,}15\text{ s}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q="Vízszintes terepen (légellenállás nélkül) melyik kilövési szög adja a legnagyobb lőtávolságot?"
+          options={[
+            { label: <M t="45^\circ" />, ok: true },
+            { label: <M t="30^\circ" /> },
+            { label: <M t="60^\circ" /> },
+            { label: <M t="90^\circ" /> },
+          ]}
+          explain={
+            <>
+              Az <M t="R = \dfrac{v_0^2}{g}\sin(2\alpha)" /> képlet akkor maximális, ha{' '}
+              <M t="\sin(2\alpha) = 1 \implies 2\alpha = 90^\circ \implies \alpha = 45^\circ" />.
+            </>
+          }
+        />
       </>
     ),
   },

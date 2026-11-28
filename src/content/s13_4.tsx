@@ -83,7 +83,7 @@ export const S13_4: Page[] = [
         <PrincipalNormalWidget />
 
         <Quiz
-          q={<>Merre mutat a <M t="\mathbf{N}(t)" /> normált főnormális vektor egy síkbeli vagy térbeli görbén (ahol <M t="\kappa > 0" />)?</>}
+          q={<>Merre mutat az <M t="\mathbf{N}(t)" /> normált főnormális vektor egy síkbeli vagy térbeli görbén (ahol <M t="\kappa > 0" />)?</>}
           options={[
             { label: <>A mozgás (érintő) irányába</> },
             { label: <>Merőlegesen <M t="\mathbf{T}" />-re, a görbe konkáv (befelé kanyarodó) oldala felé</>, ok: true },
@@ -278,7 +278,7 @@ export const S13_4: Page[] = [
           }
         />
 
-        <Task n={9} q={<>Számítsd ki az <M t="\mathbf{r}(t) = \langle t,\; t^2,\; t^3 \rangle" /> térugörbe görbületét <M t="t = 0" />-nál a keresztszorzatos képlettel!</>}>
+        <Task n={9} q={<>Számítsd ki az <M t="\mathbf{r}(t) = \langle t,\; t^2,\; t^3 \rangle" /> térgörbe görbületét <M t="t = 0" />-nál a keresztszorzatos képlettel!</>}>
           <p>
             <M t="\mathbf{v}(t) = \langle 1, 2t, 3t^2 \rangle \Rightarrow \mathbf{v}(0) = \langle 1, 0, 0 \rangle" />,{' '}
             <M t="\mathbf{a}(t) = \langle 0, 2, 6t \rangle \Rightarrow \mathbf{a}(0) = \langle 0, 2, 0 \rangle" />.
@@ -455,7 +455,7 @@ export const S13_4: Page[] = [
           </p>
         </Task>
 
-        <Task n={23} q={<>Mutasd meg, hogy a <M t="\mathbf{r}(t) = \langle a\cos^3 t,\; a\sin^3 t \rangle" /> asztroid (<M t="0 < t < \frac{\pi}{2}" />) görbülete <M t="\kappa(t) = \dfrac{1}{3a\sin t\cos t}" />!</>}>
+        <Task n={23} q={<>Mutasd meg, hogy az <M t="\mathbf{r}(t) = \langle a\cos^3 t,\; a\sin^3 t \rangle" /> asztroid (<M t="0 < t < \frac{\pi}{2}" />) görbülete <M t="\kappa(t) = \dfrac{1}{3a\sin t\cos t}" />!</>}>
           <p>
             <M t="x' = -3a\cos^2 t\sin t,\; y' = 3a\sin^2 t\cos t \Rightarrow |\mathbf{v}| = 3a\sin t\cos t" />.
             <M t="x'y'' - y'x'' = 9a^2\sin^2 t\cos^2 t" />. Elosztva <M t="|\mathbf{v}|^3 = 27a^3\sin^3 t\cos^3 t" />-vel:

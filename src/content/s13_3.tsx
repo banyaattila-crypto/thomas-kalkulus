@@ -209,7 +209,7 @@ export const S13_3: Page[] = [
           </p>
         </Task>
 
-        <Task n={8} q={<>Add meg <M t="\mathbf{T}(1)" /> értékét az <M t="\mathbf{r}(t) = \langle t,\; t^2,\; t^3 \rangle" /> térugörbén!</>}>
+        <Task n={8} q={<>Add meg <M t="\mathbf{T}(1)" /> értékét az <M t="\mathbf{r}(t) = \langle t,\; t^2,\; t^3 \rangle" /> térgörbén!</>}>
           <p>
             <M t="\mathbf{v}(t) = \langle 1, 2t, 3t^2 \rangle \Rightarrow \mathbf{v}(1) = \langle 1, 2, 3 \rangle" />,
             hossza <M t="\sqrt{1+4+9} = \sqrt{14}" />. Így{' '}
@@ -276,7 +276,7 @@ export const S13_3: Page[] = [
 
   /* ============================================================== 6. OLDAL */
   {
-    title: 'Minden ívhossz-képlet egyesítése',
+    title: 'Minden ívhosszképlet egyesítése',
     body: (
       <>
         <p>
@@ -398,7 +398,7 @@ export const S13_3: Page[] = [
           </p>
         </Task>
 
-        <Task n={20} q={<>Írd fel a <M t="\mathbf{r}(t) = \langle \cosh t,\; \sinh t,\; t \rangle" /> görbe ívhosszát <M t="0 \le t \le \ln 3" /> között!</>}>
+        <Task n={20} q={<>Írd fel az <M t="\mathbf{r}(t) = \langle \cosh t,\; \sinh t,\; t \rangle" /> görbe ívhosszát <M t="0 \le t \le \ln 3" /> között!</>}>
           <p>
             <M t="|\mathbf{v}(t)|^2 = \sinh^2 t + \cosh^2 t + 1 = 2\cosh^2 t \Rightarrow |\mathbf{v}(t)| = \sqrt{2}\cosh t" />.
             Így <M t="L = \sqrt{2}[\sinh t]_0^{\ln 3} = \sqrt{2}\cdot\frac{3 - 1/3}{2} = \frac{4\sqrt{2}}{3}" />.
