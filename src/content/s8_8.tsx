@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   DirectComparisonWidget,
   ImproperDecisionTreeDiagram,
@@ -514,6 +514,50 @@ export const S8_8: Page[] = [
             fél véges ⇒ az egész integrál <strong>konvergens</strong>!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="I. és II. típusú improprius integrál egymás mellett"
+          source="Analízis-labor"
+          problem={
+            <>
+              Vizsgáljuk meg az <M t="\displaystyle\int_{0}^{1} \frac{dx}{\sqrt{x}}" /> és az <M t="\displaystyle\int_{1}^{\infty} e^{-2x}\,dx" /> improprius integrálok konvergenciáját!
+            </>
+          }
+          steps={[
+            {
+              title: 'Első integrál (II. típus, x = 0 pólus)',
+              body: (
+                <M block t="\lim_{a\to 0^+}\int_{a}^{1} x^{-1/2}\,dx = \lim_{a\to 0^+}\bigl[2\sqrt{x}\bigr]_{a}^{1} = \lim_{a\to 0^+}(2 - 2\sqrt{a}) = \mathbf{2} \quad (\text{konvergens})." />
+              ),
+            },
+            {
+              title: 'Második integrál (I. típus, végtelen felső határ)',
+              body: (
+                <M block t="\lim_{b\to\infty}\int_{1}^{b} e^{-2x}\,dx = \lim_{b\to\infty}\left[-\frac{1}{2}e^{-2x}\right]_{1}^{b} = 0 - \left(-\frac{1}{2}e^{-2}\right) = \mathbf{\frac{1}{2e^2}} \quad (\text{konvergens})." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mely <M t="p" /> értékekre konvergens az <M t="\displaystyle\int_{1}^{\infty} \frac{1}{x^p}\,dx" /> improprius integrál?
+            </>
+          }
+          options={[
+            { label: <M t="p > 1" />, ok: true },
+            { label: <M t="p \ge 1" /> },
+            { label: <M t="0 < p < 1" /> },
+            { label: <>Minden <M t="p > 0" />-ra</> },
+          ]}
+          explain={
+            <>
+              <M t="p = 1" /> esetén <M t="\ln b \to \infty" /> (divergens); csak szigorúan <M t="p > 1" /> esetén véges az integrál.
+            </>
+          }
+        />
       </>
     ),
   },

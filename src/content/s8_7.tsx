@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   ConvexityOverUnderWidget,
   MidpointTangentDiagram,
@@ -543,6 +543,60 @@ export const S8_7: Page[] = [
             <M t="S_8 = \frac{2M_4+T_4}{3} = \frac{4T_8-T_4}{3}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Az ln 3 közelítése Simpson-szabállyal (n = 4)"
+          source="Analízis-labor"
+          problem={
+            <>
+              Közelítsük az <M t="\displaystyle\int_{0}^{2} \frac{1}{1 + x}\,dx = \ln 3 \approx 1{,}09861" /> integrált <M t="n = 4" /> esetén a Simpson-szabállyal!
+            </>
+          }
+          steps={[
+            {
+              title: 'Osztópontok és függvényértékek',
+              body: (
+                <p>
+                  <M t="\Delta x = 0{,}5" />, pontok: <M t="x = 0;\; 0{,}5;\; 1;\; 1{,}5;\; 2" />; értékek: <M t="y = 1,\; \frac{2}{3},\; \frac{1}{2},\; \frac{2}{5},\; \frac{1}{3}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Simpson-súlyok (1, 4, 2, 4, 1) alkalmazása',
+              body: (
+                <M block t="S_4 = \frac{0{,}5}{3}\left(1 + 4\cdot\frac{2}{3} + 2\cdot\frac{1}{2} + 4\cdot\frac{2}{5} + \frac{1}{3}\right) = \frac{1}{6}\cdot 6{,}6 = \mathbf{1{,}1000}." />
+              ),
+            },
+            {
+              title: 'Pontosság értékelése',
+              body: (
+                <p>
+                  A hiba mindössze <M t="0{,}0014" /> (<M t="0{,}13\%" />) csupán <M t="4" /> részintervallummal!
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha a Simpson-szabályban megduplázzuk a részintervallumok <M t="n" /> számát, körülbelül hányad részére csökken a hiba?
+            </>
+          }
+          options={[
+            { label: <>Tizenhatodára (<M t="1/2^4 = 1/16" />)</>, ok: true },
+            { label: <>Negyedére (<M t="1/4" />)</> },
+            { label: <>Felére (<M t="1/2" />)</> },
+            { label: <>Nyolcadára (<M t="1/8" />)</> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="|E_S| \propto 1/n^4" />, <M t="n" /> megduplázása <M t="2^4 = 16" />-szoros pontosságnövekedést hoz.
+            </>
+          }
+        />
       </>
     ),
   },

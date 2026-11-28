@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   EvenPowerAverageWidget,
   LnSecArcLengthWidget,
@@ -339,7 +339,7 @@ export const S8_4: Page[] = [
           <ol className="steps">
             <li><strong>Mínuszjel <M t="u = \cos x" />-nél:</strong> <M t="du = \mathbf{-}\sin x\,dx" />!</li>
             <li><strong>Félszög-képlet előjele:</strong> <M t="\sin^2 x" />-ben <strong>mínusz</strong> (<M t="\frac{1-\cos 2x}{2}" />), <M t="\cos^2 x" />-ben <strong>plusz</strong> (<M t="\frac{1+\cos 2x}{2}" />)!</li>
-            <li><strong>Szögduplázás integráláskor:</strong> <M t="\int \cos(2x)\,dx = \frac{1}{2}\sin(2x)" /> — ne felejtsd el a <M t="1/2" />-et!</li>
+            <li><strong>Szögduplázás integráláskor:</strong> <M t="\int \cos(2x)\,dx = \frac{1}{2}\sin(2x)" /> — ne felejtsd el az <M t="1/2" />-et!</li>
             <li><strong><M t="\operatorname{tg}^2 x = \sec^2 x - 1" /></strong> (NEM <M t="1 - \sec^2 x" />!).</li>
             <li><strong>Gyök alatti négyzeteknél mindig <M t="\sqrt{u^2} = |u|" />!</strong></li>
           </ol>
@@ -464,6 +464,27 @@ export const S8_4: Page[] = [
             <M block t="\int_{0}^{1}(1 + 2u^2 + u^4)\,du = 1 + \frac{2}{3} + \frac{1}{5} = \mathbf{\frac{28}{15}}." />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik azonosságot használjuk az <M t="\displaystyle\int \cos^2 x\,dx" /> kiszámításához?
+            </>
+          }
+          options={[
+            { label: <M t="\cos^2 x = \dfrac{1 + \cos 2x}{2}" />, ok: true },
+            { label: <M t="\cos^2 x = 1 - \sin^2 x" /> },
+            { label: <M t="\cos^2 x = \dfrac{1 - \cos 2x}{2}" /> },
+            { label: <M t="\cos^2 x = \sec^2 x - 1" /> },
+          ]}
+          explain={
+            <>
+              A félszögképlet eltünteti a négyzetet, így közvetlenül integrálható: <M t="\dfrac{x}{2} + \dfrac{\sin 2x}{4} + C" />.
+            </>
+          }
+        />
       </>
     ),
   },

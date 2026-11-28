@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   BoomerangLoopDiagram,
   InvisibleOneAntiderivWidget,
@@ -496,6 +496,52 @@ export const S8_2: Page[] = [
             <M block t="V = 2\pi\left[\frac{x^2}{2}\ln x - \frac{x^2}{4}\right]_{1}^{e} = 2\pi\left[\left(\frac{e^2}{2} - \frac{e^2}{4}\right) - \left(0 - \frac{1}{4}\right)\right] = \mathbf{\frac{\pi(e^2 + 1)}{2}}." />
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Parciális integrálás skálázott exponenciálissal"
+          source="Analízis-labor"
+          problem={
+            <>
+              Számítsuk ki az <M t="\displaystyle\int x e^{2x}\,dx" /> integrált!
+            </>
+          }
+          steps={[
+            {
+              title: 'LIATE szerinti választás',
+              body: (
+                <p>
+                  <M t="u = x" /> (algebrai) <M t="\implies du = dx" />, és <M t="dv = e^{2x}\,dx \implies v = \dfrac{1}{2}e^{2x}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'A parciális integrálás képletének alkalmazása',
+              body: (
+                <M block t="\int x e^{2x}\,dx = \frac{1}{2}x e^{2x} - \int \frac{1}{2}e^{2x}\,dx = \mathbf{\frac{1}{2}x e^{2x} - \frac{1}{4}e^{2x} + C}." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Az <M t="\displaystyle\int \ln x\,dx" /> integrál kiszámításához mi a helyes parciális integrálási választás?
+            </>
+          }
+          options={[
+            { label: <M t="u = \ln x,\; dv = 1\,dx" />, ok: true },
+            { label: <M t="u = 1,\; dv = \ln x\,dx" /> },
+            { label: <M t="u = x,\; dv = \dfrac{1}{x}\,dx" /> },
+            { label: <>Nem integrálható parciálisan</> },
+          ]}
+          explain={
+            <>
+              <M t="u = \ln x \implies du = \dfrac{1}{x}\,dx" /> és <M t="v = x" />, így <M t="x\ln x - \int 1\,dx = x\ln x - x + C" />.
+            </>
+          }
+        />
       </>
     ),
   },

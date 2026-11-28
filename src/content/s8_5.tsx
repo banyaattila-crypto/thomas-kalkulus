@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   DefiniteThetaBoundsDiagram,
   EllipseAndParabolaWidget,
@@ -448,7 +448,7 @@ export const S8_5: Page[] = [
           n={23}
           q={
             <>
-              <em>Tórusz térfogata korong-módszerrel (6.1 + 8.5):</em> Egy <M t="r" /> sugarú kör középpontja <M t="R > r" /> távolságra van az <M t="y" />-tengelytől (<M t="(x-R)^2 + y^2 = r^2" />). Igazold az <M t="x = R + r\sin\theta" /> helyettesítéssel, hogy a tórusz térfogata <M t="V = 2\pi^2 R r^2" />!
+              <em>Tórusz térfogata hengerhéj-módszerrel (6.2 + 8.5):</em> Egy <M t="r" /> sugarú kör középpontja <M t="R > r" /> távolságra van az <M t="y" />-tengelytől (<M t="(x-R)^2 + y^2 = r^2" />). Igazold az <M t="x = R + r\sin\theta" /> helyettesítéssel, hogy a tórusz térfogata <M t="V = 2\pi^2 R r^2" />!
             </>
           }
         >
@@ -457,6 +457,27 @@ export const S8_5: Page[] = [
             <M block t="4\pi r^2\int_{-\pi/2}^{\pi/2}(R + r\sin\theta)\cos^2\theta\,d\theta = 4\pi r^2\left(R\cdot\frac{\pi}{2} + 0\right) = \mathbf{2\pi^2 R r^2} \;\checkmark" />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik helyettesítés tünteti el a gyököt az <M t="\displaystyle\int \frac{\sqrt{x^2 - 9}}{x}\,dx" /> (<M t="x > 3" />) integrálban?
+            </>
+          }
+          options={[
+            { label: <M t="x = 3\sec\theta" />, ok: true },
+            { label: <M t="x = 3\sin\theta" /> },
+            { label: <M t="x = 3\operatorname{tg}\theta" /> },
+            { label: <M t="x = 9\sec\theta" /> },
+          ]}
+          explain={
+            <>
+              <M t="x = 3\sec\theta \implies \sqrt{9\sec^2\theta - 9} = 3\operatorname{tg}\theta" /> (<M t="x > 3" /> esetén).
+            </>
+          }
+        />
       </>
     ),
   },

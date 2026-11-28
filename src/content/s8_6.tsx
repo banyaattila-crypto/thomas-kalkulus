@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   CasComparisonDiagram,
   CasVerificationChecklistDiagram,
@@ -587,6 +587,27 @@ export const S8_6: Page[] = [
             <M t="b\to\infty" />-re pontosan <M t="\frac{\sqrt{\pi}}{4}" />.
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik integrál <strong>NEM</strong> fejezhető ki elemi függvények zárt kombinációjaként?
+            </>
+          }
+          options={[
+            { label: <M t="\displaystyle\int e^{-x^2}\,dx" />, ok: true },
+            { label: <M t="\displaystyle\int x e^{-x^2}\,dx" /> },
+            { label: <M t="\displaystyle\int x^2 e^x\,dx" /> },
+            { label: <M t="\displaystyle\int \frac{1}{1 + x^2}\,dx" /> },
+          ]}
+          explain={
+            <>
+              Az <M t="e^{-x^2}" /> (Gauss-haranggörbe) primitív függvénye nem elemi; az <M t="x" /> szorzóval viszont egyszerű <M t="u = -x^2" /> helyettesítés.
+            </>
+          }
+        />
       </>
     ),
   },

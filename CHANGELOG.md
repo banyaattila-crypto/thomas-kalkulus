@@ -4,6 +4,16 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.7.0] - 2026-11-28
+
+### Hozzáadva — 8. fejezet Analízis-labor integráció és tartalmi revízió (`8.1`–`8.8`)
+- **8.1–8.8 szakaszok (`s8_1.tsx`–`s8_8.tsx`)**: beépítve az Analízis-labor 4 nem duplikált `<Steps />` példája (`8.1`, `8.2`, `8.7`, `8.8`) és mind a 8 `<Quiz />` gyorstesztje (`8.1`–`8.8`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre/tizedesvesszőre igazítva. A meglévő anyaggal egyező vagy közel egyező példák (`8.3` 16. feladat, `8.4` 1. feladat, `8.5` 9. és 6. feladat, `8.6` = `8.2` 12. feladat) duplikátumként kiszűrve.
+
+### Javítva
+- **`8.3`**: a 3. feladat megfogalmazása pontosítva (`a parciális tört-sablonját` → `a parciális törtekre bontás sablonját`).
+- **`8.4`**: névelőhiba javítva a 3. buktatóban (`a 1/2-et` → `az 1/2-et`).
+- **`8.5`**: szakmai pontatlanság javítva a 23. feladat címében (`korong-módszerrel (6.1 + 8.5)` → `hengerhéj-módszerrel (6.2 + 8.5)`, összhangban a hengerhéj-módszeres megoldással).
+
 ## [3.6.0] - 2026-11-28
 
 ### Hozzáadva — 7. fejezet Analízis-labor integráció és tartalmi revízió (`7.1`–`7.8`)

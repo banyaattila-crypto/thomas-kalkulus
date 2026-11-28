@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   CompleteSquareVisualWidget,
   IntegralToolkitOverviewDiagram,
@@ -486,6 +486,60 @@ export const S8_1: Page[] = [
             <M block t="\int\frac{e^x\,dx}{e^{2x} + 1} = \int\frac{du}{u^2 + 1} = \mathbf{\operatorname{arctg}(e^x) + C}!" />
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Számláló szétbontása és teljes négyzet együtt"
+          source="Analízis-labor"
+          problem={
+            <>
+              Számítsuk ki az <M t="\displaystyle\int \frac{2x + 5}{x^2 + 4x + 13}\,dx" /> integrált!
+            </>
+          }
+          steps={[
+            {
+              title: 'A számláló szétbontása a nevező deriváltjára',
+              body: (
+                <p>
+                  A nevező deriváltja <M t="2x + 4" />, ezért írjuk át a számlálót: <M t="2x + 5 = (2x + 4) + 1" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Teljes négyzetté alakítás a második taghoz',
+              body: (
+                <p>
+                  <M t="x^2 + 4x + 13 = (x + 2)^2 + 3^2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Tagonkénti integrálás',
+              body: (
+                <M block t="\int\frac{2x + 4}{x^2 + 4x + 13}\,dx + \int\frac{1}{(x + 2)^2 + 3^2}\,dx = \mathbf{\ln(x^2 + 4x + 13) + \frac{1}{3}\operatorname{arctg}\!\left(\frac{x + 2}{3}\right) + C}." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az első lépés az <M t="\displaystyle\int \frac{x^3 + 2}{x - 1}\,dx" /> integrál kiszámításához?
+            </>
+          }
+          options={[
+            { label: <>Maradékos polinomosztás, mert a számláló foka nagyobb a nevezőénél</>, ok: true },
+            { label: <>Parciális integrálás</> },
+            { label: <>Trigonometrikus helyettesítés</> },
+            { label: <>Teljes négyzetté alakítás</> },
+          ]}
+          explain={
+            <>
+              Polinomosztással <M t="x^2 + x + 1 + \dfrac{3}{x - 1}" /> adódik, ami tagonként azonnal integrálható.
+            </>
+          }
+        />
       </>
     ),
   },

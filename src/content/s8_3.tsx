@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   FourCasesTemplateDiagram,
   FullPipelineFlowDiagram,
@@ -82,7 +82,7 @@ export const S8_3: Page[] = [
           n={3}
           q={
             <>
-              Írd fel a parciális tört-sablonját (az együtthatók kiszámítása nélkül!): <M t="\dfrac{x^2 + 1}{x(x - 2)^2(x^2 + 9)}" />!
+              Írd fel a parciális törtekre bontás sablonját (az együtthatók kiszámítása nélkül!): <M t="\dfrac{x^2 + 1}{x(x - 2)^2(x^2 + 9)}" />!
             </>
           }
         >
@@ -475,6 +475,27 @@ export const S8_3: Page[] = [
             <M block t="\mathbf{\operatorname{arctg} x - \frac{1}{2}\operatorname{arctg}\!\left(\frac{x}{2}\right) + C}!" />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi a helyes parciális törtes alakja az <M t="\dfrac{x + 3}{x(x - 1)^2}" /> kifejezésnek?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{A}{x} + \dfrac{B}{x - 1} + \dfrac{C}{(x - 1)^2}" />, ok: true },
+            { label: <M t="\dfrac{A}{x} + \dfrac{B}{(x - 1)^2}" /> },
+            { label: <M t="\dfrac{A}{x} + \dfrac{Bx + C}{(x - 1)^2}" /> },
+            { label: <M t="\dfrac{A}{x} + \dfrac{B}{x - 1}" /> },
+          ]}
+          explain={
+            <>
+              Kétszeres lineáris tényezőnél mind az első, mind a második hatványnak szerepelnie kell a nevezők között.
+            </>
+          }
+        />
       </>
     ),
   },
