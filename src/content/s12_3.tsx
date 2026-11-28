@@ -22,7 +22,7 @@ export const S12_3: Page[] = [
           <p>
             Két vektort már tudunk összeadni — de hogyan „szorozzuk” össze őket? Két különböző, egyaránt zseniális
             szorzás létezik a térben: az első egy <strong>egyetlen számot (skalárt)</strong> ad vissza, és megméri,
-            mennyire mutatnak egy irányba a vektorok. Ez a <strong>skalárszorzat</strong> (pont-szorzat)!
+            mennyire mutatnak egy irányba a vektorok. Ez a <strong>skalárszorzat</strong> (pontszorzat)!
           </p>
         </Story>
 
@@ -60,7 +60,7 @@ export const S12_3: Page[] = [
     body: (
       <>
         <p>
-          A skalárszorzat két alakját összevetve a tér bármely két nemnulla vektorának hajlásszögét pillanatok alatt
+          A skalárszorzat két alakját összevetve a tér bármely két nem nulla vektorának hajlásszögét pillanatok alatt
           kiszámíthatjuk:
           <M block t="\theta = \arccos\!\left(\frac{\mathbf{u}\cdot\mathbf{v}}{|\mathbf{u}|\,|\mathbf{v}|}\right) \qquad (0 \le \theta \le \pi)." />
         </p>
@@ -93,7 +93,7 @@ export const S12_3: Page[] = [
 
         <Task n={4} q={<>Mekkora szöget zár be egy kocka testátlója az egyik élével?</>}>
           <p>
-            Vegyük a <M t="\mathbf{d} = \langle 1, 1, 1 \rangle" /> testátlót és a <M t="\mathbf{i} = \langle 1, 0, 0 \rangle" />{' '}
+            Vegyük a <M t="\mathbf{d} = \langle 1, 1, 1 \rangle" /> testátlót és az <M t="\mathbf{i} = \langle 1, 0, 0 \rangle" />{' '}
             élt! <M t="\cos\theta = \frac{1}{\sqrt{3}\cdot 1} = \frac{1}{\sqrt{3}} \implies \theta \approx 54{,}7^\circ" />.
           </p>
         </Task>
@@ -230,7 +230,7 @@ export const S12_3: Page[] = [
         <WorkDotProductWidget />
 
         <Quiz
-          q={<>Egy <M t="\mathbf{F} = \langle 4, -2, 6 \rangle" /> N nagyságú állandó erő egy testet a <M t="P(1;\,0;\,2)" /> pontból a <M t="Q(3;\,4;\,2)" /> pontba mozgat (méterben). Mennyi a végzett munka?</>}
+          q={<>Egy <M t="\mathbf{F} = \langle 4, -2, 6 \rangle" /> N komponensű állandó erő egy testet a <M t="P(1;\,0;\,2)" /> pontból a <M t="Q(3;\,4;\,2)" /> pontba mozgat (méterben). Mennyi a végzett munka?</>}
           options={[
             { label: <M t="0\text{ J}" />, ok: true },
             { label: <M t="16\text{ J}" /> },
@@ -252,7 +252,7 @@ export const S12_3: Page[] = [
           </p>
         </Task>
 
-        <Task n={10} q={<>Mennyi munkát végez a <M t="\mathbf{F} = 3\mathbf{i} + 2\mathbf{j} - \mathbf{k}" /> erő, ha az elmozdulás <M t="\mathbf{D} = 2\mathbf{i} - \mathbf{j} + 4\mathbf{k}" />?</>}>
+        <Task n={10} q={<>Mennyi munkát végez az <M t="\mathbf{F} = 3\mathbf{i} + 2\mathbf{j} - \mathbf{k}" /> erő, ha az elmozdulás <M t="\mathbf{D} = 2\mathbf{i} - \mathbf{j} + 4\mathbf{k}" />?</>}>
           <p>
             <M t="W = 3(2) + 2(-1) + (-1)(4) = 6 - 2 - 4 = 0" />.
           </p>
@@ -346,7 +346,7 @@ export const S12_3: Page[] = [
           }
         />
 
-        <Task n={13} q={<>Adj példát három különböző nemnulla vektorra, amelyekre <M t="\mathbf{u}\cdot\mathbf{v} = \mathbf{u}\cdot\mathbf{w}" />, mégis <M t="\mathbf{v} \ne \mathbf{w}" />!</>}>
+        <Task n={13} q={<>Adj példát három különböző nem nulla vektorra, amelyekre <M t="\mathbf{u}\cdot\mathbf{v} = \mathbf{u}\cdot\mathbf{w}" />, mégis <M t="\mathbf{v} \ne \mathbf{w}" />!</>}>
           <p>
             Legyen <M t="\mathbf{u} = \langle 1, 0 \rangle" />, <M t="\mathbf{v} = \langle 2, 1 \rangle" />,{' '}
             <M t="\mathbf{w} = \langle 2, 5 \rangle" />. Mindkét skalárszorzat <M t="2" />, pedig <M t="\mathbf{v}\ne\mathbf{w}" />.
@@ -437,6 +437,28 @@ export const S12_3: Page[] = [
             <M t="\overrightarrow{AP}\cdot\overrightarrow{BP} = (\mathbf{p}-\mathbf{a})\cdot(\mathbf{p}+\mathbf{a}) = |\mathbf{p}|^2 - |\mathbf{a}|^2 = r^2 - r^2 = 0" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen <M t="k" /> értékre merőleges az <M t="\mathbf{u} = \langle 2, -3, 1 \rangle" /> és a{' '}
+              <M t="\mathbf{v} = \langle k, 2, 4 \rangle" /> vektor?
+            </>
+          }
+          options={[
+            { label: <M t="k = 1" />, ok: true },
+            { label: <M t="k = -1" /> },
+            { label: <M t="k = 5" /> },
+            { label: <M t="k = 0" /> },
+          ]}
+          explain={
+            <>
+              <M t="\mathbf{u}\cdot\mathbf{v} = 2k - 6 + 4 = 2k - 2 = 0 \implies k = 1" />.
+            </>
+          }
+        />
       </>
     ),
   },

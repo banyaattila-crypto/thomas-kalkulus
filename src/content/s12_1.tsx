@@ -260,7 +260,7 @@ export const S12_1: Page[] = [
           </p>
         </Task>
 
-        <Task n={10} q={<>Milyen térbeli alakzatot ír le az <M t="y^2 + z^2 \le 1,\; 0 \le x \le 4" /> egyenlőtlenség-rendszer?</>}>
+        <Task n={10} q={<>Milyen térbeli alakzatot ír le az <M t="y^2 + z^2 \le 1,\; 0 \le x \le 4" /> egyenlőtlenségrendszer?</>}>
           <p>
             Az <M t="x" />-tengely mentén fekvő, <M t="1" /> sugarú és <M t="4" /> hosszú tömör körhenger (a két
             fedőlapjával együtt, <M t="x = 0" />-tól <M t="x = 4" />-ig).

@@ -4,6 +4,18 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.11.0] - 2026-11-28
+
+### Hozzáadva — 12. fejezet Analízis-labor integráció és tartalmi revízió (`12.1`–`12.6`)
+- **12.1–12.6 szakaszok (`s12_1.tsx`–`s12_6.tsx`)**: beépítve az Analízis-labor 2 nem duplikált `<Steps />` példája (`12.4`, `12.5`) és 3 nem duplikált `<Quiz />` gyorstesztje (`12.3`, `12.5`, `12.6`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre igazítva. A meglévő anyaggal egyező vagy közel egyező 4 példa (`12.1` 4. oldal, `12.2` 3. oldal, `12.3` 17. feladat, `12.6` 18. feladat) és 3 kvíz (`12.1` 3. oldal, `12.2` 4. oldal, `12.4` 13. feladat) duplikátumként kiszűrve.
+
+### Javítva
+- **`12.1`**: helyesírási hiba javítva (`egyenlőtlenség-rendszer` → `egyenlőtlenségrendszer`).
+- **`12.3`**: helyesírási (`pont-szorzat` → `pontszorzat`, `nemnulla` → `nem nulla` 2×), névelő- (`a i` → `az i`, `a F` → `az F`) és szakmai megfogalmazási (`N nagyságú állandó erő` → `N komponensű állandó erő`) javítások.
+- **`12.4`**: négy helyesírási hiba javítva (`nemnulla` → `nem nulla` 2×, `determináns-képlet` → `determinánsképlet`, `villám-ellenőrzés` → `villámellenőrzés`).
+- **`12.5`**: magyar névelőhiba javítva (`a x + 2y - z = 4` → `az x + 2y - z = 4`).
+- **`12.6`**: hat magyar névelőhiba (`a yz-síkban` → `az yz-síkban`, `a y = ...` → `az y = ...`, `a y-tengely` → `az y-tengely`, `az z = 0` → `a z = 0`, `a x^2...` → `az x^2...` 2×) és egy helyesírási hiba (`Metszet-detektív` → `Metszetdetektív`) javítva.
+
 ## [3.10.0] - 2026-11-28
 
 ### Hozzáadva — 11. fejezet Analízis-labor integráció és tartalmi revízió (`11.1`–`11.11`)

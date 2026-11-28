@@ -1,8 +1,8 @@
 # Állapotjelentés – Kalkulus (látványos tananyag)
 
-**Aktuális verzió:** `v3.10.0`  
+**Aktuális verzió:** `v3.11.0`  
 **Dátum:** 2026-11-28  
-**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült**, folyamatban az **Analízis-labor integráció és tartalmi revízió** (`2.1`–`11.11` kész, következő: **12. fejezet**).
+**Összesített haladás:** **120 / 120 szakasz kész (100,0% — TELJES!)** — Az I., II. és III. kötet **mind a 16 fejezete (`1.1`–`16.8`) elkészült**, folyamatban az **Analízis-labor integráció és tartalmi revízió** (`2.1`–`12.6` kész, következő: **13. fejezet**).
 
 ## Haladás kötetenként és fejezetenként
 
@@ -59,7 +59,7 @@
 - **`16.7` (`v2.56.0`):** Stokes-tétel — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets167.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**119 / 120 = 99,2%!** 3D rotáció, Stokes-tétel és jobbkéz-szabály, felületfüggetlenség, két null-azonosság, Faraday- és Ampère-törvény.)*
 - **`16.8` (`v3.0.0`):** A Gauss–Osztrogradszkij-tétel — 8 oldal, 8 interaktív 2D/3D ábra (`Widgets168.tsx`), `Quiz`/`Steps`, 23 megoldott feladat. *(**120 / 120 = 100,0% — MIND A HÁROM KÖTET TELJES!** 3D divergencia, Gauss–Osztrogradszkij-tétel, fedőlap-trükk, elektrosztatikus Gauss-törvény, mind a 4 Maxwell-egyenlet, a kalkulus 4 alaptételének nagy egyesítése.)*
 - **Kereső & Képlettár Hub + GitHub Release (`v3.0.0`):** Globális kereső és 48 válogatott tétel/képlet gyűjteménye (`#formulas`, `Ctrl+K` / `Cmd+K`, LaTeX másolás), valamint önálló offline egyfájlos HTML csatolva a `v3.0.0` GitHub Release-hez.
-- **Analízis-labor integráció és tartalmi revízió (`v3.1.0` – `v3.10.0`, `2.1`–`11.11`):** Nem duplikált `<Steps />` és `<Quiz />` elemek beépítése egységes `source="Analízis-labor"` forrás-jelvénnyel, valamint szakmai és nyelvi hibák javítása:
+- **Analízis-labor integráció és tartalmi revízió (`v3.1.0` – `v3.11.0`, `2.1`–`12.6`):** Nem duplikált `<Steps />` és `<Quiz />` elemek beépítése egységes `source="Analízis-labor"` forrás-jelvénnyel, valamint szakmai és nyelvi hibák javítása:
   - **2. fejezet (`v3.1.0`, `2.1`–`2.7`):** 7 `<Steps />` + 7 `<Quiz />` (`.src-badge` forrás-jelvény bevezetése).
   - **3. fejezet (`v3.2.0`, `3.1`–`3.8`):** 6 `<Steps />` + 8 `<Quiz />` (2 duplikált példa kiszűrve), 5 szakmai/nyelvi javítás.
   - **4. fejezet (`v3.3.0`, `4.1`–`4.8`):** 3 `<Steps />` + 6 `<Quiz />` (5 példa és 2 kvíz kiszűrve), 4 javítás.
@@ -70,6 +70,7 @@
   - **9. fejezet (`v3.8.0`, `9.1`–`9.5`):** 3 `<Steps />` + 5 `<Quiz />` (2 duplikált példa kiszűrve), 4 javítás *(I–II. kötet revíziója teljes!)*.
   - **10. fejezet (`v3.9.0`, `10.1`–`10.8`):** 1 `<Steps />` + 5 `<Quiz />` (7 példa és 3 kvíz kiszűrve), 16 nyelvi/helyesírási javítás *(III. kötet nyitása!)*.
   - **11. fejezet (`v3.10.0`, `11.1`–`11.11`):** 2 `<Steps />` + 8 `<Quiz />` (9 példa és 3 kvíz kiszűrve), 61 nyelvi/helyesírási javítás.
+  - **12. fejezet (`v3.11.0`, `12.1`–`12.6`):** 2 `<Steps />` + 3 `<Quiz />` (4 példa és 3 kvíz kiszűrve), 19 szakmai/nyelvi javítás.
 
 ## Technikai állapot
 
@@ -79,6 +80,6 @@
 
 ## Következő lépések és irányelvek
 
-1. **Analízis-labor integráció és tartalmi revízió folytatása:** következő a **12. fejezet (`12.1`–`12.6`, Vektorok és a tér geometriája)**, majd a további fejezetek végigvitele szigorú duplikáció-szűréssel és `source="Analízis-labor"` jelöléssel.
+1. **Analízis-labor integráció és tartalmi revízió folytatása:** következő a **13. fejezet (`13.1`–`13.6`, Vektor értékű függvények, mozgás a térben)**, majd a további fejezetek végigvitele szigorú duplikáció-szűréssel és `source="Analízis-labor"` jelöléssel.
 2. Gazdagabb magyarázó SVG-ábrák, `<Quiz />` önellenőrző tesztek és `<Steps />` lépésenkénti levezetések egységesítése a régebbi fejezetekben.
 3. Szakmai, matematikai és helyesírási revízió minden átnézett szakaszon.

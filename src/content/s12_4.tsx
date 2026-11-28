@@ -46,7 +46,7 @@ export const S12_4: Page[] = [
           </p>
         </Task>
 
-        <Task n={2} q={<>Mikor lesz két nemnulla vektor vektoriális szorzata a <M t="\mathbf{0}" /> nullvektor?</>}>
+        <Task n={2} q={<>Mikor lesz két nem nulla vektor vektoriális szorzata a <M t="\mathbf{0}" /> nullvektor?</>}>
           <p>
             Akkor és csak akkor, ha <M t="\sin\theta = 0 \iff \theta = 0^\circ" /> vagy <M t="180^\circ" />, vagyis ha
             a két vektor <strong>párhuzamos</strong>!
@@ -110,7 +110,7 @@ export const S12_4: Page[] = [
 
   /* ============================================================== 3. OLDAL */
   {
-    title: 'A 3×3-as determináns-képlet',
+    title: 'A 3×3-as determinánsképlet',
     body: (
       <>
         <p>
@@ -147,7 +147,7 @@ export const S12_4: Page[] = [
               ),
             },
             {
-              title: 'Eredmény és villám-ellenőrzés skalárszorzattal',
+              title: 'Eredmény és villámellenőrzés skalárszorzattal',
               body: (
                 <p>
                   <strong><M t="\mathbf{u}\times\mathbf{v} = \langle 5, 1, 11 \rangle" /></strong>. Ellenőrzés:{' '}
@@ -325,7 +325,7 @@ export const S12_4: Page[] = [
         </Warn>
 
         <Quiz
-          q={<>Ha három nemnulla térbeli vektorra teljesül, hogy <M t="(\mathbf{u}\times\mathbf{v})\cdot\mathbf{w} = 0" />, mit jelent ez geometriailag?</>}
+          q={<>Ha három nem nulla térbeli vektorra teljesül, hogy <M t="(\mathbf{u}\times\mathbf{v})\cdot\mathbf{w} = 0" />, mit jelent ez geometriailag?</>}
           options={[
             { label: <>A három vektor páronként merőleges</> },
             { label: <>A három vektor egy közös síkban fekszik (komplanárisak)</>, ok: true },
@@ -439,6 +439,44 @@ export const S12_4: Page[] = [
             egyezik!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Térbeli háromszög területe vektoriális szorzattal"
+          source="Analízis-labor"
+          problem={
+            <>
+              Számítsuk ki a <M t="P(1;\,0;\,0)" />, <M t="Q(1;\,2;\,1)" /> és <M t="R(0;\,1;\,2)" /> csúcsú térbeli
+              háromszög területét!
+            </>
+          }
+          steps={[
+            {
+              title: 'Oldalvektorok felírása',
+              body: (
+                <p>
+                  <M t="\overrightarrow{PQ} = \langle 0, 2, 1 \rangle" />,{' '}
+                  <M t="\overrightarrow{PR} = \langle -1, 1, 2 \rangle" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Vektoriális szorzat kiszámítása',
+              body: (
+                <M block t="\overrightarrow{PQ}\times\overrightarrow{PR} = \begin{vmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k} \\ 0 & 2 & 1 \\ -1 & 1 & 2\end{vmatrix} = 3\mathbf{i} - \mathbf{j} + 2\mathbf{k}." />
+              ),
+            },
+            {
+              title: 'Háromszög területe',
+              body: (
+                <p>
+                  A háromszög területe a paralelogramma területének fele:{' '}
+                  <M t="T = \dfrac{1}{2}\sqrt{3^2 + (-1)^2 + 2^2} = \dfrac{\sqrt{14}}{2}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },

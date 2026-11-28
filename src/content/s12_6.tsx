@@ -83,7 +83,7 @@ export const S12_6: Page[] = [
           options={[
             { label: <>Elliptikus paraboloidot a <M t="z" />-tengely körül</> },
             { label: <>Parabolikus hengert az <M t="x" />-tengely mentén</>, ok: true },
-            { label: <>Egyetlen síkbeli parabolát a <M t="yz" />-síkban</> },
+            { label: <>Egyetlen síkbeli parabolát az <M t="yz" />-síkban</> },
             { label: <>Kúpot az origó csúcsával</> },
           ]}
           explain={
@@ -129,7 +129,7 @@ export const S12_6: Page[] = [
 
         <ParaboloidCone3DWidget />
 
-        <Task n={5} q={<>Azonosítsd a <M t="y = 4x^2 + z^2" /> felületet, és add meg a tengelyét és csúcspontját!</>}>
+        <Task n={5} q={<>Azonosítsd az <M t="y = 4x^2 + z^2" /> felületet, és add meg a tengelyét és csúcspontját!</>}>
           <p>
             Az <M t="y" /> első hatványon, <M t="x^2" /> és <M t="z^2" /> azonos (+) előjellel →{' '}
             <strong>elliptikus paraboloid</strong>, amely a pozitív <strong><M t="y" />-tengely</strong> irányába
@@ -169,7 +169,7 @@ export const S12_6: Page[] = [
             { label: <>Egyköpenyű, az <M t="x" />-tengely mentén</> },
             { label: <>Kétköpenyű, az <M t="x" />-tengely mentén</>, ok: true },
             { label: <>Kétköpenyű, a <M t="z" />-tengely mentén</> },
-            { label: <>Egyköpenyű, a <M t="y" />-tengely mentén</> },
+            { label: <>Egyköpenyű, az <M t="y" />-tengely mentén</> },
           ]}
           explain={
             <>
@@ -209,7 +209,7 @@ export const S12_6: Page[] = [
           <M block t="\frac{z}{c} = \frac{y^2}{b^2} - \frac{x^2}{a^2} \qquad (c > 0)." />
           <p>
             Az egyik függőleges metszete <em>felfelé</em>, a rá merőleges pedig <em>lefelé</em> nyíló parabola, a
-            vízszintes metszetei pedig <strong>hiperbolák</strong> (az <M t="z = 0" /> síkban két metsző egyenes).
+            vízszintes metszetei pedig <strong>hiperbolák</strong> (a <M t="z = 0" /> síkban két metsző egyenes).
           </p>
         </Def>
 
@@ -234,7 +234,7 @@ export const S12_6: Page[] = [
 
   /* ============================================================== 6. OLDAL */
   {
-    title: 'Metszet-detektív és eltolt kvadrikok azonosítása',
+    title: 'Metszetdetektív és eltolt kvadrikok azonosítása',
     body: (
       <>
         <p>
@@ -247,7 +247,7 @@ export const S12_6: Page[] = [
 
         <Steps
           title="Eltolt másodrendű felület azonosítása"
-          problem={<>Azonosítsd a <M t="x^2 + 4y^2 - z^2 - 2x + 8y + 4 = 0" /> felületet, és add meg a középpontját!</>}
+          problem={<>Azonosítsd az <M t="x^2 + 4y^2 - z^2 - 2x + 8y + 4 = 0" /> felületet, és add meg a középpontját!</>}
           steps={[
             {
               title: 'Változók csoportosítása és főegyüttható kiemelése',
@@ -285,7 +285,7 @@ export const S12_6: Page[] = [
           </p>
         </Task>
 
-        <Task n={12} q={<>Azonosítsd a <M t="x^2 - 2x + y^2 - z^2 + 1 = 0" /> felületet!</>}>
+        <Task n={12} q={<>Azonosítsd az <M t="x^2 - 2x + y^2 - z^2 + 1 = 0" /> felületet!</>}>
           <p>
             <M t="(x - 1)^2 + y^2 = z^2" /> — mivel a jobb oldal nulla, ez egy <strong>körkúp</strong>, amelynek
             csúcspontja az <M t="(1;\,0;\,0)" /> pontban van!
@@ -432,6 +432,28 @@ export const S12_6: Page[] = [
             <M t="L_2: (t,\; 2-t,\; 4-4t)" /> egyenes is végig a nyeregfelületen fekszik és áthalad <M t="(1;\,1;\,0)" />-n (<M t="t=1" />)!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen felület a <M t="z = x^2 - y^2" /> egyenlet grafikonja?
+            </>
+          }
+          options={[
+            { label: 'Hiperbolikus paraboloid (nyeregfelület)', ok: true },
+            { label: 'Elliptikus paraboloid' },
+            { label: 'Egyköpenyű hiperboloid' },
+            { label: 'Elliptikus kúp' },
+          ]}
+          explain={
+            <>
+              Az <M t="y = 0" /> metszet felfelé nyíló parabola (<M t="z = x^2" />), az <M t="x = 0" /> metszet lefelé
+              nyíló parabola (<M t="z = -y^2" />), a vízszintes metszetek pedig hiperbolák.
+            </>
+          }
+        />
       </>
     ),
   },

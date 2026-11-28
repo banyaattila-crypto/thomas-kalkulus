@@ -413,7 +413,7 @@ export const S12_5: Page[] = [
           </p>
         </Task>
 
-        <Task n={20} q={<>Hol metszi a <M t="P(2;\,1;\,-3)" /> ponton átmenő, a <M t="x + 2y - z = 4" /> síkra <em>merőleges</em> egyenes a síkot (vagyis hol van <M t="P" /> merőleges vetülete a síkon)?</>}>
+        <Task n={20} q={<>Hol metszi a <M t="P(2;\,1;\,-3)" /> ponton átmenő, az <M t="x + 2y - z = 4" /> síkra <em>merőleges</em> egyenes a síkot (vagyis hol van <M t="P" /> merőleges vetülete a síkon)?</>}>
           <p>
             Az egyenes: <M t="x = 2 + t,\; y = 1 + 2t,\; z = -3 - t" />. Behelyettesítve:{' '}
             <M t="(2+t) + 2(1+2t) - (-3-t) = 4 \implies 6t + 7 = 4 \implies t = -\frac{1}{2}" />. A talppont:{' '}
@@ -448,6 +448,64 @@ export const S12_5: Page[] = [
             (egyszerűsítve <M t="\langle 1, 1, 0 \rangle" />). Egyenlet: <M t="1(x-1) + 1(y-2) = 0 \implies x + y = 3" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Egyenes és sík döféspontjának meghatározása"
+          source="Analízis-labor"
+          problem={
+            <>
+              Hol metszi az <M t="x = 1 + t" />, <M t="y = 2 - t" />, <M t="z = 3t" /> egyenes a{' '}
+              <M t="2x + y + z = 12" /> síkot?
+            </>
+          }
+          steps={[
+            {
+              title: 'Behelyettesítés a sík egyenletébe',
+              body: (
+                <M block t="2(1 + t) + (2 - t) + 3t = 12." />
+              ),
+            },
+            {
+              title: 'A t paraméter kiszámítása',
+              body: (
+                <p>
+                  Rendezve: <M t="4 + 4t = 12 \implies 4t = 8 \implies t = 2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Döféspont koordinátái',
+              body: (
+                <p>
+                  <M t="t = 2" />-t visszahelyettesítve: <M t="(1 + 2;\, 2 - 2;\, 3\cdot 2) = \mathbf{(3;\,0;\,6)}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik vektor merőleges a <M t="3x - 2y + 5z = 7" /> síkra?
+            </>
+          }
+          options={[
+            { label: <M t="\langle 3, -2, 5 \rangle" />, ok: true },
+            { label: <M t="\langle 3, 2, 5 \rangle" /> },
+            { label: <M t="\langle 2, 3, 0 \rangle" /> },
+            { label: <M t="\langle 7, 3, -2 \rangle" /> },
+          ]}
+          explain={
+            <>
+              Az <M t="Ax + By + Cz = D" /> sík normálvektora közvetlenül az együtthatókból kiolvasható:{' '}
+              <M t="\mathbf{n} = \langle A, B, C \rangle = \langle 3, -2, 5 \rangle" />.
+            </>
+          }
+        />
       </>
     ),
   },
