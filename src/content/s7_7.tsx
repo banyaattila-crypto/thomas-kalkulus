@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   ArcsinArccosWidget,
   ArctanAreaPiWidget,
@@ -393,7 +393,7 @@ export const S7_7: Page[] = [
           <ol className="steps">
             <li><strong><M t="\sin^{-1} x = \arcsin x \ne \frac{1}{\sin x}" />!</strong></li>
             <li><strong><M t="\arcsin(\sin x) = x" /> CSAK <M t="x \in [-\pi/2;\,\pi/2]" />-re igaz!</strong> (Pl. <M t="\arcsin(\sin \pi) = 0 \ne \pi" />!)</li>
-            <li><strong>A <M t="1/a" /> szorzó:</strong> <M t="\arcsin(u/a)" /> előtt <em>nincs</em> <M t="1/a" />, de <M t="\operatorname{arctg}(u/a)" /> és <M t="\operatorname{arcsec}|u/a|" /> előtt <em>van</em> <M t="1/a" />!</li>
+            <li><strong>Az <M t="1/a" /> szorzó:</strong> <M t="\arcsin(u/a)" /> előtt <em>nincs</em> <M t="1/a" />, de <M t="\operatorname{arctg}(u/a)" /> és <M t="\operatorname{arcsec}|u/a|" /> előtt <em>van</em> <M t="1/a" />!</li>
             <li><strong>Logaritmus vs. arkusztangens:</strong> <M t="\int \frac{x}{1+x^2}\,dx = \frac{1}{2}\ln(1+x^2)" />, míg <M t="\int \frac{1}{1+x^2}\,dx = \operatorname{arctg} x" />!</li>
             <li><strong>Abszolútérték <M t="\operatorname{arcsec}" />-nél:</strong> <M t="(\operatorname{arcsec} x)' = \frac{1}{|x|\sqrt{x^2-1}}" /> mindig pozitív!</li>
           </ol>
@@ -518,6 +518,27 @@ export const S7_7: Page[] = [
             Tehát <M t="f(x)" /> konstans a <M t="(0;\,\infty)" /> ágon ÉS külön konstans a <M t="(-\infty;\,0)" /> ágon! Behelyettesítve <M t="x=1" />-et: <M t="\frac{\pi}{4}+\frac{\pi}{4} = \mathbf{\frac{\pi}{2}}" /> (<M t="x>0" />); behelyettesítve <M t="x=-1" />-et: <M t="-\frac{\pi}{4}-\frac{\pi}{4} = \mathbf{-\frac{\pi}{2}}" /> (<M t="x<0" />)!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="\displaystyle\int \frac{dx}{\sqrt{4 - x^2}}" /> határozatlan integrál?
+            </>
+          }
+          options={[
+            { label: <M t="\arcsin\!\left(\dfrac{x}{2}\right) + C" />, ok: true },
+            { label: <M t="\dfrac{1}{2}\arcsin\!\left(\dfrac{x}{2}\right) + C" /> },
+            { label: <M t="\operatorname{arctg}\!\left(\dfrac{x}{2}\right) + C" /> },
+            { label: <M t="2\arcsin x + C" /> },
+          ]}
+          explain={
+            <>
+              <M t="\displaystyle\int \frac{du}{\sqrt{a^2 - u^2}} = \arcsin\!\left(\frac{u}{a}\right) + C" /> (<M t="a = 2" />, itt nincs <M t="1/a" /> szorzó elöl!).
+            </>
+          }
+        />
       </>
     ),
   },

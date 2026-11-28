@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AlgorithmComplexityWidget,
   BigOEnvelopeWidget,
@@ -290,7 +290,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            <M t="\log_2(2n) = \log_2 n + 1" />, tehát mindössze <strong>1etlen extra lépéssel</strong>! Ez a logaritmus igazi ereje!
+            <M t="\log_2(2n) = \log_2 n + 1" />, tehát mindössze <strong>egyetlen extra lépéssel</strong>! Ez a logaritmus igazi ereje!
           </p>
         </Task>
       </>
@@ -337,7 +337,7 @@ export const S7_6: Page[] = [
           }
         >
           <p>
-            <M t="\displaystyle\lim_{x\to\infty}\frac{x\ln x}{x^2} = \lim_{x\to\infty}\frac{\ln x}{x} = 0 \implies x\ln x = o(x^2)" /> ✓ (ezért gyorsabb a <M t="O(n\log n)" /> rendezés a <M t="O(n^2)" /> buborékrendezésnél!).
+            <M t="\displaystyle\lim_{x\to\infty}\frac{x\ln x}{x^2} = \lim_{x\to\infty}\frac{\ln x}{x} = 0 \implies x\ln x = o(x^2)" /> ✓ (ezért gyorsabb az <M t="O(n\log n)" /> rendezés az <M t="O(n^2)" /> buborékrendezésnél!).
           </p>
         </Task>
       </>
@@ -418,7 +418,7 @@ export const S7_6: Page[] = [
               <strong><M t="x = O(x)" /> IGAZ, de <M t="x = o(x)" /> HAMIS!</strong> A kis ordó szigorúan lassabb növekedést követel (<M t="L = 0" />).
             </li>
             <li>
-              <strong>Kis <M t="x" />-eken csalóka a grafikon:</strong> mindig a <M t="x\to\infty" /> határértékkel dönts!
+              <strong>Kis <M t="x" />-eken csalóka a grafikon:</strong> mindig az <M t="x\to\infty" /> határértékkel dönts!
             </li>
           </ol>
         </Warn>
@@ -544,6 +544,62 @@ export const S7_6: Page[] = [
             A második párnál vegyük a 2-es alapú logaritmusukat: <M t="\sqrt{\log_2 x}" /> vs. <M t="0{,}01\log_2 x" />. Mivel <M t="\sqrt{u} \ll 0{,}01 u" /> (ha <M t="u = \log_2 x \to \infty" />), ezért <M t="2^{\sqrt{\log_2 x}} = \mathbf{o(x^{0{,}01})}" /> — tehát lassabb minden pozitív hatványnál, de gyorsabb minden logaritmusnál!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Magas fokszámú polinom vs. lassú exponenciális"
+          source="Analízis-labor"
+          problem={
+            <>
+              Döntsük el, hogy <M t="f(x) = x^{10}" /> vagy <M t="g(x) = e^{0{,}1x}" /> nő gyorsabban <M t="x \to \infty" /> esetén!
+            </>
+          }
+          steps={[
+            {
+              title: 'Hányados-határérték felírása',
+              body: (
+                <p>
+                  Vizsgáljuk a <M t="\displaystyle\lim_{x\to\infty}\frac{x^{10}}{e^{0{,}1x}}" /> határértéket (<M t="\infty/\infty" /> határozatlan alak).
+                </p>
+              ),
+            },
+            {
+              title: '10-szeres L’Hospital-szabály',
+              body: (
+                <p>
+                  10 egymást követő deriválás után a számláló <M t="10!" /> konstans, a nevező pedig <M t="(0{,}1)^{10} e^{0{,}1x} \to \infty" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Következtetés',
+              body: (
+                <p>
+                  A határérték <M t="0" />, tehát <M t="x^{10} = o(e^{0{,}1x})" />: hosszú távon az exponenciális mindig győz!
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Hogyan viszonyul a <M t="\log_2 x" /> és az <M t="\ln x" /> növekedési üteme <M t="x \to \infty" /> esetén?
+            </>
+          }
+          options={[
+            { label: <>Azonos ütemben nőnek (hányadosuk konstans)</>, ok: true },
+            { label: <><M t="\ln x" /> gyorsabban nő</> },
+            { label: <><M t="\log_2 x" /> gyorsabban nő</> },
+            { label: <>Nem összehasonlíthatók</> },
+          ]}
+          explain={
+            <>
+              <M t="\dfrac{\log_2 x}{\ln x} = \dfrac{1}{\ln 2} = \text{állandó} > 0" />, tehát azonos ütemben növekednek.
+            </>
+          }
+        />
       </>
     ),
   },

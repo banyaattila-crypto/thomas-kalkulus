@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AxIntegralAreaWidget,
   AxSlopeAtZeroWidget,
@@ -529,6 +529,60 @@ export const S7_4: Page[] = [
             Így <M t="\log_3(3{,}1) \approx 1 + 0{,}3034\cdot 0{,}1 = \mathbf{1{,}0303}" /> (a pontos érték <M t="1{,}0298" />!).
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Általános alapú exponenciális és logaritmus deriválása"
+          source="Analízis-labor"
+          problem={
+            <>
+              Deriváljuk az <M t="f(x) = 3^{2x} + \log_2(x^2 + 1)" /> függvényt!
+            </>
+          }
+          steps={[
+            {
+              title: 'Az exponenciális tag deriválása',
+              body: (
+                <p>
+                  Az <M t="(a^u)' = a^u(\ln a)u'" /> szabály alapján: <M t="(3^{2x})' = 3^{2x}(\ln 3)\cdot 2 = 2\ln 3 \cdot 3^{2x}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'A logaritmusos tag deriválása',
+              body: (
+                <p>
+                  A <M t="(\log_2 u)' = \dfrac{u'}{u\ln 2}" /> szabály alapján: <M t="\dfrac{2x}{(x^2 + 1)\ln 2}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Végeredmény',
+              body: (
+                <M block t="f'(x) = \mathbf{2\ln 3 \cdot 3^{2x} + \frac{2x}{(x^2 + 1)\ln 2}}." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="\displaystyle\int 2^x\,dx" /> határozatlan integrál?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{2^x}{\ln 2} + C" />, ok: true },
+            { label: <M t="2^x \ln 2 + C" /> },
+            { label: <M t="\dfrac{2^{x+1}}{x + 1} + C" /> },
+            { label: <M t="2^x + C" /> },
+          ]}
+          explain={
+            <>
+              Deriválással ellenőrizhető: <M t="\left(\dfrac{2^x}{\ln 2}\right)' = \dfrac{2^x\ln 2}{\ln 2} = 2^x" />.
+            </>
+          }
+        />
       </>
     ),
   },

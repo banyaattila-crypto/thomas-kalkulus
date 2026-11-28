@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   HorizontalLineTestWidget,
   HorizontalToVerticalTangentWidget,
@@ -662,6 +662,27 @@ export const S7_1: Page[] = [
           </p>
           <M block t="\int_{0}^{10} f^{-1}(y)\,dy = 2\cdot 10 - 0\cdot 0 - \int_{0}^{2} (x^3 + x)\,dx = 20 - \left[\frac{x^4}{4} + \frac{x^2}{2}\right]_{0}^{2} = 20 - (4 + 2) = \mathbf{14}." />
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha <M t="f(2) = 5" /> és <M t="f'(2) = 3" />, mennyi <M t="(f^{-1})'(5)" />?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{1}{3}" />, ok: true },
+            { label: <M t="3" /> },
+            { label: <M t="\dfrac{1}{5}" /> },
+            { label: <M t="\dfrac{2}{5}" /> },
+          ]}
+          explain={
+            <>
+              <M t="(f^{-1})'(5) = \dfrac{1}{f'(f^{-1}(5))} = \dfrac{1}{f'(2)} = \dfrac{1}{3}" />.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   CarbonDatingWidget,
   ContinuousInterestWidget,
@@ -256,7 +256,7 @@ export const S7_5: Page[] = [
           }
         >
           <p>
-            Vigázz: 10%-kal kevesebb = <strong>90% maradt meg</strong> (<M t="p = 0{,}9" />)!
+            Vigyázz: 10%-kal kevesebb = <strong>90% maradt meg</strong> (<M t="p = 0{,}9" />)!
             <M block t="t = -5700\cdot\frac{\ln 0{,}9}{\ln 2} \approx -5700\cdot\frac{-0{,}1054}{0{,}6931} \approx \mathbf{867\text{ év}}." />
           </p>
         </Task>
@@ -531,6 +531,60 @@ export const S7_5: Page[] = [
             <M t="t = \tau" /> esetén <M t="y(\tau) = y_0 e^{-1} = \mathbf{\dfrac{1}{e}\,y_0 \approx 36{,}8\%}" /> marad meg (63,2% lecseng). Mivel <M t="T_{1/2} = \frac{\ln 2}{k} = (\ln 2)\tau" />, ezért <M t="\mathbf{\tau = \dfrac{T_{1/2}}{\ln 2} \approx 1{,}443\,T_{1/2}}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Radioaktív bomlás felezési időből"
+          source="Analízis-labor"
+          problem={
+            <>
+              Egy radioaktív izotóp felezési ideje <M t="10" /> nap. Hány nap alatt csökken a mennyisége az eredeti <M t="25\%" />-ára, és mennyi marad <M t="15" /> nap után?
+            </>
+          }
+          steps={[
+            {
+              title: '25%-os szint (egész számú felezési idő)',
+              body: (
+                <p>
+                  Mivel <M t="25\% = \left(\dfrac{1}{2}\right)^2" />, pontosan <M t="2" /> felezési idő, azaz <M t="\mathbf{20\text{ nap}}" /> szükséges.
+                </p>
+              ),
+            },
+            {
+              title: 'Bomlási állandó meghatározása',
+              body: (
+                <p>
+                  <M t="k = \dfrac{\ln 2}{10} \approx 0{,}06931\text{ nap}^{-1}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Maradék mennyiség 15 nap után',
+              body: (
+                <M block t="y(15) = y_0\,e^{-15(\ln 2)/10} = y_0\cdot 2^{-1{,}5} \approx \mathbf{0{,}3536\,y_0} \quad (\text{kb. } 35{,}4\%)." />
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Folytonos kamatozásnál (<M t="A = A_0 e^{rt}" />) <M t="r = 7\% = 0{,}07" /> éves kamat mellett körülbelül hány év alatt duplázódik meg a tőke?
+            </>
+          }
+          options={[
+            { label: <><M t="\dfrac{\ln 2}{0{,}07} \approx 9{,}9" /> év</>, ok: true },
+            { label: <><M t="14{,}3" /> év</> },
+            { label: <><M t="7{,}0" /> év</> },
+            { label: <><M t="5{,}0" /> év</> },
+          ]}
+          explain={
+            <>
+              <M t="e^{0{,}07t} = 2 \implies t = \dfrac{\ln 2}{0{,}07} \approx 9{,}90" /> év (összhangban a 70-es szabállyal: <M t="70/7 = 10" /> év).
+            </>
+          }
+        />
       </>
     ),
   },

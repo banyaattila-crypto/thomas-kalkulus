@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   CatenaryVsParabolaWidget,
   InvHypDerivWidget,
@@ -512,6 +512,27 @@ export const S7_8: Page[] = [
             <M block t="S = \int_{0}^{1} 2\pi\operatorname{ch} x\cdot\operatorname{ch} x\,dx = \pi\int_{0}^{1}(\operatorname{ch} 2x + 1)\,dx = \pi\left[\frac{\operatorname{sh} 2x}{2} + x\right]_{0}^{1} = \mathbf{\pi\left(\frac{\operatorname{sh} 2}{2} + 1\right)}." />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi a <M t="\dfrac{d}{dx}\bigl(\operatorname{ch}(3x)\bigr)" /> derivált?
+            </>
+          }
+          options={[
+            { label: <M t="3\operatorname{sh}(3x)" />, ok: true },
+            { label: <M t="-3\operatorname{sh}(3x)" /> },
+            { label: <M t="\operatorname{sh}(3x)" /> },
+            { label: <M t="3\operatorname{ch}(3x)" /> },
+          ]}
+          explain={
+            <>
+              <M t="(\operatorname{ch} u)' = \operatorname{sh} u \cdot u'" /> — ellentétben a trigonometrikus koszinusszal, itt pozitív az előjel.
+            </>
+          }
+        />
       </>
     ),
   },

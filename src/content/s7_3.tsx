@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Steps, Story, Task, Warn } from '../components/ui';
 import {
   EulerLimitWidget,
   ExpAreaWidget,
@@ -581,6 +581,41 @@ export const S7_3: Page[] = [
             <M t="0 < x < 1/e" /> esetén <M t="\ln x + 1 < 0" /> (csökken), <M t="x > 1/e" /> esetén pozitív (nő), tehát <M t="x = 1/e" /> abszolút minimumhely, a minimumérték pedig <M t="f(1/e) = (1/e)^{1/e} = \mathbf{e^{-1/e} \approx 0{,}692}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Határozott exponenciális integrál u-helyettesítéssel"
+          source="Analízis-labor"
+          problem={
+            <>
+              Számítsuk ki az <M t="\displaystyle\int_{0}^{1} x e^{-x^2}\,dx" /> határozott integrált!
+            </>
+          }
+          steps={[
+            {
+              title: 'Helyettesítés megválasztása',
+              body: (
+                <p>
+                  Legyen <M t="u = -x^2 \implies du = -2x\,dx \implies x\,dx = -\dfrac{1}{2}\,du" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Integrálási határok átírása',
+              body: (
+                <p>
+                  <M t="x = 0 \to u = 0" />, illetve <M t="x = 1 \to u = -1" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Kiértékelés',
+              body: (
+                <M block t="-\frac{1}{2}\int_{0}^{-1} e^u\,du = \frac{1}{2}\int_{-1}^{0} e^u\,du = \frac{1}{2}\bigl(e^0 - e^{-1}\bigr) = \mathbf{\frac{1 - e^{-1}}{2}}." />
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },

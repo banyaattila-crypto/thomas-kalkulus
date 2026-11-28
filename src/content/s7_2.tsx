@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   AbsLogBranchesWidget,
   LnAreaDefinitionWidget,
@@ -262,7 +262,7 @@ export const S7_2: Page[] = [
           n={8}
           q={
             <>
-              Határozd meg a <M t="f(x) = \ln(\cos x)" /> függvény abszolút szélsőértékeit a <M t="[-\pi/4;\,\pi/3]" /> intervallumon!
+              Határozd meg az <M t="f(x) = \ln(\cos x)" /> függvény abszolút szélsőértékeit a <M t="[-\pi/4;\,\pi/3]" /> intervallumon!
             </>
           }
         >
@@ -536,7 +536,7 @@ export const S7_2: Page[] = [
           n={18}
           q={
             <>
-              Számítsd ki a <M t="y = \ln x" /> és az <M t="y = \ln(2x)" /> görbék által közbezárt területet az <M t="[1;\,5]" /> intervallumon!
+              Számítsd ki az <M t="y = \ln x" /> és az <M t="y = \ln(2x)" /> görbék által közbezárt területet az <M t="[1;\,5]" /> intervallumon!
             </>
           }
         >
@@ -616,6 +616,27 @@ export const S7_2: Page[] = [
             <M block t="L = \int_{4}^{8}\left(\frac{x}{4} + \frac{1}{x}\right)dx = \left[\frac{x^2}{8} + \ln x\right]_{4}^{8} = (8 + \ln 8) - (2 + \ln 4) = \mathbf{6 + \ln 2}." />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="y = \ln(x^2 + 4)" /> függvény deriváltja?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{2x}{x^2 + 4}" />, ok: true },
+            { label: <M t="\dfrac{1}{x^2 + 4}" /> },
+            { label: <M t="\dfrac{2x}{\ln(x^2 + 4)}" /> },
+            { label: <M t="\dfrac{x}{x^2 + 4}" /> },
+          ]}
+          explain={
+            <>
+              A láncszabály miatt <M t="(\ln u)' = \dfrac{u'}{u} = \dfrac{2x}{x^2 + 4}" />.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -4,6 +4,17 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.6.0] - 2026-11-28
+
+### Hozzáadva — 7. fejezet Analízis-labor integráció és tartalmi revízió (`7.1`–`7.8`)
+- **7.1–7.8 szakaszok (`s7_1.tsx`–`s7_8.tsx`)**: beépítve az Analízis-labor 4 nem duplikált `<Steps />` példája (`7.3`, `7.4`, `7.5`, `7.6`) és 7 nem duplikált `<Quiz />` gyorstesztje (`7.1`, `7.2`, `7.4`, `7.5`, `7.6`, `7.7`, `7.8`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre/tizedesvesszőre igazítva. A meglévő anyaggal egyező vagy közel egyező példák (`7.1` 6. oldali nagypélda, `7.2` 11. feladat és 6. oldali levezetés, `7.7` 10. feladat, `7.8` 4. oldali láncgörbe ívhossz-levezetés) és a `7.3` kvíze ($y=x^x$ deriválása, 14. feladat) duplikátumként kiszűrve.
+
+### Javítva
+- **`7.2`**: két magyar névelőhiba javítva (`a f(x)` → `az f(x)`, `a y = \ln x` → `az y = \ln x`).
+- **`7.5`**: elgépelés javítva a 9. feladat megoldásában (`Vigázz` → `Vigyázz`).
+- **`7.6`**: helyesírási és névelőhibák javítva (`1etlen` → `egyetlen`, `a O(n\log n)` / `a O(n^2)` → `az O(n\log n)` / `az O(n^2)`, `a x\to\infty` → `az x\to\infty`).
+- **`7.7`**: magyar névelőhiba javítva a 3. buktató címében (`A 1/a szorzó` → `Az 1/a szorzó`).
+
 ## [3.5.0] - 2026-11-27
 
 ### Hozzáadva — 6. fejezet Analízis-labor integráció és tartalmi revízió (`6.1`–`6.7`)
