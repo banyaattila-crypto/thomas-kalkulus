@@ -411,7 +411,7 @@ export const S14_3: Page[] = [
             <li>Az <M t="f_{xy}" /> és <M t="\frac{\partial^2 f}{\partial x\partial y}" /> sorrendjének felcserélése (ha nem folytonosak, eltérhetnek!).</li>
             <li>Implicit deriváláskor elfelejteni, hogy <M t="z" /> függ <M t="x" />-től (szorzatszabály pl. <M t="xz" />-nél!).</li>
             <li>Azt hinni, hogy ha <M t="f_x" /> és <M t="f_y" /> létezik egy pontban, akkor <M t="f" /> biztosan folytonos (Thomas 8. példa!).</li>
-            <li>Konstansként kezelt változók hozzáadott tagját bent hagyni (pl. <M t="\frac{\partial}{\partial x}(x^2 + y^3) = 2x" />, a <M t="y^3" /> deriváltja 0!).</li>
+            <li>Konstansként kezelt változók hozzáadott tagját bent hagyni (pl. <M t="\frac{\partial}{\partial x}(x^2 + y^3) = 2x" />, az <M t="y^3" /> deriváltja 0!).</li>
           </ol>
         </Warn>
 
@@ -500,6 +500,66 @@ export const S14_3: Page[] = [
             <M t="u_t = -c\,g'(x-ct) \Rightarrow u_{tt} = c^2 g''(x-ct) = \mathbf{c^2 u_{xx}}" /> ✓!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Első- és vegyes másodrendű parciális deriváltak"
+          source="Analízis-labor"
+          problem={
+            <>
+              Számítsuk ki az <M t="f(x, y) = x^2 e^{3y} + \sin(xy)" /> függvény <M t="f_x" />, <M t="f_y" /> és{' '}
+              <M t="f_{xy}" /> parciális deriváltjait!
+            </>
+          }
+          steps={[
+            {
+              title: 'Deriválás x szerint (y konstans)',
+              body: (
+                <p>
+                  <M t="f_x = 2x e^{3y} + y\cos(xy)" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Deriválás y szerint (x konstans)',
+              body: (
+                <p>
+                  <M t="f_y = 3x^2 e^{3y} + x\cos(xy)" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Vegyes másodrendű derivált (fₓ deriválása y szerint)',
+              body: (
+                <>
+                  <M block t="f_{xy} = 6x e^{3y} + \cos(xy) - xy\sin(xy)." />
+                  <p>(Ellenőrzés: <M t="(f_y)_x" /> pontosan ugyanezt adja Clairaut tétele alapján.)</p>
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="f(x, y) = \ln(x^2 + 3y)" /> függvény <M t="f_y(1, 1)" /> parciális deriváltja?
+            </>
+          }
+          options={[
+            { label: <M t="\dfrac{3}{4}" />, ok: true },
+            { label: <M t="\dfrac{1}{4}" /> },
+            { label: <M t="\dfrac{2}{4}" /> },
+            { label: <M t="\dfrac{3}{2}" /> },
+          ]}
+          explain={
+            <>
+              <M t="f_y(x, y) = \dfrac{3}{x^2 + 3y}" />, így <M t="(1, 1)" />-ben <M t="\dfrac{3}{1 + 3} = \dfrac{3}{4}" />.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -268,7 +268,7 @@ export const S14_6: Page[] = [
     body: (
       <>
         <p>
-          A teljes differenciál egyik legfontosabb mérnöki alkalmazása az <strong>érzékenység-elemzés</strong> és a{' '}
+          A teljes differenciál egyik legfontosabb mérnöki alkalmazása az <strong>érzékenységelemzés</strong> és a{' '}
           <strong>mérési hibák terjedése</strong> (Thomas 8–9. példa): egy rendszer mindig arra a bemeneti változóra
           a legérzékenyebb, amelynek a parciális deriváltja a legnagyobb abszolút értékű!
         </p>
@@ -428,7 +428,7 @@ export const S14_6: Page[] = [
         </Task>
         <Task
           n={20}
-          q={<>Határozd meg az <M t="z = x^2 + y^2" /> paraboloid és a <M t="z = 2x + 4y - 4" /> sík metszésvonalának érintőegyenesét a <M t="(1, 1, 2)" /> pontban!</>}
+          q={<>Határozd meg a <M t="z = x^2 + y^2" /> paraboloid és a <M t="z = 2x + 4y - 4" /> sík metszésvonalának érintőegyenesét a <M t="(1, 1, 2)" /> pontban!</>}
         >
           <p>
             <M t="\nabla(x^2+y^2-z) = \langle 2, 2, -1\rangle" />, <M t="\nabla(2x+4y-z) = \langle 2, 4, -1\rangle" />.
@@ -464,6 +464,33 @@ export const S14_6: Page[] = [
             <M t="\frac{dT}{T} = \frac{1}{2}\frac{dL}{L} - \frac{1}{2}\frac{dg}{g} = \frac{1}{2}(+0{,}5\%) - \frac{1}{2}(-0{,}3\%) = \mathbf{+0{,}4\%}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          source="Analízis-labor"
+          title="Ellipszoid érintősíkja adott pontban"
+          problem={<>Írd fel az <M t="x^2 + 2y^2 + z^2 = 7" /> ellipszoid érintősíkjának egyenletét az <M t="(1, 1, 2)" /> pontban!</>}
+          steps={[
+            {
+              title: '1. Szintfelület normálvektora',
+              body: (
+                <>
+                  Legyen <M t="F(x, y, z) = x^2 + 2y^2 + z^2" />. A gradiens{' '}
+                  <M t="\nabla F(x, y, z) = \langle 2x, 4y, 2z\rangle" />, így a normálvektor az <M t="(1, 1, 2)" /> pontban{' '}
+                  <M t="\mathbf{n} = \nabla F(1, 1, 2) = \langle 2, 4, 4\rangle" />.
+                </>
+              ),
+            },
+            {
+              title: '2. Az érintősík egyenlete',
+              body: (
+                <>
+                  <M block t="2(x - 1) + 4(y - 1) + 4(z - 2) = 0 \iff 2x + 4y + 4z = 14 \iff x + 2y + 2z = 7." />
+                </>
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },

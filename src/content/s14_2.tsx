@@ -45,7 +45,7 @@ export const S14_2: Page[] = [
         <M block t="\lim_{(x,y)\to(0,1)} \frac{x - xy + 3}{x^2 y + 5xy - y^3} = \frac{0 - 0 + 3}{0 + 0 - 1} = -3." />
 
         <Quiz
-          q={<>Mennyi az <M t="\lim_{(x,y)\to(3,-4)} \sqrt{x^2 + y^2}" /> határérték?</>}
+          q={<>Mennyi a <M t="\lim_{(x,y)\to(3,-4)} \sqrt{x^2 + y^2}" /> határérték?</>}
           options={[
             { label: <><M t="1" /></> },
             { label: <><M t="5" /></>, ok: true },
@@ -302,7 +302,7 @@ export const S14_2: Page[] = [
           q={<>Polárkoordinátákkal számítsd ki: <M t="\lim_{(x,y)\to(0,0)} (x^2 + y^2)\ln(x^2 + y^2)" />!</>}
         >
           <p>
-            <M t="\lim_{r\to 0^+} r^2\ln(r^2) = \lim_{u\to 0^+} u\ln u = \mathbf{0}" /> (L’Hospital-szabállyal!).
+            <M t="\lim_{r\to 0^+} r^2\ln(r^2) = \lim_{u\to 0^+} u\ln u = \mathbf{0}" /> (L’Hôpital-szabállyal!).
           </p>
         </Task>
         <Task
@@ -423,7 +423,7 @@ export const S14_2: Page[] = [
           <ol style={{ margin: '6px 0 0 18px' }}>
             <li>Azt hinni, hogy ha 2-3 egyenesen ugyanaz jön ki, akkor a határérték létezik (parabola-csapda!).</li>
             <li>Polárkoordinátás alaknál csak rögzített <M t="\theta" />-ra venni <M t="r\to 0^+" />-t: ha a <M t="\theta" />-függő szorzó nem korlátos, téves eredményt adhat!</li>
-            <li>Az <M t="\lim_{(x,y)\to(0,0)}" /> helyett külön-külön elvégezni az <M t="\lim_{x\to 0}(\lim_{y\to 0})" /> iterált határértéket (ezek nem mindig egyeznek meg a 2D határértékkel!).</li>
+            <li>A <M t="\lim_{(x,y)\to(0,0)}" /> helyett külön-külön elvégezni a <M t="\lim_{x\to 0}(\lim_{y\to 0})" /> iterált határértéket (ezek nem mindig egyeznek meg a 2D határértékkel!).</li>
             <li>Elfelejteni, hogy a folytonossághoz <M t="f(x_0, y_0)" />-nak is <strong>léteznie</strong> kell!</li>
             <li>Elfelejteni a <M t="2|xy| \le x^2 + y^2" /> aranyegyenlőtlenséget (pedig a legtöbb szendvicstételes feladathoz ez a kulcs!).</li>
           </ol>
@@ -504,10 +504,10 @@ export const S14_2: Page[] = [
         </Task>
         <Task
           n={23}
-          q={<>Számítsd ki a <M t="\lim_{(x,y)\to(0,0)} \frac{\operatorname{arctg}(xy)}{xy}" /> határértéket (a <M t="u = xy \to 0" /> helyettesítéssel)!</>}
+          q={<>Számítsd ki a <M t="\lim_{(x,y)\to(0,0)} \frac{\operatorname{arctg}(xy)}{xy}" /> határértéket (az <M t="u = xy \to 0" /> helyettesítéssel)!</>}
         >
           <p>
-            Mivel <M t="u = xy \to 0" />, L’Hospital-szabállyal{' '}
+            Mivel <M t="u = xy \to 0" />, L’Hôpital-szabállyal{' '}
             <M t="\lim_{u\to 0}\frac{\operatorname{arctg} u}{u} = \lim_{u\to 0}\frac{1/(1+u^2)}{1} = \mathbf{1}" />!
           </p>
         </Task>

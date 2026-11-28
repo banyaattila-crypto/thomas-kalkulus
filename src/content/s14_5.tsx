@@ -386,7 +386,7 @@ export const S14_5: Page[] = [
           <strong>5 tipikus buktató a 14.5-ben:</strong>
           <ol style={{ margin: '6px 0 0 18px' }}>
             <li><strong>Elfelejteni normálni</strong> az irányvektort (<M t="|\mathbf{u}| = 1" /> kötelező!).</li>
-            <li>A gradienset <em>számnak</em> hinni — a gradiens <strong>vektor</strong>, az iránymenti derivált pedig <strong>skalár</strong>!</li>
+            <li>A gradienst <em>számnak</em> hinni — a gradiens <strong>vektor</strong>, az iránymenti derivált pedig <strong>skalár</strong>!</li>
             <li>A <M t="\nabla f" /> vektort az <M t="xyz" />-térbe rajzolni 2D függvénynél: <M t="\nabla f(x,y)" /> az <strong><M t="xy" />-síkban</strong> fekvő 2D vektor!</li>
             <li>Összekeverni a legnagyobb növekedés <em>irányát</em> (<M t="\nabla f / |\nabla f|" />) az <em>ütemével</em> (<M t="|\nabla f|" />).</li>
             <li>Az <M t="f(x, y) = c" /> szintvonalat először <M t="y(x)" />-re próbálni megoldani az érintőhöz — a gradiens-képlet sokkal gyorsabb!</li>
@@ -432,7 +432,7 @@ export const S14_5: Page[] = [
         </Task>
         <Task
           n={19}
-          q={<>Írd fel a <M t="x^2 - y^2 = 16" /> hiperbola érintő- és normálisegyenesét az <M t="(5, 3)" /> pontban!</>}
+          q={<>Írd fel az <M t="x^2 - y^2 = 16" /> hiperbola érintő- és normálisegyenesét az <M t="(5, 3)" /> pontban!</>}
         >
           <p>
             <M t="\nabla f(5, 3) = \langle 10, -6\rangle" /> (párhuzamos <M t="\langle 5, -3\rangle" />-mal). Érintő:{' '}
@@ -472,14 +472,66 @@ export const S14_5: Page[] = [
         </Task>
         <Task
           n={23}
-          q={<>Igazold, hogy az <M t="r = \sqrt{x^2 + y^2 + z^2}" /> távolságfüggvény gradiense bármely nem-origó pontban a sugárirányú egységvektor: <M t="\nabla r = \frac{\mathbf{r}}{r}" />, és így <M t="|\nabla r| \equiv 1" />!</>}
+          q={<>Igazold, hogy az <M t="r = \sqrt{x^2 + y^2 + z^2}" /> távolságfüggvény gradiense bármely nem origó pontban a sugárirányú egységvektor: <M t="\nabla r = \frac{\mathbf{r}}{r}" />, és így <M t="|\nabla r| \equiv 1" />!</>}
         >
           <p>
-            <M t="\frac{\partial r}{\partial x} = \frac{x}{r}" />, hasonlón <M t="y" />-ra és <M t="z" />-re, tehát{' '}
+            <M t="\frac{\partial r}{\partial x} = \frac{x}{r}" />, hasonlóan <M t="y" />-ra és <M t="z" />-re, tehát{' '}
             <M t="\nabla r = \frac{1}{r}\langle x, y, z\rangle = \frac{\mathbf{r}}{r}" />, amelynek hossza{' '}
             <M t="\frac{|\mathbf{r}|}{r} = \mathbf{1}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          source="Analízis-labor"
+          title="Iránymenti derivált számítása normálással"
+          problem={<>Határozd meg az <M t="f(x, y) = x^2 - xy + 2y^2" /> függvény iránymenti deriváltját a <M t="P(1, 2)" /> pontban a <M t="\mathbf{v} = \langle 3, 4\rangle" /> irányvektor mentén!</>}
+          steps={[
+            {
+              title: '1. Az irányvektor normálása',
+              body: (
+                <>
+                  A vektor hossza <M t="|\mathbf{v}| = \sqrt{3^2 + 4^2} = 5" />, így az egységvektor{' '}
+                  <M t="\mathbf{u} = \left\langle \frac{3}{5},\; \frac{4}{5}\right\rangle" />.
+                </>
+              ),
+            },
+            {
+              title: '2. A gradiens kiszámítása a P(1, 2) pontban',
+              body: (
+                <>
+                  <M t="\nabla f(x, y) = \langle 2x - y,\; -x + 4y\rangle \implies \nabla f(1, 2) = \langle 0, 7\rangle" />.
+                </>
+              ),
+            },
+            {
+              title: '3. Skaláris szorzat',
+              body: (
+                <>
+                  <M block t="D_{\mathbf{u}} f(1, 2) = \nabla f(1, 2) \cdot \mathbf{u} = 0\cdot\frac{3}{5} + 7\cdot\frac{4}{5} = \frac{28}{5} = 5{,}6." />
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mekkora szöget zár be egy differenciálható <M t="f(x, y)" /> függvény <M t="\nabla f(x_0, y_0) \neq \mathbf{0}" /> gradiense az <M t="(x_0, y_0)" /> ponton átmenő szintvonal érintőjével?</>}
+          options={[
+            { label: <><M t="90^\circ" /> (merőleges rá)</>, ok: true },
+            { label: <><M t="0^\circ" /> (párhuzamos vele)</> },
+            { label: <><M t="45^\circ" /></> },
+            { label: 'Függ a függvénytől' },
+          ]}
+          explain={
+            <>
+              A szintvonal mentén <M t="f" /> értéke állandó, így a szintvonal érintőjének <M t="\mathbf{u}" /> irányában{' '}
+              <M t="D_{\mathbf{u}} f = \nabla f \cdot \mathbf{u} = 0" />, vagyis a gradiens merőleges a szintvonalra.
+            </>
+          }
+        />
       </>
     ),
   },

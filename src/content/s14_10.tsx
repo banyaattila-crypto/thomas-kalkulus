@@ -27,7 +27,7 @@ export const S14_10: Page[] = [
 
         <Def title="A 1D-visszavezetés trükkje: g(t) = f(a + th, b + tk)">
           <p>
-            Kötsük össze az <M t="(a,b)" /> középpontot az <M t="(a+h, b+k)" /> célponttal egy egyenes szakasszal:
+            Kössük össze az <M t="(a,b)" /> középpontot az <M t="(a+h, b+k)" /> célponttal egy egyenes szakasszal:
             <M t="x(t) = a + th, \; y(t) = b + tk" /> (<M t="t \in [0, 1]" />), és definiáljuk az egyváltozós
             <M t="g(t) = f(a + th, b + tk)" /> függvényt!
           </p>
@@ -90,7 +90,7 @@ export const S14_10: Page[] = [
             { label: 'f_xx = 8, f_xy = −6', ok: true },
             { label: 'f_xx = 8, f_xy = −12' },
           ]}
-          explain={<>Vigasztaló csapda! A képletben ½·f_xx·x² és ½·(2 f_xy)·xy = f_xy·xy szerepel! Ezért ½·f_xx = 4 ⇒ f_xx = 8, míg f_xy közvetlenül −6 (mert a 2-es és a ½ kiejti egymást)!</>}
+          explain={<>Vigyázat, csapda! A képletben ½·f_xx·x² és ½·(2 f_xy)·xy = f_xy·xy szerepel! Ezért ½·f_xx = 4 ⇒ f_xx = 8, míg f_xy közvetlenül −6 (mert a 2-es és a ½ kiejti egymást)!</>}
         />
 
         <Task n={3} q={<>Határozd meg az <M t="f(x,y) = \ln(1 + x + 2y)" /> másodfokú Taylor-polinomját az origó körül!</>}>
@@ -305,7 +305,7 @@ export const S14_10: Page[] = [
         <Task n={11} q={<>Becsüld meg az <M t="f(x,y) = e^{x+y}" /> másodfokú közelítésének maximális hibáját az <M t="|x| \le 0{,}1, \; |y| \le 0{,}1" /> négyzeten!</>}>
           <p>
             Minden 3. rendű parciális derivált megegyezik <M t="e^{x+y}" />-nal. A négyzeten <M t="x+y \le 0{,}2" />, így
-            <M t="M_3 = e^{0,2} \approx 1{,}2214 < 1{,}23" />.
+            <M t="M_3 = e^{0{,}2} \approx 1{,}2214 < 1{,}23" />.
             Mivel <M t="|h| + |k| \le 0{,}2" />:
             <M block t="|R_2| \le \frac{1{,}23}{6}(0{,}2)^3 = 0{,}205 \cdot 0{,}008 = 0{,}00164." />
             (A kvadratikus közelítés tehát garantáltan 2 ezreléken belül pontos az egész négyzeten!)
@@ -398,10 +398,10 @@ export const S14_10: Page[] = [
         <Warn>
           <strong>5 klasszikus vizsgabuktató:</strong>
           <ol>
-            <li><strong>Elfelejtett 2-es szorzó az <M t="f_{xy}" /> előtt:</strong> A másodrendű tagban <M t="\frac{1}{2}(f_{xx}h^2 + \mathbf{2}f_{xy}hk + f_{yy}k^2)" /> szerepel, így az <M t="hk" /> együtthatója egyszerűen <M t="f_{xy}" /> (nem <M t="\frac{1}{2}f_{xy}" />)!</li>
+            <li><strong>Elfelejtett 2-es szorzó az <M t="f_{xy}" /> előtt:</strong> A másodrendű tagban <M t="\frac{1}{2}(f_{xx}h^2 + \mathbf{2}f_{xy}hk + f_{yy}k^2)" /> szerepel, így a <M t="hk" /> együtthatója egyszerűen <M t="f_{xy}" /> (nem <M t="\frac{1}{2}f_{xy}" />)!</li>
             <li><strong><M t="x, y" /> helyett <M t="(x-a), (y-b)" /> elfelejtése:</strong> Ha nem az origó körül fejtesz, minden hatványban <M t="h = x - a" /> és <M t="k = y - b" /> áll!</li>
             <li><strong>Összfokszám elszámolása:</strong> Az <M t="x^2 y" /> tag <em>harmadfokú</em> (<M t="2 + 1 = 3" />), tehát a 2. fokú (kvadratikus) közelítésből már el kell hagyni!</li>
-            <li><strong>Nem-polinom behelyettesítésnél elveszett tag:</strong> Pl. <M t="e^{x+y^2}" /> másodfokú közelítésénél a <M t="y^2" /> már az első hatványban megjelenik (<M t="1 + x + y^2 + \frac{1}{2}x^2" />).</li>
+            <li><strong>Nem polinom behelyettesítésnél elveszett tag:</strong> Pl. <M t="e^{x+y^2}" /> másodfokú közelítésénél az <M t="y^2" /> már az első hatványban megjelenik (<M t="1 + x + y^2 + \frac{1}{2}x^2" />).</li>
             <li><strong>Faktoriális elfelejtése a maradéktagban:</strong> <M t="R_1" />-nél <M t="\frac{1}{2!}" />, <M t="R_2" />-nél <M t="\frac{1}{3!} = \frac{1}{6}" /> a szorzó!</li>
           </ol>
         </Warn>
@@ -483,6 +483,24 @@ export const S14_10: Page[] = [
             (Csodálatos példa arra, mennyire leegyszerűsíti a Taylor-sor az implicit függvények helyi viselkedését!)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mi az <M t="f(x, y) = \sin x \sin y" /> függvény másodrendű Taylor-polinomja az origóban?</>}
+          options={[
+            { label: <><M t="xy" /></>, ok: true },
+            { label: <><M t="x + y" /></> },
+            { label: <><M t="x^2 + y^2" /></> },
+            { label: <><M t="1 - xy" /></> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="\sin x \approx x" /> és <M t="\sin y \approx y" />, szorzatuk másodrendű közelítése pontosan{' '}
+              <M t="xy" /> (<M t="f_{xy}(0, 0) = 1" />, a többi másodrendű derivált nulla).
+            </>
+          }
+        />
       </>
     ),
   },

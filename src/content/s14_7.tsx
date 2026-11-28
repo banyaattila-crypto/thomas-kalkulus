@@ -249,7 +249,7 @@ export const S14_7: Page[] = [
 
         <Warn>
           <strong>A Peano-csapda figyelmeztetése:</strong> 2D-ben <em>nem elég</em> azt ellenőrizni, hogy az összes
-          origón átmenő egyenes mentén lokális minimum van! A <M t="f(x,y) = (y-x^2)(y-2x^2)" /> függvény minden
+          origón átmenő egyenes mentén lokális minimum van! Az <M t="f(x,y) = (y-x^2)(y-2x^2)" /> függvény minden
           egyenesen lokális minimumot mutat <M t="(0,0)" />-ban, mégis nyeregpontja van, mert az <M t="y = 1{,}5x^2" />
           parabola mentén <M t="f(x, 1{,}5x^2) = -0{,}25x^4 < 0" />.
         </Warn>
@@ -564,7 +564,7 @@ export const S14_7: Page[] = [
           </p>
         </Task>
 
-        <Task n={23} q={<>Adott a <M t="f(x,y) = (x^2 + y^2)e^{-(x^2+y^2)}" /> függvény az <M t="x^2 + y^2 \le 4" /> zárt körlapon. Keresd meg az abszolút minimumát és az összes pontot, ahol az abszolút maximumát felveszi!</>}>
+        <Task n={23} q={<>Adott az <M t="f(x,y) = (x^2 + y^2)e^{-(x^2+y^2)}" /> függvény az <M t="x^2 + y^2 \le 4" /> zárt körlapon. Keresd meg az abszolút minimumát és az összes pontot, ahol az abszolút maximumát felveszi!</>}>
           <p>
             Vezessük be az <M t="r^2 = x^2 + y^2 \in [0, 4]" /> változót! Ekkor <M t="f(x,y) = h(r^2) = u e^{-u}" />,
             ahol <M t="u \in [0, 4]" />.
@@ -576,6 +576,24 @@ export const S14_7: Page[] = [
             <li><M t="u = 4" /> (határkör): <M t="h(4) = 4e^{-4} \approx 0{,}073" /> (sem nem min, sem nem max).</li>
           </ul>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Ha egy kritikus pontban <M t="f_{xx} = -4" />, <M t="f_{yy} = -2" /> és <M t="f_{xy} = 1" />, milyen típusú a kritikus pont?</>}
+          options={[
+            { label: 'Lokális maximum', ok: true },
+            { label: 'Lokális minimum' },
+            { label: 'Nyeregpont' },
+            { label: 'Nem dönthető el' },
+          ]}
+          explain={
+            <>
+              A Hesse-determináns <M t="D = (-4)(-2) - 1^2 = 7 > 0" /> és <M t="f_{xx} = -4 < 0" />, ezért a kritikus pont{' '}
+              <strong>lokális maximum</strong>.
+            </>
+          }
+        />
       </>
     ),
   },

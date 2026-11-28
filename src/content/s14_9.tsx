@@ -500,7 +500,7 @@ export const S14_9: Page[] = [
           </p>
         </Task>
 
-        <Task n={22} q={<>Bizonyítsd be, hogy ha <M t="z = f(x, y)" /> és <M t="x, y" /> a <M t="(u, v)" /> koordináták függvényei, akkor <M t="\left(\frac{\partial w}{\partial x}\right)_y" /> láncszabállyal kifejezhető úgy, hogy <M t="\left(\frac{\partial x}{\partial u}\right)_v \left(\frac{\partial u}{\partial x}\right)_y + \left(\frac{\partial x}{\partial v}\right)_u \left(\frac{\partial v}{\partial x}\right)_y = 1" />!</>}>
+        <Task n={22} q={<>Bizonyítsd be a kétváltozós láncszabállyal, hogy ha <M t="x, y" /> az <M t="(u, v)" /> koordináták függvényei, akkor <M t="\left(\frac{\partial x}{\partial u}\right)_v \left(\frac{\partial u}{\partial x}\right)_y + \left(\frac{\partial x}{\partial v}\right)_u \left(\frac{\partial v}{\partial x}\right)_y = 1" />!</>}>
           <p>
             Tekintsük az <M t="x(u(x,y), v(x,y)) \equiv x" /> azonosságot, és deriváljuk mindkét oldalt <M t="x" /> szerint
             rögzített <M t="y" /> mellett a kétváltozós láncszabállyal:
@@ -518,6 +518,24 @@ export const S14_9: Page[] = [
             Ez a „híd-formula” közvetlenül megmutatja, mekkora a különbség a kétféle rögzítés között!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Ha <M t="PV = nRT" /> (<M t="n, R" /> állandó), mennyi a <M t="\left(\frac{\partial P}{\partial V}\right)_T" /> izotermikus parciális derivált?</>}
+          options={[
+            { label: <><M t="-\frac{nRT}{V^2}" /></>, ok: true },
+            { label: <><M t="\frac{nR}{V}" /></> },
+            { label: <><M t="0" /></> },
+            { label: <><M t="\frac{nRT}{V}" /></> },
+          ]}
+          explain={
+            <>
+              A <M t="P = nRT \cdot V^{-1}" /> kifejezést állandó <M t="T" /> mellett <M t="V" /> szerint deriválva{' '}
+              <M t="-\frac{nRT}{V^2}" /> adódik.
+            </>
+          }
+        />
       </>
     ),
   },

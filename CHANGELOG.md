@@ -4,6 +4,23 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.13.0] - 2026-11-28
+
+### Hozzáadva — 14. fejezet Analízis-labor integráció és tartalmi revízió (`14.1`–`14.10`)
+- **14.1–14.10 szakaszok (`s14_1.tsx`–`s14_10.tsx`)**: beépítve az Analízis-labor 4 nem duplikált `<Steps />` példája (`14.3`, `14.4`, `14.5`, `14.6`) és 8 nem duplikált `<Quiz />` gyorstesztje (`14.1`, `14.3`, `14.4`, `14.5`, `14.7`, `14.8`, `14.9`, `14.10`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre igazítva. A meglévő anyaggal egyező vagy közel egyező 6 példa (`14.1` 3. oldal, `14.2` 4. oldal, `14.7` 3. oldal, `14.8` 3. és 16. feladat, `14.9` 1. feladat, `14.10` 1. feladat) és 2 kvíz (`14.2` 3. oldal, `14.6` 6. oldal) duplikátumként kiszűrve.
+
+### Javítva
+- **`14.1`**: helyesírási hiba javítva (`izoterma-felületek` → `izotermafelületek`).
+- **`14.2`**: négy magyar névelőhiba (`az \lim` → `a \lim` 3×, `a u = xy` → `az u = xy`) és névírási egységesítés (`L’Hospital-szabállyal` → `L’Hôpital-szabállyal` 2×).
+- **`14.3`**: magyar névelőhiba javítva (`a y^3` → `az y^3`).
+- **`14.4`**: magyar névelőhiba javítva (`az dy/dx` → `a dy/dx`).
+- **`14.5`**: ragozási (`A gradienset` → `A gradienst`), névelő- (`a x^2-y^2=16` → `az x^2-y^2=16`), helyesírási (`nem-origó` → `nem origó`) és elgépelési (`hasonlón` → `hasonlóan`) hibák javítva.
+- **`14.6`**: helyesírási (`érzékenység-elemzés` → `érzékenységelemzés`) és névelőhiba (`az z = x^2 + y^2` → `a z = x^2 + y^2`) javítva.
+- **`14.7`**: két magyar névelőhiba javítva (`A f(x,y)` → `Az f(x,y)`, `a f(x,y)` → `az f(x,y)`).
+- **`14.8`**: magyar névelőhiba javítva (`az (0, 0)` → `a (0, 0)`).
+- **`14.9`**: szakmai megfogalmazási hiba javítva a 22. feladatban (felesleges `z = f(x, y)` és `\partial w / \partial x` hivatkozás eltávolítása).
+- **`14.10`**: elgépelés (`Kötsük össze` → `Kössük össze`), értelmetlen kifejezés (`Vigasztaló csapda!` → `Vigyázat, csapda!`), tizedesvessző-formázás (`e^{0,2}` → `e^{0{,}2}`), helyesírás (`Nem-polinom` → `Nem polinom`) és két névelőhiba (`az hk` → `a hk`, `a y^2` → `az y^2`) javítva.
+
 ## [3.12.0] - 2026-11-28
 
 ### Hozzáadva — 13. fejezet Analízis-labor integráció és tartalmi revízió (`13.1`–`13.6`)

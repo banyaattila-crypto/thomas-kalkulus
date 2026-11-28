@@ -307,7 +307,7 @@ export const S14_1: Page[] = [
           Egy háromváltozós <M t="w = f(x, y, z)" /> függvény grafikonja a <strong>négydimenziós térben</strong>{' '}
           (<M t="\mathbb{R}^4" />) fekszik, ezért nem rajzolható le közvetlenül. Helyette a{' '}
           <strong>szintfelületeit</strong> vizsgáljuk: az <M t="f(x, y, z) = c" /> egyenletű felületeket a 3D térben
-          (pl. azonos hőmérsékletű izoterma-felületek egy szobában, vagy ekvipotenciális felületek egy elektromos térben)!
+          (pl. azonos hőmérsékletű izotermafelületek egy szobában, vagy ekvipotenciális felületek egy elektromos térben)!
         </p>
 
         <LevelSurface3DWidget />
@@ -502,6 +502,28 @@ export const S14_1: Page[] = [
             <strong>ellipszisek</strong>!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen görbék az <M t="f(x, y) = y^2 - x^2" /> függvény <M t="c \neq 0" /> szintvonalai az <M t="xy" />-síkon?
+            </>
+          }
+          options={[
+            { label: 'Hiperbolák', ok: true },
+            { label: 'Koncentrikus körök' },
+            { label: 'Párhuzamos egyenesek' },
+            { label: 'Ellipszisek' },
+          ]}
+          explain={
+            <>
+              Az <M t="y^2 - x^2 = c" /> (<M t="c \neq 0" />) egyenletű görbék egyenlő szárú hiperbolák,{' '}
+              <M t="c = 0" />-ra pedig az <M t="y = \pm x" /> egyenespár.
+            </>
+          }
+        />
       </>
     ),
   },

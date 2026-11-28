@@ -422,7 +422,7 @@ export const S14_8: Page[] = [
         <Quiz
           q={<>Ha az <M t="f(x,y) = x" /> függvényt minimalizáljuk a <M t="g(x,y) = y^2 - x^3 = 0" /> görbén, mit ad a <M t="\nabla f = \lambda \nabla g" /> rendszer?</>}
           options={[
-            { label: 'Megadja az (0, 0) minimumot λ = 0 értékkel' },
+            { label: 'Megadja a (0, 0) minimumot λ = 0 értékkel' },
             { label: 'Ellentmondást (1 = 0) ad, nincs megoldása — a (0,0) szinguláris pontként (∇g = 0) bukkan fel!', ok: true },
             { label: 'Végtelen sok megoldást ad' },
           ]}
@@ -564,6 +564,23 @@ export const S14_8: Page[] = [
             (Ez a Rayleigh-hányados elve: egy kvadratikus alak egységgömbön vett szélsőértékei éppen a sajátértékei!)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mi a <M t="\nabla f = \lambda \nabla g" /> egyenlet geometriai jelentése egy feltételes szélsőértékhelyen?</>}
+          options={[
+            { label: <>Az <M t="f" /> szintvonala (szintfelülete) érinti a <M t="g = 0" /> kényszergörbét (kényszerfelületet)</>, ok: true },
+            { label: 'A két gradiens merőleges egymásra' },
+            { label: 'Mindkét gradiens nullvektor' },
+            { label: <>A <M t="\lambda" /> szorzó mindig pozitív</> },
+          ]}
+          explain={
+            <>
+              A párhuzamos gradiensek azonos normálirányt, vagyis közös érintőegyenest (3D-ben közös érintősíkot) jelentenek.
+            </>
+          }
+        />
       </>
     ),
   },

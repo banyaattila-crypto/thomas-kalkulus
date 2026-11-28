@@ -366,7 +366,7 @@ export const S14_4: Page[] = [
           <strong>5 tipikus buktató a 14.4-ben:</strong>
           <ol style={{ margin: '6px 0 0 18px' }}>
             <li>Egy ág kifelejtése a fadiagramból (ha egy változó közvetlenül ÉS közvetve is szerepel, pl. <M t="w = f(x, y(x))" />!).</li>
-            <li>A mínuszjel elhagyása az <M t="\frac{dy}{dx} = -\frac{F_x}{F_y}" /> implicit képletből.</li>
+            <li>A mínuszjel elhagyása a <M t="\frac{dy}{dx} = -\frac{F_x}{F_y}" /> implicit képletből.</li>
             <li>A <M t="\frac{\partial w}{\partial x}\frac{\partial x}{\partial r}" /> kifejezésben „leegyszerűsíteni” <M t="\partial x" />-szel — <strong>TILOS</strong>, mert az összeg többi tagjától elválasztva értelmetlen!</li>
             <li>Másodrendű láncszabályban elfelejteni, hogy <M t="f_u(u, v)" /> is összetett függvény.</li>
             <li>Végeredményben benne hagyni vegyesen <M t="x, y" />-t és <M t="r, s" />-et, amikor a feladat tisztán <M t="(r, s)" />-ben kéri!</li>
@@ -459,6 +459,66 @@ export const S14_4: Page[] = [
             Az alsó határnál mínuszjel jön: <M t="-2x\sqrt{x^6 + x^2} + \int_{x^2}^{1}\frac{x}{\sqrt{t^3+x^2}}\,dt" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Láncszabály görbe mentén adott t₀ időpontban"
+          source="Analízis-labor"
+          problem={
+            <>
+              Adott <M t="w = x^2 y + y^3" />, ahol <M t="x(t) = \cos t" /> és <M t="y(t) = \sin t" />. Számítsuk ki{' '}
+              <M t="\dfrac{dw}{dt}" /> értékét <M t="t = 0" />-nál!
+            </>
+          }
+          steps={[
+            {
+              title: 'Parciális deriváltak',
+              body: (
+                <p>
+                  <M t="w_x = 2xy" />, <M t="w_y = x^2 + 3y^2" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Időderiváltak és t = 0 behelyettesítése',
+              body: (
+                <p>
+                  <M t="x'(t) = -\sin t" />, <M t="y'(t) = \cos t" />. <M t="t = 0" />-nál:{' '}
+                  <M t="x = 1,\; y = 0,\; x' = 0,\; y' = 1" />, így <M t="w_x = 0,\; w_y = 1" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Láncszabály alkalmazása',
+              body: (
+                <M block t="\left.\frac{dw}{dt}\right|_{t=0} = 0\cdot 0 + 1\cdot 1 = \mathbf{1}." />
+              ),
+            },
+          ]}
+        />
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="x^3 + y^3 - 3xy = 0" /> implicit görbe <M t="\dfrac{dy}{dx}" /> meredeksége az{' '}
+              <M t="F_x, F_y" /> parciális deriváltakkal?
+            </>
+          }
+          options={[
+            { label: <M t="-\dfrac{3x^2 - 3y}{3y^2 - 3x} = \dfrac{y - x^2}{y^2 - x}" />, ok: true },
+            { label: <M t="\dfrac{x^2 - y}{y^2 - x}" /> },
+            { label: <M t="-\dfrac{y^2 - x}{x^2 - y}" /> },
+            { label: <M t="\dfrac{3x^2}{3y^2}" /> },
+          ]}
+          explain={
+            <>
+              A 8. tétel szerint{' '}
+              <M t="\dfrac{dy}{dx} = -\dfrac{F_x}{F_y} = -\dfrac{3x^2 - 3y}{3y^2 - 3x} = \dfrac{y - x^2}{y^2 - x}" />.
+            </>
+          }
+        />
       </>
     ),
   },
