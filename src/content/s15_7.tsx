@@ -328,7 +328,7 @@ export const S15_7: Page[] = [
           }
         />
 
-        <Task n={13} q={<>Számítsd ki az <M t="\iint_R \cos\!\left(\frac{y-x}{y+x}\right)\,dA" /> integrált a <M t="1 \le x+y \le 2,\; x \ge 0,\; y \ge 0" /> trapézon!</>}>
+        <Task n={13} q={<>Számítsd ki az <M t="\iint_R \cos\!\left(\frac{y-x}{y+x}\right)\,dA" /> integrált az <M t="1 \le x+y \le 2,\; x \ge 0,\; y \ge 0" /> trapézon!</>}>
           <p>
             <M t="u = x+y \in [1, 2],\; v = y-x \in [-u, u],\; |J| = \frac{1}{2}" />:{' '}
             <M t="\frac{1}{2}\int_1^2 \int_{-u}^u \cos\!\big(\frac{v}{u}\big)\,dv\,du = \frac{1}{2}\int_1^2 2u\sin(1)\,du = \sin(1)\big[\frac{u^2}{2}\big]_1^2 = \frac{3}{2}\sin 1" />!
@@ -414,7 +414,7 @@ export const S15_7: Page[] = [
           </p>
         </Task>
 
-        <Task n={23} q={<>Számítsd ki a <M t="x^2/a^2 + y^2/b^2 + z^2/c^2 \le 1" /> homogén ellipszoid <M t="I_z" /> tehetetlenségi nyomatékát (<M t="M" /> tömeg) az <M t="x=au, y=bv, z=cw" /> helyettesítéssel!</>}>
+        <Task n={23} q={<>Számítsd ki az <M t="x^2/a^2 + y^2/b^2 + z^2/c^2 \le 1" /> homogén ellipszoid <M t="I_z" /> tehetetlenségi nyomatékát (<M t="M" /> tömeg) az <M t="x=au, y=bv, z=cw" /> helyettesítéssel!</>}>
           <p>
             <M t="I_z = \delta abc \iiint_{B_1} (a^2 u^2 + b^2 v^2)\,du\,dv\,dw" />. Szimmetriából{' '}
             <M t="\iiint_{B_1} u^2\,dV = \iiint_{B_1} v^2\,dV = \frac{1}{3}\iiint_{B_1} \rho^2\,dV = \frac{4\pi}{15}" />.
@@ -422,6 +422,23 @@ export const S15_7: Page[] = [
             visszakapjuk a gömb <M t="\frac{2}{5}MR^2" /> képletét!)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mi az <M t="x = 2u + v" />, <M t="y = u + 3v" /> transzformáció Jacobi-determinánsa?</>}
+          options={[
+            { label: <><M t="5" /></>, ok: true },
+            { label: <><M t="7" /></> },
+            { label: <><M t="6" /></> },
+            { label: <><M t="1" /></> },
+          ]}
+          explain={
+            <>
+              <M t="J(u, v) = \begin{vmatrix} 2 & 1 \\ 1 & 3 \end{vmatrix} = 2\cdot 3 - 1\cdot 1 = 5" />.
+            </>
+          }
+        />
       </>
     ),
   },

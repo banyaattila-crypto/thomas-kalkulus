@@ -404,7 +404,7 @@ export const S15_6: Page[] = [
 
         <h3>Nehéz feladatok</h3>
 
-        <Task n={21} q={<>Számítsd ki az <M t="\rho = 2a\cos\phi" /> gömbnek a <M t="\phi = \frac{\pi}{4}" /> kúpon belüli (<M t="0 \le \phi \le \frac{\pi}{4}" />) térfogatát!</>}>
+        <Task n={21} q={<>Számítsd ki a <M t="\rho = 2a\cos\phi" /> gömbnek a <M t="\phi = \frac{\pi}{4}" /> kúpon belüli (<M t="0 \le \phi \le \frac{\pi}{4}" />) térfogatát!</>}>
           <p>
             <M t="V = 2\pi \int_0^{\pi/4}\sin\phi \int_0^{2a\cos\phi} \rho^2\,d\rho\,d\phi = \frac{16\pi a^3}{3}\int_0^{\pi/4}\cos^3\phi\sin\phi\,d\phi = \frac{16\pi a^3}{3}\big[-\frac{\cos^4\phi}{4}\big]_0^{\pi/4} = \frac{4\pi a^3}{3}\big(1 - \frac{1}{4}\big) = \pi a^3" />!
           </p>
@@ -422,10 +422,28 @@ export const S15_6: Page[] = [
           <p>
             A 7. oldal integráljában csak <M t="\int_{R_1}^{R_2} \rho^4\,d\rho = \frac{R_2^5-R_1^5}{5}" /> változik, a
             tömeg pedig <M t="M = \frac{4\pi\delta}{3}(R_2^3 - R_1^3)" />. Elosztva megkapjuk a képletet!{' '}
-            <M t="R_1 \to R_2" />-nél L’Hospital-szabállyal:{' '}
+            <M t="R_1 \to R_2" />-nél L’Hôpital-szabállyal:{' '}
             <M t="\lim_{q\to 1}\frac{2}{5}\frac{1-q^5}{1-q^3} = \frac{2}{5}\cdot\frac{5}{3} = \frac{2}{3}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Miért szerepel <M t="\sin\phi" /> a gömbi <M t="dV = \rho^2\sin\phi\,d\rho\,d\phi\,d\theta" /> térfogatelemben?</>}
+          options={[
+            { label: <>Mert a vízszintes szélességi kör sugara <M t="r = \rho\sin\phi" />, így az ívelem <M t="\rho\sin\phi\,d\theta" /></>, ok: true },
+            { label: <>Mert <M t="z = \rho\sin\phi" /></> },
+            { label: <>Mert a <M t="\phi" /> szög <M t="0" />-tól <M t="2\pi" />-ig fut</> },
+            { label: 'Csak a déli féltekén szükséges' },
+          ]}
+          explain={
+            <>
+              A gömbi cella három merőleges élhossza <M t="d\rho" />, <M t="\rho\,d\phi" /> és <M t="\rho\sin\phi\,d\theta" />,
+              ezek szorzata <M t="\rho^2\sin\phi\,d\rho\,d\phi\,d\theta" />.
+            </>
+          }
+        />
       </>
     ),
   },

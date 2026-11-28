@@ -90,7 +90,7 @@ export const S15_3: Page[] = [
           </p>
         </Task>
 
-        <Task n={4} q={<>Számítsd ki az <M t="\iint_R y\,dA" /> integrált az első síknegyedbeli <M t="1 \le x^2 + y^2 \le 4" /> negyed-körgyűrűn!</>}>
+        <Task n={4} q={<>Számítsd ki az <M t="\iint_R y\,dA" /> integrált az első síknegyedbeli <M t="1 \le x^2 + y^2 \le 4" /> negyedkörgyűrűn!</>}>
           <p>
             <M t="0 \le \theta \le \frac{\pi}{2}, \; 1 \le r \le 2" />, <M t="y = r\sin\theta" />:
             <M block t="\int_0^{\pi/2} \int_1^2 (r\sin\theta)\,r\,dr\,d\theta = \left(\int_0^{\pi/2} \sin\theta\,d\theta\right)\left(\int_1^2 r^2\,dr\right) = 1 \cdot \frac{8 - 1}{3} = \frac{7}{3}." />
@@ -155,7 +155,7 @@ export const S15_3: Page[] = [
 
         <Task n={6} q={<>Írd át polárba és számítsd ki az <M t="\int_0^1 \int_x^{\sqrt{2-x^2}} (x + 2y)\,dy\,dx" /> integrált!</>}>
           <p>
-            A <M t="y = x" /> egyenes (<M t="\theta = \frac{\pi}{4}" />) és az <M t="y" />-tengely (<M t="\theta = \frac{\pi}{2}" />)
+            Az <M t="y = x" /> egyenes (<M t="\theta = \frac{\pi}{4}" />) és az <M t="y" />-tengely (<M t="\theta = \frac{\pi}{2}" />)
             közötti <M t="R = \sqrt{2}" /> sugarú körcikk! (<M t="x = 1" /> pontosan a metszéspont: <M t="1^2+1^2=2" />.)
             <M block t="\int_{\pi/4}^{\pi/2} \int_0^{\sqrt{2}} (r\cos\theta + 2r\sin\theta)\,r\,dr\,d\theta = \left[\frac{r^3}{3}\right]_0^{\sqrt{2}} \bigl[\sin\theta - 2\cos\theta\bigr]_{\pi/4}^{\pi/2} = \frac{2\sqrt{2}}{3}\left(1 + \frac{\sqrt{2}}{2}\right) = \frac{2\sqrt{2} + 2}{3}." />
           </p>
@@ -274,7 +274,7 @@ export const S15_3: Page[] = [
               body: (
                 <>
                   Mivel <M t="e^{-x^2} > 0" />, <M t="I > 0" />, így <M t="I = \sqrt{\pi}" />!
-                  (Ebből a fél-egyenesen: <M t="\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}" />.)
+                  (Ebből a félegyenesen: <M t="\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}" />.)
                 </>
               ),
             },

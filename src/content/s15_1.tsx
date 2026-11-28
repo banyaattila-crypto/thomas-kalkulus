@@ -29,7 +29,7 @@ export const S15_1: Page[] = [
         <Def title="Kettős integrál téglalapon">
           <p>
             Legyen <M t="f(x,y)" /> korlátos függvény az <M t="R = [a, b] \times [c, d]" /> zárt téglalapon. Bontsuk
-            <M t="R" />-et <M t="n" /> darab <M t="\Delta A_k = \Delta x_k \Delta y_k" /> területű rész-téglalapra,
+            <M t="R" />-et <M t="n" /> darab <M t="\Delta A_k = \Delta x_k \Delta y_k" /> területű résztéglalapra,
             és válasszunk minden cellában egy <M t="(x_k, y_k)" /> mintapontot! A Riemann-összeg:
           </p>
           <M block t="S_n = \sum_{k=1}^n f(x_k, y_k)\,\Delta A_k." />
@@ -48,7 +48,7 @@ export const S15_1: Page[] = [
 
         <Task n={1} q={<>Becsüld meg az <M t="f(x,y) = x + 2y" /> kettős integrálját az <M t="R = [0, 2] \times [0, 2]" /> négyzeten <M t="2 \times 2" />-es felosztással és középponti mintapontokkal!</>}>
           <p>
-            Minden rész-négyzet területe <M t="\Delta A = 1 \cdot 1 = 1" />. A négy középpont:
+            Minden résznégyzet területe <M t="\Delta A = 1 \cdot 1 = 1" />. A négy középpont:
             <M t="(0{,}5;\; 0{,}5)" />, <M t="(1{,}5;\; 0{,}5)" />, <M t="(0{,}5;\; 1{,}5)" />, <M t="(1{,}5;\; 1{,}5)" />.
             A függvényértékek rendre: <M t="1{,}5" />, <M t="2{,}5" />, <M t="3{,}5" />, <M t="4{,}5" />.
             Összegük: <M t="S_4 = (1{,}5 + 2{,}5 + 3{,}5 + 4{,}5)\cdot 1 = 12" />. (Mivel <M t="f" /> lineáris, ez pontosan megegyezik a valódi integrállal!)
@@ -128,7 +128,7 @@ export const S15_1: Page[] = [
 
         <Task n={3} q={<>Számítsd ki az <M t="\iint_R y\sin(xy)\,dA" /> integrált az <M t="R = [1, 2] \times [0, \pi]" /> téglalapon! Melyik sorrend sokkal könnyebb?</>}>
           <p>
-            Ha <strong>előbb <M t="x" /> szerint</strong> integrálunk (<M t="y" /> állandó!), a <M t="y\sin(xy)" />
+            Ha <strong>előbb <M t="x" /> szerint</strong> integrálunk (<M t="y" /> állandó!), az <M t="y\sin(xy)" />
             primitív függvénye azonnal <M t="-\cos(xy)" /> (nincs parciális integrálás!):
             <M block t="\int_0^\pi \int_1^2 y\sin(xy)\,dx\,dy = \int_0^\pi \bigl[-\cos(xy)\bigr]_{x=1}^{x=2}\,dy = \int_0^\pi (\cos y - \cos 2y)\,dy = \left[\sin y - \frac{\sin 2y}{2}\right]_0^\pi = 0." />
           </p>
@@ -251,7 +251,7 @@ export const S15_1: Page[] = [
               body: (
                 <>
                   <M t="0 \le x \le 1" /> és <M t="x \le y \le 1" /> — ez a <M t="(0,0), (0,1), (1,1)" /> csúcsú háromszög
-                  (az <M t="y = x" /> átló feletti fél-négyzet!).
+                  (az <M t="y = x" /> átló feletti félnégyzet!).
                 </>
               ),
             },
@@ -418,7 +418,7 @@ export const S15_1: Page[] = [
           <ol>
             <li><strong>Változó a külső határokban:</strong> Ha a külső integrál határában <M t="x" /> vagy <M t="y" /> szerepel, biztosan rossz a felírás — a végeredménynek számnak kell lennie!</li>
             <li><strong>Vak sorrendcsere rajz nélkül:</strong> Nem cserélheted fel egyszerűen a két integráljelet, ha a határok változók! Mindig rajzold fel előbb a 2D tartományt!</li>
-            <li><strong>Szorzat-szétválasztás nem-téglalapon:</strong> A <M t="\iint g(x)h(y)\,dA = (\int g)(\int h)" /> szabály <em>kizárólag</em> téglalapon igaz (háromszögön vagy körlapon TILOS!).</li>
+            <li><strong>Szorzat-szétválasztás nem téglalapon:</strong> A <M t="\iint g(x)h(y)\,dA = (\int g)(\int h)" /> szabály <em>kizárólag</em> téglalapon igaz (háromszögön vagy körlapon TILOS!).</li>
             <li><strong>Rossz változó szerinti behelyettesítés:</strong> A belső <M t="\int f\,dy" /> integrálnál a határokat <M t="y" /> helyére írd be, ne <M t="x" /> helyére (érdemes kiírni: <M t="y=x^2" />-től <M t="y=x" />-ig)!</li>
             <li><strong>Felcserélt alsó és felső görbe:</strong> <M t="0 \le x \le 1" /> esetén <M t="x^2 \le x" /> (nem fordítva!), mert pl. <M t="0{,}5^2 = 0{,}25 < 0{,}5" />!</li>
           </ol>
@@ -496,6 +496,23 @@ export const S15_1: Page[] = [
             <strong>Miért?</strong> Mert a függvény az origóban <M t="(0,0)" /> nem korlátos és nem abszolút integrálható (<M t="\iint |f|\,dA = +\infty" />), így Fubini tétele feltételei nem teljesülnek!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Ha <M t="f(x, y) = 1" /> mindenütt egy korlátos, zárt <M t="T" /> síktartományon, mit ad meg az <M t="\iint_T 1\,dA" /> kettős integrál?</>}
+          options={[
+            { label: <>A <M t="T" /> síktartomány területét</>, ok: true },
+            { label: <>A <M t="T" /> tartomány kerületét</> },
+            { label: <>Mindig <M t="1" />-et</> },
+            { label: 'A tartomány súlypontját' },
+          ]}
+          explain={
+            <>
+              Egy egységnyi magasságú hasáb térfogata számértékileg pontosan az alapterületével egyenlő.
+            </>
+          }
+        />
       </>
     ),
   },

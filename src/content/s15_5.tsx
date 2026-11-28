@@ -188,7 +188,7 @@ export const S15_5: Page[] = [
             { label: '∭ (x² + z²) δ dV (mert az y-tengelytől való távolság négyzete x² + z²!)', ok: true },
             { label: '∭ (x² + y² + z²) δ dV' },
           ]}
-          explain={<>Az y-tengelyen lévő legközelebbi pont (0, y, 0), ennek távolság-négyzete (x, y, z)-től pontosan x² + z²!</>}
+          explain={<>Az y-tengelyen lévő legközelebbi pont (0, y, 0), ennek távolságnégyzete (x, y, z)-től pontosan x² + z²!</>}
         />
 
         <Task n={7} q={<>Számítsd ki egy <M t="[-a/2, a/2] \times [-b/2, b/2] \times [-c/2, c/2]" /> homogén téglatest (<M t="M = \delta abc" />) <M t="I_x" /> tehetetlenségi nyomatékát! (Thomas 2. példa)</>}>

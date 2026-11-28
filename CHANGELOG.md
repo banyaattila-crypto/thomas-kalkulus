@@ -4,6 +4,20 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.14.0] - 2026-11-28
+
+### Hozzáadva — 15. fejezet Analízis-labor integráció és tartalmi revízió (`15.1`–`15.7`)
+- **15.1–15.7 szakaszok (`s15_1.tsx`–`s15_7.tsx`)**: beépítve az Analízis-labor 5 nem duplikált `<Quiz />` gyorstesztje (`15.1`, `15.2`, `15.4`, `15.6`, `15.7`), egységes `Analízis-labor` forrás-jelvénnyel és magyar jelölésre igazítva. Mind a 7 példa (`15.1` 9. feladat, `15.2` 3. oldal, `15.3` 6. oldal, `15.4` 3. feladat, `15.5` 7. feladat, `15.6` 5. oldal és 9. feladat, `15.7` 7. feladat) és 2 kvíz (`15.3` 15. feladat, `15.5` 4. oldal) duplikátumként kiszűrve.
+
+### Javítva
+- **`15.1`**: négy helyesírási hiba (`rész-téglalapra` → `résztéglalapra`, `rész-négyzet` → `résznégyzet`, `fél-négyzet` → `félnégyzet`, `nem-téglalapon` → `nem téglalapon`) és névelőhiba (`a y\sin(xy)` → `az y\sin(xy)`) javítva.
+- **`15.2`**: magyar névelőhiba javítva (`A M_y` → `Az M_y`).
+- **`15.3`**: két helyesírási hiba (`negyed-körgyűrűn` → `negyedkörgyűrűn`, `fél-egyenesen` → `félegyenesen`) és névelőhiba (`A y = x` → `Az y = x`) javítva.
+- **`15.4`**: magyar névelőhiba javítva (`a yz-négyzet` → `az yz-négyzet`).
+- **`15.5`**: helyesírási hiba javítva (`távolság-négyzete` → `távolságnégyzete`).
+- **`15.6`**: magyar névelőhiba (`az \rho = 2a\cos\phi` → `a \rho = 2a\cos\phi`) és névírási egységesítés (`L’Hospital-szabállyal` → `L’Hôpital-szabállyal`).
+- **`15.7`**: két magyar névelőhiba javítva (`a 1 \le x+y \le 2...` → `az 1 \le x+y \le 2...`, `a x^2/a^2...` → `az x^2/a^2...`).
+
 ## [3.13.0] - 2026-11-28
 
 ### Hozzáadva — 14. fejezet Analízis-labor integráció és tartalmi revízió (`14.1`–`14.10`)

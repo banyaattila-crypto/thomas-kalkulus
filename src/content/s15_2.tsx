@@ -384,7 +384,7 @@ export const S15_2: Page[] = [
           <ol>
             <li><strong>Felcserélt <M t="M_x" /> és <M t="M_y" />:</strong> <M t="M_x" />-ben <strong><M t="y" /></strong> áll (az <M t="x" />-tengelytől való távolság!), <M t="M_y" />-ban <strong><M t="x" /></strong> áll — ezért <M t="\bar{x} = M_y / M" /> és <M t="\bar{y} = M_x / M" />!</li>
             <li><strong>Felcserélt <M t="I_x" /> és <M t="I_y" />:</strong> Ugyanez a szabály: <M t="I_x = \iint y^2\delta\,dA" />, <M t="I_y = \iint x^2\delta\,dA" />!</li>
-            <li><strong>Elfelejtett osztás <M t="M" />-mel:</strong> A <M t="M_y" /> még nyomaték, nem koordináta — a tömegközéppontnál <em>mindig</em> ossz el <M t="M" />-mel, és ellenőrizd, hogy <M t="(\bar{x}, \bar{y})" /> a tartományon belül van-e (konvex tartománynál mindig belül kell lennie)!</li>
+            <li><strong>Elfelejtett osztás <M t="M" />-mel:</strong> Az <M t="M_y" /> még nyomaték, nem koordináta — a tömegközéppontnál <em>mindig</em> ossz el <M t="M" />-mel, és ellenőrizd, hogy <M t="(\bar{x}, \bar{y})" /> a tartományon belül van-e (konvex tartománynál mindig belül kell lennie)!</li>
             <li><strong>Szimmetria csak a tartományra:</strong> Ha <M t="R" /> szimmetrikus az <M t="y" />-tengelyre, de a sűrűség <M t="\delta(x,y) = 2 + x" /> <em>nem</em> szimmetrikus, akkor <M t="\bar{x} \ne 0" />!</li>
             <li><strong><M t="\delta = 1" /> elfelejtése homogén feladatnál:</strong> Ha a feladat „állandó sűrűségű” vagy „homogén” lemezt mond és nem ad meg számot, választhatsz <M t="\delta = 1" />-et a súlyponthoz (de az <M t="I_x" />-hez tartsd meg <M t="\delta" />-t vagy fejezd ki <M t="M" />-mel!).</li>
           </ol>
@@ -464,6 +464,24 @@ export const S15_2: Page[] = [
             amelynek egyértelmű globális minimuma <M t="(x_0, y_0) = (\bar{x}, \bar{y})" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Mi a kapcsolat egy síklemez origóra vonatkozó <M t="I_0" /> poláris tehetetlenségi nyomatéka és az <M t="I_x, I_y" /> nyomatékok között?</>}
+          options={[
+            { label: <><M t="I_0 = I_x + I_y" /></>, ok: true },
+            { label: <><M t="I_0 = \sqrt{I_x^2 + I_y^2}" /></> },
+            { label: <><M t="I_0 = I_x \cdot I_y" /></> },
+            { label: <><M t="I_0 = |I_x - I_y|" /></> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="r^2 = x^2 + y^2" />, az integrál linearitása miatt{' '}
+              <M t="\iint_R (x^2 + y^2)\delta\,dA = I_y + I_x = I_x + I_y" />.
+            </>
+          }
+        />
       </>
     ),
   },

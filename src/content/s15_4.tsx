@@ -413,7 +413,7 @@ export const S15_4: Page[] = [
             Az egyenlőtlenségek: <M t="0 \le x \le 1" />, <M t="0 \le z \le 1 - x^2 \implies x \le \sqrt{1-z}" />,
             <M t="0 \le y \le 1 - x \implies x \le 1 - y" />.
             Tehát <M t="x \le \min\bigl(\sqrt{1-z}, \; 1 - y\bigr)" />! A két felső határ egyenlő, ha <M t="1 - z = (1-y)^2 \iff z = 2y - y^2" />.
-            Ezért <M t="dx\,dy\,dz" /> sorrendben két részre bomlik a <M t="yz" />-négyzet (<M t="[0,1]^2" />):
+            Ezért <M t="dx\,dy\,dz" /> sorrendben két részre bomlik az <M t="yz" />-négyzet (<M t="[0,1]^2" />):
             <M block t="\int_0^1 \int_0^{1-\sqrt{1-z}} \int_0^{\sqrt{1-z}} F\,dx\,dy\,dz + \int_0^1 \int_{1-\sqrt{1-z}}^1 \int_0^{1-y} F\,dx\,dy\,dz." />
           </p>
         </Task>
@@ -426,6 +426,23 @@ export const S15_4: Page[] = [
             Ha az éleket <M t="a, b, c" /> arányban nyújtjuk, minden koordinátánál kiemelkedik egy-egy <M t="a, b, c" /> tényező, így <M t="V = \frac{abc}{6}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={<>Hány különböző integrálási sorrendben írható fel egy derékszögű hármas integrál?</>}
+          options={[
+            { label: <><M t="6" /> (<M t="3! = 6" />)</>, ok: true },
+            { label: <><M t="3" /></> },
+            { label: <><M t="2" /></> },
+            { label: <><M t="8" /></> },
+          ]}
+          explain={
+            <>
+              A <M t="dx, dy, dz" /> differenciálok <M t="3! = 6" /> féle permutációba rendezhetők.
+            </>
+          }
+        />
       </>
     ),
   },
