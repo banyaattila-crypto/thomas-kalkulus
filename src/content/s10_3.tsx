@@ -20,7 +20,7 @@ export const S10_3: Page[] = [
       <>
         <Story>
           <p>
-            Az 10.1-es szakaszban csak olyan kúpszeleteket vizsgáltunk, amelyek tengelyei párhuzamosak voltak az{' '}
+            A 10.1-es szakaszban csak olyan kúpszeleteket vizsgáltunk, amelyek tengelyei párhuzamosak voltak az{' '}
             <M t="x" />- és <M t="y" />-tengelyekkel. A természetben azonban egy bolygópálya vagy egy tükör tengelye
             ritkán igazodik a mi koordinátahálónkhoz! Ha egy kúpszelet „ferdén áll”, akkor az egyenletében megjelenik
             egy <strong>vegyes <M t="Bxy" /> tag</strong>.
@@ -620,6 +620,27 @@ export const S10_3: Page[] = [
             egyenlet <M t="(2x + y + 1)(x + y + 2) = 0" />, két metsző egyenes.)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen görbetípusú az <M t="x^2 + 5xy + 2y^2 - 7 = 0" /> egyenlet a diszkrimináns alapján?
+            </>
+          }
+          options={[
+            { label: 'Hiperbola', ok: true },
+            { label: 'Ellipszis' },
+            { label: 'Parabola' },
+            { label: 'Kör' },
+          ]}
+          explain={
+            <>
+              <M t="B^2 - 4AC = 5^2 - 4\cdot 1\cdot 2 = 25 - 8 = 17 > 0" />, tehát <strong>hiperbola</strong>.
+            </>
+          }
+        />
       </>
     ),
   },

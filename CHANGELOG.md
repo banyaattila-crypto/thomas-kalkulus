@@ -4,6 +4,20 @@ A verziószámozás a [Szemantikus Verziózás 2.0.0](https://semver.org/lang/hu
 Amíg a három kötet nincs végigvíve, a MAJOR 0. A tartalmi modulok és új funkciók MINOR, a hibajavítások PATCH emelést adnak.
 Az 1.0.0 az I. kötet teljes anyagával jelenik meg.
 
+## [3.9.0] - 2026-11-28
+
+### Hozzáadva — 10. fejezet Analízis-labor integráció és tartalmi revízió (`10.1`–`10.8`, III. kötet nyitása)
+- **10.1–10.8 szakaszok (`s10_1.tsx`–`s10_8.tsx`)**: beépítve az Analízis-labor 1 nem duplikált `<Steps />` példája (`10.1`) és 5 nem duplikált `<Quiz />` gyorstesztje (`10.2`, `10.3`, `10.4`, `10.7`, `10.8`), egységes `Analízis-labor` forrás-jelvénnyel és magyar tizedesvesszőre/jelölésre igazítva. A meglévő anyaggal egyező vagy közel egyező 7 példa (`10.2`–`10.8`) és 3 kvíz (`10.1`, `10.5` 7. feladat, `10.6` 14. feladat) duplikátumként kiszűrve.
+
+### Javítva
+- **`10.2`**: két magyar névelőhiba javítva (`Az 10.1-es` → `A 10.1-es`, `a y^2 = ...` → `az y^2 = ...`).
+- **`10.3`**: magyar névelőhiba javítva (`Az 10.1-es` → `A 10.1-es`).
+- **`10.4`**: két magyar névelőhiba és kötőjel javítva (`Az \cos^2 t` → `A \cos^2 t`, `a y tengely` → `az y-tengely`).
+- **`10.5`**: négy magyar névelőhiba javítva (`a r < 0` → `az r < 0`, `a y^2 = 4x` → `az y^2 = 4x`, `a r = 2\cos\theta...` → `az r = 2\cos\theta...`, `a r^2\cos(2\theta)...` → `az r^2\cos(2\theta)...`).
+- **`10.6`**: helyesírási hiba javítva (`gyors-áttekintése` → `gyors áttekintése`).
+- **`10.7`**: magyar névelőhiba (`a \alpha \le \theta \le \beta` → `az \alpha \le \theta \le \beta`) és helyesírási hiba (`szektor-összeg` → `szektorösszeg`) javítva.
+- **`10.8`**: két helyesírási hiba (`aphélium` → `afélium`, `fél-paraméter` → `félparaméter`) és két magyar névelőhiba (`a 1 + e\cos\theta` → `az 1 + e\cos\theta`, `a 1 - e\cos\theta` → `az 1 - e\cos\theta`) javítva.
+
 ## [3.8.0] - 2026-11-28
 
 ### Hozzáadva — 9. fejezet Analízis-labor integráció és tartalmi revízió (`9.1`–`9.5`, II. kötet teljes!)

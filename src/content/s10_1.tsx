@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Steps, Story, Task, Warn } from '../components/ui';
 import {
   ConicIdentifierDiagram,
   ConicSlicesDiagram,
@@ -467,6 +467,41 @@ export const S10_1: Page[] = [
             A hajó a <M t="\mathbf{\dfrac{x^2}{900} - \dfrac{y^2}{1600} = 1}" /> hiperbola <strong>jobb oldali (<M t="x > 0" />) ágán</strong> van!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda</h3>
+        <Steps
+          title="Hiperbola normálalakja, fókuszai és aszimptotái"
+          source="Analízis-labor"
+          problem={
+            <>
+              Határozzuk meg a <M t="9x^2 - 16y^2 = 144" /> hiperbola tengelypontjait, fókuszait és aszimptotáit!
+            </>
+          }
+          steps={[
+            {
+              title: 'Normálalakra hozás',
+              body: (
+                <M block t="\frac{x^2}{16} - \frac{y^2}{9} = 1." />
+              ),
+            },
+            {
+              title: 'Féltengelyek és csúcspontok',
+              body: (
+                <p>
+                  Innen <M t="a = 4" />, <M t="b = 3" />, tehát a tengelypontok (csúcsok) <M t="(\pm 4;\,0)" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Fókuszok és aszimptoták',
+              body: (
+                <p>
+                  <M t="c = \sqrt{a^2 + b^2} = \sqrt{16 + 9} = 5" />, így a fókuszok <M t="(\pm 5;\,0)" />, az aszimptoták egyenletei pedig <M t="y = \pm\dfrac{b}{a}x = \mathbf{\pm\dfrac{3}{4}x}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
       </>
     ),
   },

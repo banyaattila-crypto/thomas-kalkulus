@@ -328,8 +328,8 @@ export const S10_8: Page[] = [
           <M block t="r = \frac{a(1 - e^2)}{1 + e\cos\theta}." />
           <ul>
             <li>Napközel (perihélium, <M t="\theta = 0" />): <M t="r_{\min} = \dfrac{a(1 - e^2)}{1 + e} = a(1 - e)" />.</li>
-            <li>Naptávol (aphélium, <M t="\theta = \pi" />): <M t="r_{\max} = \dfrac{a(1 - e^2)}{1 - e} = a(1 + e)" />.</li>
-            <li>A fókuszban mért fél-paraméter (<M t="\theta = \tfrac{\pi}{2}" />): <M t="p = a(1 - e^2) = \dfrac{b^2}{a}" />.</li>
+            <li>Naptávol (afélium, <M t="\theta = \pi" />): <M t="r_{\max} = \dfrac{a(1 - e^2)}{1 - e} = a(1 + e)" />.</li>
+            <li>A fókuszban mért félparaméter (<M t="\theta = \tfrac{\pi}{2}" />): <M t="p = a(1 - e^2) = \dfrac{b^2}{a}" />.</li>
           </ul>
         </Def>
 
@@ -406,8 +406,8 @@ export const S10_8: Page[] = [
           így a tengely hossza <M t="2a = 6 - 2 = 4" />, nem <M t="6 + 2 = 8" />!
         </Warn>
         <Warn>
-          <strong>4. A vezéregyenes oldalának felcserélése:</strong> a <M t="1 + e\cos\theta" /> nevezőhöz a{' '}
-          <em>pozitív</em> <M t="x = +k" /> direktrix tartozik (és a görbe „hasasabb” része balra nyúlik); a{' '}
+          <strong>4. A vezéregyenes oldalának felcserélése:</strong> az <M t="1 + e\cos\theta" /> nevezőhöz a{' '}
+          <em>pozitív</em> <M t="x = +k" /> direktrix tartozik (és a görbe „hasasabb” része balra nyúlik); az{' '}
           <M t="1 - e\cos\theta" /> nevezőhöz a negatív <M t="x = -k" />!
         </Warn>
 
@@ -548,6 +548,27 @@ export const S10_8: Page[] = [
             konfokális parabola pontosan <strong>derékszögben</strong> metszi egymást!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="r = \dfrac{8}{2 - 2\sin\theta}" /> görbe excentricitása és típusa?
+            </>
+          }
+          options={[
+            { label: <><M t="e = 1" />, parabola</>, ok: true },
+            { label: <><M t="e = 2" />, hiperbola</> },
+            { label: <><M t="e = 0{,}5" />, ellipszis</> },
+            { label: <><M t="e = 4" />, hiperbola</> },
+          ]}
+          explain={
+            <>
+              Kettővel osztva <M t="r = \dfrac{4}{1 - 1\cdot\sin\theta}" />, tehát <M t="e = 1" /> (<strong>parabola</strong>).
+            </>
+          }
+        />
       </>
     ),
   },

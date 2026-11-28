@@ -36,7 +36,7 @@ export const S10_4: Page[] = [
           </p>
           <M block t="x = h + a\cos t, \qquad y = k + b\sin t, \qquad 0 \le t \le 2\pi." />
           <p>
-            Az <M t="\cos^2 t + \sin^2 t = 1" /> azonosság azonnal visszaadja a Descartes-egyenletet. Ha{' '}
+            A <M t="\cos^2 t + \sin^2 t = 1" /> azonosság azonnal visszaadja a Descartes-egyenletet. Ha{' '}
             <M t="y = k - b\sin t" />-t írunk (vagy felcseréljük <M t="\cos t" />-t és <M t="\sin t" />-t), az ellipszist
             az óramutató járásával megegyező irányban járjuk be.
           </p>
@@ -340,7 +340,7 @@ export const S10_4: Page[] = [
     body: (
       <>
         <p>
-          Ha fejjel lefelé fordítjuk a cikloist (a <M t="y" /> tengely mutasson lefelé), a matematika és a fizika
+          Ha fejjel lefelé fordítjuk a cikloist (az <M t="y" />-tengely mutasson lefelé), a matematika és a fizika
           történetének két leghíresebb csodájával találkozunk.
         </p>
 
@@ -595,6 +595,27 @@ export const S10_4: Page[] = [
             <M block t="V = \pi a^3(2\pi + 3\pi) = 5\pi^2 a^3." />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi a felfordított ciklois <strong>tautochron</strong> tulajdonságának lényege?
+            </>
+          }
+          options={[
+            { label: 'Bármely magasságból indítva súrlódásmentesen, a golyó pontosan ugyanannyi idő alatt ér a legmélyebb pontra', ok: true },
+            { label: 'A ciklois ívhossza egyenlő a kerék kerületével' },
+            { label: 'Az érintő minden pontban vízszintes' },
+            { label: 'A sebesség állandó marad a lecsúszás során' },
+          ]}
+          explain={
+            <>
+              Huygens 1673-ban ezt használta ki: a cikloisív mentén lengő inga periódusideje független az amplitúdótól.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -372,7 +372,7 @@ export const S10_6: Page[] = [
       <>
         <PolarCurveGalleryDiagram />
 
-        <h3>Polárgörbék gyors-áttekintése</h3>
+        <h3>Polárgörbék gyors áttekintése</h3>
         <table className="tbl">
           <thead>
             <tr><th>Görbecsalád</th><th>Egyenlet</th><th>Kulcsjellemző</th></tr>

@@ -28,7 +28,7 @@ export const S10_7: Page[] = [
 
         <Def title="Poláris tartomány területe">
           <p>
-            Ha <M t="r = f(\theta)" /> folytonos és nem vált előjelet (vagy egyszer járja be a tartományt) a{' '}
+            Ha <M t="r = f(\theta)" /> folytonos és nem vált előjelet (vagy egyszer járja be a tartományt) az{' '}
             <M t="\alpha \le \theta \le \beta" /> (<M t="0 < \beta - \alpha \le 2\pi" />) intervallumon, akkor a
             pólus, a <M t="\theta = \alpha" /> és <M t="\theta = \beta" /> félegyenesek, valamint a görbe által
             határolt tartomány területe:
@@ -548,9 +548,31 @@ export const S10_7: Page[] = [
             <M t="r' = -k e^{-k\theta}" />, így <M t="\sqrt{r^2 + (r')^2} = \sqrt{1+k^2}\,e^{-k\theta}" />. Az
             improprius integrál konvergens:
             <M block t="L = \int_0^\infty \sqrt{1+k^2}\,e^{-k\theta}\,d\theta = \frac{\sqrt{1+k^2}}{k} < \infty!" />
-            (A teljes kisöpört szektor-összeg is véges: <M t="\tfrac{1}{2}\int_0^\infty e^{-2k\theta}\,d\theta = \tfrac{1}{4k}" />!)
+            (A teljes kisöpört szektorösszeg is véges: <M t="\tfrac{1}{2}\int_0^\infty e^{-2k\theta}\,d\theta = \tfrac{1}{4k}" />!)
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Miért szerepel <M t="r^2" /> (és nem <M t="r" />) a poláris területképletben?
+            </>
+          }
+          options={[
+            { label: <>Mert az elemi körcikk területe <M t="\frac{1}{2}r^2\,d\theta" /></>, ok: true },
+            { label: <>Mert <M t="r" /> negatív is lehet</> },
+            { label: <>Mert az <M t="x^2 + y^2" /> összegből származik</> },
+            { label: 'Csak kör esetén igaz' },
+          ]}
+          explain={
+            <>
+              Egy <M t="r" /> sugarú kör teljes területe <M t="\pi r^2" />, így a <M t="d\theta/(2\pi)" /> részének
+              területe <M t="\frac{1}{2}r^2\,d\theta" />.
+            </>
+          }
+        />
       </>
     ),
   },

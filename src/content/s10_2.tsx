@@ -20,7 +20,7 @@ export const S10_2: Page[] = [
       <>
         <Story>
           <p>
-            Az 10.1-es szakaszban három külön definíciót tanultunk: a parabolát egy fókuszpont és egy vezéregyenes, az
+            A 10.1-es szakaszban három külön definíciót tanultunk: a parabolát egy fókuszpont és egy vezéregyenes, az
             ellipszist a fókusztávolságok összege, a hiperbolát pedig a fókusztávolságok különbsége határozta meg.
             Meglepő módon azonban mindhárom alakzat leírható egyetlen közös tulajdonsággal és egyetlen nemnegatív
             számmal — az <strong>excentricitással</strong> (<M t="e" />). Ez a szám nemcsak a kúpszelet típusát árulja
@@ -261,7 +261,7 @@ export const S10_2: Page[] = [
         </Def>
 
         <p>
-          <em>Miért igaz ez?</em> Számoljuk ki <M t="PF_2^2" />-et a <M t="y^2 = b^2\left(1 - \frac{x^2}{a^2}\right)" />{' '}
+          <em>Miért igaz ez?</em> Számoljuk ki <M t="PF_2^2" />-et az <M t="y^2 = b^2\left(1 - \frac{x^2}{a^2}\right)" />{' '}
           helyettesítéssel (<M t="b^2 = a^2 - c^2 = a^2(1 - e^2)" />):
         </p>
         <M block t="PF_2^2 = (x - c)^2 + y^2 = x^2 - 2aex + a^2e^2 + a^2(1-e^2)\left(1 - \frac{x^2}{a^2}\right) = e^2 x^2 - 2aex + a^2 = (a - ex)^2." />
@@ -684,6 +684,27 @@ export const S10_2: Page[] = [
             <M block t="\sin\left(\frac{\varphi}{2}\right) = \frac{OF_2}{BF_2} = \frac{c}{a} = e." />
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Milyen típusú kúpszeletet ad a <M t="PF = 1{,}4 \cdot PD" /> fókusz–direktrix egyenlet?
+            </>
+          }
+          options={[
+            { label: 'Hiperbolát', ok: true },
+            { label: 'Ellipszist' },
+            { label: 'Parabolát' },
+            { label: 'Kört' },
+          ]}
+          explain={
+            <>
+              Mivel <M t="e = 1{,}4 > 1" />, a pontok mértani helye <strong>hiperbola</strong>.
+            </>
+          }
+        />
       </>
     ),
   },

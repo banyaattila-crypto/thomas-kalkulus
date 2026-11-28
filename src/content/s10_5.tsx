@@ -168,7 +168,7 @@ export const S10_5: Page[] = [
         <Task n={6} q={<>Mi a különbség a <M t="\theta = \tfrac{\pi}{6},\ r \ge 0" /> és a <M t="\theta = \tfrac{\pi}{6}" /> (megkötés nélkül) halmaz között?</>}>
           <p>
             Az első csak a pólusból kiinduló, <M t="30^\circ" />-os <strong>félegyenes</strong> az I. negyedben; a
-            második a <M t="r < 0" /> pontokkal kiegészített teljes <strong>egyenes</strong> (I. és III. negyed)!
+            második az <M t="r < 0" /> pontokkal kiegészített teljes <strong>egyenes</strong> (I. és III. negyed)!
           </p>
         </Task>
       </>
@@ -477,7 +477,7 @@ export const S10_5: Page[] = [
           </p>
         </Task>
 
-        <Task n={19} q={<>Írd át poláralakba a <M t="y^2 = 4x" /> parabolát, és fejezd ki belőle <M t="r" />-et (ha <M t="\sin\theta \neq 0" />)!</>}>
+        <Task n={19} q={<>Írd át poláralakba az <M t="y^2 = 4x" /> parabolát, és fejezd ki belőle <M t="r" />-et (ha <M t="\sin\theta \neq 0" />)!</>}>
           <p>
             <M t="r^2\sin^2\theta = 4r\cos\theta \Longrightarrow r = \dfrac{4\cos\theta}{\sin^2\theta} = 4\cot\theta\csc\theta" />{' '}
             (a <M t="\theta = \tfrac{\pi}{2}" /> helyen <M t="r = 0" />, tehát az origó is rajta van).
@@ -498,7 +498,7 @@ export const S10_5: Page[] = [
           n={21}
           q={
             <>
-              Alakítsd át Descartes-egyenletté a <M t="r = 2\cos\theta + 2\sqrt{3}\,\sin\theta" /> görbét, és add meg a
+              Alakítsd át Descartes-egyenletté az <M t="r = 2\cos\theta + 2\sqrt{3}\,\sin\theta" /> görbét, és add meg a
               középpontjának <em>polárkoordinátáit</em>!
             </>
           }
@@ -533,7 +533,7 @@ export const S10_5: Page[] = [
           n={23}
           q={
             <>
-              Azonosítsd a <M t="r^2\cos(2\theta) + 2r\cos\theta = 0" /> poláregyenletet, és vizsgáld meg, mi történik,
+              Azonosítsd az <M t="r^2\cos(2\theta) + 2r\cos\theta = 0" /> poláregyenletet, és vizsgáld meg, mi történik,
               ha elosztjuk <M t="r" />-rel!
             </>
           }
