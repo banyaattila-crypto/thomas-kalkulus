@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   AutonomousVsNonDiagram,
   CoolingPhaseWidget,
@@ -346,7 +346,7 @@ export const S9_4: Page[] = [
         </Warn>
         <Warn>
           <p>
-            <strong>4. A <M t="g'(y_0)" /> gyors-teszt félreértése:</strong> ha <M t="g'(y_0) < 0" /> ⇒ stabil;{' '}
+            <strong>4. A <M t="g'(y_0)" /> gyorsteszt félreértése:</strong> ha <M t="g'(y_0) < 0" /> ⇒ stabil;{' '}
             <M t="g'(y_0) > 0" /> ⇒ instabil; de ha <M t="g'(y_0) = 0" />, akkor előjelvizsgálat kell (lehet félig stabil is)!
           </p>
         </Warn>
@@ -473,6 +473,62 @@ export const S9_4: Page[] = [
             legegyszerűbb ilyen parabola az <M t="\mathbf{y' = (y - 1)(y - 3)}" />!
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Teljes fázisegyenes- és inflexió-elemzés"
+          source="Analízis-labor"
+          problem={
+            <>
+              Elemezzük az <M t="y' = y(3 - y)" /> autonóm egyenlet egyensúlyi pontjait és inflexiós szintjét!
+            </>
+          }
+          steps={[
+            {
+              title: 'Egyensúlyi értékek',
+              body: (
+                <p>
+                  <M t="y(3 - y) = 0 \implies y = 0" /> és <M t="y = 3" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Előjelek és stabilitás',
+              body: (
+                <p>
+                  <M t="y < 0" />-ra <M t="y' < 0" />; <M t="0 < y < 3" />-ra <M t="y' > 0" />; <M t="y > 3" />-ra <M t="y' < 0" />. Tehát <M t="y = 0" /> <strong>instabil</strong>, <M t="y = 3" /> pedig <strong>stabil</strong> egyensúly.
+                </p>
+              ),
+            },
+            {
+              title: 'Inflexiós szint meghatározása',
+              body: (
+                <p>
+                  <M t="y'' = (3 - 2y)y' = 0" />, így a nem egyensúlyi inflexiós szint <M t="\mathbf{y = 1{,}5}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              A logisztikus <M t="P' = rP\left(1 - \dfrac{P}{K}\right)" /> modellben melyik populációméretnél a legnagyobb a növekedési sebesség?
+            </>
+          }
+          options={[
+            { label: <M t="P = K/2" />, ok: true },
+            { label: <M t="P = K" /> },
+            { label: <M t="P = 0" /> },
+            { label: <M t="P = 2K" /> },
+          ]}
+          explain={
+            <>
+              A <M t="g(P) = rP(1 - P/K)" /> parabola a két gyök (<M t="0" /> és <M t="K" />) felezőpontjában, <M t="P = K/2" />-nél maximális.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   EquilibriumAndBlowupWidget,
   IsoclinePatternDiagram,
@@ -48,7 +48,7 @@ export const S9_1: Page[] = [
         <p>
           <strong>Thomas 1. és 2. példa (megoldás ellenőrzése):</strong> Egy jelölt függvény ellenőrzéséhez{' '}
           <em>nem</em> kell megoldani az egyenletet — elég kiszámítani <M t="y'" />-t, és behelyettesíteni mindkét
-          oldalba! A <M t="y = (x+1) - \frac{1}{3}e^x" /> függvényre <M t="y' = 1 - \frac{1}{3}e^x" />, és{' '}
+          oldalba! Az <M t="y = (x+1) - \frac{1}{3}e^x" /> függvényre <M t="y' = 1 - \frac{1}{3}e^x" />, és{' '}
           <M t="y - x = (x+1) - \frac{1}{3}e^x - x = 1 - \frac{1}{3}e^x" />, továbbá{' '}
           <M t="y(0) = 1 - \frac{1}{3} = \frac{2}{3}" /> ✓.
         </p>
@@ -348,7 +348,7 @@ export const S9_1: Page[] = [
         </Task>
         <Task
           n={14}
-          q={<>Ha a tartály sugara kétszer akkora lenne (<M t="r = 3\text{ m}" />), ugyanazzal a leeresztő nyílással hány-szorosára nőne a kiürülési idő?</>}
+          q={<>Ha a tartály sugara kétszer akkora lenne (<M t="r = 3\text{ m}" />), ugyanazzal a leeresztő nyílással hányszorosára nőne a kiürülési idő?</>}
         >
           <p>
             A keresztmetszet <M t="\pi r^2" /> a <strong>4-szeresére</strong> nő, így az ürülési idő is pontosan{' '}
@@ -487,6 +487,62 @@ export const S9_1: Page[] = [
             (Azért nem egyértelmű, mert <M t="\frac{\partial}{\partial y}\sqrt{y} = \frac{1}{2\sqrt{y}}" /> nem folytonos <M t="y=0" />-nál.)
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Szeparábilis kezdetiérték-probléma megoldása"
+          source="Analízis-labor"
+          problem={
+            <>
+              Oldjuk meg a <M t="\dfrac{dy}{dx} = 2xy^2" />, <M t="y(0) = -1" /> kezdetiérték-problémát!
+            </>
+          }
+          steps={[
+            {
+              title: 'Változók szétválasztása',
+              body: (
+                <p>
+                  Mivel <M t="y(0) = -1 \ne 0" />, oszthatunk <M t="y^2" />-tel: <M t="y^{-2}\,dy = 2x\,dx" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Mindkét oldal integrálása',
+              body: (
+                <p>
+                  <M t="-y^{-1} = x^2 + C \implies y = -\dfrac{1}{x^2 + C}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Kezdeti feltétel behelyettesítése',
+              body: (
+                <p>
+                  <M t="x = 0,\; y = -1" /> alapján <M t="-1 = -\dfrac{1}{C} \implies C = 1" />, tehát a megoldás <M t="\mathbf{y(x) = -\dfrac{1}{x^2 + 1}}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Melyik differenciálegyenlet szétválasztható változójú?
+            </>
+          }
+          options={[
+            { label: <M t="y' = e^{x + y}" />, ok: true },
+            { label: <M t="y' = x + y" /> },
+            { label: <M t="y' = \sin(xy)" /> },
+            { label: <M t="y' = x^2 + y^2" /> },
+          ]}
+          explain={
+            <>
+              Mivel <M t="e^{x+y} = e^x\cdot e^y" />, a jobb oldal tisztán <M t="x" />-es és <M t="y" />-os tényező szorzata.
+            </>
+          }
+        />
       </>
     ),
   },

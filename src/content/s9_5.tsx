@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   EscapeVelocityDiagram,
   ExpVsLogisticWidget,
@@ -310,7 +310,7 @@ export const S9_5: Page[] = [
           </tbody>
         </table>
 
-        <Def title="🎉 Gratulálunk — befejezted a teljes II. kötetet! (v2.0.0)">
+        <Def title="🎉 Gratulálunk — befejezted a teljes II. kötetet!">
           <p>
             Ezzel a szakasszal lezárult a <strong>9. fejezet</strong> és a teljes <strong>II. kötet</strong> (5–9.
             fejezet, 34 / 34 szakasz; összesítve <strong>64 / 120 szakasz, 53,3%</strong>)! Végigjártad az
@@ -470,6 +470,27 @@ export const S9_5: Page[] = [
             <M t="y(t) = 0{,}5 \iff 0{,}79 e^{-0{,}5t} = 0{,}5 \implies t = 2\ln\left(\dfrac{0{,}79}{0{,}5}\right) = 2\ln(1{,}58) \approx \mathbf{0{,}915\text{ perc}}" /> (kb. 55 másodperc)!
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi a körök (<M t="x^2 + y^2 = r^2" />) családjának ortogonális trajektóriája?
+            </>
+          }
+          options={[
+            { label: <>Az origón átmenő egyenesek (<M t="y = mx" />)</>, ok: true },
+            { label: <>Koncentrikus ellipszisek</> },
+            { label: <>Hiperbolák (<M t="xy = c" />)</> },
+            { label: <>Vízszintes egyenesek</> },
+          ]}
+          explain={
+            <>
+              Minden kör sugara merőleges a kör érintőjére, így az origón átmenő egyenesek derékszögben metszik az összes kört.
+            </>
+          }
+        />
       </>
     ),
   },

@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Story, Task, Warn } from '../components/ui';
 import {
   ConcavityBiasDiagram,
   EulerGeometryDiagram,
@@ -531,6 +531,27 @@ export const S9_3: Page[] = [
             <M t="h=1{,}5" /> esetén <M t="y_n = (-0{,}5)^n \to 0" /> (oszcillálva ugyan, de <strong>stabil</strong>!). <M t="h=2{,}5" /> esetén <M t="y_n = (-1{,}5)^n" /> (<strong>instabil</strong>, felrobban!).
           </p>
         </Task>
+
+        <h3>Kiegészítő gyorsteszt</h3>
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Ha a pontos megoldás szigorúan konvex (<M t="y'' > 0" />), az Euler-módszer hogyan közelíti a valódi görbét?
+            </>
+          }
+          options={[
+            { label: <>Alulbecsüli, mert a konvex görbe mindig az érintői fölött fekszik</>, ok: true },
+            { label: <>Felülbecsüli</> },
+            { label: <>Mindig pontosan eltalálja</> },
+            { label: <>Váltakozva alul- és felülbecsüli</> },
+          ]}
+          explain={
+            <>
+              Konvex görbe érintői a görbe alatt maradnak, így minden Euler-lépés a valódi görbe alá visz.
+            </>
+          }
+        />
       </>
     ),
   },

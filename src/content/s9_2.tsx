@@ -1,5 +1,5 @@
 import { M } from '../components/M';
-import { Def, Story, Task, Warn } from '../components/ui';
+import { Def, Quiz, Steps, Story, Task, Warn } from '../components/ui';
 import {
   BernoulliTransformDiagram,
   FirstOrderDEChoiceDiagram,
@@ -464,6 +464,62 @@ export const S9_2: Page[] = [
             <M t="\mathbf{y = \frac{1}{2x - x^2}}" />.
           </p>
         </Task>
+
+        <h3>Kiegészítő mintapélda és gyorsteszt</h3>
+        <Steps
+          title="Lineáris kezdetiérték-probléma exponenciális gerjesztéssel"
+          source="Analízis-labor"
+          problem={
+            <>
+              Oldjuk meg az <M t="y' + 2y = 6e^x" />, <M t="y(0) = 5" /> lineáris kezdetiérték-problémát!
+            </>
+          }
+          steps={[
+            {
+              title: 'Integráló tényező meghatározása',
+              body: (
+                <p>
+                  Itt <M t="P(x) = 2" />, így az integráló tényező <M t="v(x) = e^{\int 2\,dx} = e^{2x}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Beszorzás és integrálás',
+              body: (
+                <p>
+                  <M t="(e^{2x}y)' = 6e^{3x} \implies e^{2x}y = 2e^{3x} + C \implies y = 2e^x + Ce^{-2x}" />.
+                </p>
+              ),
+            },
+            {
+              title: 'Kezdeti feltétel alkalmazása',
+              body: (
+                <p>
+                  <M t="y(0) = 5 \implies 5 = 2 + C \implies C = 3" />, tehát a megoldás <M t="\mathbf{y(x) = 2e^x + 3e^{-2x}}" />.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Quiz
+          source="Analízis-labor"
+          q={
+            <>
+              Mi az <M t="xy' + 3y = x^2" /> (<M t="x > 0" />) egyenlet standard alakjának integráló tényezője?
+            </>
+          }
+          options={[
+            { label: <M t="v(x) = x^3" />, ok: true },
+            { label: <M t="v(x) = e^{3x}" /> },
+            { label: <M t="v(x) = 3\ln x" /> },
+            { label: <M t="v(x) = x^{-3}" /> },
+          ]}
+          explain={
+            <>
+              Standard alak: <M t="y' + \dfrac{3}{x}y = x" />, így <M t="v(x) = e^{\int (3/x)\,dx} = e^{3\ln x} = x^3" />.
+            </>
+          }
+        />
       </>
     ),
   },
